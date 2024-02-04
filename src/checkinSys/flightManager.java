@@ -8,7 +8,8 @@ import java.util.List;
 public class flightManager {
 //	private List<Flight> flights;
 	public HashMap<String, flight> flights = new HashMap<>();
-    public void loadFlightsFromFile(String filename) {
+	
+	public void loadFlightsFromFile(String filename) {
         // 从文件加载航班数据
     	try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -21,7 +22,17 @@ public class flightManager {
             e.printStackTrace();
         }
     }
-
+    //检查id是否一直进行check-in
+    public String checkPassenger(String name,String ID) {
+    	
+		return null;
+    }
+    
+    public double exceedFees(double actualBaggage) {
+    	double fees = 0;
+    	return fees;
+    }
+    
     private flight parseFlight(String line) {
 		// 解析文件内容TODO Auto-generated method stub
 		return null;
@@ -36,12 +47,26 @@ public class flightManager {
         flight flight = flights.get(flightCode);
         if (flight != null) {
             // 更新航班统计数据
-            flight.updateBaggageStats();
-            // 其他统计更新
+            
         }
     }
 	
-    public static void main(String[] args) {
-    	System.out.print("something");
+    /**
+	 * @return the flights
+	 */
+	public HashMap<String, flight> getFlights() {
+		return flights;
+	}
+	/**
+	 * @param flights the flights to set
+	 */
+	public void setFlights(HashMap<String, flight> flights) {
+		this.flights = flights;
+	}
+    
+    public List<passenger> generateReport() {
+        // 生成报告
+		return null;
     }
+    
 }
