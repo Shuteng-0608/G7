@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-public class FlightManager {
+public class flightManager {
 //	private List<Flight> flights;
-	public HashMap<String, Flight> flights = new HashMap<>();
+	public HashMap<String, flight> flights = new HashMap<>();
     public void loadFlightsFromFile(String filename) {
         // 从文件加载航班数据
     	try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 // 解析行数据，创建Flight对象
-                Flight flight = parseFlight(line);
+                flight flight = parseFlight(line);
                 flights.put(flight.getFlightCode(), flight);
             }
         } catch (IOException e) {
@@ -22,18 +22,18 @@ public class FlightManager {
         }
     }
 
-    private Flight parseFlight(String line) {
+    private flight parseFlight(String line) {
 		// 解析文件内容TODO Auto-generated method stub
 		return null;
 	}
 
-	public Flight findFlight(String flightCode) {
+	public flight findFlight(String flightCode) {
         // 查找航班
     	return null;
     }
     
 	public void updateFlightStats(String flightCode) {
-        Flight flight = flights.get(flightCode);
+        flight flight = flights.get(flightCode);
         if (flight != null) {
             // 更新航班统计数据
             flight.updateBaggageStats();

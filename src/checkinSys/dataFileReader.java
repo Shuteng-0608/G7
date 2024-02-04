@@ -1,6 +1,6 @@
 package checkinSys;
 
-public class DataFileReader {
+public class dataFileReader {
 	public void readPassengerFile(String filename) {
         // 读取乘客数据文件
     }

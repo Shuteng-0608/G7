@@ -1,18 +1,22 @@
 package checkinSys;
 import java.util.List;
 
-public class Flight {
+public class flight {
 	private String destinationAirport;
     private String carrier;
     private int capacity;
     private double maxBaggageWeight;
     private String maxBaggageVolume;
-    private List<Passenger> checkedInPassengers;
+    private List<passenger> checkedInPassengers;
     private double totalBaggageWeight;
     private String totalBaggageVolume;
     private double totalExcessFees;
-
-    public void addPassenger(Passenger passenger) {
+    
+    public flight(String destinationAirport) {
+    	this.destinationAirport  = destinationAirport;
+    	
+    }
+    public void addPassenger(passenger passenger) {
         // 添加乘客
     }
 

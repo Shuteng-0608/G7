@@ -1,6 +1,6 @@
 package checkinSys;
 
-public class CheckInInterface {
+public class checkInInterface {
 	public void displayInterface() {
         // 显示签到界面
     }

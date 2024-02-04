@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-public class PassengerManager {
-	public HashMap<String, Passenger> passengers = new HashMap<>();
+public class passengerManager {
+	public HashMap<String, passenger> passengers = new HashMap<>();
     public void loadPassengersFromFile(String filename) {
         // 从文件加载乘客数据
     	try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -14,9 +14,9 @@ public class PassengerManager {
             while ((line = reader.readLine()) != null) {
                 // 解析行数据，创建Passenger对象
             	try {
-                    Passenger passenger = parsePassenger(line);
+                    passenger passenger = parsePassenger(line);
                     passengers.put(passenger.getBookingReference(), passenger);
-                } catch (InvalidBookingException e) {
+                } catch (invalidBookingException e) {
                     // 处理异常，例如记录错误和继续
                     System.err.println(e.getMessage());
                 }
@@ -26,15 +26,15 @@ public class PassengerManager {
         }
     }
 
-    private Passenger parsePassenger(String line) throws InvalidBookingException {
+    private passenger parsePassenger(String line) throws invalidBookingException {
 		// 解析文件内容TODO Auto-generated method stub
     	if (line == null) {
-            throw new InvalidBookingException("Invalid booking reference found in data.");
+            throw new invalidBookingException("Invalid booking reference found in data.");
         }
 		return null;
 	}
 
-	public Passenger findPassenger(String bookingReference) {
+	public passenger findPassenger(String bookingReference) {
         // 查找乘客
 		return null;
     }
