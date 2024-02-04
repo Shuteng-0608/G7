@@ -19,4 +19,9 @@ public class Passenger {
     public void setBaggage(Baggage baggage) {
         // 设置或更新行李信息
     }
+
+	public String getBookingReference() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

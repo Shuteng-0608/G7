@@ -29,4 +29,9 @@ public class Flight {
         // 生成报告
 		return carrier;
     }
+
+	public String getFlightCode() {
+		// 获取编码
+		return null;
+	}
 }
