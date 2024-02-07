@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>0</y>
+      <w>343</w>
+      <h>518</h>
+    </coordinates>
+    <panel_attributes>checkinSys::flight
+--
+-initAirport: String
+-airCompany: String
+-destinationAirport: String
+-capacity: int
+-maxBaggageWeight: double
+-maxBaggageVolume: String
+-initPassengers: List&lt;passenger&gt;
+-totalBaggageWeight: double
+-totalBaggageVolume: String
+-totalExcessFees: double
++actulPassengers = new HashMap(): HashMap&lt;String, passenger&gt;
+-flightCode: String
+--
++loadPassengersFromFile(String filename): void
+-parsePassenger(String line): passenger
++getInitAirport(): String
++setInitAirport(String initAirport): void
++getAirCompany(): String
++setAirCompany(String airCompany): void
++getDestinationAirport(): String
++setDestinationAirport(String destinationAirport): void
++getCapacity(): int
++setCapacity(int capacity): void
++getMaxBaggageWeight(): double
++setMaxBaggageWeight(double maxBaggageWeight): void
++getMaxBaggageVolume(): String
++setMaxBaggageVolume(String maxBaggageVolume): void
++getPassengers(): List&lt;passenger&gt;
++setPassengers(List&lt;passenger&gt; passengers): void
++getTotalBaggageWeight(): double
++setTotalBaggageWeight(double totalBaggageWeight): void
++getTotalBaggageVolume(): String
++setTotalBaggageVolume(String totalBaggageVolume): void
++getTotalExcessFees(): double
++setTotalExcessFees(double totalExcessFees): void
++getFlightCode(): String
++setFlightCode(String flightCode): void
++getActulPassengers(): HashMap&lt;String, passenger&gt;
++setActulPassengers(HashMap&lt;String, passenger&gt; actulPassengers): void
++getInitPassengers(): List&lt;passenger&gt;
++setInitPassengers(List&lt;passenger&gt; initPassengers): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>42</y>
+      <w>371</w>
+      <h>441</h>
+    </coordinates>
+    <panel_attributes>checkinSys::passenger
+--
+-name: String
+-bookingReference: String
+-flightCode: String
+-checkedIn: boolean
+-weight: double
+-volume: double
+-initialBaggage: double
+-individualBaggageWeight: double
+-individualBaggageVolume: double
+-individuaActuallBaggageWeight: double
+-individuaActuallBaggageVolume: double
+--
++passenger(String name): ctor
++getName(): String
++setName(String name): void
++getBookingReference(): String
++setBookingReference(String bookingReference): void
++getFlightCode(): String
++setFlightCode(String flightCode): void
++isCheckedIn(): boolean
++setCheckedIn(boolean checkedIn): void
++getWeight(): double
++setWeight(double weight): void
++getVolume(): double
++setVolume(double volume): void
++getInitialBaggage(): double
++setInitialBaggage(double initialBaggage): void
++getIndividualBaggageWeight(): double
++setIndividualBaggageWeight(double individualBaggageWeight): void
++getIndividualBaggageVolume(): double
++setIndividualBaggageVolume(double individualBaggageVolume): void
++getIndividuaActuallBaggageWeight(): double
++setIndividuaActuallBaggageWeight(double individuaActuallBaggageWeight): void
++getIndividuaActuallBaggageVolume(): double
++setIndividuaActuallBaggageVolume(double individuaActuallBaggageVolume): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>35</y>
+      <w>350</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>checkinSys::CheckInInterface
+--
+-frame: JFrame
+-lastNameField: JTextField
+-bookingReferenceField: JTextField
+-validateButton: JButton
+-baggageFeeLabel: JLabel
+--
++CheckInInterface(): ctor
++displayInterface(): void
++receiveAndValidateInfo(String lastName, String bookingReference): boolean
++displayBaggageFee(double fee): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>560</y>
+      <w>238</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>checkinSys::flightManager
+--
++flights = new HashMap(): HashMap&lt;String, flight&gt;
+--
++loadFlightsFromFile(String filename): void
++checkPassenger(String name, String ID): String
++exceedFees(double actualBaggage): double
+-parseFlight(String line): flight
++findFlight(String flightCode): flight
++updateFlightStats(String flightCode): void
++getFlights(): HashMap&lt;String, flight&gt;
++setFlights(HashMap&lt;String, flight&gt; flights): void
++generateReport(): List&lt;passenger&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>574</y>
+      <w>294</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>checkinSys::baggage
+--
+-dimensions: String
+-weight: double
+--
++baggage(String dimensions, double weight): ctor
++calculateExcessFee(): double
++checkLimit(double maxWeight, String maxDimensions): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>637</x>
+      <y>574</y>
+      <w>287</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>checkinSys::passengerManager
+--
++passengers = new HashMap(): HashMap&lt;String, passenger&gt;
+--
++loadPassengersFromFile(String filename): void
+-parsePassenger(String line): passenger
++findPassenger(String bookingReference): passenger
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>987</x>
+      <y>574</y>
+      <w>196</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>checkinSys::dataFileReader
+--
+--
++readPassengerFile(String filename): void
++readFlightFile(String filename): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>742</y>
+      <w>224</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>checkinSys::invalidBookingException
+--
+--
++invalidBookingException(String message): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>742</y>
+      <w>126</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>checkinSys::test
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
