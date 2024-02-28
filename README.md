@@ -1,2 +1,2 @@
-# ASE-G7
-F21AS Coursework 2024
+# G7
+Coursework 2024
