@@ -1,175 +1,83 @@
-package checkinSys;
+// a simple class to contain and manage Passengers details
 
-public class passenger {
-
-
+public class Passenger implements Comparable<Passenger> {
+	private String reference_code;
 	private String name;
-	private String bookingReference;
-    private String flightCode;
-    private boolean checkedIn;
-    private double weight;
-    private double volume;
-    private double initialBaggage;
-    private double individualBaggageWeight;
-    private double individualBaggageVolume;//每人应分配额度
-    private double individuaActuallBaggageWeight;
-    private double individuaActuallBaggageVolume;//每人实际登记额度
-    
-    public passenger(String name) {
-    this.name = name;	
-    	
-    }
-    /**
-	 * @return the name
+	private String flight_code;
+	private boolean check_in;
+
+	/**
+	 * Set up the contact details.
+	 */
+	public Passenger(String reference_code, String name, String flight_code, boolean check_in) {
+		this.reference_code = reference_code.trim();
+		this.name = name.trim();
+		this.flight_code = flight_code.trim();
+		this.check_in = check_in;
+	}
+
+	/**
+	 * @return The reference code.
+	 */
+	public String getReference() {
+		return reference_code;
+	}
+
+	/**
+	 * @return The name.
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @return The flight code.
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public String getFlight() {
+		return flight_code;
 	}
 
 	/**
-	 * @return the bookingReference
+	 * @return The check_in status.
 	 */
-	public String getBookingReference() {
-		return bookingReference;
+	public boolean getCheckin() {
+		return check_in;
 	}
 
 	/**
-	 * @param bookingReference the bookingReference to set
+	 * Test for content equality between two objects.
+	 *
+	 * @param other The object to compare to this one.
+	 * @return true if the argument object has same reference code
 	 */
-	public void setBookingReference(String bookingReference) {
-		this.bookingReference = bookingReference;
+	public boolean equals(Object other) {
+		if (other instanceof Passenger) {
+			Passenger otherStaff = (Passenger) other;
+			return reference_code.equals(otherStaff.getReference());
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * @return the flightCode
+	 * Compare this Passenger object against another, for the purpose of sorting.
+	 * The fields are compared by reference code.
+	 *
+	 * @param otherDetails The details to be compared against.
+	 * @return a negative integer if this reference_code comes before the
+	 *         parameter's reference_code, zero if they are equal and a positive
+	 *         integer if this comes after the other.
 	 */
-	public String getFlightCode() {
-		return flightCode;
+
+	public int compareTo(Passenger otherDetails) {
+		return reference_code.compareTo(otherDetails.getReference());
 	}
 
 	/**
-	 * @param flightCode the flightCode to set
+	 * @return A string containing all details.
 	 */
-	public void setFlightCode(String flightCode) {
-		this.flightCode = flightCode;
-	}
-
-	/**
-	 * @return the checkedIn
-	 */
-	public boolean isCheckedIn() {
-		return checkedIn;
-	}
-
-	/**
-	 * @param checkedIn the checkedIn to set
-	 */
-	public void setCheckedIn(boolean checkedIn) {
-		this.checkedIn = checkedIn;
-	}
-
-	/**
-	 * @return the weight
-	 */
-	public double getWeight() {
-		return weight;
-	}
-
-	/**
-	 * @param weight the weight to set
-	 */
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-
-	/**
-	 * @return the volume
-	 */
-	public double getVolume() {
-		return volume;
-	}
-
-	/**
-	 * @param volume the volume to set
-	 */
-	public void setVolume(double volume) {
-		this.volume = volume;
-	}
-
-	/**
-	 * @return the initialBaggage
-	 */
-	public double getInitialBaggage() {
-		return initialBaggage;
-	}
-
-	/**
-	 * @param initialBaggage the initialBaggage to set
-	 */
-	public void setInitialBaggage(double initialBaggage) {
-		this.initialBaggage = initialBaggage;
-	}
-
-	/**
-	 * @return the individualBaggageWeight
-	 */
-	public double getIndividualBaggageWeight() {
-		return individualBaggageWeight;
-	}
-
-	/**
-	 * @param individualBaggageWeight the individualBaggageWeight to set
-	 */
-	public void setIndividualBaggageWeight(double individualBaggageWeight) {
-		this.individualBaggageWeight = individualBaggageWeight;
-	}
-
-	/**
-	 * @return the individualBaggageVolume
-	 */
-	public double getIndividualBaggageVolume() {
-		return individualBaggageVolume;
-	}
-
-	/**
-	 * @param individualBaggageVolume the individualBaggageVolume to set
-	 */
-	public void setIndividualBaggageVolume(double individualBaggageVolume) {
-		this.individualBaggageVolume = individualBaggageVolume;
-	}
-
-	/**
-	 * @return the individuaActuallBaggageWeight
-	 */
-	public double getIndividuaActuallBaggageWeight() {
-		return individuaActuallBaggageWeight;
-	}
-
-	/**
-	 * @param individuaActuallBaggageWeight the individuaActuallBaggageWeight to set
-	 */
-	public void setIndividuaActuallBaggageWeight(double individuaActuallBaggageWeight) {
-		this.individuaActuallBaggageWeight = individuaActuallBaggageWeight;
-	}
-
-	/**
-	 * @return the individuaActuallBaggageVolume
-	 */
-	public double getIndividuaActuallBaggageVolume() {
-		return individuaActuallBaggageVolume;
-	}
-
-	/**
-	 * @param individuaActuallBaggageVolume the individuaActuallBaggageVolume to set
-	 */
-	public void setIndividuaActuallBaggageVolume(double individuaActuallBaggageVolume) {
-		this.individuaActuallBaggageVolume = individuaActuallBaggageVolume;
+	public String toString() {
+		return String.format("%-8s", reference_code) + String.format("%-20s", name) + String.format("%-8s", flight_code)
+				+ String.format("%b", check_in);
 	}
 }

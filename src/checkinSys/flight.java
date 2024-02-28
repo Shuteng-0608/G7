@@ -1,210 +1,109 @@
-package checkinSys;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
+// a simple class to contain and manage Flight details
+public class Flight implements Comparable<Flight> {
+	private String destination;
+	private String carrier;
+	private String flight_code;
+	private int capacity;
+	private double weight;
+	private double volume;
+	private PassengerList passengerList;
 
-public class flight {
-	private String initAirport;
-	private String airCompany;
-	private String destinationAirport;
-    private int capacity;//人数
-    private double maxBaggageWeight;
-    private String maxBaggageVolume;//额定荷载
-	private List<passenger> initPassengers;
+	/**
+	 * Set up the contact details.
+	 */
+	public Flight(String destination, String carrier, String flight_code, int capacity, double weight, double volume) {
+		this.destination = destination;
+		this.carrier = carrier;
+		this.flight_code = flight_code;
+		this.capacity = capacity;
+		this.weight = weight;
+		this.volume = volume;
+		this.passengerList = new PassengerList();
+	}
 
-    private double totalBaggageWeight;
-    private String totalBaggageVolume;//实际荷载
-    private double totalExcessFees;
-    public HashMap<String, passenger> actulPassengers = new HashMap<>();
-    
-   
+	/**
+	 * @return The destination.
+	 */
+	public String getDestination() {
+		return destination;
+	}
 
-	public void loadPassengersFromFile(String filename) {
-        // 从文件加载乘客数据
-    	try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                // 解析行数据，创建Passenger对象
-            	try {
-                    passenger passenger = parsePassenger(line);
-                    actulPassengers.put(passenger.getBookingReference(), passenger);
-                } catch (invalidBookingException e) {
-                    // 处理异常，例如记录错误和继续
-                    System.err.println(e.getMessage());
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
-    private passenger parsePassenger(String line) throws invalidBookingException {
-		// 解析文件内容TODO Auto-generated method stub
-    	if (line == null) {
-            throw new invalidBookingException("Invalid booking reference found in data.");
-        }
-		return null;
-	}
-    
 	/**
-	 * @return the initAirport
+	 * @return The carrier.
 	 */
-	public String getInitAirport() {
-		return initAirport;
+	public String getCarrier() {
+		return carrier;
 	}
+
 	/**
-	 * @param initAirport the initAirport to set
+	 * @return The flight code.
 	 */
-	public void setInitAirport(String initAirport) {
-		this.initAirport = initAirport;
+	public String getFlight() {
+		return flight_code;
 	}
+
 	/**
-	 * @return the airCompany
-	 */
-	public String getAirCompany() {
-		return airCompany;
-	}
-	/**
-	 * @param airCompany the airCompany to set
-	 */
-	public void setAirCompany(String airCompany) {
-		this.airCompany = airCompany;
-	}
-	/**
-	 * @return the destinationAirport
-	 */
-	public String getDestinationAirport() {
-		return destinationAirport;
-	}
-	/**
-	 * @param destinationAirport the destinationAirport to set
-	 */
-	public void setDestinationAirport(String destinationAirport) {
-		this.destinationAirport = destinationAirport;
-	}
-	/**
-	 * @return the capacity
+	 * @return The capacity.
 	 */
 	public int getCapacity() {
 		return capacity;
 	}
+
 	/**
-	 * @param capacity the capacity to set
+	 * @return The maximum weight.
 	 */
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
-	/**
-	 * @return the maxBaggageWeight
-	 */
-	public double getMaxBaggageWeight() {
-		return maxBaggageWeight;
-	}
-	/**
-	 * @param maxBaggageWeight the maxBaggageWeight to set
-	 */
-	public void setMaxBaggageWeight(double maxBaggageWeight) {
-		this.maxBaggageWeight = maxBaggageWeight;
-	}
-	/**
-	 * @return the maxBaggageVolume
-	 */
-	public String getMaxBaggageVolume() {
-		return maxBaggageVolume;
-	}
-	/**
-	 * @param maxBaggageVolume the maxBaggageVolume to set
-	 */
-	public void setMaxBaggageVolume(String maxBaggageVolume) {
-		this.maxBaggageVolume = maxBaggageVolume;
-	}
-	/**
-	 * @return the passengers
-	 */
-	public List<passenger> getPassengers() {
-		return initPassengers;
-	}
-	/**
-	 * @param passengers the passengers to set
-	 */
-	public void setPassengers(List<passenger> passengers) {
-		this.initPassengers = passengers;
-	}
-	/**
-	 * @return the totalBaggageWeight
-	 */
-	public double getTotalBaggageWeight() {
-		return totalBaggageWeight;
-	}
-	/**
-	 * @param totalBaggageWeight the totalBaggageWeight to set
-	 */
-	public void setTotalBaggageWeight(double totalBaggageWeight) {
-		this.totalBaggageWeight = totalBaggageWeight;
-	}
-	/**
-	 * @return the totalBaggageVolume
-	 */
-	public String getTotalBaggageVolume() {
-		return totalBaggageVolume;
-	}
-	/**
-	 * @param totalBaggageVolume the totalBaggageVolume to set
-	 */
-	public void setTotalBaggageVolume(String totalBaggageVolume) {
-		this.totalBaggageVolume = totalBaggageVolume;
-	}
-	/**
-	 * @return the totalExcessFees
-	 */
-	public double getTotalExcessFees() {
-		return totalExcessFees;
-	}
-	/**
-	 * @param totalExcessFees the totalExcessFees to set
-	 */
-	public void setTotalExcessFees(double totalExcessFees) {
-		this.totalExcessFees = totalExcessFees;
-	}
-    /**
-	 * @return the flightCode
-	 */
-	public String getFlightCode() {
-		return flightCode;
-	}
-	/**
-	 * @param flightCode the flightCode to set
-	 */
-	public void setFlightCode(String flightCode) {
-		this.flightCode = flightCode;
-	}
-	private String flightCode;
-	/**
-	 * @return the actulPassengers
-	 */
-	public HashMap<String, passenger> getActulPassengers() {
-		return actulPassengers;
+	public double getWeight() {
+		return weight;
 	}
 
 	/**
-	 * @param actulPassengers the actulPassengers to set
+	 * @return The maximum volume.
 	 */
-	public void setActulPassengers(HashMap<String, passenger> actulPassengers) {
-		this.actulPassengers = actulPassengers;
-	}
-    /**
-	 * @return the initPassengers
-	 */
-	public List<passenger> getInitPassengers() {
-		return initPassengers;
+	public double getVolume() {
+		return volume;
 	}
 
 	/**
-	 * @param initPassengers the initPassengers to set
+	 * @return The passenger list.
 	 */
-	public void setInitPassengers(List<passenger> initPassengers) {
-		this.initPassengers = initPassengers;
+	public PassengerList getList() {
+		return passengerList;
+	}
+
+	/**
+	 * Test for content equality between two objects.
+	 *
+	 * @param other The object to compare to this one.
+	 * @return true if the argument object has same flight code
+	 */
+	public boolean equals(Object other) {
+		if (other instanceof Flight) {
+			Flight otherStaff = (Flight) other;
+			return flight_code.equals(otherStaff.getFlight());
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Compare this Flight object against another, for the purpose of sorting.
+	 * The fields are compared by flight code.
+	 *
+	 * @param otherDetails The details to be compared against.
+	 * @return a negative integer if this flight_code comes before the
+	 *         parameter's flight_code, zero if they are equal and a positive
+	 *         integer if this comes after the other.
+	 */
+
+	public int compareTo(Flight otherDetails) {
+		return flight_code.compareTo(otherDetails.getFlight());
+	}
+
+	/**
+	 * @return A string containing all details.
+	 */
+	public String toString() {
+		return String.format("%-8s", flight_code) + String.format("%-20s", destination) + String.format("%-20s", carrier)
+				+ String.format("%d", capacity) + String.format("%f", weight) + String.format("%f", volume);
 	}
 }
