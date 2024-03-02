@@ -1,0 +1,5 @@
+public class UnexpectedDataRangeException extends Exception{
+    public UnexpectedDataRangeException() {
+        super("Unexpected data range! Ask the passenger enter their information again");
+    }
+}
