@@ -1,5 +1,5 @@
 /*
- * Illegal type of data entered by the passenger
+ * Illegal range of data entered by the passenger
  */
 public class UnexpectedDataRangeException extends Exception{
     public UnexpectedDataRangeException() {
