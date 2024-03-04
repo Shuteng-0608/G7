@@ -11,7 +11,7 @@ public class Flight implements Comparable<Flight> {
 	/**
 	 * Set up the contact details.
 	 */
-	public Flight(String destination, String carrier, String flight_code, int capacity, double weight, double volume) {
+	public Flight(String flight_code, String destination, String carrier, int capacity, double weight, double volume) {
 		this.destination = destination;
 		this.carrier = carrier;
 		this.flight_code = flight_code;
@@ -72,7 +72,7 @@ public class Flight implements Comparable<Flight> {
 
 	/**
 	 * Test for content equality between two objects.
-	 *
+	 * 
 	 * @param other The object to compare to this one.
 	 * @return true if the argument object has same flight code
 	 */
@@ -85,14 +85,57 @@ public class Flight implements Comparable<Flight> {
 		}
 	}
 
+	// The number of passengers checked-in
+	public int numberOfCheckIn() {
+		int cnt = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin() == "Yes")
+				cnt++;
+		}
+		return cnt;
+	}
+
+	// The total weight of the baggage
+	public double totalWeight() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin() == "Yes")
+				sum += p.getWeight();
+		}
+		return sum;
+	}
+
+	// The total volume of the baggage
+	public double totalVolume() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin() == "Yes")
+				sum += p.getVolume();
+		}
+		return sum;
+	}
+
+	public double totalFees() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin() == "Yes")
+				sum += p.excess_fee();
+		}
+		return sum;
+	}
+
 	/**
-	 * Compare this Flight object against another, for the purpose of sorting.
-	 * The fields are compared by flight code.
-	 *
+	 * Compare this Flight object against another, for the purpose of sorting. The
+	 * fields are compared by flight code.
+	 * 
 	 * @param otherDetails The details to be compared against.
-	 * @return a negative integer if this flight_code comes before the
-	 *         parameter's flight_code, zero if they are equal and a positive
-	 *         integer if this comes after the other.
+	 * @return a negative integer if this flight_code comes before the parameter's
+	 *         flight_code, zero if they are equal and a positive integer if this
+	 *         comes after the other.
 	 */
 
 	public int compareTo(Flight otherDetails) {
@@ -103,7 +146,8 @@ public class Flight implements Comparable<Flight> {
 	 * @return A string containing all details.
 	 */
 	public String toString() {
-		return String.format("%-8s", flight_code) + String.format("%-20s", destination) + String.format("%-20s", carrier)
-				+ String.format("%d", capacity) + String.format("%f", weight) + String.format("%f", volume);
+		return String.format("%-8s", flight_code) + String.format("%-20s", destination)
+				+ String.format("%-20s", carrier) + String.format("%d", capacity) + String.format("%f", weight)
+				+ String.format("%f", volume);
 	}
 }
