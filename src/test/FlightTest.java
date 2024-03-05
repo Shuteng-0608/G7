@@ -1,7 +1,8 @@
-package flightSystem;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import checkinSys.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
