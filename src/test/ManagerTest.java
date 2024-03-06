@@ -25,7 +25,7 @@ class ManagerTest {
 
 	@Test
 	void testExcess_fee() {
-		double fee = manager.excess_fee("Wright", "JFKCA3191811246621", 22, 3);
+		double fee = manager.excess_fee("Brewer", "DXBCA3781807232238", 26.42, 1.1);
 //		assertEquals(0, p.getName(), "Equal!");
 		assertNotEquals(0, fee, "Error!");
 	}
