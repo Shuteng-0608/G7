@@ -14,7 +14,12 @@ public class Manager {
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>();
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>();
 	private FlightList flightList = new FlightList();
-
+	
+	public Manager() throws InvalidAttributeException {
+		readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
+	};
+	
+	
 	public void readFromFile(String file_flights, String file_passengers) throws InvalidAttributeException{
 		try {
 			FileReader fr = new FileReader(file_flights);

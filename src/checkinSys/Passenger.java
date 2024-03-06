@@ -1,4 +1,7 @@
+package checkinSys;
 // a simple class to contain and manage Passengers details
+
+import java.util.HashMap;
 
 public class Passenger implements Comparable<Passenger> {
 	private String reference_code;
@@ -10,12 +13,20 @@ public class Passenger implements Comparable<Passenger> {
 
 	/**
 	 * Set up the contact details.
+	 * @throws InvalidAttributeException 
 	 */
-	public Passenger(String reference_code, String name, String flight_code, String check_in) {
+	public Passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) 
+			throws InvalidBookRefException, InvalidAttributeException {
 		this.reference_code = reference_code.trim();
 		this.name = name.trim();
 		this.flight_code = flight_code.trim();
 		this.check_in = check_in;
+		this.weight = weight;
+		this.volume = volume;
+		Manager manager = new Manager();
+		if (!manager.check_rc(name)) {
+			throw new InvalidBookRefException("Invalid Booking Reference!");
+		}
 	}
 
 	/**
@@ -109,4 +120,6 @@ public class Passenger implements Comparable<Passenger> {
 		return String.format("%-8s", reference_code) + String.format("%-20s", name) + String.format("%-8s", flight_code)
 				+ String.format("%-3s", check_in);
 	}
+	
+	
 }
