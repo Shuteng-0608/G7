@@ -14,7 +14,7 @@ class FlightTest {
 	@BeforeEach
 	void testFlight() throws InvalidAttributeException {
 		Manager manager = new Manager();
-		manager.readFromFile("D:\\Users\\Desktop\\flight_details_data.csv", "D:\\Users\\Desktop\\passenger_data.csv");
+		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.flight = manager.getFlightList().getFlight(1);
 	}
 

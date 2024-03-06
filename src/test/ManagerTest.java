@@ -5,14 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import checkinSys.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import myExceptions.*;
 
 class ManagerTest {
 	
-	Manager manager = new Manager();
 	
+	Manager manager;
 	@BeforeEach
 	void testPassenger() throws InvalidAttributeException {
-		manager.readFromFile("D:\\Users\\Desktop\\flight_details_data.csv", "D:\\Users\\Desktop\\passenger_data.csv");
+		manager = new Manager();
 	}
 	
 	@Test

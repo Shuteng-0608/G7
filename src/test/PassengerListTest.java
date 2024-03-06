@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import checkinSys.*;
+import myExceptions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,7 @@ class PassengerListTest {
 	@BeforeEach
 	void testPassengerList() throws InvalidAttributeException {
 		Manager manager = new Manager();
-		manager.readFromFile("D:\\Users\\Desktop\\flight_details_data.csv", "D:\\Users\\Desktop\\passenger_data.csv");
+		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.passengers = manager.getFlightList().getFlight(0).getList();
 	}
 
