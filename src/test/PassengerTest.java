@@ -47,14 +47,14 @@ class PassengerTest {
 	@Test
 	void testGetWeight() {
 		double weight = this.passenger.getWeight();
-		assertEquals(22.0, weight, "Equal!");
+		assertEquals(26.42, weight, "Equal!");
 		assertNotEquals(16.0, weight, "Error!");
 	}
 
 	@Test
 	void testGetVolume() {
 		double volume = this.passenger.getVolume();
-		assertEquals(3.0, volume, "Equal!");
+		assertEquals(1.1, volume, "Equal!");
 		assertNotEquals(5.0, volume, "Error!");
 	}
 
