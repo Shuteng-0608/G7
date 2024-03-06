@@ -56,8 +56,8 @@ class FlightTest {
 	@Test
 	void testGetVolume() {
 		double volume = this.flight.getVolume();
-		assertEquals(6468.0, volume, "Equal!");
-		assertNotEquals(6420.0, volume, "Error!");
+		assertEquals(665.0, volume, "Equal!");
+		assertNotEquals(660.0, volume, "Error!");
 	}
 
 	@Test
