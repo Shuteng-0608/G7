@@ -10,6 +10,11 @@ import java.util.logging.Logger;
 public class GUI extends JFrame {
 	Manager manager = new Manager();
 
+	private static final Logger LOGGER = Logger.getLogger(GUI.class.getName()); // 创建日志记录器
+
+	private JTextArea reportTextArea;
+	private JLabel queueStatusLabel;
+
 	private JTextField nameField;
 	private JTextField reservationField;
 
@@ -19,10 +24,10 @@ public class GUI extends JFrame {
 	private JButton proceedToPaymentButton;
 	private JButton proceedToSuccessButton;
 
+	private StringBuilder reportBuilder;
 
 	public GUI() {
 		super("Check-in System");
-
 		// set frame
 		setSize(600, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,7 +43,9 @@ public class GUI extends JFrame {
 		JButton checkInButton = new JButton("Check in");
 		JButton proceedToLuggageButton = new JButton("Laggage Check");
 
-
+		// create a state report area
+		reportTextArea = new JTextArea();
+		reportTextArea.setEditable(false);
 
 		// create the input label
 		JLabel nameLabel = new JLabel("Last Name:");
@@ -46,6 +53,7 @@ public class GUI extends JFrame {
 		JLabel reservationLabel = new JLabel("Reference Code:");
 		reservationField = new JTextField();
 
+		// add components to the pannel
 		inputPanel.add(nameLabel);
 		inputPanel.add(nameField);
 		inputPanel.add(reservationLabel);
@@ -61,16 +69,16 @@ public class GUI extends JFrame {
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 		mainPanel.add(inputPanel, BorderLayout.NORTH);
 
-
+		// add main panel to the windows
 		add(mainPanel);
 
-		// add action haddle
+		// add action handle button to process the event
 		loadButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				manager.readFromFile(
-						"D:\\WeChat Files\\WeChat Files\\wxid_iiosqnpbqnjd12\\FileStorage\\File\\2024-03\\flight_details_data.csv",
-						"D:\\WeChat Files\\WeChat Files\\wxid_iiosqnpbqnjd12\\FileStorage\\File\\2024-03\\passenger_data.csv");
+						"data/flight_details_data.csv",
+						"data/passenger_data.csv");
 				appendToReport("Data load success");
 			}
 		});
@@ -138,6 +146,7 @@ public class GUI extends JFrame {
 				String reservationNumber = reservationField.getText();
 				if (manager.excess_fee(last_name, reservationNumber, weight, volume) > 40) {
 					JOptionPane.showMessageDialog(null, "Laggage overweight: ￡");
+					appendToReport("addtional fee: ￡"); // add the additional fee to the report
 				} else {
 					JOptionPane.showMessageDialog(null, "success");
 				}
@@ -152,11 +161,15 @@ public class GUI extends JFrame {
 			}
 		});
 	}
-
+	// add text to the report area
+	private void appendToReport(String text) {
+		reportTextArea.append(text + "\n");
+		reportBuilder.append(text).append("\n"); // add extra info to the report contents
+	}
 
 
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
+		SwingUtilities.invokeLater(new Runnable() ){
 			@Override
 			public void run() {
 				GUI gui = new GUI();
