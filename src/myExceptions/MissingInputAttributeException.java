@@ -1,3 +1,4 @@
+package myExceptions;
 /*
  * Should decide what makes valid data (e.g., length, range, number of characters, etc.)
  * If an error is found, just continue without that line of data.
