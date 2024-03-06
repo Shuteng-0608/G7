@@ -1,3 +1,5 @@
+package myException;
+
 public class IncorrectBookRefException extends Exception{
 
     public IncorrectBookRefException() {
