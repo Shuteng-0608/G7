@@ -20,8 +20,8 @@ public class Manager {
 	
 	public Manager() {
 	    try {
-	        readFromFile("data/flight_details_data.csv", 
-	                     "data/passenger_data.csv");
+	        readFromFile("src/data/flight_details_data.csv", 
+	                     "src/data/passenger_data.csv");
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();
 	    }
