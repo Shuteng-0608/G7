@@ -30,26 +30,11 @@ class ManagerTest {
 		assertNotEquals(0, fee, "Error!");
 	}
 
-//	@Test
-//	void testReport() {
-//		fail("Not yet implemented");
-//	}
-
 	@Test
 	void testFindFlight() {
 		Flight f = manager.findFlight("EK660");
 		assertEquals("EK660", f.getFlight(), "Equal!");
 		assertNotEquals("LH887", f.getFlight(), "Error!");
 	}
-
-//	@Test
-//	void testValidateFlightData() {
-//		fail("Not yet implemented");
-//	}
-
-//	@Test
-//	void testValidatePassengerData() {
-//		fail("Not yet implemented");
-//	}
-
+	
 }
