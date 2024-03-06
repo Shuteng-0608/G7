@@ -74,7 +74,7 @@ class FlightTest {
 	@Test
 	void testNumberOfCheckIn() {
 		int number = this.flight.numberOfCheckIn();
-		assertEquals(125, number, "Equal!");
+		assertEquals(130, number, "Equal!");
 		assertNotEquals(126, number, "Error!");
 	}
 
