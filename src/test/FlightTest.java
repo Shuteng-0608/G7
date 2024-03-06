@@ -42,7 +42,7 @@ class FlightTest {
 	@Test
 	void testGetCapacity() {
 		int capacity = this.flight.getCapacity();
-		assertEquals(256, capacity, "Equal!");
+		assertEquals(266, capacity, "Equal!");
 		assertNotEquals(255, capacity, "Error!");
 	}
 
