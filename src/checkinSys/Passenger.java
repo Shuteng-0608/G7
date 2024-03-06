@@ -1,6 +1,7 @@
 package checkinSys;
 // a simple class to contain and manage Passengers details
 
+import java.io.IOException;
 import java.util.HashMap;
 import myExceptions.*;
 public class Passenger implements Comparable<Passenger> {
@@ -14,19 +15,16 @@ public class Passenger implements Comparable<Passenger> {
 	/**
 	 * Set up the contact details.
 	 * @throws InvalidAttributeException 
+	 * @throws IOException 
 	 */
-	public Passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) 
-			throws InvalidBookRefException, InvalidAttributeException {
+	public Passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) {
 		this.reference_code = reference_code.trim();
 		this.name = name.trim();
 		this.flight_code = flight_code.trim();
 		this.check_in = check_in;
 		this.weight = weight;
 		this.volume = volume;
-		Manager manager = new Manager();
-		if (!manager.check_rc(name)) {
-			throw new InvalidBookRefException("Invalid Booking Reference!");
-		}
+
 	}
 	
 	public Passenger() {}
