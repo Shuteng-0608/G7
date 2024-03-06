@@ -1,3 +1,4 @@
+package myExceptions;
 /*
  * Retrieve the passenger information does not match
  * Ask the passenger to check personal information and then re-Checkin
