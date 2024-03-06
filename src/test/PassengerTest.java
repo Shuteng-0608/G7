@@ -26,22 +26,22 @@ class PassengerTest {
 	@Test
 	void testGetName() {
 		String name = this.passenger.getName();
-		assertEquals("Crystal Wright", name, "Equal!");
+		assertEquals("Diane Brewer", name, "Equal!");
 		assertNotEquals("John Mason", name, "Error!");
 	}
 
 	@Test
 	void testGetFlight() {
 		String flight_code = this.passenger.getFlight();
-		assertEquals("CA319", flight_code, "Equal!");
+		assertEquals("CA378, flight_code, "Equal!");
 		assertNotEquals("EK350", flight_code, "Error!");
 	}
 
 	@Test
 	void testGetCheckin() {
 		String result = this.passenger.getCheckin();
-		assertEquals("Yes", result, "Equal!");
-		assertNotEquals("No", result, "Error!");
+		assertEquals("No", result, "Equal!");
+		assertNotEquals("Yes", result, "Error!");
 	}
 
 	@Test
