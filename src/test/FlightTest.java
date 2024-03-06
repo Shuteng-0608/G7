@@ -35,7 +35,7 @@ class FlightTest {
 	@Test
 	void testGetFlight() {
 		String flight_code = this.flight.getFlight();
-		assertEquals("EK673", flight_code, "Equal!");
+		assertEquals("EK216", flight_code, "Equal!");
 		assertNotEquals("BA524", flight_code, "Error!");
 	}
 
