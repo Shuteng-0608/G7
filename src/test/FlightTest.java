@@ -105,4 +105,11 @@ class FlightTest {
 		assertEquals(true, result, "Equal!");
 		assertNotEquals(false, result, "Error!");
 	}	
+
+	@Test
+	void testCheck_volume() {
+		boolean result = this.flight.check_volume();
+		assertEquals(true, result, "Equal!");
+		assertNotEquals(false, result, "Error!");
+	}
 }
