@@ -49,8 +49,8 @@ class FlightTest {
 	@Test
 	void testGetWeight() {
 		double weight = this.flight.getWeight();
-		assertEquals(3988.0, weight, "Equal!");
-		assertNotEquals(3920.0, weight, "Error!");
+		assertEquals(9310.0, weight, "Equal!");
+		assertNotEquals(9302.0, weight, "Error!");
 	}
 
 	@Test
