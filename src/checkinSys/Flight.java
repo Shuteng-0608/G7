@@ -94,7 +94,7 @@ public class Flight implements Comparable<Flight> {
 		int cnt = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
+			if (p.getCheckin().equals("Yes")) {
 				cnt++;
 			}
 		}
@@ -106,7 +106,7 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
+			if (p.getCheckin().equals("Yes")) {
 				sum += p.getWeight();
 			}
 		}
@@ -118,7 +118,7 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
+			if (p.getCheckin().equals("Yes")) {
 				sum += p.getVolume();
 			}
 		}
@@ -129,7 +129,7 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
+			if (p.getCheckin().equals("Yes")) {
 				sum += p.excess_fee();
 			}
 		}
