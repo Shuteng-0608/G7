@@ -28,7 +28,7 @@ class FlightTest {
 	@Test
 	void testGetCarrier() {
 		String carrier = this.flight.getCarrier();
-		assertEquals("AF", carrier, "Equal!");
+		assertEquals("EK", carrier, "Equal!");
 		assertNotEquals("KL", carrier, "Error!");
 	}
 
