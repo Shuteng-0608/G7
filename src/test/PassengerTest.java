@@ -58,12 +58,12 @@ class PassengerTest {
 		assertNotEquals(5.0, volume, "Error!");
 	}
 
-//	@Test
-//	void testExcess_fee() {
-//		double excess_fee = this.passenger.excess_fee();
-//		assertEquals(3.0, excess_fee, "Equal!");
-//		assertNotEquals(5.0, excess_fee, "Error!");
-//	}
+	@Test
+	void testExcess_fee() {
+		double excess_fee = this.passenger.excess_fee();
+		assertEquals(19.26, excess_fee, "Equal!");
+		assertNotEquals(15.36, excess_fee, "Error!");
+	}
 
 	@Test
 	void testEqualsObject() {
