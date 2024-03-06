@@ -35,7 +35,7 @@ public class Manager {
 		    while (line != null) {
 		        try {
 		            validateFlightData(line);
-		            System.out.println("Valid Flight data");
+//		            System.out.println("Valid Flight data");
 		        } catch (InvalidAttributeException e) {
 		            System.out.println("Invalid Flight data: " + e.getMessage());
 		            line = brFlights.readLine();
@@ -62,17 +62,17 @@ public class Manager {
 	        String line = brPassengers.readLine();
 	        System.out.println("Reading Passenger Information");
 	        line = brPassengers.readLine();
-	        while (line != null) {
+	        while ((line = brPassengers.readLine()) != null) {
 	            try {
 	                validatePassengerData(line);
-	                System.out.println("Valid Passenger data");
+//	                System.out.println("Valid Passenger data");
 	            } catch (InvalidBookRefException |InvalidAttributeException e) {
 	                System.out.println("Invalid Passenger data: " + e.getMessage());
-	                line = brPassengers.readLine();
+//	                line = brPassengers.readLine();
 	                continue; // Skip this line and proceed with the next one
 	            }
 
-	            line = brPassengers.readLine();
+//	            line = brPassengers.readLine();
 	        }
 	        
 	    }
@@ -114,6 +114,8 @@ public class Manager {
 		}
 			
 		else {
+			System.out.println(name);
+			System.out.println(rc);
 			System.out.println(tmp1);
 			System.out.println(tmp2);
 			return false;
@@ -258,7 +260,7 @@ public class Manager {
         // reference code legal check
         if (!check_rc(name)) {
 			passengers.remove(name, p);
-			throw new InvalidBookRefException("Reference code doesn't match it's illegal!");
+			throw new InvalidBookRefException("Reference code doesn't match, it's illegal!");
 		} else {
 			Flight objFlight = findFlight(flight_code);
             objFlight.getList().addPassenger(p);
