@@ -1,4 +1,4 @@
-package flightSystem;
+package checkinSys;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -156,6 +156,8 @@ public class Manager {
 	}
 
 	public void validateFlightData(String line) throws InvalidAttributeException {
+		// ====== For Flight information ======
+		// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total Baggage Weight (kg)", "Total Baggage Volume (m^3)"
 		String[] fields = line.split(",");
 		if (fields.length != 6) {
 			throw new InvalidAttributeException("Invalid number of Flight data");
@@ -197,16 +199,19 @@ public class Manager {
 	}
 
 	public void validatePassengerData(String line) throws InvalidAttributeException {
+		// ====== For Passenger information ======
+		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
 		String[] fields = line.split(",");
-		if (fields.length != 4) {
+		if (fields.length != 6) {
 			throw new InvalidAttributeException("Invalid number of Passenger data");
 		}
 
 		String reference_code = line.split(",")[0];
-		//
 		String name = line.split(",")[1];
 		String flight_code = line.split(",")[2];
 		String check_in = line.split(",")[4];
+		String weight = line.split(",")[5];
+		String volume = line.split(",")[6];
 		// for reference_code
 		if (reference_code.isEmpty()) throw new InvalidAttributeException("Reference code cannot be empty");
 		// for name
@@ -216,12 +221,24 @@ public class Manager {
 		// for check_in
 		if (check_in.isEmpty()) throw new InvalidAttributeException("Check-in cannot be empty");
 
+		// for weight
+		try {
+			double weight_ = Double.parseDouble(weight);
+			if (weight_ < 0) throw new InvalidAttributeException("Weight must be a non-negative integer");
+		} catch (NumberFormatException e) {
+			throw new InvalidAttributeException("Weight must be a valid integer");
+		}
+		// for volume
+		try {
+			double volume_ = Double.parseDouble(volume);
+			if (volume_ < 0) throw new InvalidAttributeException("Volume must be a non-negative integer");
+		} catch (NumberFormatException e) {
+			throw new InvalidAttributeException("Volume must be a valid integer");
+		}
+
 	}
 
 }
 
 
-// ====== For Passenger information ======
-// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
-// ====== For Flight information ======
-// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total Baggage Weight (kg)", "Total Baggage Volume (m^3)"
+
