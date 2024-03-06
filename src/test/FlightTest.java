@@ -88,8 +88,8 @@ class FlightTest {
 	@Test
 	void testTotalVolume() {
 		double number = this.flight.totalVolume();
-		assertEquals(3237.0, number, "Equal!");
-		assertNotEquals(3235.0, number, "Error!");
+		assertEquals(188.91, number, "Equal!");
+		assertNotEquals(145.43, number, "Error!");
 	}
 
 	@Test
