@@ -61,7 +61,7 @@ public class Manager {
 	        
 	        String line = brPassengers.readLine();
 	        System.out.println("Reading Passenger Information");
-	        line = brPassengers.readLine();
+	        // line = brPassengers.readLine();
 	        while ((line = brPassengers.readLine()) != null) {
 	            try {
 	                validatePassengerData(line);
