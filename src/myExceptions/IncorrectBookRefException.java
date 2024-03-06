@@ -1,4 +1,4 @@
-package myException;
+package myExceptions;
 
 public class IncorrectBookRefException extends Exception{
 
