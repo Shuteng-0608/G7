@@ -99,4 +99,10 @@ class FlightTest {
 //		assertNotEquals(2972.02, number, "Error!");
 //	}
 
+	@Test
+	void testCheck_weight() {
+		boolean result = this.flight.check_weight();
+		assertEquals(true, result, "Equal!");
+		assertNotEquals(false, result, "Error!");
+	}	
 }
