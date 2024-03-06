@@ -42,7 +42,7 @@ class PassengerListTest {
 	@Test
 	void testGetNumberOfEntries() {
 		int number = passengers.getNumberOfEntries();
-		assertEquals(255, number, "Equal!");
+		assertEquals(20265, number, "Equal!");
 		assertNotEquals(256, number, "Equal!");
 	}
 
