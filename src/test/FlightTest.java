@@ -92,12 +92,12 @@ class FlightTest {
 		assertNotEquals(145.43, number, "Error!");
 	}
 
-//	@Test
-//	void testTotalFees() {
-//		double number = this.flight.totalFees();
-//		assertEquals(2973.04, number, "Equal!");
-//		assertNotEquals(2972.02, number, "Error!");
-//	}
+	@Test
+	void testTotalFees() {
+		double number = this.flight.totalFees();
+		assertEquals(1941.49, number, "Equal!");
+		assertNotEquals(1941.50, number, "Error!");
+	}
 
 	@Test
 	void testCheck_weight() {
