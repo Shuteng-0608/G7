@@ -1,4 +1,4 @@
-package flightSystem;
+package myExceptions;
 
 /*
  * Should decide what makes valid data (e.g., length, range, number of characters, etc.)
