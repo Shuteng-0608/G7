@@ -12,9 +12,9 @@ class FlightListTest {
 	private FlightList flightList = new FlightList();	
 
 	@BeforeEach
-	void testFlightList() throws InvalidAttributeException {
+	void testFlightList() throws InvalidAttributeException, InvalidBookRefException {
 		Manager manager = new Manager();
-		manager.readFromFile("D:\\Users\\Desktop\\flight_details_data.csv", "D:\\Users\\Desktop\\passenger_data.csv");
+		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.flightList = manager.getFlightList();
 	}
 
