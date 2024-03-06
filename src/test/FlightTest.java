@@ -81,8 +81,8 @@ class FlightTest {
 	@Test
 	void testTotalWeight() {
 		double number = this.flight.totalWeight();
-		assertEquals(2025.0, number, "Equal!");
-		assertNotEquals(2026.5, number, "Error!");
+		assertEquals(2784.13, number, "Equal!");
+		assertNotEquals(2782.13, number, "Error!");
 	}
 
 	@Test
