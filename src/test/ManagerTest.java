@@ -37,8 +37,8 @@ class ManagerTest {
 
 	@Test
 	void testFindFlight() {
-		Flight f = manager.findFlight("BA524");
-		assertEquals("BA524", f.getFlight(), "Equal!");
+		Flight f = manager.findFlight("EK660");
+		assertEquals("EK660", f.getFlight(), "Equal!");
 		assertNotEquals("LH887", f.getFlight(), "Error!");
 	}
 
