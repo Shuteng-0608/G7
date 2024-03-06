@@ -12,7 +12,7 @@ class ManagerTest {
 	
 	Manager manager;
 	@BeforeEach
-	void testPassenger() throws InvalidAttributeException {
+	void testManager() throws InvalidAttributeException {
 		manager = new Manager();
 	}
 	
