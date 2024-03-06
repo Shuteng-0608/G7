@@ -1,3 +1,4 @@
+package myExceptions;
 /*
  * Illegal range of data entered by the passenger
  */
