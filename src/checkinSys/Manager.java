@@ -20,8 +20,8 @@ public class Manager {
 	
 	public Manager() {
 	    try {
-	        readFromFile("C:\\Users\\86139\\eclipse-workspace\\checkinSystem\\src\\data\\flight_details_data.csv", 
-	                     "C:\\Users\\86139\\eclipse-workspace\\checkinSystem\\src\\data\\passenger_data.csv");
+	        readFromFile("data/flight_details_data.csv", 
+	                     "data/passenger_data.csv");
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();
 	    }
