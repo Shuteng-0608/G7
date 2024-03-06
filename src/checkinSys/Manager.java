@@ -109,7 +109,7 @@ public class Manager {
 		String des = f.getDestination();
 		String tmp1 = des + fc;
 		String tmp2 = rc.substring(0, 8);
-		if (tmp1 == tmp2) {
+		if (tmp1.equals(tmp2)) {
 			return true;
 		}
 			
@@ -228,17 +228,10 @@ public class Manager {
 		String check_in = fields[4];
 		String weight = fields[5];
 		String volume = fields[6];
-		Passenger p = new Passenger(reference_code, name, flight_code, check_in, Double.parseDouble(weight), Double.parseDouble(volume));
-        passengers.put(name, p);
+		
 		// for reference_code
 		if (reference_code.isEmpty()) throw new InvalidAttributeException("Reference code cannot be empty");
-		if (!check_rc(name)) {
-			passengers.remove(name, p);
-			throw new InvalidBookRefException("Reference code doesn't match it's illegal!");
-		} else {
-			Flight objFlight = findFlight(flight_code);
-            objFlight.getList().addPassenger(p);
-		}
+		
 		// for name
 		if (name.isEmpty()) throw new InvalidAttributeException("Name cannot be empty");
 		// for flight_code
@@ -259,6 +252,16 @@ public class Manager {
 			if (volume_ < 0) throw new InvalidAttributeException("Volume must be a non-negative Double");
 		} catch (NumberFormatException e) {
 			throw new InvalidAttributeException("Volume must be a valid Double");
+		}
+		Passenger p = new Passenger(reference_code, name, flight_code, check_in, Double.parseDouble(weight), Double.parseDouble(volume));
+        passengers.put(name, p);
+        // reference code legal check
+        if (!check_rc(name)) {
+			passengers.remove(name, p);
+			throw new InvalidBookRefException("Reference code doesn't match it's illegal!");
+		} else {
+			Flight objFlight = findFlight(flight_code);
+            objFlight.getList().addPassenger(p);
 		}
 
 	}
