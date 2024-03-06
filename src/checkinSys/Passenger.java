@@ -2,6 +2,7 @@ package checkinSys;
 // a simple class to contain and manage Passengers details
 
 import java.util.HashMap;
+import myExceptions.*;
 
 public class Passenger implements Comparable<Passenger> {
 	private String reference_code;
