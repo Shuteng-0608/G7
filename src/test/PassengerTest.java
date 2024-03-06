@@ -13,14 +13,13 @@ class PassengerTest {
 	@BeforeEach
 	void testPassenger() throws InvalidAttributeException {
 		Manager manager = new Manager();
-		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.passenger = manager.getFlightList().getFlight(0).getList().getByIdx(0);
 	}
 
 	@Test
 	void testGetReference() {
 		String reference = this.passenger.getReference();
-		assertEquals("JFKCA3191811246621", reference, "Equal!");
+		assertEquals("DXBCA3781807232238", reference, "Equal!");
 		assertNotEquals("JFKCA3191811247604", reference, "Error!");
 	}
 
