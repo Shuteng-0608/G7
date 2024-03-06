@@ -1,3 +1,4 @@
+package checkinSys;
 // a simple class to contain and manage Flight details
 public class Flight implements Comparable<Flight> {
 	private String destination;
@@ -20,6 +21,8 @@ public class Flight implements Comparable<Flight> {
 		this.volume = volume;
 		this.passengerList = new PassengerList();
 	}
+	
+	public Flight() {}
 
 	/**
 	 * @return The destination.
@@ -72,10 +75,11 @@ public class Flight implements Comparable<Flight> {
 
 	/**
 	 * Test for content equality between two objects.
-	 * 
+	 *
 	 * @param other The object to compare to this one.
 	 * @return true if the argument object has same flight code
 	 */
+	@Override
 	public boolean equals(Object other) {
 		if (other instanceof Flight) {
 			Flight otherStaff = (Flight) other;
@@ -90,8 +94,9 @@ public class Flight implements Comparable<Flight> {
 		int cnt = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes")
+			if (p.getCheckin() == "Yes") {
 				cnt++;
+			}
 		}
 		return cnt;
 	}
@@ -101,8 +106,9 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes")
+			if (p.getCheckin() == "Yes") {
 				sum += p.getWeight();
+			}
 		}
 		return sum;
 	}
@@ -112,8 +118,9 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes")
+			if (p.getCheckin() == "Yes") {
 				sum += p.getVolume();
+			}
 		}
 		return sum;
 	}
@@ -122,8 +129,9 @@ public class Flight implements Comparable<Flight> {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
 			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes")
+			if (p.getCheckin() == "Yes") {
 				sum += p.excess_fee();
+			}
 		}
 		return sum;
 	}
@@ -131,13 +139,14 @@ public class Flight implements Comparable<Flight> {
 	/**
 	 * Compare this Flight object against another, for the purpose of sorting. The
 	 * fields are compared by flight code.
-	 * 
+	 *
 	 * @param otherDetails The details to be compared against.
 	 * @return a negative integer if this flight_code comes before the parameter's
 	 *         flight_code, zero if they are equal and a positive integer if this
 	 *         comes after the other.
 	 */
 
+	@Override
 	public int compareTo(Flight otherDetails) {
 		return flight_code.compareTo(otherDetails.getFlight());
 	}
@@ -145,6 +154,7 @@ public class Flight implements Comparable<Flight> {
 	/**
 	 * @return A string containing all details.
 	 */
+	@Override
 	public String toString() {
 		return String.format("%-8s", flight_code) + String.format("%-20s", destination)
 				+ String.format("%-20s", carrier) + String.format("%d", capacity) + String.format("%f", weight)

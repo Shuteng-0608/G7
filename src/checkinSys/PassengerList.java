@@ -1,3 +1,4 @@
+package checkinSys;
 //maintains a list of Passenger objects as an ArrayList
 
 import java.util.ArrayList;

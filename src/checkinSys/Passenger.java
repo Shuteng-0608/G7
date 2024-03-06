@@ -3,7 +3,6 @@ package checkinSys;
 
 import java.util.HashMap;
 import myExceptions.*;
-
 public class Passenger implements Comparable<Passenger> {
 	private String reference_code;
 	private String name;
@@ -29,6 +28,8 @@ public class Passenger implements Comparable<Passenger> {
 			throw new InvalidBookRefException("Invalid Booking Reference!");
 		}
 	}
+	
+	public Passenger() {}
 
 	/**
 	 * @return The reference code.
