@@ -18,8 +18,8 @@ class ManagerTest {
 	
 	@Test
 	void testFindPassenger() {
-		Passenger p = manager.findPassenger("Wright", "JFKCA3191811246621");
-		assertEquals("Crystal Wright", p.getName(), "Equal!");
+		Passenger p = manager.findPassenger("Brewer", "DXBCA3781807232238");
+		assertEquals("Diane Brewer", p.getName(), "Equal!");
 		assertNotEquals("Stephanie Gomez", p.getName(), "Error!");
 	}
 
