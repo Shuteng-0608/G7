@@ -1,5 +1,5 @@
 package checkinSys;
-// a simple class to contain and manage Flight details
+// a simple calass to contain and manage Flight details
 public class Flight implements Comparable<Flight> {
 	private String destination;
 	private String carrier;
