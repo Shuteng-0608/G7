@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import myExceptions.*;
+
 public class Manager {
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>();
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>();
