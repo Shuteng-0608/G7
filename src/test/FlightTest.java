@@ -12,7 +12,9 @@ import org.junit.jupiter.api.Test;
 class FlightTest {
 	
 	Flight flight = new Flight();
-	
+
+	// This method is executed before each test. It sets up the Flight object
+	// by reading data from files and fetching a specific flight from the manager.
 	@BeforeEach
 	void testFlight() throws InvalidAttributeException, IOException, InvalidBookRefException {
 		Manager manager = new Manager();
@@ -20,6 +22,7 @@ class FlightTest {
 		this.flight = manager.getFlightList().getFlight(1);
 	}
 
+	// Test for getting the destination of the flight.
 	@Test
 	void testGetDestination() {
 		String destination = this.flight.getDestination();
@@ -27,6 +30,7 @@ class FlightTest {
 		assertNotEquals("SIN", destination, "Error!");
 	}
 
+	// Test for getting the carrier of the flight.
 	@Test
 	void testGetCarrier() {
 		String carrier = this.flight.getCarrier();
@@ -34,6 +38,7 @@ class FlightTest {
 		assertNotEquals("KL", carrier, "Error!");
 	}
 
+	// Test for getting the flight code.
 	@Test
 	void testGetFlight() {
 		String flight_code = this.flight.getFlight();
@@ -41,6 +46,7 @@ class FlightTest {
 		assertNotEquals("BA524", flight_code, "Error!");
 	}
 
+	// Test for getting the capacity of the flight.
 	@Test
 	void testGetCapacity() {
 		int capacity = this.flight.getCapacity();
@@ -48,6 +54,7 @@ class FlightTest {
 		assertNotEquals(255, capacity, "Error!");
 	}
 
+	// Test for getting the weight of the flight.
 	@Test
 	void testGetWeight() {
 		double weight = this.flight.getWeight();
@@ -55,6 +62,7 @@ class FlightTest {
 		assertNotEquals(9302.0, weight, "Error!");
 	}
 
+	// Test for getting the volume of the flight.
 	@Test
 	void testGetVolume() {
 		double volume = this.flight.getVolume();
@@ -62,6 +70,7 @@ class FlightTest {
 		assertNotEquals(660.0, volume, "Error!");
 	}
 
+	// Test for checking equality of Flight objects.
 	@Test
 	void testEqualsObject() {
 		boolean result1 = this.flight.equals(this.flight);
@@ -73,6 +82,7 @@ class FlightTest {
 		
 	}
 
+	// Test for getting the number of checked-in passengers.
 	@Test
 	void testNumberOfCheckIn() {
 		int number = this.flight.numberOfCheckIn();
@@ -80,6 +90,7 @@ class FlightTest {
 		assertNotEquals(126, number, "Error!");
 	}
 
+	// Test for calculating the total weight of checked-in luggage.
 	@Test
 	void testTotalWeight() {
 		double number = this.flight.totalWeight();
@@ -87,6 +98,7 @@ class FlightTest {
 		assertNotEquals(2782.13, number, "Error!");
 	}
 
+	// Test for calculating the total volume of checked-in luggage.
 	@Test
 	void testTotalVolume() {
 		double number = this.flight.totalVolume();
@@ -94,6 +106,7 @@ class FlightTest {
 		assertNotEquals(145.43, number, "Error!");
 	}
 
+	// Test for calculating the total fees based on checked-in luggage.
 	@Test
 	void testTotalFees() {
 		double number = this.flight.totalFees();
@@ -101,13 +114,15 @@ class FlightTest {
 		assertNotEquals(1941.50, number, "Error!");
 	}
 
+	// Test to check if the total weight of checked-in luggage is within acceptable limits.
 	@Test
 	void testCheck_weight() {
 		boolean result = this.flight.check_weight();
 		assertEquals(true, result, "Equal!");
 		assertNotEquals(false, result, "Error!");
-	}	
+	}
 
+	// Test to check if the total volume of checked-in luggage is within acceptable limits.
 	@Test
 	void testCheck_volume() {
 		boolean result = this.flight.check_volume();
