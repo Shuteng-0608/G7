@@ -276,13 +276,12 @@ public class GUI extends JFrame {
 	// total volume of
 	// their baggage, and the total excess baggage fees collected. It should also
 	// indicate whether
-	// the capacity of the flight is exceeded in any way.
-	// 将文本写入报告文件
+
 //	private void report() {
 //		for (int i = 0; i < manager.getFlightList().getNumberOfEntries(); i++) {
 //			Flight f = manager.getFlightList().getFlight(i);
-//			reportBuilder.append("*******************************************").append("\n"); // 将文本追加到报告内容中
-//			writeReportToFile("*******************************************"); // 将文本写入报告文件
+//			reportBuilder.append("*******************************************").append("\n");
+//			writeReportToFile("*******************************************");
 //			writeReportToFile("For flight " + f.getCarrier() + ":");
 //			writeReportToFile("The number of passengers checked-in is " + f.numberOfCheckIn());
 //			writeReportToFile("The total weight of their baggage is " + f.totalWeight());
