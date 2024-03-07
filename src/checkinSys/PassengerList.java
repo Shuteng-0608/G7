@@ -1,21 +1,51 @@
 package checkinSys;
-//maintains a list of Passenger objects as an ArrayList
-
+/* Maintains a list of Passenger objects as an ArrayList. */
 import java.util.ArrayList;
 
-/**
- * This class maintains a list of Passenger objects using an ArrayList.
- * It provides methods to manage and retrieve passenger details.
- */
 public class PassengerList {
-	// Storage for an arbitrary number of details.
+	// Storage for an arbitrary number of passengers.
 	private ArrayList<Passenger> passengerList;
 
 	/**
-	 * Perform any initialization for the text file.
+	 * Perform any initialization for the list.
 	 */
 	public PassengerList() {
 		passengerList = new ArrayList<Passenger>();
+	}
+
+	/**
+	 * Add a new set of details to the list
+	 * 
+	 * @param passenger The details of the passenger
+	 */
+	public void addPassenger(Passenger passenger) {
+		passengerList.add(passenger);
+	}
+
+	/**
+	 * Remove Passenger object
+	 * 
+	 * @param passenger The passenger object
+	 */
+	public void removePassenger(Passenger passenger) {
+		passengerList.remove(passenger);
+	}
+
+	/**
+	 * Look up an index and return the corresponding passenger details.
+	 * 
+	 * @param idx The index to be looked up.
+	 * @return The passenger details corresponding to the index
+	 */
+	public Passenger getByIdx(int idx) {
+		return passengerList.get(idx);
+	}
+
+	/**
+	 * @return The number of entries currently in the flight.
+	 */
+	public int getNumberOfEntries() {
+		return passengerList.size();
 	}
 
 	/**
@@ -34,60 +64,22 @@ public class PassengerList {
 	}
 
 	/**
-	 * Add a new set of details to the list
+	 * Look up a last name and reference code
 	 * 
-	 * @param passenger The details of the passenger
-	 */
-	public void addPassenger(Passenger passenger) {
-		passengerList.add(passenger);
-	}
-
-	/**
-	 * Retrieves a Passenger by their index in the list.
-	 *
-	 * @param idx The index of the passenger in the list.
-	 * @return Passenger object at the specified index.
-	 */
-	public Passenger getByIdx(int idx) {
-		return passengerList.get(idx);
-	}
-
-//	/**
-//	 * remove Passenger object identified by this name
-//	 * 
-//	 * @param name the name identifying the person to be removed
-//	 */
-//	public void removePassenger(String name) {
-//		int index = findIndex(name);
-//		if (index != -1) {
-//			passengerList.remove(index);
-//		}
-//	}    
-
-	/**
-	 * Finds the index of a Passenger by their last name and reference code.
-	 * @param lastName       The last name of the passenger.
-	 * @param reference_code The reference code of the passenger.
-	 * @return Index of the Passenger in the list, -1 if not found.
+	 * @param lastName       The last name to be looked up.
+	 * @param reference_code The reference code to be looked up.
+	 * @return The index, -1 if none
 	 */
 	public int findByLastName(String lastName, String reference_code) {
-		int size = passengerList.size();
-		for (int i = 0; i < size; i++) {
-			Passenger p = passengerList.get(i);
+		for (int i = 0; i < passengerList.size(); i++) {
+			Passenger p = getByIdx(i);
 			String name = p.getName();
-			String last = name.split(" ")[1];
-			if (last.equals(lastName) && p.getReference().equals(reference_code)) {
+			String last_name = name.split(" ")[1];
+			if (last_name.equals(lastName) && p.getReference().equals(reference_code)) {
 				return i;
 			}
 		}
 		return -1;
-	}
-
-	/**
-	 * @return Returns the number of Passengers in the list.
-	 */
-	public int getNumberOfEntries() {
-		return passengerList.size();
 	}
 
 	/**
