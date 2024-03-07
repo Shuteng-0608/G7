@@ -12,7 +12,7 @@ class ManagerTest {
 	
 	Manager manager;
 	@BeforeEach
-	void testPassenger() throws InvalidAttributeException {
+	void testManager() throws InvalidAttributeException {
 		manager = new Manager();
 	}
 	
@@ -26,8 +26,8 @@ class ManagerTest {
 	@Test
 	void testExcess_fee() throws InvalidBookRefException {
 		double fee = manager.excess_fee("Brewer", "DXBCA3781807232238", 26.42, 1.1);
-//		assertEquals(0, p.getName(), "Equal!");
-		assertNotEquals(0, fee, "Error!");
+		assertEquals(19.26, fee, "Equal!");
+		assertNotEquals(19.12, fee, "Error!");
 	}
 
 	@Test
