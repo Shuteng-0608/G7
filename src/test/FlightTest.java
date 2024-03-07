@@ -14,7 +14,6 @@ class FlightTest {
 	@BeforeEach
 	void testFlight() throws InvalidAttributeException {
 		Manager manager = new Manager();
-		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.flight = manager.getFlightList().getFlight(1);
 	}
 
@@ -28,36 +27,36 @@ class FlightTest {
 	@Test
 	void testGetCarrier() {
 		String carrier = this.flight.getCarrier();
-		assertEquals("AF", carrier, "Equal!");
+		assertEquals("EK", carrier, "Equal!");
 		assertNotEquals("KL", carrier, "Error!");
 	}
 
 	@Test
 	void testGetFlight() {
 		String flight_code = this.flight.getFlight();
-		assertEquals("EK673", flight_code, "Equal!");
+		assertEquals("EK216", flight_code, "Equal!");
 		assertNotEquals("BA524", flight_code, "Error!");
 	}
 
 	@Test
 	void testGetCapacity() {
 		int capacity = this.flight.getCapacity();
-		assertEquals(256, capacity, "Equal!");
+		assertEquals(266, capacity, "Equal!");
 		assertNotEquals(255, capacity, "Error!");
 	}
 
 	@Test
 	void testGetWeight() {
 		double weight = this.flight.getWeight();
-		assertEquals(3988.0, weight, "Equal!");
-		assertNotEquals(3920.0, weight, "Error!");
+		assertEquals(9310.0, weight, "Equal!");
+		assertNotEquals(9302.0, weight, "Error!");
 	}
 
 	@Test
 	void testGetVolume() {
 		double volume = this.flight.getVolume();
-		assertEquals(6468.0, volume, "Equal!");
-		assertNotEquals(6420.0, volume, "Error!");
+		assertEquals(665.0, volume, "Equal!");
+		assertNotEquals(660.0, volume, "Error!");
 	}
 
 	@Test
@@ -74,29 +73,43 @@ class FlightTest {
 	@Test
 	void testNumberOfCheckIn() {
 		int number = this.flight.numberOfCheckIn();
-		assertEquals(125, number, "Equal!");
+		assertEquals(130, number, "Equal!");
 		assertNotEquals(126, number, "Error!");
 	}
 
 	@Test
 	void testTotalWeight() {
 		double number = this.flight.totalWeight();
-		assertEquals(2025.0, number, "Equal!");
-		assertNotEquals(2026.5, number, "Error!");
+		assertEquals(2784.13, number, "Equal!");
+		assertNotEquals(2782.13, number, "Error!");
 	}
 
 	@Test
 	void testTotalVolume() {
 		double number = this.flight.totalVolume();
-		assertEquals(3237.0, number, "Equal!");
-		assertNotEquals(3235.0, number, "Error!");
+		assertEquals(188.91, number, "Equal!");
+		assertNotEquals(145.43, number, "Error!");
+	}
+	
+	@Test
+	void testCheck_weight() {
+		boolean result = this.flight.check_weight();
+		assertEquals(true, result, "Equal!");
+		assertNotEquals(false, result, "Error!");
 	}
 
 	@Test
+	void testCheck_volume() {
+		boolean result = this.flight.check_volume();
+		assertEquals(true, result, "Equal!");
+		assertNotEquals(false, result, "Error!");
+	}
+	
+	@Test
 	void testTotalFees() {
 		double number = this.flight.totalFees();
-		assertEquals(5262.0, number, "Equal!");
-		assertNotEquals(5260.0, number, "Error!");
+		assertEquals(1941.49, number, "Equal!");
+		assertNotEquals(1941.50, number, "Error!");
 	}
 
 }
