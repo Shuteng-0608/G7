@@ -9,6 +9,8 @@ public class Passenger implements Comparable<Passenger> {
 	private double weight;
 	private double volume;
 
+	public Passanger(){}
+	
 	/**
 	 * Set up the passengers details.
 	 */
