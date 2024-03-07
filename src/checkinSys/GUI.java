@@ -54,7 +54,7 @@ public class GUI extends JFrame {
 		reportTextArea.setEditable(false);
 
 		// Create input fields and labels
-		JLabel nameLabel = new JLabel("Name:");
+		JLabel nameLabel = new JLabel("Last Name:");
 		nameField = new JTextField();
 		JLabel reservationLabel = new JLabel("Reservation Number:");
 		reservationField = new JTextField();
@@ -87,12 +87,12 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				manager = new Manager();
-				appendToReport("数据加载成功!");
+				appendToReport("Data load successfully!");
 
 				addWindowListener(new WindowAdapter() {
 					public void windowClosing(WindowEvent e) {
 						manager.report();
-						System.out.println("\n程序已退出!");
+						System.out.println("\nProgram quit!");
 					}
 				});
 			}
@@ -132,44 +132,44 @@ public class GUI extends JFrame {
 					}
 					
 				} catch (NullPointerException | InvalidAttributeException e1) {
+					// Clear the input fields and prompt the user if input is invalid
 					nameField.setText("");
 					reservationField.setText("");
 					last_name = "";
 					reservationNumber = "";
-					JOptionPane.showMessageDialog(null, "请正确输入姓名和预定号！");
+					JOptionPane.showMessageDialog(null, "Please enter the correct last name and reference code！");
 					return;
 				}
-				
+				// Check-in logic
 				if (manager.findPassenger(last_name, reservationNumber) != null) {
 					if (manager.check_in(last_name, reservationNumber))
-						appendToReport("您已办理登机手续！");
+						appendToReport("You have already checked in！");
 					else
-						appendToReport("登机手续办理成功！");
+						appendToReport("Check in success！");
 				}
-				// 如果值机失败，则清空输入框
+				// if check in failed, empty the report frame
 				else {
 					nameField.setText("");
 					reservationField.setText("");
-					appendToReport("信息有误，请重新输入个人信息！");
+					appendToReport("Invalid information, please re-enter your details!");
 				}
 			}
 		});
 
-		// 跳转到行李托运界面按钮的点击事件处理
+		// Event listener for luggage button to proceed to luggage check-in interface
 		proceedToLuggageButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// 这里可以添加逻辑来处理跳转到行李托运界面的操作
-				// 留待您根据需求来完成
-				appendToReport("请您输入行李的重量和尺寸！");
+				appendToReport("Please type your Laggage weight and volume！");
 				openLuggageCheckPanel();
 			}
 		});
 	}
 
-	// 打开行李托运界面
+	// Opens a new window for luggage check-in process
 	private void openLuggageCheckPanel() {
-		JFrame luggageCheckFrame = new JFrame("行李托运");
+		// Frame for luggage check-in
+		JFrame luggageCheckFrame = new JFrame("Luggage Check-in");
 		luggageCheckFrame.setSize(400, 200);
 		luggageCheckFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		luggageCheckFrame.setLocationRelativeTo(this);
