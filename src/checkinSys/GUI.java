@@ -175,7 +175,7 @@ public class GUI extends JFrame {
 		luggageCheckFrame.setLocationRelativeTo(this);
 
 		JPanel panel = new JPanel(new GridLayout(3, 2));
-		JLabel weightLabel = new JLabel("行李重量(kg):");
+		JLabel weightLabel = new JLabel("Baggage Weight(kg):");
 		weightField = new JTextField();
 		JLabel volumeLabel = new JLabel("行李体积(m³):");
 		volumeField = new JTextField();
