@@ -1,5 +1,6 @@
 package checkinSys;
-/* A class to implement specific functions of GUI and manage all flight data. */
+// This class manages the airport check-in system functionality, including managing flight and passenger data.
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -15,27 +16,31 @@ import java.util.List;
 import myExceptions.*;
 
 public class Manager {
+	// Maps to store flights and passengers data
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
 	private FlightList flightList = new FlightList();
-	
+
 	/**
-	 * Perform any initialization for the class.
+	 * Constructor for Manager. Initializes the class and reads data from files.
 	 */
 	public Manager() {
 	    try {
 	        readFromFile("src/data/flight_details_data.csv", 
 	                     "src/data/passenger_data.csv");
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
-	        e.printStackTrace();
-	    }
+	        e.printStackTrace();// Print the stack trace in case of an exception
+		}
 	}
-  
+
 	/**
-	 * Read flight and passenger data from text files.
-	 * 
-	 * @param file_flights    The text file containing flight data.
-	 * @param file_passengers The text file containing passenger data.
+	 * Reads flight and passenger data from files and populates data structures.
+	 *
+	 * @param file_flights    Path to the flight data file.
+	 * @param file_passengers Path to the passenger data file.
+	 * @throws IOException                   If there is an error in file handling.
+	 * @throws InvalidAttributeException     If there is invalid flight data.
+	 * @throws InvalidBookRefException       If there is invalid booking reference data.
 	 */
 	public void readFromFile(String file_flights, String file_passengers) throws IOException, InvalidAttributeException, InvalidBookRefException {
 		try (BufferedReader brFlights = new BufferedReader(new FileReader(file_flights))) {
