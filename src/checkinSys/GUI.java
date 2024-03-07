@@ -1,3 +1,5 @@
+package checkinSys;
+
 import javax.swing.*;
 import myExceptions.InvalidAttributeException;
 import java.awt.*;
@@ -51,6 +53,8 @@ public class GUI extends JFrame {
 		nameField = new JTextField();
 		JLabel reservationLabel = new JLabel("预约号码:");
 		reservationField = new JTextField();
+		
+		
 
 		// 添加组件到输入面板
 		inputPanel.add(nameLabel);
@@ -79,11 +83,9 @@ public class GUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 加载数据
-				try {
-					manager = new Manager();
-				} catch (InvalidAttributeException e1) {
-					e1.printStackTrace();
-				}
+				
+				manager = new Manager();
+				
 				appendToReport("数据加载成功!");
 			}
 		});
@@ -92,8 +94,35 @@ public class GUI extends JFrame {
 		checkInButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String last_name = nameField.getText();
-				String reservationNumber = reservationField.getText();
+				String last_name = "";
+				String reservationNumber = "";
+//				String last_name_ = "";
+//				String reservationNumber_ = "";
+				try {
+					last_name = nameField.getText();
+					reservationNumber = reservationField.getText();
+					if (last_name.isEmpty()) throw new InvalidAttributeException("last_name cannot be empty");
+					if (reservationNumber.isEmpty()) throw new InvalidAttributeException("Flight reservationNumber cannot be empty");
+					if (last_name.length() > 20) {
+						last_name = "";
+						reservationNumber = "";
+						throw new InvalidAttributeException("last_name illeagel");
+					}
+					if (reservationNumber.length() > 20) {
+						last_name = "";
+						reservationNumber = "";
+						throw new InvalidAttributeException("Flight reservationNumber illeagel");
+					}
+					
+				} catch (NullPointerException | InvalidAttributeException e1) {
+					nameField.setText("");
+					reservationField.setText("");
+					last_name = "";
+					reservationNumber = "";
+					JOptionPane.showMessageDialog(null, "请正确输入姓名和预定号！");
+					return;
+				}
+				
 				if (manager.findPassenger(last_name, reservationNumber) != null) {
 					if (manager.check_in(last_name, reservationNumber))
 						appendToReport("您已办理登机手续！");
@@ -149,11 +178,40 @@ public class GUI extends JFrame {
 		proceedToPaymentButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				double weight = Double.parseDouble(weightField.getText());
-				double volume = Double.parseDouble(volumeField.getText());
+				String weight = null; 
+				String volume = null; 
 				String last_name = nameField.getText();
 				String reservationNumber = reservationField.getText();
-				double fee = manager.excess_fee(last_name, reservationNumber, weight, volume);
+				double weight_ = 0;
+				double volume_ = 0;
+				weight = weightField.getText();
+				volume = volumeField.getText();	
+				try {
+					
+					weight_ = Double.parseDouble(weight);
+					volume_ = Double.parseDouble(volume);
+					if (weight_ < 0 || weight_ > 50) {
+						weight = null;
+						volume = null;
+						throw new InvalidAttributeException("Weight  must be a non-negative Double");
+					}
+					if (volume_ < 0 || volume_ > 50) {
+						weight = null;
+						volume = null;
+						throw new InvalidAttributeException("volume must be a non-negative Double");
+					}
+					
+					
+				} catch (NumberFormatException | InvalidAttributeException e1) {
+					weightField.setText("");
+					volumeField.setText("");
+					JOptionPane.showMessageDialog(null, "请正确输入行李重量和尺寸！");
+					return;
+				}
+				
+				
+				
+				double fee = manager.excess_fee(last_name, reservationNumber, weight_, volume_);
 				if (fee != 0) {
 					// 计算额外费用
 					JOptionPane.showMessageDialog(null,
@@ -171,6 +229,8 @@ public class GUI extends JFrame {
 				// 这里可以添加逻辑来处理跳转到成功界面的操作
 				luggageCheckFrame.dispose();
 				appendToReport("行李托运已完成！");
+				nameField.setText("");
+				reservationField.setText("");
 			}
 		});
 	}
