@@ -237,7 +237,7 @@ public class GUI extends JFrame {
 				// Check if there are any extra fees due to baggage weight or volume
 				double fee = manager.excess_fee(last_name, reservationNumber, weight_, volume_);
 				if (fee != 0) {
-					/ If there are extra fees, inform the user and add to the report
+					// If there are extra fees, inform the user and add to the report
 					JOptionPane.showMessageDialog(null,
 							"Baggage is overweight or over volume, additional fees required: ￡" + fee);
 					appendToReport("Extra fees : ￡" + fee); // Adding the information about extra fees to the report
