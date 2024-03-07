@@ -17,14 +17,14 @@ class ManagerTest {
 	}
 	
 	@Test
-	void testFindPassenger() {
+	void testFindPassenger() throws InvalidBookRefException {
 		Passenger p = manager.findPassenger("Brewer", "DXBCA3781807232238");
 		assertEquals("Diane Brewer", p.getName(), "Equal!");
 		assertNotEquals("Stephanie Gomez", p.getName(), "Error!");
 	}
 
 	@Test
-	void testExcess_fee() {
+	void testExcess_fee() throws InvalidBookRefException {
 		double fee = manager.excess_fee("Brewer", "DXBCA3781807232238", 26.42, 1.1);
 //		assertEquals(0, p.getName(), "Equal!");
 		assertNotEquals(0, fee, "Error!");

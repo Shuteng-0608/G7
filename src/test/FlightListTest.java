@@ -16,7 +16,7 @@ class FlightListTest {
 		Manager manager = new Manager();
 		this.flightList = manager.getFlightList();
 	}
-
+//flight(flight_code, destination, carrier, capacity, weight, volume)
 	@Test
 	void testFindByCode() {
 		Flight f = this.flightList.findByCode("CA378");
@@ -30,5 +30,19 @@ class FlightListTest {
 		assertEquals(100, number, "Equal!");
 		assertNotEquals(101, number, "Equal!");
 	}
-	
+
+
+    @Test
+    void testFindByCodeNotFound() {
+        Flight f = flightList.findByCode("OO999");
+        assertNull(f, "Should return null for non-existing code");
+    }
+
+    @Test
+    void testInvalidIndex() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            flightList.getFlight(-1); // 测试无效索引
+        });
+    }
+
 }

@@ -2,6 +2,8 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.IOException;
+
 import checkinSys.*;
 import myExceptions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +14,7 @@ class FlightTest {
 	Flight flight = new Flight();
 	
 	@BeforeEach
-	void testFlight() throws InvalidAttributeException {
+	void testFlight() throws InvalidAttributeException, IOException, InvalidBookRefException {
 		Manager manager = new Manager();
 		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.flight = manager.getFlightList().getFlight(1);

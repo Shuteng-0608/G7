@@ -81,7 +81,10 @@ public class Manager {
 
 
 	// allow the passenger to enter their last name and booking reference
-	public Passenger findPassenger(String last_name, String br) {
+	public Passenger findPassenger(String last_name, String br) throws InvalidBookRefException {
+		 if (br == null || br.length() < 3) {
+		        throw new InvalidBookRefException("The 'br' parameter is null or too short.");
+		    }
 		String flight_code = br.substring(3, 8);
 		Flight flight = flights.get(flight_code);
 		int idx = flight.getList().findByLastName(last_name, br);
@@ -92,7 +95,7 @@ public class Manager {
 
 	// ask for the dimensions and weight of the passenger’s baggage
 	// and indicate any excess baggage fee that needs to be paid
-	public double excess_fee(String last_name, String br, double weight, double volume) {
+	public double excess_fee(String last_name, String br, double weight, double volume) throws InvalidBookRefException {
 		Passenger p = findPassenger(last_name, br);
 		if (p == null)
 			return -1;
@@ -123,7 +126,7 @@ public class Manager {
 	}
 
 	// true 表示checkin成功,反之失败
-	public boolean check_in(String last_name, String br) {
+	public boolean check_in(String last_name, String br) throws InvalidBookRefException {
 		Passenger p = findPassenger(last_name, br);
 		if (p == null)
 			return false;

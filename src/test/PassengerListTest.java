@@ -44,5 +44,20 @@ class PassengerListTest {
 		assertEquals(20265, number, "Equal!");
 		assertNotEquals(256, number, "Equal!");
 	}
+	
+	 @Test
+	    void testAddPassenger() {
+	        Passenger newPassenger = new Passenger( "AMSKE6251401240299", "Jane Doe", "CA378", "yes", 23.2, 2.2);
+	        int originalSize = passengers.getNumberOfEntries();
+	        passengers.addPassenger(newPassenger);
+	        assertEquals(originalSize + 1, passengers.getNumberOfEntries(), "Passenger should be added");
+	    }
+
+	    @Test
+	    void testGetByIdxOutOfBounds() {
+	        assertThrows(IndexOutOfBoundsException.class, () -> passengers.getByIdx(-1));
+	        assertThrows(IndexOutOfBoundsException.class, () -> passengers.getByIdx(passengers.getNumberOfEntries()));
+	    }
+
 
 }
