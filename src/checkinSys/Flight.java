@@ -1,3 +1,4 @@
+package checkinSys;
 /* A simple class to contain and manage Flight details. */
 public class Flight implements Comparable<Flight> {
 	private String flight_code;
@@ -9,6 +10,8 @@ public class Flight implements Comparable<Flight> {
 	private double maxVolume;
 	private PassengerList passengerList;
 
+	public Flight() {}
+	
 	/**
 	 * Set up the contact details.
 	 */
