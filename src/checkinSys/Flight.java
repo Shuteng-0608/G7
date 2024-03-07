@@ -10,7 +10,13 @@ public class Flight implements Comparable<Flight> {
 	private PassengerList passengerList;
 
 	/**
-	 * Set up the contact details.
+	 * Constructor for creating a Flight object with detailed parameters.
+	 * @param flight_code The unique code for the flight.
+	 * @param destination The destination of the flight.
+	 * @param carrier The carrier or airline operating the flight.
+	 * @param capacity The maximum number of passengers that can be accommodated.
+	 * @param weight The maximum weight capacity of the flight.
+	 * @param volume The maximum volume capacity of the flight.
 	 */
 	public Flight(String flight_code, String destination, String carrier, int capacity, double weight, double volume) {
 		this.destination = destination;
@@ -21,63 +27,35 @@ public class Flight implements Comparable<Flight> {
 		this.volume = volume;
 		this.passengerList = new PassengerList();
 	}
-	
+
+	// Default constructor
 	public Flight() {}
 
-	/**
-	 * @return The destination.
-	 */
+	//getter
 	public String getDestination() {
 		return destination;
 	}
-
-	/**
-	 * @return The carrier.
-	 */
 	public String getCarrier() {
 		return carrier;
 	}
-
-	/**
-	 * @return The flight code.
-	 */
-	public String getFlight() {
-		return flight_code;
-	}
-
-	/**
-	 * @return The capacity.
-	 */
+	public String getFlight() {return flight_code;}
 	public int getCapacity() {
 		return capacity;
 	}
-
-	/**
-	 * @return The maximum weight.
-	 */
 	public double getWeight() {
 		return weight;
 	}
-
-	/**
-	 * @return The maximum volume.
-	 */
 	public double getVolume() {
 		return volume;
 	}
-
-	/**
-	 * @return The passenger list.
-	 */
 	public PassengerList getList() {
 		return passengerList;
 	}
 
 	/**
-	 * Test for content equality between two objects.
-	 *
-	 * @param other The object to compare to this one.
-	 * @return true if the argument object has same flight code
+	 * Overrides the equals method to compare flights based on their flight code.
+	 * @param other The object to be compared.
+	 * @return true if the flight codes are equal.
 	 */
 	@Override
 	public boolean equals(Object other) {
@@ -89,7 +67,7 @@ public class Flight implements Comparable<Flight> {
 		}
 	}
 
-	// The number of passengers checked-in
+	// Additional methods to compute aggregated data from passenger list
 	public int numberOfCheckIn() {
 		int cnt = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
@@ -137,13 +115,10 @@ public class Flight implements Comparable<Flight> {
 	}
 
 	/**
-	 * Compare this Flight object against another, for the purpose of sorting. The
-	 * fields are compared by flight code.
-	 *
-	 * @param otherDetails The details to be compared against.
-	 * @return a negative integer if this flight_code comes before the parameter's
-	 *         flight_code, zero if they are equal and a positive integer if this
-	 *         comes after the other.
+	 * Implements compareTo for sorting flights based on flight code.
+	 * @param otherDetails The Flight object to be compared against.
+	 * @return a negative integer, zero, or a positive integer as this object
+	 *         is less than, equal to, or greater than the specified object.
 	 */
 
 	@Override
