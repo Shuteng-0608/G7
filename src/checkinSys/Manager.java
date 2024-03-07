@@ -18,10 +18,14 @@ public class Manager {
 	/**
 	 * Perform any initialization for the class.
 	 */
-	public Manager() throws InvalidAttributeException {
-		readFromFile("D:\\1125115069\\FileRecv\\flight_details_data.csv",
-				"D:\\1125115069\\FileRecv\\passenger_data.csv");
-	};
+	public Manager() {
+	    try {
+	        readFromFile("src/data/flight_details_data.csv", 
+	                     "src/data/passenger_data.csv");
+	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
+	        e.printStackTrace();
+	    }
+	}
 
 	/**
 	 * Read flight and passenger data from text files.
@@ -29,66 +33,57 @@ public class Manager {
 	 * @param file_flights    The text file containing flight data.
 	 * @param file_passengers The text file containing passenger data.
 	 */
-	public void readFromFile(String file_flights, String file_passengers) throws InvalidAttributeException {
+	public void readFromFile(String file_flights, String file_passengers) throws IOException, InvalidAttributeException, InvalidBookRefException {
+	    try (BufferedReader brFlights = new BufferedReader(new FileReader(file_flights))) {
+		System.out.println("Reading Flights Information"); 
+		String line= brFlights.readLine();
+		line= brFlights.readLine();
+		while (line != null) {
 		try {
-			// Process flights file
-			FileReader fr = new FileReader(file_flights);
-			BufferedReader br = new BufferedReader(fr);
-			String line = br.readLine();
-
-			while ((line = br.readLine()) != null) {
-				try {
-					validateFlightData(line);
-				} catch (InvalidAttributeException e) {
-					System.out.println("Invalid Flight data: " + e.getMessage());
-				}
-				String flight_code = line.split(",")[0];
-				String date = line.split(",")[1];
-				String destination = line.split(",")[2];
-				String carrier = line.split(",")[3];
-				int capacity = Integer.parseInt(line.split(",")[4]);
-				double maxWeight = Double.parseDouble(line.split(",")[5]);
-				double maxVolume = Double.parseDouble(line.split(",")[6]);
-				Flight flight = new Flight(flight_code, date, destination, carrier, capacity, maxWeight, maxVolume);
-				flightList.addFlight(flight);
-				flights.put(flight_code, flight);
+		    validateFlightData(line);
+	        // System.out.println("Valid Flight data");
+		} catch (InvalidAttributeException e) {
+		    System.out.println("Invalid Flight data: " + e.getMessage());
+		    line = brFlights.readLine();
+			    continue; // Skip this line and proceed with the next one
 			}
-
-			// Process passengers file
-			fr = new FileReader(file_passengers);
-			br = new BufferedReader(fr);
-			line = br.readLine();
-
-			while ((line = br.readLine()) != null) {
-				try {
-					validatePassengerData(line);
-				} catch (InvalidAttributeException e) {
-					System.out.println("Invalid Passenger data: " + e.getMessage());
-				}
-				String reference_code = line.split(",")[0];
-				String name = line.split(",")[1];
-				String flight_code = line.split(",")[2];
-				String date = line.split(",")[3];
-				String check_in = line.split(",")[4];
-				double weight = Double.parseDouble(line.split(",")[5]);
-				double volume = Double.parseDouble(line.split(",")[6]);
-				Passenger p = new Passenger(reference_code, name, flight_code, date, check_in, weight, volume);
-				Flight objFlight = findFlight(flight_code);
-				objFlight.getList().addPassenger(p);
-				passengers.put(name, p);
-			}
-			br.close();
-		} catch (Exception e) {
-			e.printStackTrace();
+		
+			String[] flightData = line.split(",");
+			String flight_code = flightData[0];
+			String destination = flightData[2];
+			String carrier = flightData[3];
+			int capacity = Integer.parseInt(flightData[4]);
+			double weight = Double.parseDouble(flightData[5]);
+			double volume = Double.parseDouble(flightData[6]);
+			Flight flight = new Flight(flight_code, destination, carrier, capacity, weight, volume);
+			flightList.addFlight(flight);
+			flights.put(flight_code, flight);
+			line = brFlights.readLine();
+		    }
+		    
 		}
+
+	    try (BufferedReader brPassengers = new BufferedReader(new FileReader(file_passengers))) {
+	        String line = brPassengers.readLine();
+	        System.out.println("Reading Passenger Information");
+	        while ((line = brPassengers.readLine()) != null) {
+	            try {
+	                validatePassengerData(line);
+	            } catch (InvalidBookRefException |InvalidAttributeException e) {
+	                System.out.println("Invalid Passenger data: " + e.getMessage());
+	                continue; // Skip this line and proceed with the next one
+	            }
+	        }
+	        
+	    }
+	    
 	}
 
 	public void validateFlightData(String line) throws InvalidAttributeException {
 		// ====== For Flight information ======
-		// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total
-		// Baggage Weight (kg)", "Total Baggage Volume (m^3)"
+		// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total Baggage Weight (kg)", "Total Baggage Volume (m^3)"
 		String[] fields = line.split(",");
-		if (fields.length != 6) {
+		if (fields.length != 7) {
 			throw new InvalidAttributeException("Invalid number of Flight data");
 		}
 
@@ -99,84 +94,84 @@ public class Manager {
 		String weight = fields[5];
 		String volume = fields[6];
 		// for flight_code
-		if (flight_code.isEmpty())
-			throw new InvalidAttributeException("Flight code cannot be empty");
+		if (flight_code.isEmpty()) throw new InvalidAttributeException("Flight code cannot be empty");
 		// for destination
-		if (destination.isEmpty())
-			throw new InvalidAttributeException("Destination cannot be empty");
+		if (destination.isEmpty()) throw new InvalidAttributeException("Destination cannot be empty");
 		// for carrier
-		if (carrier.isEmpty())
-			throw new InvalidAttributeException("Carrier cannot be empty");
+		if (carrier.isEmpty()) throw new InvalidAttributeException("Carrier cannot be empty");
 		// for capacity
 		try {
 			int capacity_ = Integer.parseInt(capacity);
-			if (capacity_ < 0)
-				throw new InvalidAttributeException("Capacity must be a non-negative integer");
+			if (capacity_ < 0) throw new InvalidAttributeException("Capacity must be a non-negative integer");
 		} catch (NumberFormatException e) {
 			throw new InvalidAttributeException("Capacity must be a valid integer");
 		}
 		// for weight
 		try {
 			double weight_ = Double.parseDouble(weight);
-			if (weight_ < 0)
-				throw new InvalidAttributeException("Weight must be a non-negative integer");
+			if (weight_ < 0) throw new InvalidAttributeException("Weight must be a non-negative Double");
 		} catch (NumberFormatException e) {
-			throw new InvalidAttributeException("Weight must be a valid integer");
+			throw new InvalidAttributeException("Weight must be a valid Double");
 		}
 		// for volume
 		try {
 			double volume_ = Double.parseDouble(volume);
-			if (volume_ < 0)
-				throw new InvalidAttributeException("Volume must be a non-negative integer");
+			if (volume_ < 0) throw new InvalidAttributeException("Volume must be a non-negative double");
 		} catch (NumberFormatException e) {
-			throw new InvalidAttributeException("Volume must be a valid integer");
+			throw new InvalidAttributeException("Volume must be a valid double");
 		}
 	}
 
-	public void validatePassengerData(String line) throws InvalidAttributeException {
+	public void validatePassengerData(String line) throws InvalidAttributeException, InvalidBookRefException {
 		// ====== For Passenger information ======
-		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight
-		// (kg)", "Baggage Volume (m^3)"
+		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
 		String[] fields = line.split(",");
-		if (fields.length != 6) {
+		if (fields.length != 7) {
 			throw new InvalidAttributeException("Invalid number of Passenger data");
 		}
 
-		String reference_code = line.split(",")[0];
-		String name = line.split(",")[1];
-		String flight_code = line.split(",")[2];
-		String check_in = line.split(",")[4];
-		String weight = line.split(",")[5];
-		String volume = line.split(",")[6];
+		String reference_code = fields[0];
+		String name = fields[1];
+		String flight_code = fields[2];
+		String check_in = fields[4];
+		String weight = fields[5];
+		String volume = fields[6];
+		
 		// for reference_code
-		if (reference_code.isEmpty())
-			throw new InvalidAttributeException("Reference code cannot be empty");
+		if (reference_code.isEmpty()) throw new InvalidAttributeException("Reference code cannot be empty");
+		
 		// for name
-		if (name.isEmpty())
-			throw new InvalidAttributeException("Name cannot be empty");
+		if (name.isEmpty()) throw new InvalidAttributeException("Name cannot be empty");
 		// for flight_code
-		if (flight_code.isEmpty())
-			throw new InvalidAttributeException("Flight code cannot be empty");
+		if (flight_code.isEmpty()) throw new InvalidAttributeException("Flight code cannot be empty");
 		// for check_in
-		if (check_in.isEmpty())
-			throw new InvalidAttributeException("Check-in cannot be empty");
+		if (check_in.isEmpty()) throw new InvalidAttributeException("Check-in cannot be empty");
 
 		// for weight
 		try {
 			double weight_ = Double.parseDouble(weight);
-			if (weight_ < 0)
-				throw new InvalidAttributeException("Weight must be a non-negative integer");
+			if (weight_ < 0) throw new InvalidAttributeException("Weight must be a non-negative Double");
 		} catch (NumberFormatException e) {
-			throw new InvalidAttributeException("Weight must be a valid integer");
+			throw new InvalidAttributeException("Weight must be a valid Double");
 		}
 		// for volume
 		try {
 			double volume_ = Double.parseDouble(volume);
-			if (volume_ < 0)
-				throw new InvalidAttributeException("Volume must be a non-negative integer");
+			if (volume_ < 0) throw new InvalidAttributeException("Volume must be a non-negative Double");
 		} catch (NumberFormatException e) {
-			throw new InvalidAttributeException("Volume must be a valid integer");
+			throw new InvalidAttributeException("Volume must be a valid Double");
 		}
+		Passenger p = new Passenger(reference_code, name, flight_code, check_in, Double.parseDouble(weight), Double.parseDouble(volume));
+        passengers.put(name, p);
+        // reference code legal check
+        if (!check_rc(name)) {
+			passengers.remove(name, p);
+			throw new InvalidBookRefException("Reference code doesn't match, it's illegal!");
+		} else {
+			Flight objFlight = findFlight(flight_code);
+            objFlight.getList().addPassenger(p);
+		}
+
 	}
 
 	/**
