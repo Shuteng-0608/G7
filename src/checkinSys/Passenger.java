@@ -90,9 +90,16 @@ public class Passenger implements Comparable<Passenger> {
 		this.volume = volume;
 	}
 
-	// Method to calculate excess fee based on weight and volume
+	/**
+	 * @return The excess baggage fee
+	 */
 	public double excess_fee() {
-		return weight + volume;
+		double w = 0;
+		double v = 0;
+		if(weight > 20) w = 3 * (weight - 20);
+		if(volume > 1.5) v = 10 * (volume - 1.5);
+		double sum = Math.round((w + v) * 100) * 0.01d;
+		return sum;
 	}
 
 	/**
