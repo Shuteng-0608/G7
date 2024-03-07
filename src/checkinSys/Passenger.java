@@ -1,3 +1,4 @@
+package checkinSys;
 /* A simple class to contain and manage Passengers details. */
 
 public class Passenger implements Comparable<Passenger> {
@@ -9,7 +10,7 @@ public class Passenger implements Comparable<Passenger> {
 	private double weight;
 	private double volume;
 
-	public Passanger(){}
+	public Passenger(){}
 	
 	/**
 	 * Set up the passengers details.
