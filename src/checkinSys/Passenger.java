@@ -1,35 +1,27 @@
-package checkinSys;
-// a simple class to contain and manage Passengers details
+/* A simple class to contain and manage Passengers details. */
 
-import java.util.HashMap;
-import myExceptions.*;
 public class Passenger implements Comparable<Passenger> {
 	private String reference_code;
 	private String name;
 	private String flight_code;
+	private String date;
 	private String check_in;
 	private double weight;
 	private double volume;
 
 	/**
-	 * Set up the contact details.
-	 * @throws InvalidAttributeException 
+	 * Set up the passengers details.
 	 */
-	public Passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) 
-			throws InvalidBookRefException, InvalidAttributeException {
+	public Passenger(String reference_code, String name, String flight_code, String date, String check_in,
+			double weight, double volume) {
 		this.reference_code = reference_code.trim();
 		this.name = name.trim();
 		this.flight_code = flight_code.trim();
-		this.check_in = check_in;
+		this.date = date.trim();
+		this.check_in = check_in.trim();
 		this.weight = weight;
 		this.volume = volume;
-		Manager manager = new Manager();
-		if (!manager.check_rc(name)) {
-			throw new InvalidBookRefException("Invalid Booking Reference!");
-		}
 	}
-	
-	public Passenger() {}
 
 	/**
 	 * @return The reference code.
@@ -53,7 +45,14 @@ public class Passenger implements Comparable<Passenger> {
 	}
 
 	/**
-	 * @return The check_in status.
+	 * @return The date
+	 */
+	public String getDate() {
+		return date;
+	}
+
+	/**
+	 * @return The check-in status.
 	 */
 	public String getCheckin() {
 		return check_in;
@@ -73,8 +72,16 @@ public class Passenger implements Comparable<Passenger> {
 		return volume;
 	}
 
-	public void check_in() {
-		check_in = "Yes";
+	/**
+	 * @return true if checked in, false otherwise.
+	 */
+	public boolean check_in() {
+		if (check_in.equals("Yes")) {
+			return true;
+		} else {
+			check_in = "Yes";
+			return false;
+		}
 	}
 
 	public void set(double weight, double volume) {
@@ -82,8 +89,16 @@ public class Passenger implements Comparable<Passenger> {
 		this.volume = volume;
 	}
 
+	/**
+	 * @return The excess baggage fee
+	 */
 	public double excess_fee() {
-		return weight + volume;
+		double w = 0;
+		double v = 0;
+		if(weight > 20) w = 3 * (weight - 20);
+		if(volume > 1.5) v = 10 * (volume - 1.5);
+		double sum = Math.round((w + v) * 100) * 0.01d;
+		return sum;
 	}
 
 	/**
@@ -94,8 +109,8 @@ public class Passenger implements Comparable<Passenger> {
 	 */
 	public boolean equals(Object other) {
 		if (other instanceof Passenger) {
-			Passenger otherStaff = (Passenger) other;
-			return reference_code.equals(otherStaff.getReference());
+			Passenger otherPassenger = (Passenger) other;
+			return reference_code.equals(otherPassenger.getReference());
 		} else {
 			return false;
 		}
@@ -119,9 +134,8 @@ public class Passenger implements Comparable<Passenger> {
 	 * @return A string containing all details.
 	 */
 	public String toString() {
-		return String.format("%-8s", reference_code) + String.format("%-20s", name) + String.format("%-8s", flight_code)
-				+ String.format("%-3s", check_in);
+		return String.format("%-20s", reference_code) + String.format("%-20s", name)
+				+ String.format("%-8s", flight_code) + String.format("%-8s", date) + String.format("%-3s", check_in)
+				+ String.format("%f", weight) + String.format("%f", volume);
 	}
-	
-	
 }
