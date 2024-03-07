@@ -303,6 +303,12 @@ public class Manager {
 
 	}
 
+	/**
+	 * When the application exits, it should generate a report. This should indicate, for each flight,
+	 * the number of passengers checked-in, the total weight of their baggage, the total volume of
+	 * their baggage, and the total excess baggage fees collected. It should also indicate whether
+	 * the capacity of the flight is exceeded in any way.
+	 */
 	public void report() {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/report.txt"))) {
 			for (int i = 0; i < flightList.getNumberOfEntries(); i++) {
