@@ -10,7 +10,13 @@ public class Flight implements Comparable<Flight> {
 	private PassengerList passengerList;
 
 	/**
-	 * Set up the contact details.
+	 * Constructor to initialize flight details.
+	 * @param flight_code Flight identifier code.
+	 * @param destination Destination of the flight.
+	 * @param carrier Airline carrier.
+	 * @param capacity Maximum capacity of passengers.
+	 * @param weight Maximum weight limit.
+	 * @param volume Maximum volume limit.
 	 */
 	public Flight(String flight_code, String destination, String carrier, int capacity, double weight, double volume) {
 		this.destination = destination;
@@ -89,7 +95,7 @@ public class Flight implements Comparable<Flight> {
 		}
 	}
 
-	// The number of passengers checked-in
+	// Counts the number of passengers who have checked in
 	public int numberOfCheckIn() {
 		int cnt = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
@@ -101,7 +107,7 @@ public class Flight implements Comparable<Flight> {
 		return cnt;
 	}
 
-	// The total weight of the baggage
+	// Calculates the total weight of checked-in baggage.
 	public double totalWeight() {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
@@ -125,6 +131,7 @@ public class Flight implements Comparable<Flight> {
 		return sum;
 	}
 
+	//Calculates the total excess fees from all passengers.
 	public double totalFees() {
 		double sum = 0;
 		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
@@ -152,6 +159,8 @@ public class Flight implements Comparable<Flight> {
 	}
 
 	/**
+	 * Provides a string representation of all flight details.
+	 * This includes formatted output of flight code, destination, carrier, capacity, weight, and volume.
 	 * @return A string containing all details.
 	 */
 	@Override

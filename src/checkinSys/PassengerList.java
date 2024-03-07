@@ -3,6 +3,10 @@ package checkinSys;
 
 import java.util.ArrayList;
 
+/**
+ * This class maintains a list of Passenger objects using an ArrayList.
+ * It provides methods to manage and retrieve passenger details.
+ */
 public class PassengerList {
 	// Storage for an arbitrary number of details.
 	private ArrayList<Passenger> passengerList;
@@ -38,6 +42,12 @@ public class PassengerList {
 		passengerList.add(passenger);
 	}
 
+	/**
+	 * Retrieves a Passenger by their index in the list.
+	 *
+	 * @param idx The index of the passenger in the list.
+	 * @return Passenger object at the specified index.
+	 */
 	public Passenger getByIdx(int idx) {
 		return passengerList.get(idx);
 	}
@@ -55,10 +65,10 @@ public class PassengerList {
 //	}    
 
 	/**
-	 * Look up a name and return index
-	 * 
-	 * @param name The name to be looked up.
-	 * @return The index, -1 if none
+	 * Finds the index of a Passenger by their last name and reference code.
+	 * @param lastName       The last name of the passenger.
+	 * @param reference_code The reference code of the passenger.
+	 * @return Index of the Passenger in the list, -1 if not found.
 	 */
 	public int findByLastName(String lastName, String reference_code) {
 		int size = passengerList.size();
@@ -74,7 +84,7 @@ public class PassengerList {
 	}
 
 	/**
-	 * @return The number of entries currently in the flight.
+	 * @return Returns the number of Passengers in the list.
 	 */
 	public int getNumberOfEntries() {
 		return passengerList.size();

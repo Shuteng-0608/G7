@@ -14,10 +14,12 @@ import java.util.List;
 import myExceptions.*;
 
 public class Manager {
+	// HashMaps for storing flight and passenger information
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>();
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>();
 	private FlightList flightList = new FlightList();
-	
+
+	// Constructor - Initializes the Manager and reads data from files
 	public Manager() {
 	    try {
 	        readFromFile("src/data/flight_details_data.csv", 
@@ -26,7 +28,8 @@ public class Manager {
 	        e.printStackTrace();
 	    }
 	}
-  
+
+	// Reads flight and passenger data from provided file paths
 	public void readFromFile(String file_flights, String file_passengers) throws IOException, InvalidAttributeException, InvalidBookRefException {
 		try (BufferedReader brFlights = new BufferedReader(new FileReader(file_flights))) {
 		    System.out.println("Reading Flights Information"); 
@@ -41,14 +44,17 @@ public class Manager {
 		            line = brFlights.readLine();
 		            continue; // Skip this line and proceed with the next one
 		        }
-		
+
+				// Parsing and storing flight data
 		        String[] flightData = line.split(",");
+				// Extract flight details from line
 		        String flight_code = flightData[0];
 		        String destination = flightData[2];
 		        String carrier = flightData[3];
 		        int capacity = Integer.parseInt(flightData[4]);
 		        double weight = Double.parseDouble(flightData[5]);
 		        double volume = Double.parseDouble(flightData[6]);
+				// Create new Flight object and add to flight list and map
 		        Flight flight = new Flight(flight_code, destination, carrier, capacity, weight, volume);
 		        flightList.addFlight(flight);
 		        flights.put(flight_code, flight);
@@ -57,6 +63,7 @@ public class Manager {
 		    
 		}
 
+		// Reading passenger information from the file
 	    try (BufferedReader brPassengers = new BufferedReader(new FileReader(file_passengers))) {
 	        
 	        String line = brPassengers.readLine();
@@ -85,6 +92,7 @@ public class Manager {
 		 if (br == null || br.length() < 3) {
 		        throw new InvalidBookRefException("The 'br' parameter is null or too short.");
 		    }
+		// Extract flight code from booking reference and find passenger
 		String flight_code = br.substring(3, 8);
 		Flight flight = flights.get(flight_code);
 		int idx = flight.getList().findByLastName(last_name, br);
@@ -125,7 +133,7 @@ public class Manager {
 		}
 	}
 
-	// true 表示checkin成功,反之失败
+	// Check-in process for a passenger, true stand for success
 	public boolean check_in(String last_name, String br) throws InvalidBookRefException {
 		Passenger p = findPassenger(last_name, br);
 		if (p == null)
@@ -159,11 +167,12 @@ public class Manager {
 		}
 	}
 
-	// 在flights map查找某一个flight
+	// Finds a flight in the flights map by flight code
 	public Flight findFlight(String flight_code) {
 		return flights.get(flight_code);
 	}
 
+	// Getters for flights, passengers, and flight list
 	public HashMap<String, Flight> getFlights() {
 		return flights;
 	}
@@ -176,6 +185,7 @@ public class Manager {
 		return flightList;
 	}
 
+	// Validates the data format of flight information
 	public void validateFlightData(String line) throws InvalidAttributeException {
 		// ====== For Flight information ======
 		// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total Baggage Weight (kg)", "Total Baggage Volume (m^3)"
@@ -184,12 +194,15 @@ public class Manager {
 			throw new InvalidAttributeException("Invalid number of Flight data");
 		}
 
+		// Extracting and validating flight data
 		String flight_code = fields[0];
 		String destination = fields[2];
 		String carrier = fields[3];
 		String capacity = fields[4];
 		String weight = fields[5];
 		String volume = fields[6];
+
+		// Validation checks for each field
 		// for flight_code
 		if (flight_code.isEmpty()) throw new InvalidAttributeException("Flight code cannot be empty");
 		// for destination
@@ -219,6 +232,7 @@ public class Manager {
 		}
 	}
 
+	// Validates the data format of passenger information
 	public void validatePassengerData(String line) throws InvalidAttributeException, InvalidBookRefException {
 		// ====== For Passenger information ======
 		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
@@ -227,6 +241,7 @@ public class Manager {
 			throw new InvalidAttributeException("Invalid number of Passenger data");
 		}
 
+		// Extracting and validating passenger data
 		String reference_code = fields[0];
 		String name = fields[1];
 		String flight_code = fields[2];
@@ -258,9 +273,12 @@ public class Manager {
 		} catch (NumberFormatException e) {
 			throw new InvalidAttributeException("Volume must be a valid Double");
 		}
+
+		// Creating and adding Passenger object to map and flight list
 		Passenger p = new Passenger(reference_code, name, flight_code, check_in, Double.parseDouble(weight), Double.parseDouble(volume));
         passengers.put(name, p);
-        // reference code legal check
+
+		// Check legality of reference code and add to flight
         if (!check_rc(name)) {
 			passengers.remove(name, p);
 			throw new InvalidBookRefException("Reference code doesn't match, it's illegal!");

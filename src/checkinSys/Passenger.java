@@ -4,7 +4,13 @@ package checkinSys;
 import java.io.IOException;
 import java.util.HashMap;
 import myExceptions.*;
+
+/**
+ * A class to manage Passenger details in a check-in system.
+ * It implements the Comparable interface for sorting passengers based on reference code.
+ */
 public class Passenger implements Comparable<Passenger> {
+	// Fields for passenger details
 	private String reference_code;
 	private String name;
 	private String flight_code;
@@ -13,9 +19,13 @@ public class Passenger implements Comparable<Passenger> {
 	private double volume;
 
 	/**
-	 * Set up the contact details.
-	 * @throws InvalidAttributeException 
-	 * @throws IOException 
+	 * Constructor to initialize a passenger with all details.
+	 * @param reference_code The reference code of the passenger.
+	 * @param name           The name of the passenger.
+	 * @param flight_code    The code of the flight the passenger is booked on.
+	 * @param check_in       The check-in status of the passenger.
+	 * @param weight         The weight of the passenger's baggage.
+	 * @param volume         The volume of the passenger's baggage.
 	 */
 	public Passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) {
 		this.reference_code = reference_code.trim();
@@ -26,7 +36,7 @@ public class Passenger implements Comparable<Passenger> {
 		this.volume = volume;
 
 	}
-	
+	// Default constructor
 	public Passenger() {}
 
 	/**
@@ -80,6 +90,7 @@ public class Passenger implements Comparable<Passenger> {
 		this.volume = volume;
 	}
 
+	// Method to calculate excess fee based on weight and volume
 	public double excess_fee() {
 		return weight + volume;
 	}
@@ -117,7 +128,9 @@ public class Passenger implements Comparable<Passenger> {
 	 * @return A string containing all details.
 	 */
 	public String toString() {
-		return String.format("%-8s", reference_code) + String.format("%-20s", name) + String.format("%-8s", flight_code)
+		return String.format("%-8s", reference_code)
+				+ String.format("%-20s", name)
+				+ String.format("%-8s", flight_code)
 				+ String.format("%-3s", check_in);
 	}
 	
