@@ -1,3 +1,5 @@
+package checkinSys;
+
 /* Maintains a list of Flight objects as an ArrayList. */
 import java.util.ArrayList;
 
