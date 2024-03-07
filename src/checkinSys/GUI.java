@@ -13,56 +13,59 @@ import java.util.logging.Logger; // 导入日志记录器类
 public class GUI extends JFrame {
 	private Manager manager;
 	
-    private static final Logger LOGGER = Logger.getLogger(GUI.class.getName()); // 创建日志记录器
-    private StringBuilder reportBuilder; // 用于保存报告内容
+    private static final Logger LOGGER = Logger.getLogger(GUI.class.getName());
+    private StringBuilder reportBuilder;
     
 	private JTextArea reportTextArea;
 
+	// Text fields for user input
 	private JTextField nameField;
 	private JTextField reservationField;
 	private JTextField weightField;
 	private JTextField volumeField;
 
+	// Buttons for different actions
 	private JButton proceedToPaymentButton;
 	private JButton proceedToSuccessButton;
 
+	// Constructor setting up the GUI
 	public GUI() {
-		super("机场值机系统");
+		super("Airport Check-in System");
 
-		// 设置窗口属性
+		// Set properties of the window
 		setSize(600, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocationRelativeTo(null); // 窗口居中显示
+		setLocationRelativeTo(null); // Center the window
 
-		// 创建面板和布局
+		// Create panels and layouts
 		JPanel mainPanel = new JPanel(new BorderLayout());
 		JPanel buttonPanel = new JPanel();
 		JPanel inputPanel = new JPanel(new GridLayout(2, 2));
 
-		// 创建按钮
-		JButton loadButton = new JButton("加载数据");
-		JButton checkInButton = new JButton("值机");
-		JButton proceedToLuggageButton = new JButton("继续行李托运");
+		// Create buttons
+		JButton loadButton = new JButton("Load Data");
+		JButton checkInButton = new JButton("Check-in");
+		JButton proceedToLuggageButton = new JButton("Proceed to Luggage");
 
-		// 创建报告文本区域
+		// Create the report text area
 		reportTextArea = new JTextArea();
 		reportTextArea.setEditable(false);
 
-		// 创建输入字段和标签
-		JLabel nameLabel = new JLabel("姓名:");
+		// Create input fields and labels
+		JLabel nameLabel = new JLabel("Name:");
 		nameField = new JTextField();
-		JLabel reservationLabel = new JLabel("预约号码:");
+		JLabel reservationLabel = new JLabel("Reservation Number:");
 		reservationField = new JTextField();
-		
-		
 
-		// 添加组件到输入面板
+
+
+		// Add components to the input panel
 		inputPanel.add(nameLabel);
 		inputPanel.add(nameField);
 		inputPanel.add(reservationLabel);
 		inputPanel.add(reservationField);
 
-		// 添加按钮到按钮面板
+		// Add buttons to the button panel
 		buttonPanel.add(loadButton);
 		buttonPanel.add(checkInButton);
 		buttonPanel.add(proceedToLuggageButton);
