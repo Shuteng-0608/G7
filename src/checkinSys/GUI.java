@@ -174,14 +174,17 @@ public class GUI extends JFrame {
 		luggageCheckFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		luggageCheckFrame.setLocationRelativeTo(this);
 
+		// Panel for luggage check-in interface
 		JPanel panel = new JPanel(new GridLayout(3, 2));
 		JLabel weightLabel = new JLabel("Baggage Weight(kg):");
 		weightField = new JTextField();
-		JLabel volumeLabel = new JLabel("行李体积(m³):");
+		JLabel volumeLabel = new JLabel("Baggage Volume (m³):");
 		volumeField = new JTextField();
-		proceedToPaymentButton = new JButton("付款");
-		proceedToSuccessButton = new JButton("成功");
+		proceedToPaymentButton = new JButton("Pay");
+		proceedToSuccessButton = new JButton("Success");
 
+
+		// Adding components to the panel
 		panel.add(weightLabel);
 		panel.add(weightField);
 		panel.add(volumeLabel);
@@ -189,10 +192,14 @@ public class GUI extends JFrame {
 		panel.add(proceedToPaymentButton);
 		panel.add(proceedToSuccessButton);
 
+		// Add the panel to the frame and make it visible
 		luggageCheckFrame.add(panel);
 		luggageCheckFrame.setVisible(true);
 
+		// Button action handling within the luggage check-in window
 		proceedToPaymentButton.addActionListener(new ActionListener() {
+			// Implement the logic for processing luggage weight and volume inputs
+			// along with payment process
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String weight = null; 
@@ -222,20 +229,21 @@ public class GUI extends JFrame {
 				} catch (NumberFormatException | InvalidAttributeException e1) {
 					weightField.setText("");
 					volumeField.setText("");
-					JOptionPane.showMessageDialog(null, "请正确输入行李重量和尺寸！");
+					JOptionPane.showMessageDialog(null, "Please enter the correct Baggege weight and volume！");
 					return;
 				}
-				
-				
-				
+
+
+				// Check if there are any extra fees due to baggage weight or volume
 				double fee = manager.excess_fee(last_name, reservationNumber, weight_, volume_);
 				if (fee != 0) {
-					// 计算额外费用
+					/ If there are extra fees, inform the user and add to the report
 					JOptionPane.showMessageDialog(null,
-							"行李超重或超体积，需要支付额外费用: $" + fee);
-					appendToReport("额外费用: $" + fee); // 将额外费用信息添加到报告
+							"Baggage is overweight or over volume, additional fees required: ￡" + fee);
+					appendToReport("Extra fees : ￡" + fee); // Adding the information about extra fees to the report
 				} else {
-					JOptionPane.showMessageDialog(null, "行李托运成功!");
+					// If there are no extra fees, inform the user that luggage check-in was successful
+					JOptionPane.showMessageDialog(null, "Luggage check-in successful!");
 				}
 			}
 		});
@@ -243,23 +251,24 @@ public class GUI extends JFrame {
 		proceedToSuccessButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// 这里可以添加逻辑来处理跳转到成功界面的操作
+				// Logic to be added for transitioning to the success interface
 				luggageCheckFrame.dispose();
-				appendToReport("行李托运已完成！");
+				appendToReport("Luggage check-in completed！");
 				nameField.setText("");
 				reservationField.setText("");
 			}
 		});
 	}
 
-	// 在报告文本区域中追加文本
+	// Method to append text to the report area
 	private void appendToReport(String text) {
 		reportTextArea.append(text + "\n");
 	}
 	
     @Override
     public void dispose() {
-        super.dispose();
+        super.dispose();// Clean up resources
+		// Additional clean-up code can go here if needed
     }
 
 	// This should indicate, for each flight,
@@ -290,7 +299,7 @@ public class GUI extends JFrame {
 //	}
 	
 	public static void main(String[] args) {
-		// 使用 Event Dispatch Thread (EDT) 启动 Swing 应用程序
+		// Launch the Swing application using the Event Dispatch Thread (EDT)
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
