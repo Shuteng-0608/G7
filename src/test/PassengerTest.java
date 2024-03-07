@@ -13,58 +13,57 @@ class PassengerTest {
 	@BeforeEach
 	void testPassenger() throws InvalidAttributeException {
 		Manager manager = new Manager();
-		manager.readFromFile("data/flight_details_data.csv", "data/passenger_data.csv");
 		this.passenger = manager.getFlightList().getFlight(0).getList().getByIdx(0);
 	}
 
 	@Test
 	void testGetReference() {
 		String reference = this.passenger.getReference();
-		assertEquals("JFKCA3191811246621", reference, "Equal!");
+		assertEquals("DXBCA3781807232238", reference, "Equal!");
 		assertNotEquals("JFKCA3191811247604", reference, "Error!");
 	}
-
+	
 	@Test
 	void testGetName() {
 		String name = this.passenger.getName();
-		assertEquals("Crystal Wright", name, "Equal!");
+		assertEquals("Diane Brewer", name, "Equal!");
 		assertNotEquals("John Mason", name, "Error!");
 	}
 
 	@Test
 	void testGetFlight() {
 		String flight_code = this.passenger.getFlight();
-		assertEquals("CA319", flight_code, "Equal!");
+		assertEquals("CA378", flight_code, "Equal!");
 		assertNotEquals("EK350", flight_code, "Error!");
 	}
 
 	@Test
 	void testGetCheckin() {
 		String result = this.passenger.getCheckin();
-		assertEquals("Yes", result, "Equal!");
-		assertNotEquals("No", result, "Error!");
+		assertEquals("No", result, "Equal!");
+		assertNotEquals("Yes", result, "Error!");
 	}
 
 	@Test
 	void testGetWeight() {
 		double weight = this.passenger.getWeight();
-		assertEquals(22.0, weight, "Equal!");
+		assertEquals(26.42, weight, "Equal!");
 		assertNotEquals(16.0, weight, "Error!");
 	}
 
 	@Test
 	void testGetVolume() {
 		double volume = this.passenger.getVolume();
-		assertEquals(3.0, volume, "Equal!");
+		assertEquals(1.1, volume, "Equal!");
 		assertNotEquals(5.0, volume, "Error!");
 	}
 
-//	@Test
-//	void testExcess_fee() {
-//		double excess_fee = this.passenger.excess_fee();
-//		assertEquals(3.0, excess_fee, "Equal!");
-//		assertNotEquals(5.0, excess_fee, "Error!");
-//	}
+	@Test
+	void testExcess_fee() {
+		double excess_fee = this.passenger.excess_fee();
+		assertEquals(19.26, excess_fee, "Equal!");
+		assertNotEquals(15.36, excess_fee, "Error!");
+	}
 
 	@Test
 	void testEqualsObject() {
