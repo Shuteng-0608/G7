@@ -143,6 +143,16 @@ public class Flight implements Comparable<Flight> {
 		return sum;
 	}
 
+	public boolean check_weight() {
+		if(totalWeight() > weight) return false;
+		return true;
+	}
+	
+	public boolean check_volume() {
+		if(totalVolume() > volume) return false;
+		return true;
+	}
+	
 	/**
 	 * Compare this Flight object against another, for the purpose of sorting. The
 	 * fields are compared by flight code.
