@@ -1,28 +1,42 @@
-package checkinSys;
-// a simple class to contain and manage Flight details
+/* A simple class to contain and manage Flight details. */
 public class Flight implements Comparable<Flight> {
+	private String flight_code;
+	private String date;
 	private String destination;
 	private String carrier;
-	private String flight_code;
 	private int capacity;
-	private double weight;
-	private double volume;
+	private double maxWeight;
+	private double maxVolume;
 	private PassengerList passengerList;
 
 	/**
 	 * Set up the contact details.
 	 */
-	public Flight(String flight_code, String destination, String carrier, int capacity, double weight, double volume) {
+	public Flight(String flight_code, String date, String destination, String carrier, int capacity, double maxWeight,
+			double maxVolume) {
+		this.flight_code = flight_code;
+		this.date = date;
 		this.destination = destination;
 		this.carrier = carrier;
-		this.flight_code = flight_code;
 		this.capacity = capacity;
-		this.weight = weight;
-		this.volume = volume;
+		this.maxWeight = maxWeight;
+		this.maxVolume = maxVolume;
 		this.passengerList = new PassengerList();
 	}
-	
-	public Flight() {}
+
+	/**
+	 * @return The flight code.
+	 */
+	public String getFlight() {
+		return flight_code;
+	}
+
+	/**
+	 * @return The date.
+	 */
+	public String getDate() {
+		return date;
+	}
 
 	/**
 	 * @return The destination.
@@ -39,13 +53,6 @@ public class Flight implements Comparable<Flight> {
 	}
 
 	/**
-	 * @return The flight code.
-	 */
-	public String getFlight() {
-		return flight_code;
-	}
-
-	/**
 	 * @return The capacity.
 	 */
 	public int getCapacity() {
@@ -56,14 +63,14 @@ public class Flight implements Comparable<Flight> {
 	 * @return The maximum weight.
 	 */
 	public double getWeight() {
-		return weight;
+		return maxWeight;
 	}
 
 	/**
 	 * @return The maximum volume.
 	 */
 	public double getVolume() {
-		return volume;
+		return maxVolume;
 	}
 
 	/**
@@ -74,90 +81,110 @@ public class Flight implements Comparable<Flight> {
 	}
 
 	/**
-	 * Test for content equality between two objects.
-	 *
-	 * @param other The object to compare to this one.
-	 * @return true if the argument object has same flight code
+	 * @return The number of passengers checked-in.
 	 */
-	@Override
+	public int numberOfCheckIn() {
+		int cnt = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin().equals("Yes"))
+				cnt++;
+		}
+		return cnt;
+	}
+
+	/**
+	 * @return The total weight of the baggage.
+	 */
+	public double totalWeight() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if (p.getCheckin().equals("Yes"))
+				sum += p.getWeight();
+		}
+		return sum;
+	}
+
+	/**
+	 * @return The total volume of the baggage.
+	 */
+	public double totalVolume() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if ((p.getCheckin().equals("Yes")))
+				sum += p.getVolume();
+		}
+		return sum;
+	}
+
+	/**
+	 * @return The total excess baggage fees.
+	 */
+	public double totalFees() {
+		double sum = 0;
+		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
+			Passenger p = passengerList.getByIdx(i);
+			if ((p.getCheckin().equals("Yes")))
+				sum += p.excess_fee();
+		}
+		return sum;
+	}
+
+	/**
+	 * Determine if the flight is overweight.
+	 */
+	public boolean check_weight() {
+		if (totalWeight() > maxWeight)
+			return false;
+		return true;
+	}
+
+	/**
+	 * Determine if the flight exceeds its maximum volume.
+	 */
+	public boolean check_volume() {
+		if (totalVolume() > maxVolume)
+			return false;
+		return true;
+	}
+
+	/**
+	 * Test for content equality between two flights.
+	 * 
+	 * @param other The object to compare to this one.
+	 * @return true if the argument object has the same flight code.
+	 */
 	public boolean equals(Object other) {
 		if (other instanceof Flight) {
-			Flight otherStaff = (Flight) other;
-			return flight_code.equals(otherStaff.getFlight());
+			Flight otherFlight = (Flight) other;
+			return flight_code.equals(otherFlight.getFlight());
 		} else {
 			return false;
 		}
 	}
 
-	// The number of passengers checked-in
-	public int numberOfCheckIn() {
-		int cnt = 0;
-		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
-			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
-				cnt++;
-			}
-		}
-		return cnt;
-	}
-
-	// The total weight of the baggage
-	public double totalWeight() {
-		double sum = 0;
-		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
-			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
-				sum += p.getWeight();
-			}
-		}
-		return sum;
-	}
-
-	// The total volume of the baggage
-	public double totalVolume() {
-		double sum = 0;
-		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
-			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
-				sum += p.getVolume();
-			}
-		}
-		return sum;
-	}
-
-	public double totalFees() {
-		double sum = 0;
-		for (int i = 0; i < passengerList.getNumberOfEntries(); i++) {
-			Passenger p = passengerList.getByIdx(i);
-			if (p.getCheckin() == "Yes") {
-				sum += p.excess_fee();
-			}
-		}
-		return sum;
-	}
-
 	/**
 	 * Compare this Flight object against another, for the purpose of sorting. The
 	 * fields are compared by flight code.
-	 *
-	 * @param otherDetails The details to be compared against.
+	 * 
+	 * @param otherFlight The flight to be compared against.
 	 * @return a negative integer if this flight_code comes before the parameter's
 	 *         flight_code, zero if they are equal and a positive integer if this
 	 *         comes after the other.
 	 */
 
-	@Override
-	public int compareTo(Flight otherDetails) {
-		return flight_code.compareTo(otherDetails.getFlight());
+	public int compareTo(Flight otherFlight) {
+		return flight_code.compareTo(otherFlight.getFlight());
 	}
 
 	/**
 	 * @return A string containing all details.
 	 */
-	@Override
 	public String toString() {
-		return String.format("%-8s", flight_code) + String.format("%-20s", destination)
-				+ String.format("%-20s", carrier) + String.format("%d", capacity) + String.format("%f", weight)
-				+ String.format("%f", volume);
+		return String.format("%-8s", flight_code) + String.format("%-8s", date) + String.format("%-5s", destination)
+				+ String.format("%-5s", carrier) + String.format("%d", capacity) + String.format("%f", maxWeight)
+				+ String.format("%f", maxVolume);
 	}
 }
