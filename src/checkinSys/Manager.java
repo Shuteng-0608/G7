@@ -90,7 +90,7 @@ public class Manager {
 	// allow the passenger to enter their last name and booking reference
 	public Passenger findPassenger(String last_name, String br) throws InvalidBookRefException {
 		 if (br == null || br.length() < 3) {
-		        throw new InvalidBookRefException("The 'br' parameter is null or too short.");
+		        throw new InvalidBookRefException("The 'Bookreference Code' parameter is null or too short.");
 		    }
 		// Extract flight code from booking reference and find passenger
 		String flight_code = br.substring(3, 8);
