@@ -19,8 +19,8 @@ class FlightListTest {
 
 	@Test
 	void testFindByCode() {
-		Flight f = this.flightList.findByCode("CA319");
-		assertEquals("CA319", f.getFlight(), "Equal!");
+		Flight f = this.flightList.findByCode("CA378");
+		assertEquals("CA378", f.getFlight(), "Equal!");
 		assertNotEquals("KL653", f.getFlight(), "Error!");
 	}
 	

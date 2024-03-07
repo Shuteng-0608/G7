@@ -189,6 +189,12 @@ public class Manager {
 		return flightList;
 	}
 
+	/**
+	 * validate Flight Data legal or not
+	 * 
+	 * @param line The reading-line of flight data (excepted length 7)
+	 * @exception InvalidAttributeException Invalid input attribute
+	 */
 	public void validateFlightData(String line) throws InvalidAttributeException {
 		// ====== For Flight information ======
 		// "Flight Code", "Date", "Destination Airport", "Carrier", "Passengers", "Total Baggage Weight (kg)", "Total Baggage Volume (m^3)"
@@ -235,6 +241,13 @@ public class Manager {
 		}
 	}
 
+	/**
+	 * validate Passenger Data legal or not
+	 * 
+	 * @param fields The reading-line of flight data (excepted length 7)
+	 * @exception InvalidAttributeException Invalid input attribute
+	 * @exception InvalidBookRefException Invalid booking reference
+	 */
 	public void validatePassengerData(String line) throws InvalidAttributeException, InvalidBookRefException {
 		// ====== For Passenger information ======
 		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
