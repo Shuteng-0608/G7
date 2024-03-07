@@ -1,0 +1,1101 @@
+
+*******************************************
+For flight BA959:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4060.0
+The maximum baggage volume of this flight is 290.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA144:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4830.0
+The maximum baggage volume of this flight is 345.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA661:
+The flight carrier is: KL
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9940.0
+The maximum baggage volume of this flight is 710.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK247:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5250.0
+The maximum baggage volume of this flight is 375.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ266:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9240.0
+The maximum baggage volume of this flight is 660.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA568:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6405.0
+The maximum baggage volume of this flight is 457.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA557:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10360.0
+The maximum baggage volume of this flight is 740.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE210:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6720.0
+The maximum baggage volume of this flight is 480.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ515:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5565.0
+The maximum baggage volume of this flight is 397.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ976:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9905.0
+The maximum baggage volume of this flight is 707.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA554:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10360.0
+The maximum baggage volume of this flight is 740.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE856:
+The flight carrier is: AA
+The number of passengers due to arrive is 105
+The number of passengers checked-in is 51
+The total weight of their baggage is 1089.4399999999998
+The total volume of their baggage is 80.89
+The total excess baggage fees collected is 80.89
+The maximum baggage weight of this flight is 3675.0
+The maximum baggage volume of this flight is 262.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA111:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5390.0
+The maximum baggage volume of this flight is 385.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ909:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8435.0
+The maximum baggage volume of this flight is 602.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK784:
+The flight carrier is: NH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7735.0
+The maximum baggage volume of this flight is 552.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF691:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4550.0
+The maximum baggage volume of this flight is 325.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE515:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3920.0
+The maximum baggage volume of this flight is 280.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH427:
+The flight carrier is: KL
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8435.0
+The maximum baggage volume of this flight is 602.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA238:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3955.0
+The maximum baggage volume of this flight is 282.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH848:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8680.0
+The maximum baggage volume of this flight is 620.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA964:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7630.0
+The maximum baggage volume of this flight is 545.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA486:
+The flight carrier is: NH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9625.0
+The maximum baggage volume of this flight is 687.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA554:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8575.0
+The maximum baggage volume of this flight is 612.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA939:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4690.0
+The maximum baggage volume of this flight is 335.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA793:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8050.0
+The maximum baggage volume of this flight is 575.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ571:
+The flight carrier is: BA
+The number of passengers due to arrive is 211
+The number of passengers checked-in is 110
+The total weight of their baggage is 2085.4599999999996
+The total volume of their baggage is 166.18
+The total excess baggage fees collected is 166.18
+The maximum baggage weight of this flight is 7385.0
+The maximum baggage volume of this flight is 527.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ188:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4655.0
+The maximum baggage volume of this flight is 332.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ108:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4270.0
+The maximum baggage volume of this flight is 305.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA524:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3500.0
+The maximum baggage volume of this flight is 250.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA938:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5740.0
+The maximum baggage volume of this flight is 410.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA330:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5215.0
+The maximum baggage volume of this flight is 372.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA944:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9030.0
+The maximum baggage volume of this flight is 645.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH750:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9870.0
+The maximum baggage volume of this flight is 705.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight KL220:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8190.0
+The maximum baggage volume of this flight is 585.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA827:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8645.0
+The maximum baggage volume of this flight is 617.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE941:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9870.0
+The maximum baggage volume of this flight is 705.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ144:
+The flight carrier is: NH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9170.0
+The maximum baggage volume of this flight is 655.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA950:
+The flight carrier is: AA
+The number of passengers due to arrive is 105
+The number of passengers checked-in is 47
+The total weight of their baggage is 930.9800000000001
+The total volume of their baggage is 69.86000000000003
+The total excess baggage fees collected is 69.86000000000003
+The maximum baggage weight of this flight is 3675.0
+The maximum baggage volume of this flight is 262.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KL850:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4235.0
+The maximum baggage volume of this flight is 302.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE407:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9345.0
+The maximum baggage volume of this flight is 667.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE650:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6720.0
+The maximum baggage volume of this flight is 480.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA465:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9030.0
+The maximum baggage volume of this flight is 645.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA896:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10290.0
+The maximum baggage volume of this flight is 735.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA843:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7945.0
+The maximum baggage volume of this flight is 567.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF272:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6650.0
+The maximum baggage volume of this flight is 475.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA458:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6335.0
+The maximum baggage volume of this flight is 452.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH890:
+The flight carrier is: KL
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6300.0
+The maximum baggage volume of this flight is 450.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF417:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5950.0
+The maximum baggage volume of this flight is 425.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH565:
+The flight carrier is: AF
+The number of passengers due to arrive is 177
+The number of passengers checked-in is 92
+The total weight of their baggage is 1943.5500000000002
+The total volume of their baggage is 135.58000000000004
+The total excess baggage fees collected is 135.58000000000004
+The maximum baggage weight of this flight is 6195.0
+The maximum baggage volume of this flight is 442.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE757:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4375.0
+The maximum baggage volume of this flight is 312.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH789:
+The flight carrier is: KL
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9170.0
+The maximum baggage volume of this flight is 655.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK581:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9905.0
+The maximum baggage volume of this flight is 707.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA567:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8715.0
+The maximum baggage volume of this flight is 622.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH349:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7245.0
+The maximum baggage volume of this flight is 517.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA690:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3675.0
+The maximum baggage volume of this flight is 262.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK868:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3605.0
+The maximum baggage volume of this flight is 257.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF431:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7840.0
+The maximum baggage volume of this flight is 560.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF801:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7595.0
+The maximum baggage volume of this flight is 542.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ966:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7910.0
+The maximum baggage volume of this flight is 565.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight KE190:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6685.0
+The maximum baggage volume of this flight is 477.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA517:
+The flight carrier is: NH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3710.0
+The maximum baggage volume of this flight is 265.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH129:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9450.0
+The maximum baggage volume of this flight is 675.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ435:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8330.0
+The maximum baggage volume of this flight is 595.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ589:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3850.0
+The maximum baggage volume of this flight is 275.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK244:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4970.0
+The maximum baggage volume of this flight is 355.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA580:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7805.0
+The maximum baggage volume of this flight is 557.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH710:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7595.0
+The maximum baggage volume of this flight is 542.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH235:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9100.0
+The maximum baggage volume of this flight is 650.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA804:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9380.0
+The maximum baggage volume of this flight is 670.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF435:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5180.0
+The maximum baggage volume of this flight is 370.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA555:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9380.0
+The maximum baggage volume of this flight is 670.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA938:
+The flight carrier is: CA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10395.0
+The maximum baggage volume of this flight is 742.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA685:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7385.0
+The maximum baggage volume of this flight is 527.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight KL972:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9240.0
+The maximum baggage volume of this flight is 660.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH785:
+The flight carrier is: BA
+The number of passengers due to arrive is 151
+The number of passengers checked-in is 82
+The total weight of their baggage is 1648.9999999999993
+The total volume of their baggage is 118.73000000000003
+The total excess baggage fees collected is 118.73000000000003
+The maximum baggage weight of this flight is 5285.0
+The maximum baggage volume of this flight is 377.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA736:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9695.0
+The maximum baggage volume of this flight is 692.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ167:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8925.0
+The maximum baggage volume of this flight is 637.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA414:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6370.0
+The maximum baggage volume of this flight is 455.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight NH357:
+The flight carrier is: BA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 5880.0
+The maximum baggage volume of this flight is 420.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK942:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 3850.0
+The maximum baggage volume of this flight is 275.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA965:
+The flight carrier is: AA
+The number of passengers due to arrive is 211
+The number of passengers checked-in is 110
+The total weight of their baggage is 2326.01
+The total volume of their baggage is 173.51
+The total excess baggage fees collected is 173.51
+The maximum baggage weight of this flight is 7385.0
+The maximum baggage volume of this flight is 527.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA164:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9030.0
+The maximum baggage volume of this flight is 645.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH135:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 7000.0
+The maximum baggage volume of this flight is 500.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ342:
+The flight carrier is: AF
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6475.0
+The maximum baggage volume of this flight is 462.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK325:
+The flight carrier is: BA
+The number of passengers due to arrive is 282
+The number of passengers checked-in is 159
+The total weight of their baggage is 3254.919999999999
+The total volume of their baggage is 233.8799999999999
+The total excess baggage fees collected is 233.8799999999999
+The maximum baggage weight of this flight is 9870.0
+The maximum baggage volume of this flight is 705.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ103:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6405.0
+The maximum baggage volume of this flight is 457.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA929:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4690.0
+The maximum baggage volume of this flight is 335.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA839:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 8925.0
+The maximum baggage volume of this flight is 637.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA345:
+The flight carrier is: NH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4725.0
+The maximum baggage volume of this flight is 337.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight SQ193:
+The flight carrier is: LH
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6685.0
+The maximum baggage volume of this flight is 477.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA817:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 6720.0
+The maximum baggage volume of this flight is 480.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight CA454:
+The flight carrier is: KL
+The number of passengers due to arrive is 204
+The number of passengers checked-in is 113
+The total weight of their baggage is 2189.6200000000003
+The total volume of their baggage is 163.31
+The total excess baggage fees collected is 163.31
+The maximum baggage weight of this flight is 7140.0
+The maximum baggage volume of this flight is 510.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AF377:
+The flight carrier is: SQ
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10465.0
+The maximum baggage volume of this flight is 747.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH485:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9555.0
+The maximum baggage volume of this flight is 682.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight LH775:
+The flight carrier is: KL
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4585.0
+The maximum baggage volume of this flight is 327.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA469:
+The flight carrier is: KE
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 4795.0
+The maximum baggage volume of this flight is 342.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA536:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9205.0
+The maximum baggage volume of this flight is 657.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight EK902:
+The flight carrier is: LH
+The number of passengers due to arrive is 223
+The number of passengers checked-in is 125
+The total weight of their baggage is 2457.5900000000006
+The total volume of their baggage is 181.66999999999996
+The total excess baggage fees collected is 181.66999999999996
+The maximum baggage weight of this flight is 7805.0
+The maximum baggage volume of this flight is 557.5
+The capacity of the flight is not exceeded
+*******************************************
+For flight BA800:
+The flight carrier is: EK
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 9590.0
+The maximum baggage volume of this flight is 685.0
+The capacity of the flight is not exceeded
+*******************************************
+For flight AA275:
+The flight carrier is: AA
+The number of passengers due to arrive is 0
+The number of passengers checked-in is 0
+The total weight of their baggage is 0.0
+The total volume of their baggage is 0.0
+The total excess baggage fees collected is 0.0
+The maximum baggage weight of this flight is 10325.0
+The maximum baggage volume of this flight is 737.5
+The capacity of the flight is not exceeded

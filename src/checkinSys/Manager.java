@@ -1,9 +1,10 @@
 package checkinSys;
 /* A class to implement specific functions of GUI and manage all flight data. */
 import java.io.BufferedReader;
-
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -289,6 +290,29 @@ public class Manager {
 
 	}
 
+	public void report() {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/report.txt"))) {
+			for (int i = 0; i < flightList.getNumberOfEntries(); i++) {
+				Flight f = flightList.getFlight(i);
+				writer.append("\r\n*******************************************");
+				writer.append("\r\nFor flight " + f.getFlight() + ":");
+				writer.append("\r\nThe flight carrier is: " + f.getCarrier());
+				writer.append("\r\nThe number of passengers due to arrive is " + f.getList().getNumberOfEntries());
+				writer.append("\r\nThe number of passengers checked-in is " + f.numberOfCheckIn());
+				writer.append("\r\nThe total weight of their baggage is " + f.totalWeight());
+				writer.append("\r\nThe total volume of their baggage is " + f.totalVolume());
+				writer.append("\r\nThe total excess baggage fees collected is " + f.totalVolume());
+				writer.append("\r\nThe maximum baggage weight of this flight is " + f.getWeight());
+				writer.append("\r\nThe maximum baggage volume of this flight is " + f.getVolume());
+				if (f.totalWeight() <= f.getWeight() && f.totalVolume() <= f.getVolume() && f.numberOfCheckIn() <= f.getCapacity()) {
+					writer.append("\r\nThe capacity of the flight is not exceeded");
+				} else
+					writer.append("\r\nThe capacity of the flight is exceeded");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
 
 

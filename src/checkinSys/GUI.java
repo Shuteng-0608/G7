@@ -5,10 +5,12 @@ import myExceptions.InvalidAttributeException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.logging.Logger; // 导入日志记录器类
+import java.util.logging.Logger; 
 
 public class GUI extends JFrame {
 	private Manager manager;
@@ -70,37 +72,49 @@ public class GUI extends JFrame {
 		buttonPanel.add(checkInButton);
 		buttonPanel.add(proceedToLuggageButton);
 
-		// 添加组件到主面板
+		// Add components to the main panel
 		mainPanel.add(new JScrollPane(reportTextArea), BorderLayout.CENTER);
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 		mainPanel.add(inputPanel, BorderLayout.NORTH);
 		
-	    // 初始化报告内容
+	    // Initialize the report content
 	    reportBuilder = new StringBuilder();
 
-		// 添加主面板到窗口
+		// Add main panel to the frame
 		add(mainPanel);
-
-		// 加载数据按钮的点击事件处理
 		loadButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// 加载数据
-				
+
+				manager = new Manager();
+				appendToReport("数据加载成功!");
+
+				addWindowListener(new WindowAdapter() {
+					public void windowClosing(WindowEvent e) {
+						manager.report();
+						System.out.println("\n程序已退出!");
+					}
+				});
+			}
+		});
+		// Action listener for the load button
+		loadButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
 				manager = new Manager();
 				
-				appendToReport("数据加载成功!");
+				appendToReport("Data loaded successfully!");
 			}
 		});
 
-		// 办理登机手续按钮的点击事件处理
+		// Action listener for the check-in button
 		checkInButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String last_name = "";
 				String reservationNumber = "";
-//				String last_name_ = "";
-//				String reservationNumber_ = "";
+
 				try {
 					last_name = nameField.getText();
 					reservationNumber = reservationField.getText();
