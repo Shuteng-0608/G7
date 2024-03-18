@@ -26,7 +26,7 @@ public class passengerList {
 			}
 			return null;
 		}
-
+		
 		/**
 		 * Add a new set of details to the list
 		 * 
@@ -35,7 +35,16 @@ public class passengerList {
 		public void addPassenger(passenger passenger) {
 			passengerList.add(passenger);
 		}
-
+		
+		/**
+		 * Remove Passenger object
+		 * 
+		 * @param passenger The passenger object
+		 */
+		public void removePassenger(passenger passenger) {
+			passengerList.remove(passenger);
+		}
+		
 		/**
 		 * Retrieves a Passenger by their index in the list.
 		 *
@@ -45,18 +54,6 @@ public class passengerList {
 		public passenger getByIdx(int idx) {
 			return passengerList.get(idx);
 		}
-
-//		/**
-//		 * remove Passenger object identified by this name
-//		 * 
-//		 * @param name the name identifying the person to be removed
-//		 */
-//		public void removePassenger(String name) {
-//			int index = findIndex(name);
-//			if (index != -1) {
-//				passengerList.remove(index);
-//			}
-//		}    
 
 		/**
 		 * Finds the index of a Passenger by their last name and reference code.
