@@ -1,68 +1,90 @@
 package threads;
 
-
 import models.passenger;
+
 import java.util.LinkedList;
-import java.util.Queue;
+import java.util.List;
 
 /**
- * The queue class is responsible for managing the queue of passengers in the airport.
+ * Manages the queue of passengers in a thread-safe manner without using Java's built-in thread-safe classes.
+ * This class demonstrates manual synchronization to ensure that adding to and removing from the queue
+ * are atomic operations and can safely be called from multiple threads.
  */
-public class queue implements Runnable {
-    // Thread for the queue management
-    private Thread queueThread;
-    private boolean isRunning;
-    private Queue<passenger> passengerQueue = null;
-    private int queueSize;
-
-    // Constructor
-    public queue(int queueSize) {
+public class queue implements Runnable{
+	private String queueType;
+    private List<passenger> passengerQueue;
+    private boolean isOpen;
+    public queue(String queueType, List<passenger> queue) {
         this.passengerQueue = new LinkedList<>();
-        this.isRunning = true;
-        this.queueSize = queueSize;
-        // Thread initialization
-        queueThread = new Thread(this);
-        queueThread.start();
+        this.queueType = queueType;
+		this.passengerQueue = queue;
+		this.isOpen = true;
     }
 
-    // Method to stop the queue management
-    public void stopQueueManager() {
-        isRunning = false;
-        queueThread.interrupt();
-    }
-
-    // Method to add a passenger to the queue
+    /**
+     * Synchronized method to add a passenger to the queue.
+     *
+     * @param passenger the passenger to be added to the queue
+     */
     public synchronized void addPassengerToQueue(passenger passenger) {
-        passengerQueue.offer(passenger);
-        // Notify any waiting threads that a new passenger has arrived
-        notifyAll();
+        passengerQueue.addLast(passenger);
+        // Notify any threads waiting for passengers to be added to the queue
+        notify();
     }
 
-    // Method to get the next passenger from the queue
-    public synchronized passenger getNextPassenger() {
-        return passengerQueue.poll();
-    }
-
-    // Runnable method to simulate the arrival of passengers
-    @Override
-    public void run() {
-        while (isRunning) {
-            try {
-                // Simulate passenger arrival with some delay
-                Thread.sleep(1);
-
-                // Add a passenger to the queue
-                // this should read from the .csv file
-                passenger passenger = new passenger(null, null, null, null, 0, 0);
-                addPassengerToQueue(passenger);
-                // showing in the GUI
-
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+    /**
+     * Synchronized method to remove and return the first passenger in the queue.
+     * If the queue is empty, the method will block until a passenger is added.
+     *
+     * @return the first passenger in the queue
+     * @throws InterruptedException if any thread interrupted the current thread before or
+     *                              while the current thread was waiting for a notification.
+     */
+    public synchronized passenger getNextPassenger() throws InterruptedException {
+        while (passengerQueue.isEmpty()) {
+            wait(); // Wait for a passenger to be added if the queue is empty
         }
+        return passengerQueue.removeFirst();
     }
 
+    public static void main(String[] args) {
+    	String queueType = "1";
+    	List<passenger> passengerQueue = new LinkedList<>();
+    	passengerQueue.add(new passenger("1", queueType, queueType, queueType, 0, 0));
+        queue queueManager = new queue(queueType, passengerQueue);
 
+     // Producer thread to add passengers to the queue
+        new Thread(() -> {
+            for (int i = 1; i <= 5; i++) {
+                passenger passenger = new passenger("Ref" + i, "Name" + i, "Flight" + i, "Yes", 20.5 * i, 10.5 * i);
+                System.out.println("Create passenger: "+passenger);
+                queueManager.addPassengerToQueue(passenger);
+                try {
+                    Thread.sleep(1000); // Simulating time delay between each passenger
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+        // Consumer thread to process passengers from the queue
+        new Thread(() -> {
+            for (int i = 1; i <= 5; i++) {
+                try {
+                    passenger passenger = queueManager.getNextPassenger();
+                    System.out.println("Processed from queue: " + passenger);
+                    Thread.sleep(1000); // Simulating processing time
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

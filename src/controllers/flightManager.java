@@ -290,6 +290,15 @@ public class flightManager{
 
     	
     	/**
+    	 * Look up a passenger in the HashMap.
+    	 * 
+    	 * @param name The passenger's name.
+    	 * @return The passenger object.
+    	 */
+    	public passenger findPassenger(String name) {
+    		return passengers.get(name);
+    	}
+    	/**
     	 * Look up a flight in the HashMap.
     	 * 
     	 * @param flight_code The flight code.
