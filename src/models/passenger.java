@@ -8,6 +8,7 @@ public class passenger {
     private String referenceCode;
     private String name;
 	private String flight_code;
+	private String date;
     private double weight;
     private double volume;
     private String isCheckedIn;
@@ -21,14 +22,14 @@ public class passenger {
 	 * @param weight         The weight of the passenger's baggage.
 	 * @param volume         The volume of the passenger's baggage.
 	 */
-	public passenger(String reference_code, String name, String flight_code, String check_in, double weight, double volume) {
+	public passenger(String reference_code, String name, String flight_code, String date, String check_in, double weight, double volume) {
 		this.referenceCode = reference_code.trim();
 		this.name = name.trim();
 		this.flight_code = flight_code.trim();
-		this.isCheckedIn = check_in;
+		this.date = date.trim();
+		this.isCheckedIn = check_in.trim();
 		this.weight = weight;
 		this.volume = volume;
-
 	}
 
     // Baggage details setter
@@ -50,7 +51,14 @@ public class passenger {
     public String getName() {
         return name;
     }
-
+    
+	/**
+	 * @return The date
+	 */
+	public String getDate() {
+		return date;
+	}
+    
     public double getBaggageWeight() {
         return weight;
     }
@@ -59,23 +67,77 @@ public class passenger {
         return volume;
     }
 
-    public boolean isCheckedIn() {
-    	if (this.isCheckedIn == "Yes"){
-    			return true;
-    	}else {
-    		return false;
-    	}
-    }
+	/**
+	 * @return The check-in status.
+	 */
+	public String getCheckin() {
+		return isCheckedIn;
+	}
 
-    // Additional methods such as toString() for printing passenger details
-    @Override
-    public String toString() {
-        return "Passenger{" +
-                "reference code='" + referenceCode + '\'' +
-                ", name='" + name + '\'' +
-                ", baggageWeight=" + weight +
-                ", baggageVolume=" + volume +
-                ", isCheckedIn=" + isCheckedIn +
-                '}';
-    }
+	/**
+	 * @return true if checked in, false otherwise.
+	 */
+	public boolean check_in() {
+		if (isCheckedIn.equals("Yes")) {
+			return true;
+		} else {
+			isCheckedIn = "Yes";
+			return false;
+		}
+	}
+
+	public void set(double weight, double volume) {
+		this.weight = weight;
+		this.volume = volume;
+	}
+
+	/**
+	 * @return The excess baggage fee
+	 */
+	public double excess_fee() {
+		double w = 0;
+		double v = 0;
+		if(weight > 20) w = 3 * (weight - 20);
+		if(volume > 1.5) v = 10 * (volume - 1.5);
+		double sum = Math.round((w + v) * 100) * 0.01d;
+		return sum;
+	}
+
+	/**
+	 * Test for content equality between two objects.
+	 * 
+	 * @param other The object to compare to this one.
+	 * @return true if the argument object has same reference code
+	 */
+	public boolean equals(Object other) {
+		if (other instanceof passenger) {
+			passenger otherPassenger = (passenger) other;
+			return referenceCode.equals(otherPassenger.getReference());
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Compare this Passenger object against another, for the purpose of sorting.
+	 * The fields are compared by reference code.
+	 * 
+	 * @param otherDetails The details to be compared against.
+	 * @return a negative integer if this reference_code comes before the
+	 *         parameter's reference_code, zero if they are equal and a positive
+	 *         integer if this comes after the other.
+	 */
+
+	public int compareTo(passenger otherDetails) {
+		return referenceCode.compareTo(otherDetails.getReference());
+	}
+
+	/**
+	 * @return A string containing all details.
+	 */
+	public String toString() {
+		return String.format("%-20s", referenceCode) + String.format("%-20s", name)
+				+ String.format("%-8s", flight_code) + String.format("%-8s", date) + String.format("%-3s", isCheckedIn)
+				+ String.format("%f", weight) + String.format("%f", volume);
+	}
 }
