@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkInSys;
 
 import java.util.List;
 
