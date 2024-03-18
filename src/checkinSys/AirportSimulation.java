@@ -15,8 +15,11 @@ public class AirportSimulation {
 		int checkInDeskNum = 3;
 		Manager manager = new Manager();
 		for (Map.Entry<String, Passenger> entry : manager.getPassengers().entrySet()) {
-            //
-        }
+	            Passenger p = entry.getValue();
+	            if (p.getCheckin().equals("No")) {
+	            	passengerNotCheckIn.add(p);
+	            }
+	        }
 		
 		
 		
