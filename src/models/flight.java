@@ -211,6 +211,12 @@ public class flight {
 	public void setMaxVolume(double maxVolume) {
 		this.maxVolume = maxVolume;
 	}
+	/**
+	 * @return The passenger list.
+	 */
+	public passengerList getList() {
+		return passengerList;
+	}
 
 
 }

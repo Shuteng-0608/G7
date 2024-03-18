@@ -67,6 +67,23 @@ public class passenger {
     	}
     }
 
+	/**
+	 * @return The excess baggage fee
+	 */
+	public double excess_fee() {
+		double w = 0;
+		double v = 0;
+		if(weight > 20) w = 3 * (weight - 20);
+		if(volume > 1.5) v = 10 * (volume - 1.5);
+		double sum = Math.round((w + v) * 100) * 0.01d;
+		return sum;
+	}
+	/**
+	 * @return The flight code.
+	 */
+	public String getFlight() {
+		return flight_code;
+	}
     // Additional methods such as toString() for printing passenger details
     @Override
     public String toString() {
