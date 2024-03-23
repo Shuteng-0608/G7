@@ -1,9 +1,4 @@
-package GUI;
-
 import javax.swing.*;
-
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,39 +9,53 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
-import checkInSimulation.*;
 
-public class AirportGUI extends JFrame{
+public class AirportGUI extends JFrame implements Runnable{
     private JPanel queuePanel;
     private JPanel deskPanel;
     private JPanel flightPanel;
     private JSlider speedSlider;
-
+    JTextArea queue1Text;
+    JTextArea queue2Text;
     private Random timeSetter = new Random();
-    private final int deskWidth = 150; // ÉèÖÃ¹ñÌ¨´°¿Ú¹Ì¶¨¿í¶È
-    private final int deskHeight = 150; // ÉèÖÃ¹ñÌ¨´°¿Ú¹Ì¶¨¸ß¶È
-    private int queueCount1;  
-    private int queueCount2;  
+    private final int deskWidth = 150; // è®¾ç½®æŸœå°çª—å£å›ºå®šå®½åº¦
+    private final int deskHeight = 150; // è®¾ç½®æŸœå°çª—å£å›ºå®šé«˜åº¦
+    private int queueCount1 = 0;  
+    private int queueCount2 = 0;  
     private int queueNum = 2;
     private int deskNum = 5;
     private SharedObject so;
     private List<Thread> checkInThreads = new ArrayList<>();
     private List<Thread> queueThreads = new ArrayList<>();
-    private final int queuePanelHeight = 200; // ÉèÖÃ¶ÓÁĞÃæ°å¹Ì¶¨¸ß¶È
+    private final int queuePanelHeight = 200; // è®¾ç½®é˜Ÿåˆ—é¢æ¿å›ºå®šé«˜åº¦
 
-    private int timerSpeed = 1000; // ³õÊ¼ËÙ¶ÈÉèÖÃÎª1000ºÁÃë£¬¼´1Ãë
+    private int timerSpeed = 1000; // åˆå§‹é€Ÿåº¦è®¾ç½®ä¸º1000æ¯«ç§’ï¼Œå³1ç§’
 
-    // ´æ´¢Ã¿¸öº½°à¼ÆÊ±Æ÷µÄÒıÓÃ£¬ÒÔ±ã¿ÉÒÔ¸ù¾İ»¬¶¯ÌõµÄ±ä»¯µ÷Õû¼ÆÊ±Æ÷ËÙ¶È
+    // å­˜å‚¨æ¯ä¸ªèˆªç­è®¡æ—¶å™¨çš„å¼•ç”¨ï¼Œä»¥ä¾¿å¯ä»¥æ ¹æ®æ»‘åŠ¨æ¡çš„å˜åŒ–è°ƒæ•´è®¡æ—¶å™¨é€Ÿåº¦
     private Map<Integer, Timer> flightTimers = new HashMap<>();
     public AirportGUI() {
     	so = new SharedObject();
         setTitle("Airport Check-in System");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(10, 10)); // ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷¼ä¸ô
+        setLayout(new BorderLayout(10, 10)); // è®¾ç½®å¸ƒå±€ç®¡ç†å™¨é—´éš”
+        
+        JPanel queuePanel = new JPanel(new GridLayout(1, 2, 10, 10));
+        queuePanel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // è®¾ç½®å›ºå®šé«˜åº¦
+        queuePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
+        
+        queue1Text.setEditable(false);
+        JScrollPane queue1Scroll = new JScrollPane(queue1Text);
+        queuePanel.add(queue1Scroll);
+        
+        queue2Text = new JTextArea("There are currently "+ queueCount2 +" people in queue2");
+        queue2Text.setEditable(false);
+        JScrollPane queue2Scroll = new JScrollPane(queue2Text);
+        queuePanel.add(queue2Scroll);
 
-        queuePanel = createQueuePanel(); // ´´½¨¶ÓÁĞÏÔÊ¾Çø
-        deskPanel = createDeskPanel();   // ´´½¨¹ñÌ¨²Ù×÷Çø
-        flightPanel = createFlightPanel(); // ´´½¨º½°àĞÅÏ¢Çø
+        createQueuePanel(); // åˆ›å»ºé˜Ÿåˆ—æ˜¾ç¤ºåŒº
+        deskPanel = createDeskPanel();   // åˆ›å»ºæŸœå°æ“ä½œåŒº
+        flightPanel = createFlightPanel(); // åˆ›å»ºèˆªç­ä¿¡æ¯åŒº
         speedSlider = createSpeedSlider();
 
         JPanel bottomPanel = new JPanel(new BorderLayout());
@@ -57,9 +66,8 @@ public class AirportGUI extends JFrame{
         add(deskPanel, BorderLayout.CENTER);
         add(bottomPanel, BorderLayout.SOUTH);
 
-        pack(); // µ÷Õû´°¿ÚÒÔÊÊÓ¦×é¼ş´óĞ¡
+        pack(); // è°ƒæ•´çª—å£ä»¥é€‚åº”ç»„ä»¶å¤§å°
         setVisible(true);
-        startQueueUpdateTimer();
 //        for (Thread thread : queueThreads) {
 //            try {
 //                thread.join();
@@ -68,81 +76,19 @@ public class AirportGUI extends JFrame{
 //            }
 //        }
     }
-    
-    private void startQueueUpdateTimer() {
-        Timer queueTimer = new Timer(5000, new ActionListener() { // Ã¿5Ãë¸üĞÂÒ»´Î
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                queueCount1 = so.getQueue1().size();
-                JTextArea queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
-                Queue<Passenger> q1 = so.getQueue1();
-                for (Passenger p : q1) {
-                	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-                	queue1Text.paintImmediately(queue1Text.getBounds());
-                }
                 
-                queueCount2 = so.getQueue2().size();
-                JTextArea queue2Text = new JTextArea("There are currently "+ queueCount2 +" people in queue2");
-                Queue<Passenger> q2 = so.getQueue2();
-                for (Passenger p : q2) {
-                	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-                	queue2Text.paintImmediately(queue2Text.getBounds());
-                }
-                
-            }
-        });
-        queueTimer.start();
-    }
-
-    
-    private JPanel createQueuePanel() {
+    private void createQueuePanel() {
     	for (int i = 1; i <= queueNum; i++) {
 			PassengerQueue queue = new PassengerQueue("economy " + i, so);
 			Thread thread = new Thread(queue);
 			queueThreads.add(thread);
 	        thread.start();
 		}
-    	
-    	
-    	
-        JPanel panel = new JPanel(new GridLayout(1, 2, 10, 10));
-        panel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // ÉèÖÃ¹Ì¶¨¸ß¶È
-        panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        JTextArea queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
-//        queueCount1 = so.getQueue1().size();
-//        JTextArea queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
-//        Queue<Passenger> q1 = so.getQueue1();
-//        for (Passenger p : q1) {
-//        	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-//        	queue1Text.paintImmediately(queue1Text.getBounds());
-//        }
-        
-        queue1Text.setEditable(false);
-        JScrollPane queue1Scroll = new JScrollPane(queue1Text);
-        panel.add(queue1Scroll);
-        
-        
-        
-//        queueCount2 = so.getQueue2().size();
-//        JTextArea queue2Text = new JTextArea("There are currently "+ queueCount2 +" people in queue2");
-//        Queue<Passenger> q2 = so.getQueue2();
-//        for (Passenger p : q2) {
-//        	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-//        	queue2Text.paintImmediately(queue2Text.getBounds());
-//        }
-        JTextArea queue2Text = new JTextArea("There are currently "+ queueCount2 +" people in queue2");
-        queue2Text.setEditable(false);
-        JScrollPane queue2Scroll = new JScrollPane(queue2Text);
-        panel.add(queue2Scroll);
-        
-        
-
-        return panel;
     }
 
     private JPanel createDeskPanel() {
         JPanel panel = new JPanel(new GridLayout(1, 5, 10, 10));
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Ìí¼Ó±ß¾à
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // æ·»åŠ è¾¹è·
 //        for (int i = 1; i <= deskNum; i++) {
 //			CheckInDesk queue = new CheckInDesk("Desk " + i, so);
 //			Thread thread = new Thread(queue);
@@ -158,21 +104,21 @@ public class AirportGUI extends JFrame{
 //            }
 //        }
         for (int i = 1; i <= 5; i++) {
-            final int deskNumber = i; // Ê¹ÓÃfinal±äÁ¿ÒÔ±ãÔÚÄäÃûÀàÖĞÊ¹ÓÃ
+            final int deskNumber = i; // ä½¿ç”¨finalå˜é‡ä»¥ä¾¿åœ¨åŒ¿åç±»ä¸­ä½¿ç”¨
             JPanel desk = new JPanel();
-            desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // ÉèÖÃ¹ñÌ¨¹Ì¶¨´óĞ¡
-            desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // ³õÊ¼±ß¿òÉèÖÃÎªÂÌÉ«
+            desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // è®¾ç½®æŸœå°å›ºå®šå¤§å°
+            desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // åˆå§‹è¾¹æ¡†è®¾ç½®ä¸ºç»¿è‰²
             JCheckBox checkBox = new JCheckBox("Desk " + deskNumber + " Close");
             checkBox.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JCheckBox cb = (JCheckBox) e.getSource();
                     if (cb.isSelected()) {
-                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // ¹´Ñ¡Ê±±ß¿ò±äÂÌ
-                        cb.setText("Desk " + deskNumber + " Open"); // ¸üĞÂ¸´Ñ¡¿òÎÄ±¾ÎªOpen
+                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // å‹¾é€‰æ—¶è¾¹æ¡†å˜ç»¿
+                        cb.setText("Desk " + deskNumber + " Open"); // æ›´æ–°å¤é€‰æ¡†æ–‡æœ¬ä¸ºOpen
                     } else {
-                        desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // Î´¹´Ñ¡Ê±±ß¿ò±ä»ØºÚÉ«
-                        cb.setText("Desk " + deskNumber + " Close"); // ¸üĞÂ¸´Ñ¡¿òÎÄ±¾Îª³õÊ¼×´Ì¬
+                        desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // æœªå‹¾é€‰æ—¶è¾¹æ¡†å˜å›é»‘è‰²
+                        cb.setText("Desk " + deskNumber + " Close"); // æ›´æ–°å¤é€‰æ¡†æ–‡æœ¬ä¸ºåˆå§‹çŠ¶æ€
                     }
                 }
             });
@@ -188,7 +134,7 @@ public class AirportGUI extends JFrame{
     private JPanel createFlightPanel() {
         JPanel panel = new JPanel(new GridLayout(2, 3, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        panel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // ¼ÙÉèÒÑ¾­¶¨ÒåÁËqueuePanelHeight
+        panel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // å‡è®¾å·²ç»å®šä¹‰äº†queuePanelHeight
 
         for (int i = 1; i <= 6; i++) {
             final int flightNumber = i;
@@ -198,22 +144,22 @@ public class AirportGUI extends JFrame{
             JLabel countdownLabel = new JLabel("", SwingConstants.CENTER);
             flightPanel.add(countdownLabel, BorderLayout.CENTER);
 
-            // ÉèÖÃµ¹¼ÆÊ±Ê±¼äÎª1·ÖÖÓ
-            final int[] timeLeft = {60 + timeSetter.nextInt(200)}; // ÒÔÃëÎªµ¥Î»
+            // è®¾ç½®å€’è®¡æ—¶æ—¶é—´ä¸º1åˆ†é’Ÿ
+            final int[] timeLeft = {60 + timeSetter.nextInt(200)}; // ä»¥ç§’ä¸ºå•ä½
 
-            Timer timer = new Timer(1000, new ActionListener() { // ¼ÆÊ±Æ÷Ã¿Ãë´¥·¢Ò»´Î
+            Timer timer = new Timer(1000, new ActionListener() { // è®¡æ—¶å™¨æ¯ç§’è§¦å‘ä¸€æ¬¡
                 public void actionPerformed(ActionEvent e) {
                     timeLeft[0]--;
                     countdownLabel.setText("Flight " + flightNumber + " - " + timeLeft[0]/60 + "M" + timeLeft[0]%60 + "S");
 
                     if (timeLeft[0] <= 0) {
-                        flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // ±ß¿ò±äºì
-                        countdownLabel.setText("Flight " + flightNumber + " Closed"); // ÎÄ±¾¸üĞÂÎªClosed
-                        ((Timer)e.getSource()).stop(); // Í£Ö¹¼ÆÊ±Æ÷
+                        flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // è¾¹æ¡†å˜çº¢
+                        countdownLabel.setText("Flight " + flightNumber + " Closed"); // æ–‡æœ¬æ›´æ–°ä¸ºClosed
+                        ((Timer)e.getSource()).stop(); // åœæ­¢è®¡æ—¶å™¨
                     }
                 }
             });
-            timer.start(); // Æô¶¯¼ÆÊ±Æ÷
+            timer.start(); // å¯åŠ¨è®¡æ—¶å™¨
             flightTimers.put(flightNumber, timer); // Store the timer reference
 
             panel.add(flightPanel);
@@ -236,7 +182,7 @@ public class AirportGUI extends JFrame{
         labelTable.put(2000, new JLabel("X2"));
         labelTable.put(3000, new JLabel("X3"));
         labelTable.put(4000, new JLabel("X4"));
-        speedSlider.setLabelTable(labelTable); // ÉèÖÃ»¬¶¯ÌõµÄ±êÇ©
+        speedSlider.setLabelTable(labelTable); // è®¾ç½®æ»‘åŠ¨æ¡çš„æ ‡ç­¾
         speedSlider.addChangeListener(e -> {
             JSlider source = (JSlider)e.getSource();
             if (!source.getValueIsAdjusting()) {
@@ -259,16 +205,32 @@ public class AirportGUI extends JFrame{
         }
     }
     
-  
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new AirportGUI();
-                
+    @Override
+	public void run() {
+		while (true) {
+			try {
+			Thread.sleep(1000);//Thread.Sleep()æ–¹æ³•ç”¨äºå°†å½“å‰çº¿ç¨‹ä¼‘çœ ä¸€å®šæ—¶é—´ï¼Œå•ä½ä¸ºæ¯«ç§’ã€‚è¿™é‡Œä¸ºæ¯1000æ¯«ç§’ä¼‘çœ ä¸€æ¬¡çº¿ç¨‹ã€‚
+			queueCount1 = so.getQueue1().size();
+            Queue<Passenger> q1 = so.getQueue1();
+            for (Passenger p : q1) {
+            	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
+            	queue1Text.paintImmediately(queue1Text.getBounds());
             }
             
-        });
+            queueCount2 = so.getQueue2().size();
+            Queue<Passenger> q2 = so.getQueue2();
+            for (Passenger p : q2) {
+            	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
+            	queue2Text.paintImmediately(queue2Text.getBounds());
+            }
+			} catch (InterruptedException e) {
+				e.printStackTrace();//æŠ›å‡ºå¼‚å¸¸
+			}
+		}
+	}
+
+    public static void main(String[] args) {
+    	AirportGUI a = new AirportGUI();
+    	new Thread(a).start();//å¯åŠ¨çº¿ç¨‹
     }
 }
