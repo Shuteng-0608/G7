@@ -1,5 +1,3 @@
-package checkinSys;
-
 import java.util.List;
 
 public class CheckInDesk implements Runnable {
@@ -20,7 +18,7 @@ public class CheckInDesk implements Runnable {
 	@Override
 	public void run() {
 		while (isOpen) {
-			while(!so.getQueue().isEmpty()) {
+			while(!so.getQueue1().isEmpty() || !so.getQueue2().isEmpty()) {
 				Passenger p = so.getFromQueue();
 				try {
 					Thread.sleep(50);
