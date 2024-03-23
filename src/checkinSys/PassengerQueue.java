@@ -1,5 +1,3 @@
-package checkinSys;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -10,7 +8,7 @@ public class PassengerQueue implements Runnable {
 	private SharedObject so;
     private boolean isOpen;
     
-	public PassengerQueue(String queueType, SharedObject so, boolean isOpen) {
+	public PassengerQueue(String queueType, SharedObject so) {
 		this.queueType = queueType;
 		this.so = so;
 		this.isOpen = true;
@@ -29,7 +27,8 @@ public class PassengerQueue implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			so.addQueue(p);
+			if(queueType.equals("economy 1")) so.addQueue1(p);
+			if(queueType.equals("economy 2")) so.addQueue2(p);
 		}
     }
 
