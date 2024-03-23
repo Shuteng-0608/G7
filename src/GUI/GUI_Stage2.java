@@ -1,3 +1,5 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,7 +9,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Random;
 
-public class AirportGUI extends JFrame {
+public class GUI_Stage2 extends JFrame {
     private JPanel queuePanel;
     private JPanel deskPanel;
     private JPanel flightPanel;
@@ -24,7 +26,7 @@ public class AirportGUI extends JFrame {
 
     // 存储每个航班计时器的引用，以便可以根据滑动条的变化调整计时器速度
     private Map<Integer, Timer> flightTimers = new HashMap<>();
-    public AirportGUI() {
+    public GUI_Stage2() {
         setTitle("Airport Check-in System");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10)); // 设置布局管理器间隔
@@ -174,7 +176,7 @@ public class AirportGUI extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new AirportGUI();
+                new GUI_Stage2();
             }
         });
     }

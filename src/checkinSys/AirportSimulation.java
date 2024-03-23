@@ -1,4 +1,4 @@
-package checkInSys;
+package checkinSys;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class AirportSimulation {
 	public static void main(String[] args) {
 		List<Thread> checkInThreads = new ArrayList<>();
-		List<Passenger> passengerQueue = new ArrayList<>();
+		SharedObject passengerQueue = new SharedObject();
 		List<Passenger> passengerNotCheckIn = new ArrayList<>();
 		int queueNum = 1;
 		int checkInDeskNum = 3;
@@ -26,7 +26,7 @@ public class AirportSimulation {
 		
 		// Create passenger queue
 		for (int i = 1; i <= queueNum; i++) {
-			PassengerQueue queue = new PassengerQueue("economy", passengerQueue, passengerNotCheckIn);
+			PassengerQueue queue = new PassengerQueue("economy", passengerQueue, true);
 			Thread thread = new Thread(queue);
 			checkInThreads.add(thread);
 	        thread.start();

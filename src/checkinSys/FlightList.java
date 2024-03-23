@@ -2,6 +2,7 @@ package checkinSys;
 
 /* Maintains a list of Flight objects as an ArrayList. */
 import java.util.ArrayList;
+import java.util.Random;
 
 public class FlightList {
 	// Storage for an arbitrary number of flights.
@@ -53,5 +54,21 @@ public class FlightList {
 			}
 		}
 		return null;
+	}
+
+	public Passenger randomSelect() {
+		Random rand = new Random();
+		int idx1 = rand.nextInt(getNumberOfEntries());
+		
+		while(flightList.get(idx1).getList().getNumberOfEntries() == flightList.get(idx1).numberOfCheckIn()) 
+			idx1 = rand.nextInt(getNumberOfEntries());
+		
+		Flight flight = getFlight(idx1);
+		int idx2 = rand.nextInt(flight.getList().getNumberOfEntries());
+		
+		while(flight.getList().getByIdx(idx2).getCheckin() == "Yes")
+			idx2 = rand.nextInt(flight.getList().getNumberOfEntries());
+		
+		return flight.getList().getByIdx(idx2);
 	}
 }

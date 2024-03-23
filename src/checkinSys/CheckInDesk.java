@@ -1,3 +1,5 @@
+package checkinSys;
+
 import java.util.List;
 
 public class CheckInDesk implements Runnable {
