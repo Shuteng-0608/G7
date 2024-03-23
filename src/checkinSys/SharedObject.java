@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import myExceptions.InvalidAttributeException;
 import myExceptions.InvalidBookRefException;
@@ -11,6 +13,7 @@ public class SharedObject {
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
 	private FlightList flightList = new FlightList();
+	private Queue<Passenger> queue = new LinkedList();
 
 	/**
 	 * Constructor for Manager. Initializes the class and reads data from files.
@@ -135,13 +138,10 @@ public class SharedObject {
 	/**
 	 * Help passengers check in.
 	 * 
-	 * @param last_name Passenger's last name
-	 * @param br        Passenger's reference code
-	 * @return true if checked-in, false otherwise.
+	 * @param passenger Passenger object
 	 */
-	public synchronized boolean check_in(String last_name, String br) {
-		Passenger p = findPassenger(last_name, br);
-		return p.check_in();
+	public synchronized void check_in(Passenger p) {
+		p.check_in();
 	}
 	
 	/**
@@ -181,8 +181,20 @@ public class SharedObject {
 	/**
 	 * @return A list of flights.
 	 */
-	public FlightList getFlightList() {
+	public synchronized FlightList getFlightList() {
 		return flightList;
+	}
+	
+	public synchronized void addQueue(Passenger p) {
+		queue.add(p);
+	}
+	
+	public synchronized Queue getQueue() {
+		return queue;
+	}
+	
+	public synchronized Passenger getFromQueue() {
+		return queue.poll();
 	}
 
 	/**
