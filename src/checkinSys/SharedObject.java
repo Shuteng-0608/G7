@@ -1,11 +1,10 @@
-package checkinSys;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
 
 import myExceptions.InvalidAttributeException;
 import myExceptions.InvalidBookRefException;
@@ -15,7 +14,8 @@ public class SharedObject {
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
 	private FlightList flightList = new FlightList();
-	private Queue<Passenger> queue = new LinkedList();
+	private Queue<Passenger> queue1 = new LinkedList();
+	private Queue<Passenger> queue2 = new LinkedList();
 
 	/**
 	 * Constructor for Manager. Initializes the class and reads data from files.
@@ -187,18 +187,31 @@ public class SharedObject {
 		return flightList;
 	}
 	
-	public synchronized void addQueue(Passenger p) {
-		queue.add(p);
+	public synchronized void addQueue1(Passenger p) {
+		queue1.add(p);
 	}
 	
-	public synchronized Queue getQueue() {
-		return queue;
+	public synchronized void addQueue2(Passenger p) {
+		queue2.add(p);
+	}
+	
+	public synchronized Queue getQueue1() {
+		return queue1;
+	}
+	
+	public synchronized Queue getQueue2() {
+		return queue2;
 	}
 	
 	public synchronized Passenger getFromQueue() {
-		return queue.poll();
+		if(queue1.isEmpty()) return queue1.poll();
+		if(queue2.isEmpty()) return queue2.poll();
+		Random rand = new Random();
+		int idx = rand.nextInt(2);
+		if(idx == 0) return queue1.poll();
+		else return queue2.poll();
 	}
-
+	
 	/**
 	 * validate Flight Data legal or not
 	 * 
