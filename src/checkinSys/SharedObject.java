@@ -19,6 +19,8 @@ public class SharedObject {
 	private Queue<Passenger> queue1 = new LinkedList();
 	private Queue<Passenger> queue2 = new LinkedList();
 
+	//test
+	
 	/**
 	 * Constructor for Manager. Initializes the class and reads data from files.
 	 */
