@@ -58,6 +58,5 @@ public class PassengerQueueTest {
         if (passengerQueue != null) {
             passengerQueue.queueClose(); // Try to close, in case the test fails
         }
-        // If needed, queues can be cleared here
     }
 }
