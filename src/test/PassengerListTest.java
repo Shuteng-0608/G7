@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 
 class PassengerListTest {
 	
-	PassengerList passengers = new PassengerList();
+	private PassengerList passengers = new PassengerList();
 	
 	@BeforeEach
-	void testPassengerList() throws InvalidAttributeException {
+	void setUp() throws InvalidAttributeException, InvalidBookRefException {
 		Manager manager = new Manager();
 		this.passengers = manager.getFlightList().getFlight(0).getList();
 	}
