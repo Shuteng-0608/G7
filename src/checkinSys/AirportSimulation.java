@@ -26,7 +26,7 @@ public class AirportSimulation {
 		
 		// Create passenger queue
 		for (int i = 1; i <= queueNum; i++) {
-			PassengerQueue queue = new PassengerQueue("economy", passengerQueue, true);
+			PassengerQueue queue = new PassengerQueue("economy", passengerQueue);
 			Thread thread = new Thread(queue);
 			checkInThreads.add(thread);
 	        thread.start();
