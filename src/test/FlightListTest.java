@@ -8,11 +8,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class FlightListTest {
-	
-	private FlightList flightList = new FlightList();	
 
+	private FlightList flightList = new FlightList();
+	
 	@BeforeEach
-	void testFlightList() throws InvalidAttributeException, InvalidBookRefException {
+	void setUp() throws InvalidAttributeException, InvalidBookRefException {
 		Manager manager = new Manager();
 		this.flightList = manager.getFlightList();
 	}
@@ -30,5 +30,5 @@ class FlightListTest {
 		assertEquals(100, number, "Equal!");
 		assertNotEquals(101, number, "Equal!");
 	}
-	
+
 }
