@@ -1,17 +1,18 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import checkinSys.*;
+import myExceptions.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import myExceptions.*;
 
 class PassengerTest {
-
-	Passenger passenger = new Passenger();
+	
+	private Passenger passenger = new Passenger();
 	
 	@BeforeEach
-	void testPassenger() throws InvalidAttributeException {
+	void setUp() throws InvalidAttributeException, InvalidBookRefException {
 		Manager manager = new Manager();
 		this.passenger = manager.getFlightList().getFlight(0).getList().getByIdx(0);
 	}
@@ -22,7 +23,7 @@ class PassengerTest {
 		assertEquals("DXBCA3781807232238", reference, "Equal!");
 		assertNotEquals("JFKCA3191811247604", reference, "Error!");
 	}
-	
+
 	@Test
 	void testGetName() {
 		String name = this.passenger.getName();
@@ -35,6 +36,13 @@ class PassengerTest {
 		String flight_code = this.passenger.getFlight();
 		assertEquals("CA378", flight_code, "Equal!");
 		assertNotEquals("EK350", flight_code, "Error!");
+	}
+
+	@Test
+	void testGetDate() {
+		String date = this.passenger.getDate();
+		assertEquals("180723", date, "Equal!");
+		assertNotEquals("180523", date, "Error!");
 	}
 
 	@Test
@@ -59,6 +67,13 @@ class PassengerTest {
 	}
 
 	@Test
+	void testCheck_in() {
+		boolean result = this.passenger.check_in();
+		assertEquals(false, result, "Equal!");
+		assertNotEquals(true, result, "Error!");
+	}
+
+	@Test
 	void testExcess_fee() {
 		double excess_fee = this.passenger.excess_fee();
 		assertEquals(19.26, excess_fee, "Equal!");
@@ -74,5 +89,5 @@ class PassengerTest {
 		assertEquals(false, result2, "Equal!");
 		assertNotEquals(true, result2, "Error!");
 	}
-	
+
 }
