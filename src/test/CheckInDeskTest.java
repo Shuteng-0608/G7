@@ -2,6 +2,7 @@ package test;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import checkinSys.CheckInDesk;
 import checkinSys.Passenger;
@@ -14,7 +15,7 @@ public class CheckInDeskTest {
     private CheckInDesk checkInDesk;
     private Thread checkInDeskThread;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         sharedObject = new SharedObject(); // 初始化共享对象
         checkInDesk = new CheckInDesk("Desk 1", sharedObject); // 初始化CheckInDesk
@@ -39,7 +40,6 @@ public class CheckInDeskTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         // 检查乘客是否已经被处理（即他们的check_in状态应该被设置为"Yes"）
         assertTrue("Passenger1 should have been checked in", passenger1.getCheckin().equals("Yes"));
         assertTrue("Passenger2 should have been checked in", passenger2.getCheckin().equals("Yes"));

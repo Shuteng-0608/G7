@@ -207,9 +207,18 @@ public class SharedObject {
 		return queue2;
 	}
 	
+	//TODO the code is wrong, if queue is null no passenger can be invoked
+//	public synchronized Passenger getFromQueue() {
+//		if(queue1.isEmpty()) return queue1.poll();
+//		if(queue2.isEmpty()) return queue2.poll();
+//		Random rand = new Random();
+//		int idx = rand.nextInt(2);
+//		if(idx == 0) return queue1.poll();
+//		else return queue2.poll();
+//	}
 	public synchronized Passenger getFromQueue() {
-		if(queue1.isEmpty()) return queue1.poll();
-		if(queue2.isEmpty()) return queue2.poll();
+		if(!queue1.isEmpty()) return queue1.poll();
+		if(!queue2.isEmpty()) return queue2.poll();
 		Random rand = new Random();
 		int idx = rand.nextInt(2);
 		if(idx == 0) return queue1.poll();
