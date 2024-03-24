@@ -1,14 +1,11 @@
 package test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+import checkinSys.*;
+import myExceptions.*;
 import org.junit.jupiter.api.BeforeEach;
-
-import checkinSys.CheckInDesk;
-import checkinSys.Passenger;
-import checkinSys.SharedObject;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class CheckInDeskTest {
     private SharedObject sharedObject;
@@ -16,38 +13,38 @@ public class CheckInDeskTest {
     private Thread checkInDeskThread;
 
     @BeforeEach
-    public void setUp() {
-        sharedObject = new SharedObject(); // 初始化共享对象
-        checkInDesk = new CheckInDesk("Desk 1", sharedObject); // 初始化CheckInDesk
-        checkInDeskThread = new Thread(checkInDesk); // 创建一个线程来运行CheckInDesk
+    void setUp() throws InvalidAttributeException, InvalidBookRefException{
+        sharedObject = new SharedObject(); // Initialize shared object
+        checkInDesk = new CheckInDesk("Desk 1", sharedObject); // Initialize CheckInDesk
+        checkInDeskThread = new Thread(checkInDesk); // Create a thread to run CheckInDesk
     }
 
     @Test
     public void testCheckInProcess() {
-        // 假设已经有乘客信息和航班信息加载到sharedObject中
+        // Assuming passenger information and flight information are already loaded into sharedObject
 
-        // 创建几个乘客实例并加入队列
+        // Create a few passenger instances and add them to the queue
         Passenger passenger1 = new Passenger("DXBCA3781807232238", "Diane Brewer", "CA378", "180723", "No", 26.42, 1.1);
         Passenger passenger2 = new Passenger("DXBCA3781807236379", "George Hall", "CA378", "180723", "Yes", 31.98, 1.85);
         sharedObject.addQueue1(passenger1);
         sharedObject.addQueue2(passenger2);
 
-        // 启动CheckInDesk线程
+        // Start the CheckInDesk thread
         checkInDeskThread.start();
 
         try {
-            Thread.sleep(100); // 等待足够的时间让CheckInDesk处理乘客
+            Thread.sleep(100); // Wait enough time for CheckInDesk to process passengers
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        // 检查乘客是否已经被处理（即他们的check_in状态应该被设置为"Yes"）
+        // Check if passengers have been processed (i.e., their check_in status should be set to "Yes")
         assertTrue("Passenger1 should have been checked in", passenger1.getCheckin().equals("Yes"));
         assertTrue("Passenger2 should have been checked in", passenger2.getCheckin().equals("Yes"));
 
-        // 关闭CheckInDesk以结束线程
+        // Close CheckInDesk to end thread
         checkInDesk.closeDesk();
         try {
-            checkInDeskThread.join(); // 确保线程安全地结束
+            checkInDeskThread.join(); // Ensure the thread ends safely
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
