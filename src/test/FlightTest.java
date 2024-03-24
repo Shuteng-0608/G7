@@ -8,11 +8,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class FlightTest {
-	
-	Flight flight = new Flight();
+
+	private Flight flight = new Flight();
 	
 	@BeforeEach
-	void testFlight() throws InvalidAttributeException {
+	void setUp() throws InvalidAttributeException, InvalidBookRefException {
 		Manager manager = new Manager();
 		this.flight = manager.getFlightList().getFlight(1);
 	}
