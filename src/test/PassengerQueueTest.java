@@ -16,8 +16,8 @@ public class PassengerQueueTest {
 
     @Before
     public void setUp() {
-        sharedObject = new SharedObject(); // 假设这个对象已经被正确初始化和配置
-        // 假设FlightList中已经有乘客数据可供选择
+        sharedObject = new SharedObject(); // Assume this object has been correctly initialized and configured
+        // Assume there is already passenger data available in FlightList for selection
     }
 
     @Test
@@ -26,11 +26,11 @@ public class PassengerQueueTest {
         passengerQueueThread = new Thread(passengerQueue);
         passengerQueueThread.start();
 
-        // 给线程一些时间来处理任务
-        Thread.sleep(200); // 调整此值根据实际情况可能需要
+        // Give the thread some time to process tasks
+        Thread.sleep(200); // Adjust this value as needed based on actual situations
 
-        passengerQueue.queueClose(); // 通知线程关闭
-        passengerQueueThread.join(); // 等待线程安全结束
+        passengerQueue.queueClose();  // Notify the thread to close
+        passengerQueueThread.join(); // Wait for the thread to end safely
 
         assertFalse("Queue 1 should not be empty after running", sharedObject.getQueue1().isEmpty());
         assertTrue("Queue 2 should be empty when only queue 1 is being used", sharedObject.getQueue2().isEmpty());
@@ -42,11 +42,11 @@ public class PassengerQueueTest {
         passengerQueueThread = new Thread(passengerQueue);
         passengerQueueThread.start();
 
-        // 给线程一些时间来处理任务
-        Thread.sleep(200); // 调整此值根据实际情况可能需要
+        // Give the thread some time to process tasks
+        Thread.sleep(200); // Adjust this value as needed based on actual situations
 
-        passengerQueue.queueClose(); // 通知线程关闭
-        passengerQueueThread.join(); // 等待线程安全结束
+        passengerQueue.queueClose(); // Notify the thread to close
+        passengerQueueThread.join(); // Wait for the thread to end safely
 
         assertTrue("Queue 1 should be empty when only queue 2 is being used", sharedObject.getQueue1().isEmpty());
         assertFalse("Queue 2 should not be empty after running", sharedObject.getQueue2().isEmpty());
@@ -54,10 +54,10 @@ public class PassengerQueueTest {
 
     @After
     public void tearDown() {
-        // 清理资源，例如关闭线程等
+    	// Clean up resources, such as closing threads, etc.
         if (passengerQueue != null) {
-            passengerQueue.queueClose(); // 尝试关闭，如果测试失败
+            passengerQueue.queueClose(); // Try to close, in case the test fails
         }
-        // 如果需要，可以在这里清空队列等
+        // If needed, queues can be cleared here
     }
 }
