@@ -2,19 +2,32 @@ package checkinSys;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 
 public class Logger {
-	
     private static final String LOG_FILE = "simulation.log";
+    private static Logger instance; // only instance
 
-    public static void log(String message) {
+    // make the constructor private
+    private Logger() {
+    }
+
+    // provide the global access method for the logger
+    public static synchronized Logger getInstance() {
+        if (instance == null) {
+            instance = new Logger();
+        }
+        return instance;
+    }
+
+    // logger method
+    public void log(String message) {
         String logEntry = LocalDateTime.now() + ": " + message;
-        try (FileWriter writer = new FileWriter(LOG_FILE, true)) {
-            writer.write(logEntry + "\n");
+        try (PrintWriter writer = new PrintWriter(new FileWriter(LOG_FILE, true))) {
+            writer.println(logEntry);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }
