@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,6 +15,7 @@ public class SharedObject {
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
 	private FlightList flightList = new FlightList();
+	private PassengerList all = new PassengerList();
 	private Queue<Passenger> queue1 = new LinkedList();
 	private Queue<Passenger> queue2 = new LinkedList();
 
@@ -22,8 +24,8 @@ public class SharedObject {
 	 */
 	public SharedObject() {
 	    try {
-	        readFromFile("src/data/flight_details_data.csv", 
-	                     "src/data/passenger_data.csv");
+	        readFromFile("D:\\1125115069\\FileRecv\\flight_details_data.csv", 
+	                     "D:\\1125115069\\FileRecv\\testdata.csv");
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();// Print the stack trace in case of an exception
 		}
@@ -116,6 +118,15 @@ public class SharedObject {
 		p.set(weight, volume);
 		return p.excess_fee();
 	}
+	
+	public Passenger randomSelect() {
+		if(all.getNumberOfEntries() == 0) return null;
+		Random rand = new Random();
+		int idx = rand.nextInt(all.getNumberOfEntries());
+		Passenger tmp = all.getByIdx(idx);
+		all.removePassenger(tmp);
+		return tmp;
+	}
 
 	/**
 	 * Check that the booking reference code is correct according to our rules.
@@ -144,6 +155,10 @@ public class SharedObject {
 	 */
 	public synchronized void check_in(Passenger p) {
 		p.check_in();
+	}
+	
+	public synchronized PassengerList getAllPassenger() {
+		return all;
 	}
 	
 	/**
@@ -204,8 +219,14 @@ public class SharedObject {
 	}
 	
 	public synchronized Passenger getFromQueue() {
-		if(queue1.isEmpty()) return queue1.poll();
-		if(queue2.isEmpty()) return queue2.poll();
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		notifyAll();
+		if(!queue1.isEmpty() && queue2.isEmpty()) return queue1.poll();
+		if(!queue2.isEmpty() && queue1.isEmpty()) return queue2.poll();
 		Random rand = new Random();
 		int idx = rand.nextInt(2);
 		if(idx == 0) return queue1.poll();
@@ -322,6 +343,7 @@ public class SharedObject {
 		} else {
 			Flight objFlight = findFlight(flight_code);
             objFlight.getList().addPassenger(p);
+            if(p.getCheckin().equals("No")) all.addPassenger(p);
 		}
 
 	}
