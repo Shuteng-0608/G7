@@ -51,6 +51,6 @@ public class AirportSimulation {
             }
         }
 
-        Logger.log("All passengers have been processed.");
+        Logger.getInstance().log("All passengers have been processed.");
     }
 }

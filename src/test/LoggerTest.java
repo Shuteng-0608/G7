@@ -34,7 +34,7 @@ public class LoggerTest {
         String testMessage = "This is a test log message";
         
         // Call the method under test
-        Logger.log(testMessage);
+        Logger.getInstance().log(testMessage);
         
         // Verify the log file exists
         File logFile = new File(LOG_FILE);
