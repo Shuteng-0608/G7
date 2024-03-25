@@ -21,11 +21,15 @@ public class PassengerQueue implements Runnable {
 	@Override
     public void run() {
 		while(isOpen) {
-			Passenger p = so.getFlightList().randomSelect();
 			try {
-				Thread.sleep(50);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
+			}
+			Passenger p = so.randomSelect();
+			if(p == null) {
+				queueClose();
+				continue;
 			}
 			if(queueType.equals("economy 1")) so.addQueue1(p);
 			if(queueType.equals("economy 2")) so.addQueue2(p);
