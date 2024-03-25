@@ -4,6 +4,7 @@ public class CheckInDesk implements Runnable {
 	private final String deskName;
 	private SharedObject so;
 	private boolean isOpen;
+	private Passenger client;
 
 	public CheckInDesk(String deskName, SharedObject so) {
 		this.deskName = deskName;
@@ -14,17 +15,23 @@ public class CheckInDesk implements Runnable {
 	public void closeDesk() {
 		isOpen = false;
 	}
+	
+	public Passenger getClient() {
+		return client;
+	}
 
 	@Override
 	public void run() {
 		while (isOpen) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0)
+				closeDesk();
 			while(!so.getQueue1().isEmpty() || !so.getQueue2().isEmpty()) {
-				Passenger p = so.getFromQueue();
-				try {
-					Thread.sleep(50);
-				} catch (InterruptedException e) {
-				}
-				so.check_in(p);
+				client = so.getFromQueue();
+				so.check_in(client);
 			}
 		}
 	}
