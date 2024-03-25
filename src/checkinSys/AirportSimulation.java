@@ -4,9 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import checkinSys.Logger.LogLevel;
+
 import java.util.HashMap;
 
 public class AirportSimulation {
+	private static final LogLevel INFO = LogLevel.INFO;
+	
 	public static void main(String[] args) {
 		List<Thread> checkInThreads = new ArrayList<>();
 		SharedObject passengerQueue = new SharedObject();
@@ -51,6 +56,6 @@ public class AirportSimulation {
             }
         }
 
-        Logger.getInstance().log("All passengers have been processed.");
+        Logger.getInstance().log(INFO,"All passengers have been processed.");
     }
 }

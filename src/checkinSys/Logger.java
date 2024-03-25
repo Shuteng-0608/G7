@@ -13,6 +13,13 @@ public class Logger {
     private Logger() {
     }
 
+    public enum LogLevel {
+        INFO,
+        DEBUG,
+        WARN,
+        ERROR
+    }
+    
     // provide the global access method for the logger
     public static synchronized Logger getInstance() {
         if (instance == null) {
@@ -22,8 +29,8 @@ public class Logger {
     }
 
     // logger method
-    public void log(String message) {
-        String logEntry = LocalDateTime.now() + ": " + message;
+    public void log(LogLevel level, String message) {
+    	String logEntry = LocalDateTime.now() + " [" + level + "]: " + message;
         try (PrintWriter writer = new PrintWriter(new FileWriter(LOG_FILE, true))) {
             writer.println(logEntry);
         } catch (IOException e) {

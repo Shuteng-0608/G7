@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import checkinSys.Logger;
+import checkinSys.Logger.LogLevel;
 
 import org.junit.After;
 import org.junit.Before;
@@ -19,6 +20,7 @@ import java.io.IOException;
 public class LoggerTest {
 
     private static final String LOG_FILE = "simulation.log";
+	private static final LogLevel INFO = LogLevel.INFO;
 
     @Before
     public void setUp() {
@@ -34,7 +36,7 @@ public class LoggerTest {
         String testMessage = "This is a test log message";
         
         // Call the method under test
-        Logger.getInstance().log(testMessage);
+        Logger.getInstance().log(INFO,testMessage);
         
         // Verify the log file exists
         File logFile = new File(LOG_FILE);
