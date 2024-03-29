@@ -1,3 +1,5 @@
+package checkInSimulation;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,8 +9,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-import myExceptions.InvalidAttributeException;
-import myExceptions.InvalidBookRefException;
+import myException.InvalidAttributeException;
+import myException.InvalidBookRefException;
 
 public class SharedObject {
 	// Maps to store flights and passengers data
@@ -24,8 +26,8 @@ public class SharedObject {
 	 */
 	public SharedObject() {
 	    try {
-	        readFromFile("D:\\1125115069\\FileRecv\\flight_details_data.csv", 
-	                     "D:\\1125115069\\FileRecv\\testdata.csv");
+	        readFromFile("src/data/flight_details_data.csv", 
+	                     "src/data/testdata.csv");
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();// Print the stack trace in case of an exception
 		}
@@ -203,11 +205,23 @@ public class SharedObject {
 	}
 	
 	public synchronized void addQueue1(Passenger p) {
+//		try {
+//			wait();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		queue1.add(p);
+		notifyAll();
 	}
 	
 	public synchronized void addQueue2(Passenger p) {
+//		try {
+//			wait();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		queue2.add(p);
+		notifyAll();
 	}
 	
 	public synchronized Queue getQueue1() {
@@ -224,13 +238,30 @@ public class SharedObject {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		notifyAll();
-		if(!queue1.isEmpty() && queue2.isEmpty()) return queue1.poll();
-		if(!queue2.isEmpty() && queue1.isEmpty()) return queue2.poll();
+//		notifyAll();
+		if(!queue1.isEmpty() && queue2.isEmpty()) {
+			Passenger curP = queue1.poll();
+			notifyAll();
+			return curP;
+		}
+		if(!queue2.isEmpty() && queue1.isEmpty()) {
+			Passenger curP = queue2.poll();
+			notifyAll();
+			return curP;
+		}
 		Random rand = new Random();
 		int idx = rand.nextInt(2);
-		if(idx == 0) return queue1.poll();
-		else return queue2.poll();
+		if(idx == 0) {
+			Passenger curP = queue1.poll();
+			notifyAll();
+			return curP;
+			
+		}
+		else {
+			Passenger curP = queue2.poll();
+			notifyAll();
+			return curP;
+		}
 	}
 	
 	/**
