@@ -1,4 +1,9 @@
+package GUI;
+
 import javax.swing.*;
+
+import checkInSimulation.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,36 +19,45 @@ public class AirportGUI extends JFrame implements Runnable{
     private JPanel queuePanel;
     private JPanel deskPanel;
     private JPanel flightPanel;
+    private JPanel deskControlPanel;
     private JSlider speedSlider;
     JTextArea queue1Text;
     JTextArea queue2Text;
+    JTextArea desk1Text;
+    JTextArea desk2Text;
+    JTextArea desk3Text;
+    JTextArea desk4Text;
+    JTextArea desk5Text;
     private Random timeSetter = new Random();
-    private final int deskWidth = 150; // è®¾ç½®æŸœå°çª—å£å›ºå®šå®½åº¦
-    private final int deskHeight = 150; // è®¾ç½®æŸœå°çª—å£å›ºå®šé«˜åº¦
+    private final int deskWidth = 150; // ÉèÖÃ¹ñÌ¨´°¿Ú¹Ì¶¨¿í¶È
+    private final int deskHeight = 50; // ÉèÖÃ¹ñÌ¨´°¿Ú¹Ì¶¨¸ß¶È
     private int queueCount1 = 0;  
     private int queueCount2 = 0;  
     private int queueNum = 2;
     private int deskNum = 5;
     private SharedObject so;
     private List<Thread> checkInThreads = new ArrayList<>();
+    private List<CheckInDesk> Desk = new ArrayList<>();
     private List<Thread> queueThreads = new ArrayList<>();
-    private final int queuePanelHeight = 200; // è®¾ç½®é˜Ÿåˆ—é¢æ¿å›ºå®šé«˜åº¦
+    private final int queuePanelHeight = 200; // ÉèÖÃ¶ÓÁĞÃæ°å¹Ì¶¨¸ß¶È
+    private List<Passenger> curPassengerList = new ArrayList<>();
 
-    private int timerSpeed = 1000; // åˆå§‹é€Ÿåº¦è®¾ç½®ä¸º1000æ¯«ç§’ï¼Œå³1ç§’
+    private int timerSpeed = 1000; // ³õÊ¼ËÙ¶ÈÉèÖÃÎª1000ºÁÃë£¬¼´1Ãë
 
-    // å­˜å‚¨æ¯ä¸ªèˆªç­è®¡æ—¶å™¨çš„å¼•ç”¨ï¼Œä»¥ä¾¿å¯ä»¥æ ¹æ®æ»‘åŠ¨æ¡çš„å˜åŒ–è°ƒæ•´è®¡æ—¶å™¨é€Ÿåº¦
+    // ´æ´¢Ã¿¸öº½°à¼ÆÊ±Æ÷µÄÒıÓÃ£¬ÒÔ±ã¿ÉÒÔ¸ù¾İ»¬¶¯ÌõµÄ±ä»¯µ÷Õû¼ÆÊ±Æ÷ËÙ¶È
     private Map<Integer, Timer> flightTimers = new HashMap<>();
     public AirportGUI() {
     	so = new SharedObject();
         setTitle("Airport Check-in System");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(10, 10)); // è®¾ç½®å¸ƒå±€ç®¡ç†å™¨é—´éš”
+        setLayout(new BorderLayout(10, 10)); // ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷¼ä¸ô
         
-        JPanel queuePanel = new JPanel(new GridLayout(1, 2, 10, 10));
-        queuePanel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // è®¾ç½®å›ºå®šé«˜åº¦
+        // For passenger queue
+        queuePanel = new JPanel(new GridLayout(1, 2, 10, 10));
+        queuePanel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // ÉèÖÃ¹Ì¶¨¸ß¶È
         queuePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
         
+        queue1Text = new JTextArea("There are currently "+ queueCount1 +" people in queue1");
         queue1Text.setEditable(false);
         JScrollPane queue1Scroll = new JScrollPane(queue1Text);
         queuePanel.add(queue1Scroll);
@@ -52,32 +66,78 @@ public class AirportGUI extends JFrame implements Runnable{
         queue2Text.setEditable(false);
         JScrollPane queue2Scroll = new JScrollPane(queue2Text);
         queuePanel.add(queue2Scroll);
+        
+        
+        // For check-in desk
+        deskControlPanel = new JPanel(new GridLayout(1, 5, 10, 10));
+        deskControlPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Ìí¼Ó±ß¾à
+        
+        deskPanel = new JPanel(new GridLayout(1, 5, 10, 10));
+        deskPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Ìí¼Ó±ß¾à
+        
+        desk1Text = new JTextArea("desk1");
+        desk1Text.setEditable(false);
+        desk1Text.setPreferredSize(new Dimension(150, 100));
+        desk1Text.setLineWrap(true);
+        desk1Text.setWrapStyleWord(true);
+        deskPanel.add(desk1Text);
+        
+        desk2Text = new JTextArea("desk2");
+        desk2Text.setEditable(false);
+        desk2Text.setPreferredSize(new Dimension(150, 100));
+        desk2Text.setLineWrap(true);
+        desk2Text.setWrapStyleWord(true);
+        deskPanel.add(desk2Text);
+        
+        desk3Text = new JTextArea("desk3");
+        desk3Text.setEditable(false);
+        desk3Text.setPreferredSize(new Dimension(150, 100));
+        desk3Text.setLineWrap(true);
+        desk3Text.setWrapStyleWord(true);
+        deskPanel.add(desk3Text);
+        
+        desk4Text = new JTextArea("desk4");
+        desk4Text.setEditable(false);
+        desk4Text.setPreferredSize(new Dimension(150, 100));
+        desk4Text.setLineWrap(true);
+        desk4Text.setWrapStyleWord(true);
+        deskPanel.add(desk4Text);
+        
+        desk5Text = new JTextArea("desk5");
+        desk5Text.setEditable(false);
+        desk5Text.setPreferredSize(new Dimension(150, 100));
+        desk5Text.setLineWrap(true);
+        desk5Text.setWrapStyleWord(true);
+        deskPanel.add(desk5Text);
 
-        createQueuePanel(); // åˆ›å»ºé˜Ÿåˆ—æ˜¾ç¤ºåŒº
-        deskPanel = createDeskPanel();   // åˆ›å»ºæŸœå°æ“ä½œåŒº
-        flightPanel = createFlightPanel(); // åˆ›å»ºèˆªç­ä¿¡æ¯åŒº
+        
+        // Open queue and desk threads
+        createQueue(); 
+        createDesk();
+        
+        deskControlPanel = createControlDeskPanel();   // ´´½¨¹ñÌ¨²Ù×÷Çø
+        flightPanel = createFlightPanel(); // ´´½¨º½°àĞÅÏ¢Çø
         speedSlider = createSpeedSlider();
+        
+        JPanel centerPanel = new JPanel(new BorderLayout());
+        centerPanel.add(deskControlPanel, BorderLayout.CENTER);
+        centerPanel.add(deskPanel, BorderLayout.SOUTH);
+        
 
         JPanel bottomPanel = new JPanel(new BorderLayout());
         bottomPanel.add(flightPanel, BorderLayout.CENTER);
         bottomPanel.add(speedSlider, BorderLayout.SOUTH);
 
         add(queuePanel, BorderLayout.NORTH);
-        add(deskPanel, BorderLayout.CENTER);
+        add(centerPanel, BorderLayout.CENTER);
         add(bottomPanel, BorderLayout.SOUTH);
 
-        pack(); // è°ƒæ•´çª—å£ä»¥é€‚åº”ç»„ä»¶å¤§å°
+        pack(); 
         setVisible(true);
-//        for (Thread thread : queueThreads) {
-//            try {
-//                thread.join();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
+
     }
                 
-    private void createQueuePanel() {
+    private void createQueue() {
     	for (int i = 1; i <= queueNum; i++) {
 			PassengerQueue queue = new PassengerQueue("economy " + i, so);
 			Thread thread = new Thread(queue);
@@ -85,56 +145,50 @@ public class AirportGUI extends JFrame implements Runnable{
 	        thread.start();
 		}
     }
+    
+    private void createDesk() {
+    	for (int i = 1; i <= deskNum; i++) {
+			CheckInDesk queue = new CheckInDesk("Desk " + i, so);
+			Thread thread = new Thread(queue);
+			checkInThreads.add(thread);
+			Desk.add(queue);
+	        thread.start();
+		}
+    }
 
-    private JPanel createDeskPanel() {
-        JPanel panel = new JPanel(new GridLayout(1, 5, 10, 10));
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // æ·»åŠ è¾¹è·
-//        for (int i = 1; i <= deskNum; i++) {
-//			CheckInDesk queue = new CheckInDesk("Desk " + i, so);
-//			Thread thread = new Thread(queue);
-//			checkInThreads.add(thread);
-//	        thread.start();
-//		}
-//        
-//        for (Thread thread : checkInThreads) {
-//            try {
-//                thread.join();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
+    private JPanel createControlDeskPanel() {
+        
         for (int i = 1; i <= 5; i++) {
-            final int deskNumber = i; // ä½¿ç”¨finalå˜é‡ä»¥ä¾¿åœ¨åŒ¿åç±»ä¸­ä½¿ç”¨
+            final int deskNumber = i; // Ê¹ÓÃfinal±äÁ¿ÒÔ±ãÔÚÄäÃûÀàÖĞÊ¹ÓÃ
             JPanel desk = new JPanel();
-            desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // è®¾ç½®æŸœå°å›ºå®šå¤§å°
-            desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // åˆå§‹è¾¹æ¡†è®¾ç½®ä¸ºç»¿è‰²
+            desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // ÉèÖÃ¹ñÌ¨¹Ì¶¨´óĞ¡
+            desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // ³õÊ¼±ß¿òÉèÖÃÎªÂÌÉ«
             JCheckBox checkBox = new JCheckBox("Desk " + deskNumber + " Close");
             checkBox.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JCheckBox cb = (JCheckBox) e.getSource();
                     if (cb.isSelected()) {
-                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // å‹¾é€‰æ—¶è¾¹æ¡†å˜ç»¿
-                        cb.setText("Desk " + deskNumber + " Open"); // æ›´æ–°å¤é€‰æ¡†æ–‡æœ¬ä¸ºOpen
+                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // ¹´Ñ¡Ê±±ß¿ò±äÂÌ
+                        cb.setText("Desk " + deskNumber + " Open"); // ¸üĞÂ¸´Ñ¡¿òÎÄ±¾ÎªOpen
                     } else {
-                        desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // æœªå‹¾é€‰æ—¶è¾¹æ¡†å˜å›é»‘è‰²
-                        cb.setText("Desk " + deskNumber + " Close"); // æ›´æ–°å¤é€‰æ¡†æ–‡æœ¬ä¸ºåˆå§‹çŠ¶æ€
+                        desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // Î´¹´Ñ¡Ê±±ß¿ò±ä»ØºÚÉ«
+                        cb.setText("Desk " + deskNumber + " Close"); // ¸üĞÂ¸´Ñ¡¿òÎÄ±¾Îª³õÊ¼×´Ì¬
                     }
                 }
             });
-
             desk.add(checkBox);
-            panel.add(desk);
+            
+            deskControlPanel.add(desk);
         }
-
-        return panel;
+        return deskControlPanel;
     }
 
 
     private JPanel createFlightPanel() {
         JPanel panel = new JPanel(new GridLayout(2, 3, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        panel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // å‡è®¾å·²ç»å®šä¹‰äº†queuePanelHeight
+        panel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // ¼ÙÉèÒÑ¾­¶¨ÒåÁËqueuePanelHeight
 
         for (int i = 1; i <= 6; i++) {
             final int flightNumber = i;
@@ -144,24 +198,23 @@ public class AirportGUI extends JFrame implements Runnable{
             JLabel countdownLabel = new JLabel("", SwingConstants.CENTER);
             flightPanel.add(countdownLabel, BorderLayout.CENTER);
 
-            // è®¾ç½®å€’è®¡æ—¶æ—¶é—´ä¸º1åˆ†é’Ÿ
-            final int[] timeLeft = {60 + timeSetter.nextInt(200)}; // ä»¥ç§’ä¸ºå•ä½
+            // ÉèÖÃµ¹¼ÆÊ±Ê±¼äÎª1·ÖÖÓ
+            final int[] timeLeft = {60 + timeSetter.nextInt(200)}; // ÒÔÃëÎªµ¥Î»
 
-            Timer timer = new Timer(1000, new ActionListener() { // è®¡æ—¶å™¨æ¯ç§’è§¦å‘ä¸€æ¬¡
+            Timer timer = new Timer(1000, new ActionListener() { // ¼ÆÊ±Æ÷Ã¿Ãë´¥·¢Ò»´Î
                 public void actionPerformed(ActionEvent e) {
                     timeLeft[0]--;
                     countdownLabel.setText("Flight " + flightNumber + " - " + timeLeft[0]/60 + "M" + timeLeft[0]%60 + "S");
 
                     if (timeLeft[0] <= 0) {
-                        flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // è¾¹æ¡†å˜çº¢
-                        countdownLabel.setText("Flight " + flightNumber + " Closed"); // æ–‡æœ¬æ›´æ–°ä¸ºClosed
-                        ((Timer)e.getSource()).stop(); // åœæ­¢è®¡æ—¶å™¨
+                        flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // ±ß¿ò±äºì
+                        countdownLabel.setText("Flight " + flightNumber + " Closed"); // ÎÄ±¾¸üĞÂÎªClosed
+                        ((Timer)e.getSource()).stop(); // Í£Ö¹¼ÆÊ±Æ÷
                     }
                 }
             });
-            timer.start(); // å¯åŠ¨è®¡æ—¶å™¨
+            timer.start(); // Æô¶¯¼ÆÊ±Æ÷
             flightTimers.put(flightNumber, timer); // Store the timer reference
-
             panel.add(flightPanel);
         }
 
@@ -182,7 +235,7 @@ public class AirportGUI extends JFrame implements Runnable{
         labelTable.put(2000, new JLabel("X2"));
         labelTable.put(3000, new JLabel("X3"));
         labelTable.put(4000, new JLabel("X4"));
-        speedSlider.setLabelTable(labelTable); // è®¾ç½®æ»‘åŠ¨æ¡çš„æ ‡ç­¾
+        speedSlider.setLabelTable(labelTable); // ÉèÖÃ»¬¶¯ÌõµÄ±êÇ©
         speedSlider.addChangeListener(e -> {
             JSlider source = (JSlider)e.getSource();
             if (!source.getValueIsAdjusting()) {
@@ -209,28 +262,97 @@ public class AirportGUI extends JFrame implements Runnable{
 	public void run() {
 		while (true) {
 			try {
-			Thread.sleep(1000);//Thread.Sleep()æ–¹æ³•ç”¨äºå°†å½“å‰çº¿ç¨‹ä¼‘çœ ä¸€å®šæ—¶é—´ï¼Œå•ä½ä¸ºæ¯«ç§’ã€‚è¿™é‡Œä¸ºæ¯1000æ¯«ç§’ä¼‘çœ ä¸€æ¬¡çº¿ç¨‹ã€‚
-			queueCount1 = so.getQueue1().size();
-            Queue<Passenger> q1 = so.getQueue1();
-            for (Passenger p : q1) {
-            	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-            	queue1Text.paintImmediately(queue1Text.getBounds());
-            }
-            
-            queueCount2 = so.getQueue2().size();
-            Queue<Passenger> q2 = so.getQueue2();
-            for (Passenger p : q2) {
-            	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "\t" + p.getWeight() + "\t" + p.getVolume() );
-            	queue2Text.paintImmediately(queue2Text.getBounds());
-            }
+				Thread.sleep(1000);//Thread.Sleep()·½·¨ÓÃÓÚ½«µ±Ç°Ïß³ÌĞİÃßÒ»¶¨Ê±¼ä£¬µ¥Î»ÎªºÁÃë¡£ÕâÀïÎªÃ¿1000ºÁÃëĞİÃßÒ»´ÎÏß³Ì¡£
+				
+				// for passenger queue
+				queueCount1 = so.getQueue1().size();
+	            Queue<Passenger> q1 = so.getQueue1();
+	            queue1Text.setText("There are currently "+ queueCount1 +" people in queue1");
+	            for (Passenger p : q1) {
+	            	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName()+ "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
+	            	queue1Text.paintImmediately(queue1Text.getBounds());
+	            }
+	            
+	            queueCount2 = so.getQueue2().size();
+	            queue2Text.setText("There are currently "+ queueCount2 +" people in queue2");
+	            Queue<Passenger> q2 = so.getQueue2();
+	            for (Passenger p : q2) {
+	            	
+	            	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
+	            	queue2Text.paintImmediately(queue2Text.getBounds());
+	            }
+	            
+	            
+	            // for check-in desk
+	            for (CheckInDesk desk : Desk) {
+	            	Passenger p = desk.getClient();
+	            	if (p == null) continue;
+	            	if (desk.getDeskName().equals("Desk 1")) {
+	            		desk1Text.setText(p.getName() + " is dropping off 1 bag of " + p.getWeight() + "kg");
+	            		if (p.excess_fee() != 0) {
+	            			desk1Text.append("A buggage fee of " + p.excess_fee() + "$ is due");
+	            			desk1Text.paintImmediately(desk1Text.getBounds());
+	            		} else {
+	            			desk1Text.append("\n" + "No baggage fee is due.");
+	            			desk1Text.paintImmediately(desk1Text.getBounds());
+	            		}
+	            	}
+					if (desk.getDeskName().equals("Desk 2")) {
+						desk2Text.setText(p.getName() + " is dropping off 1 bag of " + p.getWeight() + "kg");
+	            		if (p.excess_fee() != 0) {
+	            			desk2Text.append("A buggage fee of " + p.excess_fee() + "$ is due");
+	            			desk2Text.paintImmediately(desk2Text.getBounds());
+	            		} else {
+	            			desk2Text.append("\n" + "No baggage fee is due.");
+	            			desk2Text.paintImmediately(desk2Text.getBounds());
+	            		}
+	            	}
+					if (desk.getDeskName().equals("Desk 3")) {
+						desk3Text.setText(p.getName() + " is dropping off 1 bag of " + p.getWeight() + "kg");
+	            		if (p.excess_fee() != 0) {
+	            			desk3Text.append("A buggage fee of " + p.excess_fee() + "$ is due");
+	            			desk3Text.paintImmediately(desk3Text.getBounds());
+	            		} else {
+	            			desk3Text.append("\n" + "No baggage fee is due.");
+	            			desk3Text.paintImmediately(desk3Text.getBounds());
+	            		}
+					}
+					if (desk.getDeskName().equals("Desk 4")) {
+						desk4Text.setText(p.getName() + " is dropping off 1 bag of " + p.getWeight() + "kg");
+	            		if (p.excess_fee() != 0) {
+	            			desk4Text.append("A buggage fee of " + p.excess_fee() + "$ is due");
+	            			desk4Text.paintImmediately(desk4Text.getBounds());
+	            		} else {
+	            			desk4Text.append("\n" + "No baggage fee is due.");
+	            			desk4Text.paintImmediately(desk4Text.getBounds());
+	            		}
+					}
+					if (desk.getDeskName().equals("Desk 5")) {
+						desk5Text.setText(p.getName() + " is dropping off 1 bag of " + p.getWeight() + "kg");
+	            		if (p.excess_fee() != 0) {
+	            			desk5Text.append("A buggage fee of " + p.excess_fee() + "$ is due");
+	            			desk5Text.paintImmediately(desk5Text.getBounds());
+	            		} else {
+	            			desk5Text.append("\n" + "No baggage fee is due.");
+	            			desk5Text.paintImmediately(desk5Text.getBounds());
+	            		}
+					}
+	            	
+	            }
+	            
+	            
+	            
+	            
+	            
+	            
 			} catch (InterruptedException e) {
-				e.printStackTrace();//æŠ›å‡ºå¼‚å¸¸
+				e.printStackTrace();//Å×³öÒì³£
 			}
 		}
 	}
 
     public static void main(String[] args) {
     	AirportGUI a = new AirportGUI();
-    	new Thread(a).start();//å¯åŠ¨çº¿ç¨‹
+    	new Thread(a).start();//Æô¶¯Ïß³Ì
     }
 }
