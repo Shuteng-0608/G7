@@ -36,12 +36,19 @@ public class AirportGUI extends JFrame implements Runnable{
     private int queueNum = 2;
     private int deskNum = 5;
     private SharedObject so;
+    
     private List<Thread> checkInThreads = new ArrayList<>();
     private List<CheckInDesk> Desk = new ArrayList<>();
+    private List<PassengerQueue> passengerQueueDesk = new ArrayList<>();
+    private List<JCheckBox> JBox = new ArrayList<>();
+    private List<JPanel> JPDesk = new ArrayList<>();
+    
+    
     private List<Thread> queueThreads = new ArrayList<>();
     private final int queuePanelHeight = 200; // 设置队列面板固定高度
     private List<Passenger> curPassengerList = new ArrayList<>();
-
+    private boolean q1state = true;
+    private boolean q2state = true;
     private int timerSpeed = 1000; // 初始速度设置为1000毫秒，即1秒
 
     // 存储每个航班计时器的引用，以便可以根据滑动条的变化调整计时器速度
@@ -142,6 +149,7 @@ public class AirportGUI extends JFrame implements Runnable{
 			PassengerQueue queue = new PassengerQueue("economy " + i, so);
 			Thread thread = new Thread(queue);
 			queueThreads.add(thread);
+			passengerQueueDesk.add(queue);
 	        thread.start();
 		}
     }
@@ -161,24 +169,28 @@ public class AirportGUI extends JFrame implements Runnable{
         for (int i = 1; i <= 5; i++) {
             final int deskNumber = i; // 使用final变量以便在匿名类中使用
             JPanel desk = new JPanel();
+            JPDesk.add(desk);
             desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // 设置柜台固定大小
             desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 初始边框设置为绿色
             JCheckBox checkBox = new JCheckBox("Desk " + deskNumber + " Open");
+            JBox.add(checkBox);
+        	
             checkBox.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JCheckBox cb = (JCheckBox) e.getSource();
+                    
                     if (cb.isSelected()) {
                     	desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // 未勾选时边框变回黑色
                         cb.setText("Desk " + deskNumber + " Close"); // 更新复选框文本为初始状态
-                        for (CheckInDesk desk : Desk) {
-                        	if (desk.getDeskName().equals("Desk " + deskNumber)) {
+                        for (CheckInDesk desk_ : Desk) {
+                        	if (desk_.getDeskName().equals("Desk " + deskNumber)) {
                         		System.out.println("Desk " + deskNumber + " Close");
-                        		desk.closeDesk();
+                        		desk_.closeDesk();
                         	}
                         }
                     } else {
-                        
+
                         desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 勾选时边框变绿
                         cb.setText("Desk " + deskNumber + " Open"); // 更新复选框文本为Open
                     }
@@ -247,6 +259,7 @@ public class AirportGUI extends JFrame implements Runnable{
             JSlider source = (JSlider)e.getSource();
             if (!source.getValueIsAdjusting()) {
                 timerSpeed = 1000000/source.getValue() ;
+               
                 // Adjust all timers according to the new speed
                 adjustTimerSpeeds();
             }
@@ -269,29 +282,62 @@ public class AirportGUI extends JFrame implements Runnable{
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(1000);//Thread.Sleep()方法用于将当前线程休眠一定时间，单位为毫秒。这里为每1000毫秒休眠一次线程。
+				Thread.sleep(timerSpeed);//Thread.Sleep()方法用于将当前线程休眠一定时间，单位为毫秒。这里为每1000毫秒休眠一次线程。
 				
-				// for passenger queue
+				// for passenger queue 1
 				queueCount1 = so.getQueue1().size();
 	            Queue<Passenger> q1 = so.getQueue1();
-	            queue1Text.setText("There are currently "+ queueCount1 +" people in queue1");
-	            for (Passenger p : q1) {
-	            	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName()+ "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
-	            	queue1Text.paintImmediately(queue1Text.getBounds());
+	            if (q1state == false && q2state == false) {
+	            	for (JPanel d: JPDesk) {
+	            		d.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // 初始边框设置为绿色
+	            	}
+	            	for (JCheckBox b: JBox) {
+	            		b.setText("Close");
+	            		b.setSelected(true);
+	            	}
+	            }
+	            for (PassengerQueue queue : passengerQueueDesk) {
+	            	if (!queue.states() && queue.getName().equals("economy 1")) {
+	            		q1state = false;
+	            	}
+	            	if (!queue.states() && queue.getName().equals("economy 2")) {
+	            		q2state = false;
+	            	}
+	            	queue.setTimer(timerSpeed);
 	            }
 	            
-	            queueCount2 = so.getQueue2().size();
-	            queue2Text.setText("There are currently "+ queueCount2 +" people in queue2");
-	            Queue<Passenger> q2 = so.getQueue2();
-	            for (Passenger p : q2) {
-	            	
-	            	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
-	            	queue2Text.paintImmediately(queue2Text.getBounds());
+	            if (!q1.isEmpty() && q1state == true) {
+	            	queue1Text.setText("There are currently "+ queueCount1 +" people in queue1");
+		            for (Passenger p : q1) {
+		            	queue1Text.append("\n" + p.getFlight() + "\t" +  p.getName()+ "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
+//		            	queue1Text.paintImmediately(queue1Text.getBounds());
+		            }
+	            } else {
+//	            	System.out.println("There are currently "+ 0 +" people in queue1");
+	            	queue1Text.setText("There are currently "+ 0 +" people in queue1");
 	            }
+	            
+	            // for passenger queue 2
+	            queueCount2 = so.getQueue2().size();
+	            Queue<Passenger> q2 = so.getQueue2();
+	            if (!q2.isEmpty() && q2state == true) {
+	            	queue2Text.setText("There are currently "+ queueCount2 +" people in queue2");
+		            
+		            for (Passenger p : q2) {
+		            	
+		            	queue2Text.append("\n" + p.getFlight() + "\t" +  p.getName() + "          " + "\t" + p.getWeight() + "\t" + p.getVolume() );
+//		            	queue2Text.paintImmediately(queue2Text.getBounds());
+		            }
+	            } else {
+//	            	System.out.println("There are currently "+ 0 +" people in queue2");
+	            	queue2Text.setText("There are currently "+ 0 +" people in queue2");
+	            }
+	            
 	            
 	            
 	            // for check-in desk
 	            for (CheckInDesk desk : Desk) {
+	            	desk.setTimer(timerSpeed);
 	            	Passenger p = desk.getClient();
 	            	if (p == null) continue;
 	            	if (desk.getDeskName().equals("Desk 1")) {
