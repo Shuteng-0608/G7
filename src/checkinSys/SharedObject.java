@@ -121,12 +121,16 @@ public class SharedObject {
 		return p.excess_fee();
 	}
 	
-	public Passenger randomSelect() {
-		if(all.getNumberOfEntries() == 0) return null;
+	public synchronized Passenger randomSelect() {
+		if(all.getNumberOfEntries() == 0) {
+			notifyAll();
+			return null;
+		}
 		Random rand = new Random();
 		int idx = rand.nextInt(all.getNumberOfEntries());
 		Passenger tmp = all.getByIdx(idx);
 		all.removePassenger(tmp);
+		notifyAll();
 		return tmp;
 	}
 
