@@ -22,6 +22,7 @@ public class AirportGUI extends JFrame implements Runnable{
     private JPanel flightInfo;
     private JPanel deskControlPanel;
     private JSlider speedSlider;
+    JPanel deskBut;
     JTextArea queue1Text;
     JTextArea queue2Text;
     JTextArea desk1Text;
@@ -32,6 +33,7 @@ public class AirportGUI extends JFrame implements Runnable{
     JTextArea flight1Text;
     JTextArea flight2Text;
     JTextArea flight3Text;
+	JCheckBox checkBox;
     
 
     
@@ -54,6 +56,10 @@ public class AirportGUI extends JFrame implements Runnable{
     private List<PassengerQueue> passengerQueueDesk = new ArrayList<>();
     private List<JCheckBox> JBox = new ArrayList<>();
     private List<JPanel> JPDesk = new ArrayList<>();
+    private List<JPanel> JDeskBut = new ArrayList<>();
+    
+    private JCheckBox[] JBoxs = new JCheckBox[6];
+    private JPanel[] JDeskButs = new JPanel[6];
     
     
     private List<Thread> queueThreads = new ArrayList<>();
@@ -61,12 +67,18 @@ public class AirportGUI extends JFrame implements Runnable{
     private List<Passenger> curPassengerList = new ArrayList<>();
     private boolean q1state = true;
     private boolean q2state = true;
-    private int timerSpeed = 100; // 初始速度设置为1000毫秒，即1秒
+    private int timerSpeed = 1000; // 初始速度设置为1000毫秒，即1秒
 
     // 存储每个航班计时器的引用，以便可以根据滑动条的变化调整计时器速度
     private Map<Integer, Timer> flightTimers = new HashMap<>();
-    public AirportGUI() {
-    	so = new SharedObject();
+    
+    
+    
+    
+    
+    public AirportGUI(SharedObject so) {
+//    	so = new SharedObject();
+    	this.so = so;
         setTitle("Airport Check-in System");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10)); // 设置布局管理器间隔
@@ -187,8 +199,43 @@ public class AirportGUI extends JFrame implements Runnable{
         setVisible(true);
 
     }
-                
-    private void createQueue() {
+    
+    
+    public void setTimerSpeed(int timerspeed) {
+    	this.timerSpeed = timerspeed;
+    }
+    
+    public JSlider getSpeedSlider() {
+    	return speedSlider;
+    }
+    
+    public void setSharedObject(SharedObject so) {
+    	this.so = so;
+    }
+    
+    public JCheckBox getCheckBox() {
+		return checkBox;
+	}
+
+	public JPanel getDeskBut() {
+		return deskBut;
+	}
+	
+	
+    
+    
+    
+    public List<JPanel> getJDeskBut() {
+		return JDeskBut;
+	}
+
+
+	public void setJDeskBut(List<JPanel> jDeskBut) {
+		JDeskBut = jDeskBut;
+	}
+
+
+	private void createQueue() {
     	for (int i = 1; i <= queueNum; i++) {
 			PassengerQueue queue = new PassengerQueue("economy " + i, so);
 			Thread thread = new Thread(queue);
@@ -198,7 +245,27 @@ public class AirportGUI extends JFrame implements Runnable{
 		}
     }
     
-    private void createDesk() {
+    public JCheckBox[] getJBoxs() {
+		return JBoxs;
+	}
+
+
+	public void setJBoxs(JCheckBox[] jBoxs) {
+		JBoxs = jBoxs;
+	}
+
+
+	public JPanel[] getJDeskButs() {
+		return JDeskButs;
+	}
+
+
+	public void setJDeskButs(JPanel[] jDeskButs) {
+		JDeskButs = jDeskButs;
+	}
+
+
+	private void createDesk() {
     	for (int i = 1; i <= deskNum; i++) {
 			CheckInDesk queue = new CheckInDesk("Desk " + i, so);
 			Thread thread = new Thread(queue);
@@ -212,56 +279,88 @@ public class AirportGUI extends JFrame implements Runnable{
         
         for (int i = 1; i <= 5; i++) {
             final int deskNumber = i; // 使用final变量以便在匿名类中使用
-            JPanel desk = new JPanel();
-            JPDesk.add(desk);
-            desk.setPreferredSize(new Dimension(deskWidth, deskHeight)); // 设置柜台固定大小
-            desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 初始边框设置为绿色
-            JCheckBox checkBox;
+            deskBut = new JPanel();
+            JPDesk.add(deskBut);
+            JDeskButs[i] = deskBut;
+            deskBut.setPreferredSize(new Dimension(deskWidth, deskHeight)); // 设置柜台固定大小
+            deskBut.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 初始边框设置为绿色
+//            JCheckBox checkBox;
             if (deskNumber == 1 || deskNumber == 2 || deskNumber == 3) {
             	checkBox = new JCheckBox("Business Desk " + deskNumber + " Open");
+            	
         	} else {
         		checkBox = new JCheckBox("Economy Desk " + deskNumber + " Open");
         	}
-            
+            JBoxs[i] = checkBox;
             JBox.add(checkBox);
         	
-            checkBox.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    JCheckBox cb = (JCheckBox) e.getSource();
-                    
-                    if (cb.isSelected()) {
-                    	desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // 未勾选时边框变回黑色
-                    	
-                    	if (deskNumber == 1 || deskNumber == 2 || deskNumber == 3) {
-                    		cb.setText("Business Desk " + deskNumber + " Close"); // 更新复选框文本为初始状态
-                    	} else {
-                    		cb.setText("Economy Desk " + deskNumber + " Close"); // 更新复选框文本为初始状态
-                    	}
-                    	
-                        
-                        for (CheckInDesk desk_ : Desk) {
-                        	if (desk_.getDeskName().equals("Desk " + deskNumber)) {
-                        		System.out.println("Desk " + deskNumber + " Close");
-                        		desk_.closeDesk();
-                        	}
-                        }
-                    } else {
-
-                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 勾选时边框变绿
-                        cb.setText("Desk " + deskNumber + " Open"); // 更新复选框文本为Open
-                    }
-                }
-            });
-            desk.add(checkBox);
+//            checkBox.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//                    JCheckBox cb = (JCheckBox) e.getSource();
+//                    
+//                    if (cb.isSelected()) {
+//                    	desk.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // 未勾选时边框变回黑色
+//                    	
+//                    	if (deskNumber == 1 || deskNumber == 2 || deskNumber == 3) {
+//                    		cb.setText("Business Desk " + deskNumber + " Close"); // 更新复选框文本为初始状态
+//                    	} else {
+//                    		cb.setText("Economy Desk " + deskNumber + " Close"); // 更新复选框文本为初始状态
+//                    	}
+//                    	
+//                        
+//                        for (CheckInDesk desk_ : Desk) {
+//                        	if (desk_.getDeskName().equals("Desk " + deskNumber)) {
+//                        		System.out.println("Desk " + deskNumber + " Close");
+//                        		desk_.closeDesk();
+//                        	}
+//                        }
+//                    } else {
+//
+//                        desk.setBorder(BorderFactory.createLineBorder(Color.GREEN)); // 勾选时边框变绿
+//                        cb.setText("Desk " + deskNumber + " Open"); // 更新复选框文本为Open
+//                    }
+//                }
+//            });
+            deskBut.add(checkBox);
             
-            deskControlPanel.add(desk);
+            deskControlPanel.add(deskBut);
         }
         return deskControlPanel;
     }
+    
+
+    public int getDeskNum() {
+		return deskNum;
+	}
 
 
-    private JPanel createFlightPanel() {
+	public void setDeskNum(int deskNum) {
+		this.deskNum = deskNum;
+	}
+
+
+	public List<CheckInDesk> getDesk() {
+		return Desk;
+	}
+
+
+	public void setDesk(List<CheckInDesk> desk) {
+		Desk = desk;
+	}
+
+
+	public List<JCheckBox> getJBox() {
+		return JBox;
+	}
+
+
+	public void setJBox(List<JCheckBox> jBox) {
+		JBox = jBox;
+	}
+
+
+	private JPanel createFlightPanel() {
         JPanel panel = new JPanel(new GridLayout(1, 3, 10, 10));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         panel.setPreferredSize(new Dimension(getWidth(), 70)); 
@@ -325,36 +424,39 @@ public class AirportGUI extends JFrame implements Runnable{
 
         return panel;
     }
-
+    
+    
+    
+    
     private JSlider createSpeedSlider() {
-        JSlider speedSlider = new JSlider(JSlider.HORIZONTAL, 25, 400, timerSpeed);
+        speedSlider = new JSlider(JSlider.HORIZONTAL, 250, 4000, timerSpeed);
         speedSlider.setMajorTickSpacing(50);
         speedSlider.setMinorTickSpacing(25);
         speedSlider.setPaintTicks(true);
         speedSlider.setPaintLabels(true);
 
         Hashtable<Integer, JLabel> labelTable = new Hashtable<>();
-        labelTable.put(25, new JLabel("X0.25"));
-        labelTable.put(50, new JLabel("X0.5"));
-        labelTable.put(100, new JLabel("X1"));
-        labelTable.put(200, new JLabel("X2"));
-        labelTable.put(300, new JLabel("X3"));
-        labelTable.put(400, new JLabel("X4"));
+        labelTable.put(250, new JLabel("X0.25"));
+        labelTable.put(500, new JLabel("X0.5"));
+        labelTable.put(1000, new JLabel("X1"));
+        labelTable.put(2000, new JLabel("X2"));
+        labelTable.put(3000, new JLabel("X3"));
+        labelTable.put(4000, new JLabel("X4"));
         speedSlider.setLabelTable(labelTable); // 设置滑动条的标签
-        speedSlider.addChangeListener(e -> {
-            JSlider source = (JSlider)e.getSource();
-            if (!source.getValueIsAdjusting()) {
-                timerSpeed = 100000/source.getValue() ;
-               
-                // Adjust all timers according to the new speed
-                adjustTimerSpeeds();
-            }
-        });
+//        speedSlider.addChangeListener(e -> {
+//            JSlider source = (JSlider)e.getSource();
+//            if (!source.getValueIsAdjusting()) {
+//                timerSpeed = 1000000/source.getValue() ;
+//               
+//                // Adjust all timers according to the new speed
+//                adjustTimerSpeeds();
+//            }
+//        });
 
         return speedSlider;
     }
 
-    private void adjustTimerSpeeds() {
+    public void adjustTimerSpeeds() {
         for (Map.Entry<Integer, Timer> entry : flightTimers.entrySet()) {
             Timer timer = entry.getValue();
             if (timer != null) {
@@ -368,7 +470,7 @@ public class AirportGUI extends JFrame implements Runnable{
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(10 * timerSpeed);//Thread.Sleep()方法用于将当前线程休眠一定时间，单位为毫秒。这里为每1000毫秒休眠一次线程。
+				Thread.sleep(timerSpeed);//Thread.Sleep()方法用于将当前线程休眠一定时间，单位为毫秒。这里为每1000毫秒休眠一次线程。
 				
             	
 				// for passenger queue 1
@@ -387,6 +489,7 @@ public class AirportGUI extends JFrame implements Runnable{
 	            	desk3Text.setText("All Passengers Have Checked-in");
 	            	desk4Text.setText("All Passengers Have Checked-in");
 	            	desk5Text.setText("All Passengers Have Checked-in");
+	            	Logger.log("All Passengers Have Checked-in");
 	            }
 	            if (!so.isF1() && !so.isF2() && !so.isF3()) {
 	            	for (JPanel d: JPDesk) {
@@ -401,6 +504,7 @@ public class AirportGUI extends JFrame implements Runnable{
 	            	desk3Text.setText("All Flights Have Departured");
 	            	desk4Text.setText("All Flights Have Departured");
 	            	desk5Text.setText("All Flights Have Departured");
+	            	Logger.log("All Flights Have Departured");
 	            	
 	            }
 	            for (PassengerQueue queue : passengerQueueDesk) {
@@ -528,8 +632,8 @@ public class AirportGUI extends JFrame implements Runnable{
 		}
 	}
 
-    public static void main(String[] args) {
-    	AirportGUI a = new AirportGUI();
-    	new Thread(a).start();//启动线程
-    }
+//    public static void main(String[] args) {
+//    	AirportGUI a = new AirportGUI();
+//    	new Thread(a).start();//启动线程
+//    }
 }
