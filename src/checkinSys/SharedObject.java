@@ -20,6 +20,15 @@ public class SharedObject {
 	private PassengerList all = new PassengerList();
 	private Queue<Passenger> queue1 = new LinkedList();
 	private Queue<Passenger> queue2 = new LinkedList();
+    private int passengerNum1 = 0;
+    private int passengerNum2 = 0;
+    private int passengerNum3 = 0;
+    private double baggageNum1 = 0;
+    private double baggageNum2 = 0;
+    private double baggageNum3 = 0;
+    private boolean f1;
+	private boolean f2;
+	private boolean f3;
 
 	/**
 	 * Constructor for Manager. Initializes the class and reads data from files.
@@ -31,7 +40,135 @@ public class SharedObject {
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();// Print the stack trace in case of an exception
 		}
+	    this.f1 = true;
+		this.f2 = true;
+		this.f3 = true;
 	}
+	
+	
+	public boolean closef1() {
+		f1 = false;
+		return f1;
+	}
+	
+	public boolean closef2() {
+		f2 = false;
+		return f2;
+	}
+	
+	public boolean closef3() {
+		f3 = false;
+		return f3;
+	}
+	
+	public void addF2P() {
+		passengerNum2++;
+	}
+	
+	public boolean isF1() {
+		return f1;
+	}
+
+
+	public void setF1(boolean f1) {
+		this.f1 = f1;
+	}
+
+
+	public boolean isF2() {
+		return f2;
+	}
+
+
+	public void setF2(boolean f2) {
+		this.f2 = f2;
+	}
+
+
+	public boolean isF3() {
+		return f3;
+	}
+
+
+	public void setF3(boolean f3) {
+		this.f3 = f3;
+	}
+
+
+	public void addF2B(Passenger p) {
+		baggageNum2 += p.getWeight();
+	}
+	
+	public void addF3P() {
+		passengerNum3++;
+	}
+	
+	public void addF3B(Passenger p) {
+		baggageNum3 += p.getWeight();
+		
+	}
+	
+	public void addF1P() {
+		passengerNum1++;
+	}
+	
+	public void addF1B(Passenger p) {
+		baggageNum1 += p.getWeight();
+	}
+	
+	
+	
+	
+
+	public int getPassengerNum1() {
+		return passengerNum1;
+	}
+
+	public void setPassengerNum1(int passengerNum1) {
+		this.passengerNum1 = passengerNum1;
+	}
+
+	public int getPassengerNum2() {
+		return passengerNum2;
+	}
+
+	public void setPassengerNum2(int passengerNum2) {
+		this.passengerNum2 = passengerNum2;
+	}
+
+	public int getPassengerNum3() {
+		return passengerNum3;
+	}
+
+	public void setPassengerNum3(int passengerNum3) {
+		this.passengerNum3 = passengerNum3;
+	}
+
+	public double getBaggageNum1() {
+		return baggageNum1;
+	}
+
+	public void setBaggageNum1(double baggageNum1) {
+		this.baggageNum1 = baggageNum1;
+	}
+
+	public double getBaggageNum2() {
+		return baggageNum2;
+	}
+
+	public void setBaggageNum2(double baggageNum2) {
+		this.baggageNum2 = baggageNum2;
+	}
+
+	public double getBaggageNum3() {
+		return baggageNum3;
+	}
+
+	public void setBaggageNum3(double baggageNum3) {
+		this.baggageNum3 = baggageNum3;
+	}
+
+	
 
 	/**
 	 * Reads flight and passenger data from files and populates data structures.
@@ -236,37 +373,68 @@ public class SharedObject {
 		return queue2;
 	}
 	
-	public synchronized Passenger getFromQueue() {
+	public synchronized Passenger getFromQueue1() {
 		try {
 			wait();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 //		notifyAll();
-		if(!queue1.isEmpty() && queue2.isEmpty()) {
-			Passenger curP = queue1.poll();
+//		if(!queue1.isEmpty() && queue2.isEmpty()) {
+//			Passenger curP = queue1.poll();
+//			notifyAll();
+//			return curP;
+//		}
+//		if(!queue2.isEmpty() && queue1.isEmpty()) {
+//			Passenger curP = queue2.poll();
+//			notifyAll();
+//			return curP;
+//		}
+//		Random rand = new Random();
+//		int idx = rand.nextInt(2);
+//		if(idx == 0) {
+//			Passenger curP = queue1.poll();
+//			notifyAll();
+//			return curP;
+//			
+//		}
+//		else {
+//			Passenger curP = queue2.poll();
+//			notifyAll();
+//			return curP;
+//		}
+		Passenger curP = null;
+		if(!queue1.isEmpty()) {
+			curP = queue1.poll();
+			notifyAll();
+			return curP;
+		} else {
 			notifyAll();
 			return curP;
 		}
-		if(!queue2.isEmpty() && queue1.isEmpty()) {
-			Passenger curP = queue2.poll();
-			notifyAll();
-			return curP;
-		}
-		Random rand = new Random();
-		int idx = rand.nextInt(2);
-		if(idx == 0) {
-			Passenger curP = queue1.poll();
-			notifyAll();
-			return curP;
-			
-		}
-		else {
-			Passenger curP = queue2.poll();
-			notifyAll();
-			return curP;
-		}
+		
 	}
+	
+	public synchronized Passenger getFromQueue2() {
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		Passenger curP = null;
+		if(!queue2.isEmpty()) {
+			curP = queue2.poll();
+			notifyAll();
+			return curP;
+		} else {
+			notifyAll();
+			return curP;
+		}
+		
+		
+	}
+	
+	
 	
 	/**
 	 * validate Flight Data legal or not

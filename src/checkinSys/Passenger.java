@@ -1,14 +1,16 @@
-package checkinSys;
-/* A simple class to contain and manage Passengers details. */
+package checkInSimulation;
 
 public class Passenger implements Comparable<Passenger> {
-	private String reference_code;
+
 	private String name;
+    private double weight;
+    private String reference_code;
 	private String flight_code;
 	private String date;
 	private String check_in;
-	private double weight;
 	private double volume;
+
+
 
 	public Passenger(){}
 	
@@ -141,4 +143,5 @@ public class Passenger implements Comparable<Passenger> {
 				+ String.format("%-8s", flight_code) + String.format("%-8s", date) + String.format("%-3s", check_in)
 				+ String.format("%f", weight) + String.format("%f", volume);
 	}
+	
 }

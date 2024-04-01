@@ -1,19 +1,14 @@
-package checkinSys;
-// This class manages the airport check-in system functionality, including managing flight and passenger data.
+package checkInSimulation;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 
-import myExceptions.*;
+import myException.InvalidAttributeException;
+import myException.InvalidBookRefException;
 
 public class Manager {
 	// Maps to store flights and passengers data
@@ -50,7 +45,7 @@ public class Manager {
 		    while (line != null) {
 		        try {
 		            validateFlightData(line);
-//		            System.out.println("Valid Flight data");
+//			            System.out.println("Valid Flight data");
 		        } catch (InvalidAttributeException e) {
 		            System.out.println("Invalid Flight data: " + e.getMessage());
 		            line = brFlights.readLine();
@@ -338,5 +333,3 @@ public class Manager {
 		}
 	}
 }
-
-

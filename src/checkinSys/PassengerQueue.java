@@ -30,7 +30,7 @@ public class PassengerQueue implements Runnable {
 	}
 	
 	public void setTimer(int timer) {
-		this.timer = timer;
+		this.timer = 10 * timer;
 	}
 	
 	

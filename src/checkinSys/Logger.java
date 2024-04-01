@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 
 import java.io.FileWriter;
 import java.io.IOException;

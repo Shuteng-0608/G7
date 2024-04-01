@@ -1,6 +1,8 @@
-package checkinSys;
-/* A simple class to contain and manage Flight details. */
+package checkInSimulation;
+
+
 public class Flight implements Comparable<Flight> {
+	
 	private String flight_code;
 	private String date;
 	private String destination;
@@ -40,6 +42,15 @@ public class Flight implements Comparable<Flight> {
 	public String getDate() {
 		return date;
 	}
+	
+	/**
+	 * @return The maxWeight.
+	 */
+	public double getMaxWeight() {
+		return maxWeight;
+	}
+	
+	
 
 	/**
 	 * @return The destination.
@@ -190,4 +201,5 @@ public class Flight implements Comparable<Flight> {
 				+ String.format("%-5s", carrier) + String.format("%d", capacity) + String.format("%f", maxWeight)
 				+ String.format("%f", maxVolume);
 	}
+
 }
