@@ -30,7 +30,7 @@ public class PassengerQueue implements Runnable {
 	}
 	
 	public void setTimer(int timer) {
-		this.timer = 10 * timer;
+		this.timer = timer;
 	}
 	
 	
@@ -46,6 +46,7 @@ public class PassengerQueue implements Runnable {
 			if(p == null) {
 				queueClose();
 				System.out.println("Queue " + queueType + " is closed");
+				Logger.log("Queue " + queueType + " is closed");
 				continue;
 			}
 			if(queueType.equals("economy 1")) so.addQueue1(p);
