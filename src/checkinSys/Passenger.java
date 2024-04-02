@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 
 public class Passenger implements Comparable<Passenger> {
 
