@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 import java.util.List;
 
 public class CheckInDesk implements Runnable {
@@ -50,7 +50,6 @@ public class CheckInDesk implements Runnable {
 			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0) {
 				closeDesk();
 				client = null;
-				System.out.println("Desk " + getDeskName() + " closed");
 				Logger.log("Desk " + getDeskName() + " closed");
 			} 
 				
@@ -81,6 +80,8 @@ public class CheckInDesk implements Runnable {
 					so.addF3P();
 				}
 				so.check_in(client);
+				Logger.log("Desk " + getDeskName() + " check in passenger : " + getClient().getName());
+
 				
 			}
 		}
