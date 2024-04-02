@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,8 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-import myException.InvalidAttributeException;
-import myException.InvalidBookRefException;
+import myExceptions.InvalidAttributeException;
+import myExceptions.InvalidBookRefException;
 
 public class Manager {
 	// Maps to store flights and passengers data
