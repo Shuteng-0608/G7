@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -25,7 +25,7 @@ public class Controller {
 	
 	public void startCheckInDeskBox(AirportGUI airport) {
 		for (int i = 1; i <= 5; i++) {
-            final int deskNumber = i; // Ê¹ÓÃfinal±äÁ¿ÒÔ±ãÔÚÄäÃûÀàÖÐÊ¹ÓÃ
+            final int deskNumber = i; // Ê¹ï¿½ï¿½finalï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
            
 
 			airport.getJBoxs()[i].addActionListener(new ActionListener() {
@@ -34,25 +34,31 @@ public class Controller {
 		              JCheckBox cb = (JCheckBox) e.getSource();
 //		              System.out.println(airport.getDeskNum());
 		              if (cb.isSelected()) {
-		            	  airport.getJDeskButs()[deskNumber].setBorder(BorderFactory.createLineBorder(Color.BLACK)); // Î´¹´Ñ¡Ê±±ß¿ò±ä»ØºÚÉ«
+		            	  airport.getJDeskButs()[deskNumber].setBorder(BorderFactory.createLineBorder(Color.BLACK)); // Î´ï¿½ï¿½Ñ¡Ê±ï¿½ß¿ï¿½ï¿½Øºï¿½É«
 		              	
 			              if (airport.getDeskNum() == 1 || airport.getDeskNum() == 2 || airport.getDeskNum() == 3) {
-			            	  cb.setText("Business Desk " + airport.getDeskNum() + " Close"); // ¸üÐÂ¸´Ñ¡¿òÎÄ±¾Îª³õÊ¼×´Ì¬
+			            	  cb.setText("Business Desk " + airport.getDeskNum() + " Close"); // ï¿½ï¿½ï¿½Â¸ï¿½Ñ¡ï¿½ï¿½ï¿½Ä±ï¿½Îªï¿½ï¿½Ê¼×´Ì¬
+		            		  Logger.log("Business Desk " + airport.getDeskNum() + " Close");
+
 			              } else {
-			            	  cb.setText("Economy Desk " + airport.getDeskNum() + " Close"); // ¸üÐÂ¸´Ñ¡¿òÎÄ±¾Îª³õÊ¼×´Ì¬
+			            	  cb.setText("Economy Desk " + airport.getDeskNum() + " Close"); // ï¿½ï¿½ï¿½Â¸ï¿½Ñ¡ï¿½ï¿½ï¿½Ä±ï¿½Îªï¿½ï¿½Ê¼×´Ì¬
+		            		  Logger.log("Economy Desk " + airport.getDeskNum() + " Close");
+
 			              }
 		              	
 		                  
 			              for (CheckInDesk desk_ : airport.getDesk()) {
 			            	  if (desk_.getDeskName().equals("Desk " + airport.getDeskNum())) {
 			            		  System.out.println("Desk " + airport.getDeskNum() + " Close");
+			            		  Logger.log("Desk " + airport.getDeskNum() + " Close");
 			            		  desk_.closeDesk();
 			            	  }
 			              }
 		              } else {
 
-		            	  airport.getJDeskButs()[deskNumber].setBorder(BorderFactory.createLineBorder(Color.GREEN)); // ¹´Ñ¡Ê±±ß¿ò±äÂÌ
-		                  cb.setText("Desk " + airport.getDeskNum() + " Open"); // ¸üÐÂ¸´Ñ¡¿òÎÄ±¾ÎªOpen
+		            	  airport.getJDeskButs()[deskNumber].setBorder(BorderFactory.createLineBorder(Color.GREEN)); // ï¿½ï¿½Ñ¡Ê±ï¿½ß¿ï¿½ï¿½ï¿½ï¿½
+		                  cb.setText("Desk " + airport.getDeskNum() + " Open"); // ï¿½ï¿½ï¿½Â¸ï¿½Ñ¡ï¿½ï¿½ï¿½Ä±ï¿½ÎªOpen
+	            		  Logger.log("Desk " + airport.getDeskNum() + " Open");
 		              }
 		          }
 		      });
