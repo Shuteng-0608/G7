@@ -27,9 +27,12 @@ public class AirportGUI extends JFrame implements Runnable {
 	JTextArea flight1Text;
 	JTextArea flight2Text;
 	JTextArea flight3Text;
+    private Font fontS = new Font("Comic Sans MS", Font.BOLD,12);
+    private Font fontM = new Font("Comic Sans MS", Font.BOLD,14);
+    private Font fontL = new Font("Comic Sans MS", Font.BOLD,18);
 
 	private Random timeSetter = new Random();
-	private final int deskWidth = 150; // ���ù�̨���ڹ̶����
+	private final int deskWidth = 200; // ���ù�̨���ڹ̶����
 	private final int deskHeight = 50; // ���ù�̨���ڹ̶��߶�
 	private int queueCount1 = 0;
 	private int queueCount2 = 0;
@@ -68,12 +71,12 @@ public class AirportGUI extends JFrame implements Runnable {
 		queuePanel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); // ���ù̶��߶�
 		queuePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
-		queue1Text = new JTextArea("There are currently " + queueCount1 + " people in queue1");
+		queue1Text = new JTextArea("There are currently " + queueCount1 + " people in Business Queue");
 		queue1Text.setEditable(false);
 		JScrollPane queue1Scroll = new JScrollPane(queue1Text);
 		queuePanel.add(queue1Scroll);
 
-		queue2Text = new JTextArea("There are currently " + queueCount2 + " people in queue2");
+		queue2Text = new JTextArea("There are currently " + queueCount2 + " people in Economy Queue");
 		queue2Text.setEditable(false);
 		JScrollPane queue2Scroll = new JScrollPane(queue2Text);
 		queuePanel.add(queue2Scroll);
@@ -88,6 +91,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		// check-in desk initialization
 		for (int i = 0; i < deskNum; i++) {
 			JTextArea deskText = new JTextArea("Desk " + (i + 1));
+			deskText.setFont(fontS);
 			deskText.setEditable(false);
 			deskText.setPreferredSize(new Dimension(150, 100));
 			deskText.setLineWrap(true);
@@ -99,6 +103,7 @@ public class AirportGUI extends JFrame implements Runnable {
 			deskPanel.setPreferredSize(new Dimension(deskWidth, deskHeight));
 			deskPanel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
 			JCheckBox deskButton;
+			
 			String deskType;
 			if (i == 0 || i == 1 || i == 2) {
 				deskButton = new JCheckBox("Business Desk " + (i + 1) + " Open");
@@ -108,6 +113,7 @@ public class AirportGUI extends JFrame implements Runnable {
 				deskButton = new JCheckBox("Economy Desk " + (i + 1) + " Open");
 				deskType = "Economy";
 			}
+			deskButton.setFont(fontM);
 			deskButtons.add(deskButton);
 			deskPanel.add(deskButton);
 			deskControlPanel.add(deskPanel);
@@ -125,6 +131,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		flightInfo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // ��ӱ߾�
 
 		flight1Text = new JTextArea(" ");
+		flight1Text.setFont(fontL);
 		flight1Text.setEditable(false);
 		flight1Text.setPreferredSize(new Dimension(150, 100));
 		flight1Text.setLineWrap(true);
@@ -132,6 +139,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		flightInfo.add(flight1Text);
 
 		flight2Text = new JTextArea(" ");
+		flight2Text.setFont(fontL);
 		flight2Text.setEditable(false);
 		flight2Text.setPreferredSize(new Dimension(150, 100));
 		flight2Text.setLineWrap(true);
@@ -139,6 +147,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		flightInfo.add(flight2Text);
 
 		flight3Text = new JTextArea(" ");
+		flight3Text.setFont(fontL);
 		flight3Text.setEditable(false);
 		flight3Text.setPreferredSize(new Dimension(150, 100));
 		flight3Text.setLineWrap(true);
@@ -224,6 +233,7 @@ public class AirportGUI extends JFrame implements Runnable {
 			flightPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 			JLabel countdownLabel = new JLabel("", SwingConstants.CENTER);
+			countdownLabel.setFont(fontL);
 			flightPanel.add(countdownLabel, BorderLayout.CENTER);
 
 			Timer timer = new Timer(1000, new ActionListener() { // ��ʱ��ÿ�봥��һ��
@@ -237,6 +247,7 @@ public class AirportGUI extends JFrame implements Runnable {
 							flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // �߿���
 							countdownLabel.setText("Flight " + flightNumber + " Closed"); // �ı�����ΪClosed
 							Logger.log("Flight " + flightNumber + " Closed");
+							countdownLabel.setForeground(Color.RED);
 							((Timer) e.getSource()).stop(); // ֹͣ��ʱ��
 							so.closef1();
 
@@ -249,6 +260,7 @@ public class AirportGUI extends JFrame implements Runnable {
 						if (timeLeft2[0] <= 0) {
 							flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // �߿���
 							countdownLabel.setText("Flight " + flightNumber + " Closed"); // �ı�����ΪClosed
+							countdownLabel.setForeground(Color.RED);
 							((Timer) e.getSource()).stop(); // ֹͣ��ʱ��
 							so.closef2();
 						}
@@ -260,6 +272,7 @@ public class AirportGUI extends JFrame implements Runnable {
 						if (timeLeft3[0] <= 0) {
 							flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // �߿���
 							countdownLabel.setText("Flight " + flightNumber + " Closed"); // �ı�����ΪClosed
+							countdownLabel.setForeground(Color.RED);
 							((Timer) e.getSource()).stop(); // ֹͣ��ʱ��
 							so.closef3();
 						}
@@ -352,7 +365,8 @@ public class AirportGUI extends JFrame implements Runnable {
 				}
 
 				if (!q1.isEmpty() && q1state == true) {
-					queue1Text.setText("There are currently " + queueCount1 + " people in VIP Membership queue");
+					queue1Text.setText("There are currently " + queueCount1 + " people in Business queue");
+					
 					for (Passenger p : q1) {
 						queue1Text.append("\n" + p.getFlight() + "\t" + p.getName() + "          " + "\t"
 								+ p.getWeight() + "\t" + p.getVolume());
@@ -360,14 +374,14 @@ public class AirportGUI extends JFrame implements Runnable {
 					}
 				} else {
 //	            	System.out.println("There are currently "+ 0 +" people in queue1");
-					queue1Text.setText("There are currently " + 0 + " people in VIP Membership queue ");
+					queue1Text.setText("There are currently " + 0 + " people in Business queue ");
 				}
 
 				// for passenger queue 2
 				queueCount2 = so.getQueue2().size();
 				Queue<Passenger> q2 = so.getQueue2();
 				if (!q2.isEmpty() && q2state == true) {
-					queue2Text.setText("There are currently " + queueCount2 + " people in queue2");
+					queue2Text.setText("There are currently " + queueCount2 + " people in Economy Queue");
 
 					for (Passenger p : q2) {
 
@@ -375,13 +389,14 @@ public class AirportGUI extends JFrame implements Runnable {
 								+ p.getWeight() + "\t" + p.getVolume());
 					}
 				} else {
-					queue2Text.setText("There are currently " + 0 + " people in queue2");
+					queue2Text.setText("There are currently " + 0 + " people in Economy Queue");
 				}
 
 				// for check-in desk
 
 				for (CheckInDesk desk : Desk) {
 					Passenger p = desk.getClient();
+					
 					if (!desk.states()) {
 						continue;
 					}
@@ -390,8 +405,14 @@ public class AirportGUI extends JFrame implements Runnable {
 						continue;
 					}
 					if (so.isF1() || so.isF2() || so.isF3()) {
-						desk.getText().setText("[VIP Membership] " + p.getName() + " is dropping off 1 bag of "
-								+ p.getWeight() + "kg. ");
+						if (p.getCabin().equals("Business")) {
+							desk.getText().setText("[VIP Membership] " + p.getName() + " is dropping off 1 bag of "
+									+ p.getWeight() + "kg. ");
+						} else {
+							desk.getText().setText(p.getName() + " is dropping off 1 bag of "
+									+ p.getWeight() + "kg. ");
+						}
+						
 						if (p.excess_fee() != 0) {
 							desk.getText().append("A buggage fee of " + String.format("%.2f", p.excess_fee()) + "$ is due.");
 							// desk1Text.paintImmediately(desk1Text.getBounds());
