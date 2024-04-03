@@ -1,67 +1,58 @@
 package checkinSys;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.BorderFactory;
-import javax.swing.JCheckBox;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-
-import GUI.AirportGUI;
-
-public class Controller {
-	public Controller(AirportGUI airport, SharedObject so) {
-		airport.setSharedObject(so);
-		startSpeedSlider(airport);
-		new Thread(airport).start();
-		for(CheckInDesk desk: airport.getDesk())
-			startCheckInDeskBox(desk);
+public class PassengerQueue implements Runnable {
+	
+	private final String queueType;
+	private SharedObject so;
+    private boolean isOpen;
+    private int timer;
+    
+	public PassengerQueue(String queueType, SharedObject so) {
+		this.queueType = queueType;
+		this.so = so;
+		this.isOpen = true;
+		this.timer = 1000;
 	}
-
-	public void startCheckInDeskBox(CheckInDesk desk) {
-			desk.getButton().addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					JCheckBox jcb = (JCheckBox) e.getSource(); // 得到产生的事件
-					if (jcb.isSelected()) {
-						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.RED)); 
-						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
-						jcb.setForeground(Color.red);
-						desk.getText().setText("");
-						Logger.log(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
-						desk.closeDesk();
-					}
-					else {
-						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.GREEN)); 
-						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open");
-						jcb.setForeground(Color.black);
-						Logger.log(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open"); 
-						desk.restartDesk();
-					}
-				}
-			});
-		}
-
-	public void startSpeedSlider(AirportGUI airport) {
-		airport.getSpeedSlider().addChangeListener(e -> {
-			JSlider source = (JSlider) e.getSource();
-			if (!source.getValueIsAdjusting()) {
-				airport.setTimerSpeed(1000000 / source.getValue());
-
-				// Adjust all timers according to the new speed
-				airport.adjustTimerSpeeds();
+	
+	public void queueClose() {
+        isOpen = false;
+    }
+	
+	public boolean states() {
+		return isOpen;
+	}
+	
+	public String getName() {
+		return queueType;
+	}
+	
+	public void setTimer(int timer) {
+		this.timer = timer;
+	}
+	
+	
+	@Override
+    public void run() {
+		while(true) {
+			if(!isOpen) continue;
+			try {
+				Thread.sleep(timer);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-		});
-	}
-
-	public static void main(String[] args) {
-
-		SharedObject so = new SharedObject();
-		AirportGUI airport = new AirportGUI(so);
-		Controller c = new Controller(airport, so);
-	}
+			Passenger p = so.randomSelect();
+			if(p == null) {
+				queueClose();
+				System.out.println("Queue " + queueType + " is closed");
+				Logger.log("Queue " + queueType + " is closed");
+				continue;
+			}
+			if(p.getCabin().equals("Business")) so.addQueue1(p);
+			if(p.getCabin().equals("Economy")) so.addQueue2(p);
+		}
+    }
 
 }
