@@ -14,7 +14,6 @@ public class PassengerQueue implements Runnable {
 		this.queueType = queueType;
 		this.so = so;
 		this.isOpen = true;
-		this.timer = 1000;
 	}
 	
 	public void queueClose() {
@@ -36,7 +35,8 @@ public class PassengerQueue implements Runnable {
 	
 	@Override
     public void run() {
-		while(isOpen) {
+		while(true) {
+			if(!isOpen) continue;
 			try {
 				Thread.sleep(timer);
 			} catch (InterruptedException e) {
