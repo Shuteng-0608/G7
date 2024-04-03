@@ -72,12 +72,14 @@ public class CheckInDesk implements Runnable {
 	@Override
 	public void run() {
 		while (true) {
-//			System.out.println(1111);
 			try {
 				Thread.sleep(timer);
 			} catch (InterruptedException e) {
 			}
-			if(!isOpen) continue;
+			if(!isOpen) {
+				System.out.println(" ");
+				continue;
+			}
 			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0) {
 				closeDesk();
 				client = null;
@@ -98,20 +100,26 @@ public class CheckInDesk implements Runnable {
 //				System.out.println("Desk " + getDeskName() + " get passenger : " + getClient().getName());
 				Logger.log("Desk " + getDeskName() + " get passenger : " + getClient().getName());
 				if (client.getFlight().equals("CA378")) {
+					System.out.println(deskName);
 					so.addF1B(client);
 					so.addF1P();
 				}
 				if (client.getFlight().equals("EK216")) {
+					System.out.println(deskName);
+
 					so.addF2B(client);
 					so.addF2P();
 				}
 				if (client.getFlight().equals("EK660")) {
+					System.out.println(deskName);
+
 					so.addF3B(client);
 					so.addF3P();
 				}
 				so.check_in(client);
 				Logger.log("Desk " + getDeskName() + " check in passenger : " + getClient().getName());	
 			}
+			
 		}
 	}
 
