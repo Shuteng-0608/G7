@@ -29,13 +29,15 @@ public class Controller {
 					if (jcb.isSelected()) {
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.RED)); 
 						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
+						jcb.setForeground(Color.red);
 						desk.getText().setText("");
 						Logger.log(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
 						desk.closeDesk();
 					}
 					else {
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.GREEN)); 
-						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open"); 
+						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open");
+						jcb.setForeground(Color.black);
 						Logger.log(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open"); 
 						desk.restartDesk();
 					}
