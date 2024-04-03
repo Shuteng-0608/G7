@@ -9,8 +9,16 @@ public class Passenger implements Comparable<Passenger> {
 	private String date;
 	private String check_in;
 	private double volume;
+	private String cabin;
 
 
+	public String getCabin() {
+		return cabin;
+	}
+
+	public void setCabin(String cabin) {
+		this.cabin = cabin;
+	}
 
 	public Passenger(){}
 	
@@ -18,7 +26,7 @@ public class Passenger implements Comparable<Passenger> {
 	 * Set up the passengers details.
 	 */
 	public Passenger(String reference_code, String name, String flight_code, String date, String check_in,
-			double weight, double volume) {
+			double weight, double volume, String cabin) {
 		this.reference_code = reference_code.trim();
 		this.name = name.trim();
 		this.flight_code = flight_code.trim();
@@ -26,6 +34,7 @@ public class Passenger implements Comparable<Passenger> {
 		this.check_in = check_in.trim();
 		this.weight = weight;
 		this.volume = volume;
+		this.cabin = cabin;
 	}
 
 	/**
