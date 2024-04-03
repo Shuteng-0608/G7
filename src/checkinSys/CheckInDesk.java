@@ -72,6 +72,7 @@ public class CheckInDesk implements Runnable {
 	@Override
 	public void run() {
 		while (true) {
+//			System.out.println(1111);
 			try {
 				Thread.sleep(timer);
 			} catch (InterruptedException e) {
