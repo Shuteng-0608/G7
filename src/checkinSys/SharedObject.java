@@ -499,7 +499,7 @@ public class SharedObject {
 		// ====== For Passenger information ======
 		// "Booking Code", "Name", "Flight Code", "Date", "Checked In", "Baggage Weight (kg)", "Baggage Volume (m^3)"
 		String[] fields = line.split(",");
-		if (fields.length != 7) {
+		if (fields.length != 8) {
 			throw new InvalidAttributeException("Invalid number of Passenger data");
 		}
 
@@ -510,7 +510,7 @@ public class SharedObject {
 		String check_in = fields[4];
 		String weight = fields[5];
 		String volume = fields[6];
-		
+		String cabin = fields[7];
 		// for reference_code
 		if (reference_code.isEmpty()) throw new InvalidAttributeException("Reference code cannot be empty");
 		
@@ -537,7 +537,7 @@ public class SharedObject {
 		} catch (NumberFormatException e) {
 			throw new InvalidAttributeException("Volume must be a valid Double");
 		}
-		Passenger p = new Passenger(reference_code, name, flight_code, date, check_in, Double.parseDouble(weight), Double.parseDouble(volume));
+		Passenger p = new Passenger(reference_code, name, flight_code, date, check_in, Double.parseDouble(weight), Double.parseDouble(volume), cabin);
         passengers.put(name, p);
         // reference code legal check
         if (!check_rc(name)) {
