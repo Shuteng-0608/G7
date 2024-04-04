@@ -1,17 +1,17 @@
 package checkInSimulation;
-
+// Represents a passenger with details relevant to a flight.
 public class Passenger implements Comparable<Passenger> {
 
-	private String name;
-    private double weight;
-    private String reference_code;
-	private String flight_code;
-	private String date;
-	private String check_in;
-	private double volume;
-	private String cabin;
+	private String name;// Passenger's name.
+    private double weight;// Weight of the passenger's baggage.
+    private String reference_code;// Unique reference code for the passenger.
+	private String flight_code;// Code of the flight the passenger is booked on.
+	private String date;// Date of the flight.
+	private String check_in;// Check-in status of the passenger.
+	private double volume;// Volume of the passenger's baggage.
+	private String cabin;// Cabin class of the passenger.
 
-
+	// Getter and setter
 	public String getCabin() {
 		return cabin;
 	}
