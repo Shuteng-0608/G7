@@ -1,17 +1,21 @@
-package checkInSimulation;
+package checkinSys;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import javax.swing.JTextArea;
 
 public class PassengerQueue implements Runnable {
 	
 	private final String queueType;
 	private SharedObject so;
+	private JTextArea queueText;
     private boolean isOpen;
     private int timer;
     
-	public PassengerQueue(String queueType, SharedObject so) {
+	public PassengerQueue(String queueType, SharedObject so, JTextArea queueText) {
 		this.queueType = queueType;
+		this.queueText = queueText;
 		this.so = so;
 		this.isOpen = true;
 		this.timer = 1000;
@@ -33,6 +37,10 @@ public class PassengerQueue implements Runnable {
 		this.timer = timer;
 	}
 	
+	public JTextArea getText() {
+		return queueText;
+	}
+	
 	
 	@Override
     public void run() {
@@ -46,14 +54,14 @@ public class PassengerQueue implements Runnable {
 			Passenger p = so.randomSelect();
 			if(p == null) {
 				queueClose();
-//				System.out.println("Queue " + queueType + " is closed");
-				
-				Logger.log(Logger.LogLevel.INFO, "Queue is closed");
+				System.out.println("Queue " + queueType + " is closed");
+				Logger.log("Queue " + queueType + " is closed");
 				continue;
 			}
 			if(p.getCabin().equals("Business")) so.addQueue1(p);
 			if(p.getCabin().equals("Economy")) so.addQueue2(p);
 		}
     }
+
 
 }
