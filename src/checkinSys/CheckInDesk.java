@@ -81,25 +81,30 @@ public class CheckInDesk implements Runnable {
 				System.out.println(" ");
 				continue;
 			}
+			// Check if both queues are empty and all passengers are processed.
 			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0) {
-				closeDesk();
-				client = null;
+				closeDesk();// Close the desk if no passengers are left.
+				client = null;// Clear the current client.
 				Logger.log(Logger.LogLevel.INFO, getDeskName() + " closed");
 			} 
-				
+
+			// Process passengers from queues as long as there are passengers waiting.
 			while(!so.getQueue1().isEmpty() || !so.getQueue2().isEmpty()) {
+				// Assign the next passenger from the appropriate queue based on the desk type.
 				if (deskName.equals("Desk 1") || deskName.equals("Desk 2") || deskName.equals("Desk 3")) {
 					client = so.getFromQueue1();
 				} else {
 					client = so.getFromQueue2();
 				}
-				if (client == null) continue;
+				if (client == null) continue;// Skip if no passenger was retrieved.
+				// Skip processing the passenger if their flight is already closed.
 				if (!so.isF1() && client.getFlight().equals("CA378")) continue;
 				if (!so.isF2() && client.getFlight().equals("EK216")) continue;
 				if (!so.isF3() && client.getFlight().equals("EK660")) continue;
-				
+				 // Log that the passenger is being processed at this desk.
 //				System.out.println("Desk " + getDeskName() + " get passenger : " + getClient().getName());
 				Logger.log(Logger.LogLevel.INFO, getDeskName() + " get passenger : " + getClient().getName());
+				// Update shared object with the passenger's baggage and increment the passenger count for the flight.
 				if (client.getFlight().equals("CA378")) {
 //					System.out.println(deskName);
 					so.addF1B(client);
@@ -117,7 +122,7 @@ public class CheckInDesk implements Runnable {
 					so.addF3B(client);
 					so.addF3P();
 				}
-				so.check_in(client);
+				so.check_in(client);// Check in the passenger.
 				Logger.log(Logger.LogLevel.INFO, getDeskName() + " check in passenger : " + getClient().getName());	
 			}
 			
