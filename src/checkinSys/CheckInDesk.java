@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 import java.util.List;
 
 import javax.swing.JCheckBox;
