@@ -107,11 +107,11 @@ public class AirportGUI extends JFrame implements Runnable {
 			JCheckBox deskButton;
 			
 			String deskType;
-			if (i == 0 || i == 1 || i == 2) {
+			if (i == 0 || i == 1 || i == 2) {// First three desks are business desks
 				deskButton = new JCheckBox("Business Desk " + (i + 1) + " Open");
 				deskType = "Business";
 			}
-			else {
+			else {// Remaining desks are economy desks
 				deskButton = new JCheckBox("Economy Desk " + (i + 1) + " Open");
 				deskType = "Economy";
 			}
@@ -120,6 +120,7 @@ public class AirportGUI extends JFrame implements Runnable {
 			deskPanel.add(deskButton);
 			deskControlPanel.add(deskPanel);
 
+			// Create and start check-in desk threads
 			CheckInDesk desk = new CheckInDesk("Desk " + (i + 1), deskType, so, deskText, deskButton, deskPanel);
 			desk.setTimer(timerSpeed);
 			Thread thread = new Thread(desk);
@@ -128,10 +129,11 @@ public class AirportGUI extends JFrame implements Runnable {
 			thread.start();
 		}
 		// for flight
-
+        	// Flight information panel setup
 		flightInfo = new JPanel(new GridLayout(1, 3, 10, 10));
 		flightInfo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); 
 
+		// Flight text areas for displaying flight information
 		flight1Text = new JTextArea(" ");
 		flight1Text.setFont(fontL);
 		flight1Text.setEditable(false);
@@ -172,6 +174,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		bottomPanel.add(flightInfo, BorderLayout.CENTER);
 		bottomPanel.add(speedSlider, BorderLayout.SOUTH);
 
+		 // Add panels to the frame
 		add(queuePanel, BorderLayout.NORTH);
 		add(centerPanel, BorderLayout.CENTER);
 		add(bottomPanel, BorderLayout.SOUTH);
@@ -180,7 +183,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		setVisible(true);
 
 	}
-
+    	// Setters and getters
 	public void setTimerSpeed(int timerspeed) {
 		this.timerSpeed = timerspeed;
 	}
@@ -197,6 +200,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		return JDeskBut;
 	}
 
+	// Method to create and start passenger queues
 	private void createQueue() {
 		for (int i = 1; i <= queueNum; i++) {
 			PassengerQueue queue = new PassengerQueue("economy " + i, so);
@@ -223,6 +227,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		return deskButtons;
 	}
 
+    	// Method to create flight information panel with countdown timers
 	private JPanel createFlightPanel() {
 		JPanel panel = new JPanel(new GridLayout(1, 3, 10, 10));
 		panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -237,9 +242,11 @@ public class AirportGUI extends JFrame implements Runnable {
 			countdownLabel.setFont(fontL);
 			flightPanel.add(countdownLabel, BorderLayout.CENTER);
 
+			 // Initialize timers for flight countdowns
 			Timer timer = new Timer(1000, new ActionListener() { 
 				public void actionPerformed(ActionEvent e) {
 
+					 // Update countdown for each flight and close flights when countdown reaches zero
 					if (flightNumber == 1) {
 						timeLeft1[0]--;
 						countdownLabel.setText(
@@ -288,7 +295,7 @@ public class AirportGUI extends JFrame implements Runnable {
 
 		return panel;
 	}
-
+ 	// Method to create and configure the speed slider for adjusting simulation speed
 	private JSlider createSpeedSlider() {
 		speedSlider = new JSlider(JSlider.HORIZONTAL, 250, 4000, timerSpeed);
 		speedSlider.setMajorTickSpacing(50);
@@ -296,6 +303,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		speedSlider.setPaintTicks(true);
 		speedSlider.setPaintLabels(true);
 
+	        // Create and set labels for the slider
 		Hashtable<Integer, JLabel> labelTable = new Hashtable<>();
 		labelTable.put(250, new JLabel("X0.25"));
 		labelTable.put(500, new JLabel("X0.5"));
@@ -307,7 +315,7 @@ public class AirportGUI extends JFrame implements Runnable {
 
 		return speedSlider;
 	}
-
+	// Method to adjust the speed of all flight timers based on the slider value
 	public void adjustTimerSpeeds() {
 		for (Map.Entry<Integer, Timer> entry : flightTimers.entrySet()) {
 			Timer timer = entry.getValue();
@@ -319,12 +327,13 @@ public class AirportGUI extends JFrame implements Runnable {
 		}
 	}
 
+	// Override the run method from the Runnable interface to implement the main functionality of the GUI update
 	@Override
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(timerSpeed);// Thread.Sleep()
-				// for passenger queue 1
+				Thread.sleep(timerSpeed);// Pause the thread based on the current timer speed
+                		// Update passenger queues, check-in desks, and flight information continuously
 				queueCount1 = so.getQueue1().size();
 				Queue<Passenger> q1 = so.getQueue1();
 				if (q1state == false && q2state == false) {
