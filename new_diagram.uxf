@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1372</x>
+      <y>84</y>
+      <w>518</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::CheckInDesk
+--
+-deskName: String
+-so: SharedObject
+-isOpen: boolean
+-client: Passenger
+-timer: int
+--
++CheckInDesk(String deskName, SharedObject so): ctor
++closeDesk(): void
++getClient(): Passenger
++getDeskName(): String
++setTimer(int timer): void
++states(): boolean
++run(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>112</y>
+      <w>490</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::Controller
+--
+--
++Controller(AirportGUI airport, SharedObject so): ctor
++startCheckInDeskBox(AirportGUI airport): void
++startSpeedSlider(AirportGUI airport): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1218</x>
+      <y>700</y>
+      <w>1148</w>
+      <h>742</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::Flight
+--
+-flight_code: String
+-date: String
+-destination: String
+-carrier: String
+-capacity: int
+-maxWeight: double
+-maxVolume: double
+-passengerList: PassengerList
+--
++Flight(): ctor
++Flight(String flight_code, String date, String destination, String carrier, int capacity, double maxWeight, double maxVolume): ctor
++getFlight(): String
++getDate(): String
++getMaxWeight(): double
++getDestination(): String
++getCarrier(): String
++getCapacity(): int
++getWeight(): double
++getVolume(): double
++getList(): PassengerList
++numberOfCheckIn(): int
++totalWeight(): double
++totalVolume(): double
++totalFees(): double
++check_weight(): boolean
++check_volume(): boolean
++equals(Object other): boolean
++compareTo(Flight otherFlight): int
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1904</x>
+      <y>70</y>
+      <w>364</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::FlightList
+--
+-flightList: ArrayList&lt;Flight&gt;
+--
++FlightList(): ctor
++addFlight(Flight flight): void
++getFlight(int idx): Flight
++getNumberOfEntries(): int
++findByCode(String flight_code): Flight
++randomSelect(): Passenger
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1918</x>
+      <y>434</y>
+      <w>350</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::Logger
+--
+-LOG_FILE = "simulation.log": String
+--
++log(String message): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2296</x>
+      <y>70</y>
+      <w>1176</w>
+      <h>602</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::Passenger
+--
+-name: String
+-weight: double
+-reference_code: String
+-flight_code: String
+-date: String
+-check_in: String
+-volume: double
+--
++Passenger(): ctor
++Passenger(String reference_code, String name, String flight_code, String date, String check_in, double weight, double volume): ctor
++getReference(): String
++getName(): String
++getFlight(): String
++getDate(): String
++getCheckin(): String
++getWeight(): double
++getVolume(): double
++check_in(): boolean
++set(double weight, double volume): void
++excess_fee(): double
++equals(Object other): boolean
++compareTo(Passenger otherDetails): int
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2562</x>
+      <y>714</y>
+      <w>574</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::PassengerList
+--
+-passengerList: ArrayList&lt;Passenger&gt;
+--
++PassengerList(): ctor
++addPassenger(Passenger passenger): void
++removePassenger(Passenger passenger): void
++getByIdx(int idx): Passenger
++getNumberOfEntries(): int
++findByName(String name): Passenger
++findByLastName(String lastName, String reference_code): int
++listDetails(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2562</x>
+      <y>1036</y>
+      <w>560</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::PassengerQueue
+--
+-queueType: String
+-so: SharedObject
+-isOpen: boolean
+-timer: int
+--
++PassengerQueue(String queueType, SharedObject so): ctor
++queueClose(): void
++states(): boolean
++getName(): String
++setTimer(int timer): void
++run(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3584</x>
+      <y>98</y>
+      <w>742</w>
+      <h>1582</h>
+    </coordinates>
+    <panel_attributes>checkInSimulation::SharedObject
+--
+-flights = new HashMap&lt;String, Flight&gt;(): HashMap&lt;String, Flight&gt;
+-passengers = new HashMap&lt;String, Passenger&gt;(): HashMap&lt;String, Passenger&gt;
+-flightList = new FlightList(): FlightList
+-all = new PassengerList(): PassengerList
+-queue1 = new LinkedList(): Queue&lt;Passenger&gt;
+-queue2 = new LinkedList(): Queue&lt;Passenger&gt;
+-passengerNum1 = 0: int
+-passengerNum2 = 0: int
+-passengerNum3 = 0: int
+-baggageNum1 = 0: double
+-baggageNum2 = 0: double
+-baggageNum3 = 0: double
+-f1: boolean
+-f2: boolean
+-f3: boolean
+--
++SharedObject(): ctor
++closef1(): boolean
++closef2(): boolean
++closef3(): boolean
++addF2P(): void
++isF1(): boolean
++setF1(boolean f1): void
++isF2(): boolean
++setF2(boolean f2): void
++isF3(): boolean
++setF3(boolean f3): void
++addF2B(Passenger p): void
++addF3P(): void
++addF3B(Passenger p): void
++addF1P(): void
++addF1B(Passenger p): void
++getPassengerNum1(): int
++setPassengerNum1(int passengerNum1): void
++getPassengerNum2(): int
++setPassengerNum2(int passengerNum2): void
++getPassengerNum3(): int
++setPassengerNum3(int passengerNum3): void
++getBaggageNum1(): double
++setBaggageNum1(double baggageNum1): void
++getBaggageNum2(): double
++setBaggageNum2(double baggageNum2): void
++getBaggageNum3(): double
++setBaggageNum3(double baggageNum3): void
++readFromFile(String file_flights, String file_passengers): void
++findPassenger(String last_name, String br): Passenger
++excess_fee(String last_name, String br, double weight, double volume): double
++randomSelect(): Passenger
++check_rc(String name): boolean
++check_in(Passenger p): void
++getAllPassenger(): PassengerList
++findFlight(String flight_code): Flight
++findPassenger(String name): Passenger
++getFlights(): HashMap&lt;String, Flight&gt;
++getPassengers(): HashMap&lt;String, Passenger&gt;
++getFlightList(): FlightList
++addQueue1(Passenger p): void
++addQueue2(Passenger p): void
++getQueue1(): Queue
++getQueue2(): Queue
++getFromQueue1(): Passenger
++getFromQueue2(): Passenger
++validateFlightData(String line): void
++validatePassengerData(String line): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>602</w>
+      <h>1736</h>
+    </coordinates>
+    <panel_attributes>GUI::AirportGUI
+--
+-queuePanel: JPanel
+-deskPanel: JPanel
+-flightPanel: JPanel
+-flightInfo: JPanel
+-deskControlPanel: JPanel
+-speedSlider: JSlider
+~deskBut: JPanel
+~queue1Text: JTextArea
+~queue2Text: JTextArea
+~desk1Text: JTextArea
+~desk2Text: JTextArea
+~desk3Text: JTextArea
+~desk4Text: JTextArea
+~desk5Text: JTextArea
+~flight1Text: JTextArea
+~flight2Text: JTextArea
+~flight3Text: JTextArea
+~checkBox: JCheckBox
+-timeSetter = new Random(): Random
+-deskWidth = 150: int
+-deskHeight = 50: int
+-queueCount1 = 0: int
+-queueCount2 = 0: int
+-queueNum = 2: int
+-deskNum = 5: int
+~timeLeft1 = { 20 + timeSetter.nextInt(100) }: int[]
+~timeLeft2 = { 20 + timeSetter.nextInt(100) }: int[]
+~timeLeft3 = { 20 + timeSetter.nextInt(100) }: int[]
+-so: SharedObject
+-checkInThreads = new ArrayList(): List&lt;Thread&gt;
+-Desk = new ArrayList(): List&lt;CheckInDesk&gt;
+-passengerQueueDesk = new ArrayList(): List&lt;PassengerQueue&gt;
+-JBox = new ArrayList(): List&lt;JCheckBox&gt;
+-JPDesk = new ArrayList(): List&lt;JPanel&gt;
+-JDeskBut = new ArrayList(): List&lt;JPanel&gt;
+-JBoxs = new JCheckBox[6]: JCheckBox[]
+-JDeskButs = new JPanel[6]: JPanel[]
+-queueThreads = new ArrayList(): List&lt;Thread&gt;
+-queuePanelHeight = 200: int
+-curPassengerList = new ArrayList(): List&lt;Passenger&gt;
+-q1state = true: boolean
+-q2state = true: boolean
+-timerSpeed = 1000: int
+-flightTimers = new HashMap(): Map&lt;Integer, Timer&gt;
+--
++AirportGUI(SharedObject so): ctor
++setTimerSpeed(int timerspeed): void
++getSpeedSlider(): JSlider
++setSharedObject(SharedObject so): void
++getCheckBox(): JCheckBox
++getDeskBut(): JPanel
++getJDeskBut(): List&lt;JPanel&gt;
++setJDeskBut(List&lt;JPanel&gt; jDeskBut): void
+-createQueue(): void
++getJBoxs(): JCheckBox[]
++setJBoxs(JCheckBox[] jBoxs): void
++getJDeskButs(): JPanel[]
++setJDeskButs(JPanel[] jDeskButs): void
+-createDesk(): void
+-createControlDeskPanel(): JPanel
++getDeskNum(): int
++setDeskNum(int deskNum): void
++getDesk(): List&lt;CheckInDesk&gt;
++setDesk(List&lt;CheckInDesk&gt; desk): void
++getJBox(): List&lt;JCheckBox&gt;
++setJBox(List&lt;JCheckBox&gt; jBox): void
+-createFlightPanel(): JPanel
+-createSpeedSlider(): JSlider
++adjustTimerSpeeds(): void
++run(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>28</y>
+      <w>602</w>
+      <h>1694</h>
+    </coordinates>
+    <panel_attributes>GUI::AirportGUI
+--
+-queuePanel: JPanel
+-deskPanel: JPanel
+-flightPanel: JPanel
+-flightInfo: JPanel
+-deskControlPanel: JPanel
+-speedSlider: JSlider
+~deskBut: JPanel
+~queue1Text: JTextArea
+~queue2Text: JTextArea
+~desk1Text: JTextArea
+~desk2Text: JTextArea
+~desk3Text: JTextArea
+~desk4Text: JTextArea
+~desk5Text: JTextArea
+~flight1Text: JTextArea
+~flight2Text: JTextArea
+~flight3Text: JTextArea
+~checkBox: JCheckBox
+-timeSetter = new Random(): Random
+-deskWidth = 150: int
+-deskHeight = 50: int
+-queueCount1 = 0: int
+-queueCount2 = 0: int
+-queueNum = 2: int
+-deskNum = 5: int
+~timeLeft1 = { 20 + timeSetter.nextInt(100) }: int[]
+~timeLeft2 = { 20 + timeSetter.nextInt(100) }: int[]
+~timeLeft3 = { 20 + timeSetter.nextInt(100) }: int[]
+-so: SharedObject
+-checkInThreads = new ArrayList(): List&lt;Thread&gt;
+-Desk = new ArrayList(): List&lt;CheckInDesk&gt;
+-passengerQueueDesk = new ArrayList(): List&lt;PassengerQueue&gt;
+-JBox = new ArrayList(): List&lt;JCheckBox&gt;
+-JPDesk = new ArrayList(): List&lt;JPanel&gt;
+-JDeskBut = new ArrayList(): List&lt;JPanel&gt;
+-JBoxs = new JCheckBox[6]: JCheckBox[]
+-JDeskButs = new JPanel[6]: JPanel[]
+-queueThreads = new ArrayList(): List&lt;Thread&gt;
+-queuePanelHeight = 200: int
+-curPassengerList = new ArrayList(): List&lt;Passenger&gt;
+-q1state = true: boolean
+-q2state = true: boolean
+-timerSpeed = 1000: int
+-flightTimers = new HashMap(): Map&lt;Integer, Timer&gt;
+--
++AirportGUI(SharedObject so): ctor
++setTimerSpeed(int timerspeed): void
++getSpeedSlider(): JSlider
++setSharedObject(SharedObject so): void
++getCheckBox(): JCheckBox
++getDeskBut(): JPanel
++getJDeskBut(): List&lt;JPanel&gt;
++setJDeskBut(List&lt;JPanel&gt; jDeskBut): void
+-createQueue(): void
++getJBoxs(): JCheckBox[]
++setJBoxs(JCheckBox[] jBoxs): void
++getJDeskButs(): JPanel[]
++setJDeskButs(JPanel[] jDeskButs): void
+-createDesk(): void
+-createControlDeskPanel(): JPanel
++getDeskNum(): int
++setDeskNum(int deskNum): void
++getDesk(): List&lt;CheckInDesk&gt;
++setDesk(List&lt;CheckInDesk&gt; desk): void
++getJBox(): List&lt;JCheckBox&gt;
++setJBox(List&lt;JCheckBox&gt; jBox): void
+-createFlightPanel(): JPanel
+-createSpeedSlider(): JSlider
++adjustTimerSpeeds(): void
++run(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

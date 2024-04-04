@@ -1,0 +1,1886 @@
+2024-04-04T02:03:55.436916400 [INFO]: Desk 4 get passenger : Barbara Best
+2024-04-04T02:03:55.436916400 [INFO]: Desk 5 get passenger : Debra Sheppard
+2024-04-04T02:03:55.436916400 [INFO]: Desk 1 get passenger : Douglas Kaufman
+2024-04-04T02:03:55.440905400 [INFO]: Desk 4 check in passenger : Barbara Best
+2024-04-04T02:03:55.440905400 [INFO]: Desk 5 check in passenger : Debra Sheppard
+2024-04-04T02:03:55.440905400 [INFO]: Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T02:03:56.425371300 [INFO]: Desk 4 get passenger : Paul Thomas
+2024-04-04T02:03:56.425371300 [INFO]: Desk 5 get passenger : Miss Katrina Lane
+2024-04-04T02:03:56.425371300 [INFO]: Desk 1 get passenger : Tiffany Green
+2024-04-04T02:03:56.426364200 [INFO]: Desk 4 check in passenger : Paul Thomas
+2024-04-04T02:03:56.426364200 [INFO]: Desk 1 check in passenger : Tiffany Green
+2024-04-04T02:03:56.426364200 [INFO]: Desk 5 check in passenger : Miss Katrina Lane
+2024-04-04T02:03:57.427450200 [INFO]: Desk 3 get passenger : David Dennis
+2024-04-04T02:03:57.427450200 [INFO]: Desk 3 check in passenger : David Dennis
+2024-04-04T02:03:58.427666800 [INFO]: Desk 5 get passenger : Chelsea Moreno
+2024-04-04T02:03:58.427666800 [INFO]: Desk 4 get passenger : Catherine Murphy
+2024-04-04T02:03:58.427666800 [INFO]: Desk 4 check in passenger : Catherine Murphy
+2024-04-04T02:03:58.427666800 [INFO]: Desk 5 check in passenger : Chelsea Moreno
+2024-04-04T02:03:59.428251800 [INFO]: Desk 5 get passenger : Denise Salas
+2024-04-04T02:03:59.428251800 [INFO]: Desk 4 get passenger : Christopher Mendoza
+2024-04-04T02:03:59.428251800 [INFO]: Desk 4 check in passenger : Christopher Mendoza
+2024-04-04T02:03:59.428251800 [INFO]: Desk 5 check in passenger : Denise Salas
+2024-04-04T02:04:00.429374 [INFO]: Desk 5 get passenger : Christine Willis
+2024-04-04T02:04:00.429374 [INFO]: Desk 4 get passenger : Dr. Gerald Hall
+2024-04-04T02:04:00.429374 [INFO]: Desk 1 get passenger : Anne Jackson
+2024-04-04T02:04:00.430367900 [INFO]: Desk 4 check in passenger : Dr. Gerald Hall
+2024-04-04T02:04:00.430367900 [INFO]: Desk 1 check in passenger : Anne Jackson
+2024-04-04T02:04:00.430367900 [INFO]: Desk 5 check in passenger : Christine Willis
+2024-04-04T02:04:02.430120300 [INFO]: Desk 5 get passenger : Eric Grant
+2024-04-04T02:04:02.430120300 [INFO]: Desk 4 get passenger : Hannah Romero
+2024-04-04T02:04:02.430835300 [INFO]: Desk 4 check in passenger : Hannah Romero
+2024-04-04T02:04:02.430835300 [INFO]: Desk 5 check in passenger : Eric Grant
+2024-04-04T02:04:02.430835300 [INFO]: Desk 4 get passenger : Kenneth Morales
+2024-04-04T02:04:02.430835300 [INFO]: Desk 5 get passenger : David Davis
+2024-04-04T02:04:02.431833200 [INFO]: Desk 4 check in passenger : Kenneth Morales
+2024-04-04T02:04:02.431833200 [INFO]: Desk 5 check in passenger : David Davis
+2024-04-04T02:04:04.431508300 [INFO]: Desk 4 get passenger : Sharon Hamilton
+2024-04-04T02:04:04.431508300 [INFO]: Desk 5 get passenger : Michelle Daniels
+2024-04-04T02:04:04.431508300 [INFO]: Desk 4 check in passenger : Sharon Hamilton
+2024-04-04T02:04:04.431508300 [INFO]: Desk 5 check in passenger : Michelle Daniels
+2024-04-04T02:04:04.432504300 [INFO]: Desk 4 get passenger : Joseph Stevens
+2024-04-04T02:04:04.432504300 [INFO]: Desk 4 check in passenger : Joseph Stevens
+2024-04-04T02:04:04.433498 [INFO]: Desk 4 get passenger : Matthew Sanchez
+2024-04-04T02:04:04.433498 [INFO]: Desk 4 check in passenger : Matthew Sanchez
+2024-04-04T02:04:06.432611600 [INFO]: Desk 5 get passenger : Jordan Richmond
+2024-04-04T02:04:06.432611600 [INFO]: Desk 4 get passenger : Mrs. Alexis Martin
+2024-04-04T02:04:06.432611600 [INFO]: Desk 4 check in passenger : Mrs. Alexis Martin
+2024-04-04T02:04:06.432611600 [INFO]: Desk 5 check in passenger : Jordan Richmond
+2024-04-04T02:04:06.434601700 [INFO]: Desk 4 get passenger : Marie Williams
+2024-04-04T02:04:06.434601700 [INFO]: Desk 5 get passenger : Kathryn Ho
+2024-04-04T02:04:06.434601700 [INFO]: Desk 5 check in passenger : Kathryn Ho
+2024-04-04T02:04:06.434601700 [INFO]: Desk 4 check in passenger : Marie Williams
+2024-04-04T02:04:06.608190600 [INFO]: Business Desk 1 Close
+2024-04-04T02:04:06.969764500 [INFO]: Business Desk 2 Close
+2024-04-04T02:04:07.324665100 [INFO]: Business Desk 3 Close
+2024-04-04T02:04:07.675760300 [INFO]: Economy Desk 4 Close
+2024-04-04T02:04:08.009389800 [INFO]: Economy Desk 5 Close
+2024-04-04T02:04:08.433939200 [INFO]: Desk 5 get passenger : Benjamin Hayes
+2024-04-04T02:04:08.433939200 [INFO]: Desk 4 get passenger : Amanda Smith
+2024-04-04T02:04:08.433939200 [INFO]: Desk 4 check in passenger : Amanda Smith
+2024-04-04T02:04:08.433939200 [INFO]: Desk 5 check in passenger : Benjamin Hayes
+2024-04-04T02:04:08.511727 [INFO]: Economy Desk 5 Open
+2024-04-04T02:04:08.881166 [INFO]: Economy Desk 4 Open
+2024-04-04T02:04:09.179709400 [INFO]: Business Desk 3 Open
+2024-04-04T02:04:09.434653100 [INFO]: Desk 5 get passenger : Lauren Mcclure
+2024-04-04T02:04:09.434653100 [INFO]: Desk 4 get passenger : Julie Smith
+2024-04-04T02:04:09.434653100 [INFO]: Desk 4 check in passenger : Julie Smith
+2024-04-04T02:04:09.434653100 [INFO]: Desk 5 check in passenger : Lauren Mcclure
+2024-04-04T02:04:09.488508800 [INFO]: Business Desk 2 Open
+2024-04-04T02:04:09.800672 [INFO]: Business Desk 1 Open
+2024-04-04T02:04:10.435394400 [INFO]: Desk 4 get passenger : Sean Johnson MD
+2024-04-04T02:04:10.435394400 [INFO]: Desk 5 get passenger : Donald Taylor
+2024-04-04T02:04:10.435394400 [INFO]: Desk 3 get passenger : Glenn Walker
+2024-04-04T02:04:10.435394400 [INFO]: Desk 4 check in passenger : Sean Johnson MD
+2024-04-04T02:04:10.436391900 [INFO]: Desk 5 check in passenger : Donald Taylor
+2024-04-04T02:04:10.436391900 [INFO]: Desk 3 check in passenger : Glenn Walker
+2024-04-04T02:04:11.436240700 [INFO]: Desk 2 get passenger : Jenna Smith
+2024-04-04T02:04:11.436240700 [INFO]: Desk 4 get passenger : Lisa Oliver
+2024-04-04T02:04:11.436240700 [INFO]: Desk 4 check in passenger : Lisa Oliver
+2024-04-04T02:04:11.436240700 [INFO]: Desk 2 check in passenger : Jenna Smith
+2024-04-04T02:04:12.436837500 [INFO]: Desk 4 get passenger : Jorge Mejia
+2024-04-04T02:04:12.436837500 [INFO]: Desk 5 get passenger : Mary Jones
+2024-04-04T02:04:12.436837500 [INFO]: Desk 4 check in passenger : Jorge Mejia
+2024-04-04T02:04:12.436837500 [INFO]: Desk 5 check in passenger : Mary Jones
+2024-04-04T02:04:13.437518500 [INFO]: Desk 1 get passenger : Maria Wolfe
+2024-04-04T02:04:13.437518500 [INFO]: Desk 4 get passenger : Jessica Donovan
+2024-04-04T02:04:13.437518500 [INFO]: Desk 2 get passenger : Diana Ponce
+2024-04-04T02:04:13.437518500 [INFO]: Desk 1 check in passenger : Maria Wolfe
+2024-04-04T02:04:13.437518500 [INFO]: Desk 4 check in passenger : Jessica Donovan
+2024-04-04T02:04:13.437518500 [INFO]: Desk 2 check in passenger : Diana Ponce
+2024-04-04T02:04:15.438482800 [INFO]: Desk 3 get passenger : Bethany Harrison
+2024-04-04T02:04:15.438482800 [INFO]: Desk 1 get passenger : Lisa Moore
+2024-04-04T02:04:15.438482800 [INFO]: Desk 4 get passenger : Emily Greene
+2024-04-04T02:04:15.438482800 [INFO]: Desk 5 get passenger : Wesley Warren
+2024-04-04T02:04:15.438482800 [INFO]: Desk 3 check in passenger : Bethany Harrison
+2024-04-04T02:04:15.438482800 [INFO]: Desk 1 check in passenger : Lisa Moore
+2024-04-04T02:04:15.438482800 [INFO]: Desk 4 check in passenger : Emily Greene
+2024-04-04T02:04:15.438482800 [INFO]: Desk 5 check in passenger : Wesley Warren
+2024-04-04T02:04:17.440070100 [INFO]: Desk 5 get passenger : Ivan Bates
+2024-04-04T02:04:17.440070100 [INFO]: Desk 4 get passenger : Kim Williams
+2024-04-04T02:04:17.440070100 [INFO]: Desk 4 check in passenger : Kim Williams
+2024-04-04T02:04:17.440070100 [INFO]: Desk 5 check in passenger : Ivan Bates
+2024-04-04T02:04:17.440070100 [INFO]: Desk 4 get passenger : Audrey Salinas
+2024-04-04T02:04:17.440070100 [INFO]: Desk 5 get passenger : Kimberly Murphy
+2024-04-04T02:04:17.441063200 [INFO]: Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T02:04:17.441063200 [INFO]: Desk 4 check in passenger : Audrey Salinas
+2024-04-04T02:04:19.440626200 [INFO]: Desk 5 get passenger : Andrew Phillips
+2024-04-04T02:04:19.440626200 [INFO]: Desk 4 get passenger : Kristine Fitzgerald
+2024-04-04T02:04:19.440626200 [INFO]: Desk 5 check in passenger : Andrew Phillips
+2024-04-04T02:04:19.440626200 [INFO]: Desk 4 check in passenger : Kristine Fitzgerald
+2024-04-04T02:04:19.442576300 [INFO]: Desk 4 get passenger : Philip Johnson
+2024-04-04T02:04:19.442576300 [INFO]: Desk 5 get passenger : Michele Smith
+2024-04-04T02:04:19.442576300 [INFO]: Desk 4 check in passenger : Philip Johnson
+2024-04-04T02:04:19.442576300 [INFO]: Desk 5 check in passenger : Michele Smith
+2024-04-04T02:04:20.691127900 [INFO]: Desk 4 get passenger : Harold Smith
+2024-04-04T02:04:20.691127900 [INFO]: Desk 3 get passenger : Joseph Norman
+2024-04-04T02:04:20.691127900 [INFO]: Desk 5 get passenger : Deborah Bowman
+2024-04-04T02:04:20.692094500 [INFO]: Desk 4 check in passenger : Harold Smith
+2024-04-04T02:04:20.692094500 [INFO]: Desk 5 check in passenger : Deborah Bowman
+2024-04-04T02:04:20.692094500 [INFO]: Desk 3 check in passenger : Joseph Norman
+2024-04-04T02:04:21.692921500 [INFO]: Desk 4 get passenger : Jessica Bell
+2024-04-04T02:04:21.692921500 [INFO]: Desk 4 check in passenger : Jessica Bell
+2024-04-04T02:04:21.693912900 [INFO]: Desk 4 get passenger : Maria Woods
+2024-04-04T02:04:21.693912900 [INFO]: Desk 5 get passenger : Lynn Buckley
+2024-04-04T02:04:21.693912900 [INFO]: Desk 4 check in passenger : Maria Woods
+2024-04-04T02:04:21.693912900 [INFO]: Desk 5 check in passenger : Lynn Buckley
+2024-04-04T02:04:21.693912900 [INFO]: Desk 4 get passenger : Kimberly Anthony
+2024-04-04T02:04:21.694911200 [INFO]: Desk 4 check in passenger : Kimberly Anthony
+2024-04-04T02:04:21.694911200 [INFO]: Desk 4 get passenger : Dale Harris
+2024-04-04T02:04:21.694911200 [INFO]: Desk 5 get passenger : Kathy Byrd
+2024-04-04T02:04:21.694911200 [INFO]: Desk 4 check in passenger : Dale Harris
+2024-04-04T02:04:21.695908700 [INFO]: Desk 5 check in passenger : Kathy Byrd
+2024-04-04T02:04:21.695908700 [INFO]: Desk 4 get passenger : Kevin Williams
+2024-04-04T02:04:21.695908700 [INFO]: Desk 5 get passenger : James Reynolds
+2024-04-04T02:04:21.695908700 [INFO]: Desk 4 check in passenger : Kevin Williams
+2024-04-04T02:04:21.695908700 [INFO]: Desk 5 check in passenger : James Reynolds
+2024-04-04T02:04:22.699096800 [INFO]: Desk 4 get passenger : Michelle Hansen
+2024-04-04T02:04:22.699096800 [INFO]: Desk 4 check in passenger : Michelle Hansen
+2024-04-04T02:04:22.699801800 [INFO]: Desk 5 get passenger : Vanessa Smith
+2024-04-04T02:04:22.699801800 [INFO]: Desk 4 get passenger : John Williams
+2024-04-04T02:04:22.700799100 [INFO]: Desk 4 check in passenger : John Williams
+2024-04-04T02:04:22.700799100 [INFO]: Desk 5 check in passenger : Vanessa Smith
+2024-04-04T02:04:22.700799100 [INFO]: Desk 4 get passenger : Steven Miller Jr.
+2024-04-04T02:04:22.700799100 [INFO]: Desk 5 get passenger : David Hayes
+2024-04-04T02:04:22.700799100 [INFO]: Desk 4 check in passenger : Steven Miller Jr.
+2024-04-04T02:04:22.700799100 [INFO]: Desk 5 check in passenger : David Hayes
+2024-04-04T02:04:22.700799100 [INFO]: Desk 4 get passenger : Richard White
+2024-04-04T02:04:22.700799100 [INFO]: Desk 4 check in passenger : Richard White
+2024-04-04T02:04:22.701795100 [INFO]: Desk 4 get passenger : Russell Barr
+2024-04-04T02:04:22.701795100 [INFO]: Desk 5 get passenger : Veronica Kaufman
+2024-04-04T02:04:22.701795100 [INFO]: Desk 4 check in passenger : Russell Barr
+2024-04-04T02:04:22.701795100 [INFO]: Desk 5 check in passenger : Veronica Kaufman
+2024-04-04T02:04:22.705783200 [INFO]: Desk 5 get passenger : Maureen Grimes
+2024-04-04T02:04:22.705783200 [INFO]: Desk 5 check in passenger : Maureen Grimes
+2024-04-04T02:04:23.477530800 [INFO]: Flight 1 Closed
+2024-04-04T02:04:23.948977400 [INFO]: Desk 4 get passenger : Maurice Baker
+2024-04-04T02:04:23.948977400 [INFO]: Desk 2 get passenger : Heather Peterson
+2024-04-04T02:04:23.948977400 [INFO]: Desk 5 get passenger : Ashley Duarte
+2024-04-04T02:04:23.948977400 [INFO]: Desk 2 check in passenger : Heather Peterson
+2024-04-04T02:04:23.948977400 [INFO]: Desk 4 check in passenger : Maurice Baker
+2024-04-04T02:04:23.948977400 [INFO]: Desk 5 check in passenger : Ashley Duarte
+2024-04-04T02:04:23.952963 [INFO]: Desk 4 get passenger : Drew Cortez
+2024-04-04T02:04:23.952963 [INFO]: Desk 4 check in passenger : Drew Cortez
+2024-04-04T02:04:23.956952 [INFO]: Desk 4 get passenger : Daniel Larson
+2024-04-04T02:04:23.956952 [INFO]: Desk 5 get passenger : Sara Fisher
+2024-04-04T02:04:23.956952 [INFO]: Desk 4 check in passenger : Daniel Larson
+2024-04-04T02:04:23.956952 [INFO]: Desk 5 check in passenger : Sara Fisher
+2024-04-04T02:04:25.202395400 [INFO]: Desk 2 get passenger : Robert Brown
+2024-04-04T02:04:25.202395400 [INFO]: Desk 5 get passenger : Cynthia Bell
+2024-04-04T02:04:25.202395400 [INFO]: Desk 4 get passenger : Kyle Fitzpatrick
+2024-04-04T02:04:25.202395400 [INFO]: Desk 5 check in passenger : Cynthia Bell
+2024-04-04T02:04:25.202395400 [INFO]: Desk 4 check in passenger : Kyle Fitzpatrick
+2024-04-04T02:04:25.202395400 [INFO]: Desk 2 check in passenger : Robert Brown
+2024-04-04T02:04:25.202395400 [INFO]: Desk 5 get passenger : Christopher Ryan
+2024-04-04T02:04:25.203349200 [INFO]: Desk 5 check in passenger : Christopher Ryan
+2024-04-04T02:04:25.205343900 [INFO]: Desk 5 get passenger : Scott Anderson
+2024-04-04T02:04:25.205343900 [INFO]: Desk 4 get passenger : James Morrison
+2024-04-04T02:04:25.205343900 [INFO]: Desk 5 check in passenger : Scott Anderson
+2024-04-04T02:04:25.205343900 [INFO]: Desk 4 check in passenger : James Morrison
+2024-04-04T02:04:25.205343900 [INFO]: Desk 5 get passenger : John Mcintyre
+2024-04-04T02:04:25.206354700 [INFO]: Desk 5 check in passenger : John Mcintyre
+2024-04-04T02:04:26.207616100 [INFO]: Desk 1 get passenger : Sergio Smith
+2024-04-04T02:04:26.207616100 [INFO]: Desk 4 get passenger : Jonathan Rose
+2024-04-04T02:04:26.207616100 [INFO]: Desk 2 get passenger : Robert Smith
+2024-04-04T02:04:26.207616100 [INFO]: Desk 1 check in passenger : Sergio Smith
+2024-04-04T02:04:26.207616100 [INFO]: Desk 4 check in passenger : Jonathan Rose
+2024-04-04T02:04:26.207616100 [INFO]: Desk 2 check in passenger : Robert Smith
+2024-04-04T02:04:27.209130300 [INFO]: Desk 3 get passenger : Yvette Martinez
+2024-04-04T02:04:27.209130300 [INFO]: Desk 3 check in passenger : Yvette Martinez
+2024-04-04T02:04:27.456507800 [INFO]: Desk 5 get passenger : Scott Jones
+2024-04-04T02:04:27.456507800 [INFO]: Desk 5 check in passenger : Scott Jones
+2024-04-04T02:04:27.458498100 [INFO]: Desk 5 get passenger : Taylor Fitzgerald
+2024-04-04T02:04:27.458498100 [INFO]: Desk 4 get passenger : Willie Thomas
+2024-04-04T02:04:27.458498100 [INFO]: Desk 5 check in passenger : Taylor Fitzgerald
+2024-04-04T02:04:27.458498100 [INFO]: Desk 4 check in passenger : Willie Thomas
+2024-04-04T02:04:27.459495500 [INFO]: Desk 5 get passenger : Albert Malone
+2024-04-04T02:04:27.459495500 [INFO]: Desk 4 get passenger : Brittany Anderson
+2024-04-04T02:04:27.459495500 [INFO]: Desk 4 check in passenger : Brittany Anderson
+2024-04-04T02:04:27.459495500 [INFO]: Desk 5 check in passenger : Albert Malone
+2024-04-04T02:04:28.461467100 [INFO]: Desk 3 get passenger : Daniel Rivera
+2024-04-04T02:04:28.461467100 [INFO]: Desk 1 get passenger : Fernando Buchanan
+2024-04-04T02:04:28.461467100 [INFO]: Desk 2 get passenger : Daniel Brown
+2024-04-04T02:04:28.462458 [INFO]: Desk 1 check in passenger : Fernando Buchanan
+2024-04-04T02:04:28.462458 [INFO]: Desk 3 check in passenger : Daniel Rivera
+2024-04-04T02:04:28.462458 [INFO]: Desk 2 check in passenger : Daniel Brown
+2024-04-04T02:04:28.709450700 [INFO]: Desk 4 get passenger : Charles Evans
+2024-04-04T02:04:28.709450700 [INFO]: Desk 5 get passenger : Matthew Turner
+2024-04-04T02:04:28.709450700 [INFO]: Desk 4 check in passenger : Charles Evans
+2024-04-04T02:04:28.709450700 [INFO]: Desk 5 check in passenger : Matthew Turner
+2024-04-04T02:04:28.709450700 [INFO]: Desk 5 get passenger : Lee Kline
+2024-04-04T02:04:28.710409800 [INFO]: Desk 5 check in passenger : Lee Kline
+2024-04-04T02:04:28.960142 [INFO]: Queue is closed
+2024-04-04T02:04:28.963128 [INFO]: Queue is closed
+2024-04-04T02:04:29.308402800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:29.560371300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:29.813683400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:30.065097 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:30.316440300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:30.569797 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:30.823123300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:31.074416700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:31.327476200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:31.578837700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:31.830164 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:32.081525400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:32.333170200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:32.584464100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:32.835790100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:33.088818500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:33.340372500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:33.593642700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:33.844972900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:34.098249900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:34.350101900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:34.601428800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:34.852801900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:35.104123 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:35.355793200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:35.607077900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:35.858592200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:36.110437300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:36.361966 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:36.613817800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:36.865145100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:37.116508100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:37.369555700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:37.621414700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:37.872774900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:38.124455900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:38.376298400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:38.627624800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:38.879527800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:39.131478500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:39.383329 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:39.637611700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:39.889248300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:40.142528 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:40.394444400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:40.645730800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:40.897144300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:41.149471800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:41.402474300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:41.653770 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:41.904951700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:42.156237900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:42.156237900 [INFO]: All Flights Have Departured
+2024-04-04T02:04:42.407737100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:42.407737100 [INFO]: All Flights Have Departured
+2024-04-04T02:04:42.659063800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:42.659063800 [INFO]: All Flights Have Departured
+2024-04-04T02:04:42.911992400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:42.911992400 [INFO]: All Flights Have Departured
+2024-04-04T02:04:43.164295200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:43.164295200 [INFO]: All Flights Have Departured
+2024-04-04T02:04:43.415735700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:43.415735700 [INFO]: All Flights Have Departured
+2024-04-04T02:04:43.667020500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:43.667020500 [INFO]: All Flights Have Departured
+2024-04-04T02:04:43.918446500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:04:43.918446500 [INFO]: All Flights Have Departured
+2024-04-04T02:35:18.053828 [INFO]: Desk 5 get passenger : Kevin Little
+2024-04-04T02:35:18.053828 [INFO]: Desk 4 get passenger : Donald Taylor
+2024-04-04T02:35:18.053828 [INFO]: Desk 1 get passenger : Anne Jackson
+2024-04-04T02:35:18.056819600 [INFO]: Desk 5 check in passenger : Kevin Little
+2024-04-04T02:35:18.056819600 [INFO]: Desk 4 check in passenger : Donald Taylor
+2024-04-04T02:35:18.056819600 [INFO]: Desk 1 check in passenger : Anne Jackson
+2024-04-04T02:35:19.040402400 [INFO]: Desk 5 get passenger : Kristine Fitzgerald
+2024-04-04T02:35:19.040402400 [INFO]: Desk 4 get passenger : Russell Barr
+2024-04-04T02:35:19.040402400 [INFO]: Desk 4 check in passenger : Russell Barr
+2024-04-04T02:35:19.040402400 [INFO]: Desk 5 check in passenger : Kristine Fitzgerald
+2024-04-04T02:35:20.041366800 [INFO]: Desk 2 get passenger : Maria Wolfe
+2024-04-04T02:35:20.041366800 [INFO]: Desk 4 get passenger : John Mcintyre
+2024-04-04T02:35:20.041366800 [INFO]: Desk 2 check in passenger : Maria Wolfe
+2024-04-04T02:35:20.041366800 [INFO]: Desk 4 check in passenger : John Mcintyre
+2024-04-04T02:35:20.291697 [INFO]: Desk 2 get passenger : Bethany Harrison
+2024-04-04T02:35:20.291697 [INFO]: Desk 4 get passenger : Jessica Bell
+2024-04-04T02:35:20.291697 [INFO]: Desk 4 check in passenger : Jessica Bell
+2024-04-04T02:35:20.291697 [INFO]: Desk 2 check in passenger : Bethany Harrison
+2024-04-04T02:35:20.412955500 [INFO]: Economy Desk 5 Close
+2024-04-04T02:35:20.542608200 [INFO]: Desk 4 get passenger : Miss Katrina Lane
+2024-04-04T02:35:20.542608200 [INFO]: Desk 4 check in passenger : Miss Katrina Lane
+2024-04-04T02:35:20.672787400 [INFO]: Economy Desk 4 Close
+2024-04-04T02:35:20.793464500 [INFO]: Desk 4 get passenger : Monique Bryan
+2024-04-04T02:35:20.793464500 [INFO]: Desk 4 check in passenger : Monique Bryan
+2024-04-04T02:35:20.896239100 [INFO]: Business Desk 3 Close
+2024-04-04T02:35:21.043839300 [INFO]: Desk 4 get passenger : Michelle Daniels
+2024-04-04T02:35:21.043839300 [INFO]: Desk 1 get passenger : Kimberly Haney
+2024-04-04T02:35:21.043839300 [INFO]: Desk 1 check in passenger : Kimberly Haney
+2024-04-04T02:35:21.043839300 [INFO]: Desk 4 check in passenger : Michelle Daniels
+2024-04-04T02:35:21.118639600 [INFO]: Business Desk 2 Close
+2024-04-04T02:35:21.294169900 [INFO]: Desk 4 get passenger : Harold Smith
+2024-04-04T02:35:21.294169900 [INFO]: Desk 4 check in passenger : Harold Smith
+2024-04-04T02:35:21.340138400 [INFO]: Business Desk 1 Close
+2024-04-04T02:35:21.545160600 [INFO]: Desk 4 get passenger : Andrew Phillips
+2024-04-04T02:35:21.545160600 [INFO]: Desk 4 check in passenger : Andrew Phillips
+2024-04-04T02:35:21.588606800 [INFO]: Business Desk 2 Open
+2024-04-04T02:35:21.796057600 [INFO]: Desk 4 get passenger : Veronica Kaufman
+2024-04-04T02:35:21.796057600 [INFO]: Desk 4 check in passenger : Veronica Kaufman
+2024-04-04T02:35:21.822981200 [INFO]: Business Desk 3 Open
+2024-04-04T02:35:22.024486300 [INFO]: Economy Desk 4 Open
+2024-04-04T02:35:22.046428100 [INFO]: Desk 4 get passenger : Vanessa Smith
+2024-04-04T02:35:22.046428100 [INFO]: Desk 4 check in passenger : Vanessa Smith
+2024-04-04T02:35:22.047425800 [INFO]: Desk 4 get passenger : Julie Smith
+2024-04-04T02:35:22.047425800 [INFO]: Desk 4 check in passenger : Julie Smith
+2024-04-04T02:35:22.047425800 [INFO]: Desk 4 get passenger : Marie Williams
+2024-04-04T02:35:22.047425800 [INFO]: Desk 4 check in passenger : Marie Williams
+2024-04-04T02:35:22.048423200 [INFO]: Desk 4 get passenger : Dale Harris
+2024-04-04T02:35:22.048423200 [INFO]: Desk 4 check in passenger : Dale Harris
+2024-04-04T02:35:22.049421100 [INFO]: Desk 4 get passenger : Taylor Fitzgerald
+2024-04-04T02:35:22.049421100 [INFO]: Desk 4 check in passenger : Taylor Fitzgerald
+2024-04-04T02:35:22.050417800 [INFO]: Desk 4 get passenger : Denise Salas
+2024-04-04T02:35:22.050417800 [INFO]: Desk 4 check in passenger : Denise Salas
+2024-04-04T02:35:22.050417800 [INFO]: Desk 4 get passenger : Lynn Buckley
+2024-04-04T02:35:22.050417800 [INFO]: Desk 4 check in passenger : Lynn Buckley
+2024-04-04T02:35:22.051414900 [INFO]: Desk 4 get passenger : Lee Kline
+2024-04-04T02:35:22.051414900 [INFO]: Desk 4 check in passenger : Lee Kline
+2024-04-04T02:35:22.280058600 [INFO]: Economy Desk 5 Open
+2024-04-04T02:35:22.942218200 [INFO]: Business Desk 1 Open
+2024-04-04T02:35:23.048932200 [INFO]: Desk 5 get passenger : Steven Miller Jr.
+2024-04-04T02:35:23.048932200 [INFO]: Desk 5 check in passenger : Steven Miller Jr.
+2024-04-04T02:35:23.154649700 [INFO]: Business Desk 2 Close
+2024-04-04T02:35:23.299262 [INFO]: Desk 2 get passenger : Douglas Kaufman
+2024-04-04T02:35:23.299262 [INFO]: Desk 5 get passenger : Wesley Warren
+2024-04-04T02:35:23.299262 [INFO]: Desk 4 get passenger : Amanda Smith
+2024-04-04T02:35:23.299262 [INFO]: Desk 2 check in passenger : Douglas Kaufman
+2024-04-04T02:35:23.299262 [INFO]: Desk 4 check in passenger : Amanda Smith
+2024-04-04T02:35:23.299262 [INFO]: Desk 5 check in passenger : Wesley Warren
+2024-04-04T02:35:23.371353900 [INFO]: Business Desk 1 Close
+2024-04-04T02:35:23.549877200 [INFO]: Desk 5 get passenger : Michelle Hansen
+2024-04-04T02:35:23.549877200 [INFO]: Desk 4 get passenger : David Davis
+2024-04-04T02:35:23.549877200 [INFO]: Desk 5 check in passenger : Michelle Hansen
+2024-04-04T02:35:23.549877200 [INFO]: Desk 4 check in passenger : David Davis
+2024-04-04T02:35:23.550873800 [INFO]: Desk 5 get passenger : Michael Obrien
+2024-04-04T02:35:23.550873800 [INFO]: Desk 4 get passenger : Daniel Larson
+2024-04-04T02:35:23.550873800 [INFO]: Desk 4 check in passenger : Daniel Larson
+2024-04-04T02:35:23.550873800 [INFO]: Desk 5 check in passenger : Michael Obrien
+2024-04-04T02:35:23.550873800 [INFO]: Desk 4 get passenger : Eric Grant
+2024-04-04T02:35:23.550873800 [INFO]: Desk 5 get passenger : Kathryn Ho
+2024-04-04T02:35:23.550873800 [INFO]: Desk 4 check in passenger : Eric Grant
+2024-04-04T02:35:23.550873800 [INFO]: Desk 5 check in passenger : Kathryn Ho
+2024-04-04T02:35:23.550873800 [INFO]: Desk 4 get passenger : Sharon Hamilton
+2024-04-04T02:35:23.550873800 [INFO]: Desk 5 get passenger : Philip Johnson
+2024-04-04T02:35:23.551872 [INFO]: Desk 4 check in passenger : Sharon Hamilton
+2024-04-04T02:35:23.551872 [INFO]: Desk 5 check in passenger : Philip Johnson
+2024-04-04T02:35:23.596276800 [INFO]: Business Desk 2 Open
+2024-04-04T02:35:23.796739800 [INFO]: Business Desk 1 Open
+2024-04-04T02:35:24.803433 [INFO]: Desk 4 get passenger : Paul Thomas
+2024-04-04T02:35:24.803433 [INFO]: Desk 5 get passenger : Matthew Sanchez
+2024-04-04T02:35:24.803433 [INFO]: Desk 4 check in passenger : Paul Thomas
+2024-04-04T02:35:24.803433 [INFO]: Desk 5 check in passenger : Matthew Sanchez
+2024-04-04T02:35:24.803433 [INFO]: Desk 4 get passenger : Maurice Baker
+2024-04-04T02:35:24.803433 [INFO]: Desk 5 get passenger : Matthew Turner
+2024-04-04T02:35:24.804427600 [INFO]: Desk 4 check in passenger : Maurice Baker
+2024-04-04T02:35:24.804427600 [INFO]: Desk 5 check in passenger : Matthew Turner
+2024-04-04T02:35:24.807418100 [INFO]: Desk 4 get passenger : Maria Woods
+2024-04-04T02:35:24.807418100 [INFO]: Desk 5 get passenger : Debra Sheppard
+2024-04-04T02:35:24.807418100 [INFO]: Desk 4 check in passenger : Maria Woods
+2024-04-04T02:35:24.807418100 [INFO]: Desk 5 check in passenger : Debra Sheppard
+2024-04-04T02:35:24.811408400 [INFO]: Desk 5 get passenger : Christopher Mendoza
+2024-04-04T02:35:24.811408400 [INFO]: Desk 4 get passenger : Emily Greene
+2024-04-04T02:35:24.811408400 [INFO]: Desk 4 check in passenger : Emily Greene
+2024-04-04T02:35:24.811408400 [INFO]: Desk 5 check in passenger : Christopher Mendoza
+2024-04-04T02:35:24.811408400 [INFO]: Desk 5 get passenger : Christine Willis
+2024-04-04T02:35:24.811408400 [INFO]: Desk 4 get passenger : Dr. Gerald Hall
+2024-04-04T02:35:24.812406800 [INFO]: Desk 5 check in passenger : Christine Willis
+2024-04-04T02:35:24.812406800 [INFO]: Desk 4 check in passenger : Dr. Gerald Hall
+2024-04-04T02:35:26.056025 [INFO]: Desk 1 get passenger : David Dennis
+2024-04-04T02:35:26.056025 [INFO]: Desk 5 get passenger : Willie Thomas
+2024-04-04T02:35:26.056025 [INFO]: Desk 3 get passenger : Fernando Buchanan
+2024-04-04T02:35:26.056025 [INFO]: Desk 2 get passenger : Daniel Brown
+2024-04-04T02:35:26.056025 [INFO]: Desk 4 get passenger : Lauren Mcclure
+2024-04-04T02:35:26.060015 [INFO]: Desk 1 check in passenger : David Dennis
+2024-04-04T02:35:26.060015 [INFO]: Desk 5 check in passenger : Willie Thomas
+2024-04-04T02:35:26.060015 [INFO]: Desk 3 check in passenger : Fernando Buchanan
+2024-04-04T02:35:26.060015 [INFO]: Desk 2 check in passenger : Daniel Brown
+2024-04-04T02:35:26.060015 [INFO]: Desk 4 check in passenger : Lauren Mcclure
+2024-04-04T02:35:26.306356200 [INFO]: Desk 5 get passenger : Jordan Richmond
+2024-04-04T02:35:26.306356200 [INFO]: Desk 4 get passenger : Drew Cortez
+2024-04-04T02:35:26.306356200 [INFO]: Desk 4 check in passenger : Drew Cortez
+2024-04-04T02:35:26.306356200 [INFO]: Desk 5 check in passenger : Jordan Richmond
+2024-04-04T02:35:26.306356200 [INFO]: Desk 4 get passenger : Kimberly Anthony
+2024-04-04T02:35:26.306356200 [INFO]: Desk 5 get passenger : Chelsea Moreno
+2024-04-04T02:35:26.307372800 [INFO]: Desk 4 check in passenger : Kimberly Anthony
+2024-04-04T02:35:26.307372800 [INFO]: Desk 5 check in passenger : Chelsea Moreno
+2024-04-04T02:35:26.307372800 [INFO]: Desk 4 get passenger : Kyle Fitzpatrick
+2024-04-04T02:35:26.307876700 [INFO]: Desk 5 get passenger : Kimberly Lee
+2024-04-04T02:35:26.307876700 [INFO]: Desk 4 check in passenger : Kyle Fitzpatrick
+2024-04-04T02:35:26.307876700 [INFO]: Desk 5 check in passenger : Kimberly Lee
+2024-04-04T02:35:26.307876700 [INFO]: Desk 4 get passenger : Kathy Byrd
+2024-04-04T02:35:26.307876700 [INFO]: Desk 4 check in passenger : Kathy Byrd
+2024-04-04T02:35:27.308515100 [INFO]: Desk 5 get passenger : Kevin Williams
+2024-04-04T02:35:27.308515100 [INFO]: Desk 1 get passenger : Sergio Smith
+2024-04-04T02:35:27.309023400 [INFO]: Desk 5 check in passenger : Kevin Williams
+2024-04-04T02:35:27.309023400 [INFO]: Desk 1 check in passenger : Sergio Smith
+2024-04-04T02:35:27.558961700 [INFO]: Desk 5 get passenger : Rachel Robertson
+2024-04-04T02:35:27.558961700 [INFO]: Desk 4 get passenger : Jessica Donovan
+2024-04-04T02:35:27.559486400 [INFO]: Desk 4 check in passenger : Jessica Donovan
+2024-04-04T02:35:27.559486400 [INFO]: Desk 5 check in passenger : Rachel Robertson
+2024-04-04T02:35:27.559486400 [INFO]: Desk 4 get passenger : Philip Leonard
+2024-04-04T02:35:27.559486400 [INFO]: Desk 5 get passenger : Sean Johnson MD
+2024-04-04T02:35:27.560002800 [INFO]: Desk 4 check in passenger : Philip Leonard
+2024-04-04T02:35:27.560002800 [INFO]: Desk 5 check in passenger : Sean Johnson MD
+2024-04-04T02:35:27.560998200 [INFO]: Desk 4 get passenger : Albert Malone
+2024-04-04T02:35:27.560998200 [INFO]: Desk 5 get passenger : Audrey Salinas
+2024-04-04T02:35:27.561995400 [INFO]: Desk 4 check in passenger : Albert Malone
+2024-04-04T02:35:27.561995400 [INFO]: Desk 5 check in passenger : Audrey Salinas
+2024-04-04T02:35:27.564987600 [INFO]: Desk 4 get passenger : Heather Jackson
+2024-04-04T02:35:27.564987600 [INFO]: Desk 5 get passenger : Diane Golden
+2024-04-04T02:35:27.564987600 [INFO]: Desk 4 check in passenger : Heather Jackson
+2024-04-04T02:35:27.564987600 [INFO]: Desk 5 check in passenger : Diane Golden
+2024-04-04T02:35:28.812249200 [INFO]: Desk 3 get passenger : Shawn Mack
+2024-04-04T02:35:28.812249200 [INFO]: Desk 5 get passenger : Joseph Stevens
+2024-04-04T02:35:28.812249200 [INFO]: Desk 4 get passenger : James Reynolds
+2024-04-04T02:35:28.813246800 [INFO]: Desk 5 check in passenger : Joseph Stevens
+2024-04-04T02:35:28.813246800 [INFO]: Desk 4 check in passenger : James Reynolds
+2024-04-04T02:35:28.813246800 [INFO]: Desk 3 check in passenger : Shawn Mack
+2024-04-04T02:35:29.062590 [INFO]: Desk 4 get passenger : Shelby Curtis
+2024-04-04T02:35:29.062590 [INFO]: Desk 5 get passenger : Deborah Bowman
+2024-04-04T02:35:29.062590 [INFO]: Desk 4 check in passenger : Shelby Curtis
+2024-04-04T02:35:29.062590 [INFO]: Desk 5 check in passenger : Deborah Bowman
+2024-04-04T02:35:29.066578300 [INFO]: Desk 5 get passenger : Kim Williams
+2024-04-04T02:35:29.066578300 [INFO]: Desk 4 get passenger : Emma Nunez
+2024-04-04T02:35:29.066578300 [INFO]: Desk 4 check in passenger : Emma Nunez
+2024-04-04T02:35:29.066578300 [INFO]: Desk 5 check in passenger : Kim Williams
+2024-04-04T02:35:29.070567500 [INFO]: Desk 5 get passenger : Ivan Bates
+2024-04-04T02:35:29.070567500 [INFO]: Desk 4 get passenger : Courtney Johnson
+2024-04-04T02:35:29.070567500 [INFO]: Desk 4 check in passenger : Courtney Johnson
+2024-04-04T02:35:29.070567500 [INFO]: Desk 5 check in passenger : Ivan Bates
+2024-04-04T02:35:29.070567500 [INFO]: Desk 5 get passenger : Sara Fisher
+2024-04-04T02:35:29.070567500 [INFO]: Desk 4 get passenger : Richard White
+2024-04-04T02:35:29.071565700 [INFO]: Desk 5 check in passenger : Sara Fisher
+2024-04-04T02:35:29.071565700 [INFO]: Desk 4 check in passenger : Richard White
+2024-04-04T02:35:29.071565700 [INFO]: Desk 5 get passenger : Catherine Murphy
+2024-04-04T02:35:29.071565700 [INFO]: Desk 5 check in passenger : Catherine Murphy
+2024-04-04T02:35:30.316171600 [INFO]: Desk 5 get passenger : Lisa Oliver
+2024-04-04T02:35:30.316171600 [INFO]: Desk 1 get passenger : Yvette Martinez
+2024-04-04T02:35:30.316171600 [INFO]: Desk 4 get passenger : Barbara Best
+2024-04-04T02:35:30.316171600 [INFO]: Desk 3 get passenger : Diana Ponce
+2024-04-04T02:35:30.316171600 [INFO]: Desk 5 check in passenger : Lisa Oliver
+2024-04-04T02:35:30.317163200 [INFO]: Desk 4 check in passenger : Barbara Best
+2024-04-04T02:35:30.317163200 [INFO]: Desk 1 check in passenger : Yvette Martinez
+2024-04-04T02:35:30.317163200 [INFO]: Desk 3 check in passenger : Diana Ponce
+2024-04-04T02:35:30.567014 [INFO]: Desk 5 get passenger : Scott Jones
+2024-04-04T02:35:30.567014 [INFO]: Desk 4 get passenger : Jorge Mejia
+2024-04-04T02:35:30.567014 [INFO]: Desk 4 check in passenger : Jorge Mejia
+2024-04-04T02:35:30.567014 [INFO]: Desk 5 check in passenger : Scott Jones
+2024-04-04T02:35:30.567014 [INFO]: Desk 5 get passenger : Cynthia Bell
+2024-04-04T02:35:30.567014 [INFO]: Desk 4 get passenger : Benjamin Hayes
+2024-04-04T02:35:30.568013300 [INFO]: Desk 4 check in passenger : Benjamin Hayes
+2024-04-04T02:35:30.568013300 [INFO]: Desk 5 check in passenger : Cynthia Bell
+2024-04-04T02:35:30.568013300 [INFO]: Desk 5 get passenger : Hannah Romero
+2024-04-04T02:35:30.568013300 [INFO]: Desk 4 get passenger : Jonathan Rose
+2024-04-04T02:35:30.568013300 [INFO]: Desk 5 check in passenger : Hannah Romero
+2024-04-04T02:35:30.568013300 [INFO]: Desk 4 check in passenger : Jonathan Rose
+2024-04-04T02:35:30.863879200 [INFO]: Flight 1 Closed
+2024-04-04T02:35:31.571485700 [INFO]: Desk 2 get passenger : Lisa Moore
+2024-04-04T02:35:31.571485700 [INFO]: Desk 1 get passenger : Daniel Rivera
+2024-04-04T02:35:31.571485700 [INFO]: Desk 3 get passenger : Robert Smith
+2024-04-04T02:35:31.571485700 [INFO]: Desk 4 get passenger : Charles Evans
+2024-04-04T02:35:31.571485700 [INFO]: Desk 5 get passenger : Mary Jones
+2024-04-04T02:35:31.571485700 [INFO]: Desk 1 check in passenger : Daniel Rivera
+2024-04-04T02:35:31.571485700 [INFO]: Desk 2 check in passenger : Lisa Moore
+2024-04-04T02:35:31.571485700 [INFO]: Desk 3 check in passenger : Robert Smith
+2024-04-04T02:35:31.571485700 [INFO]: Desk 4 check in passenger : Charles Evans
+2024-04-04T02:35:31.571485700 [INFO]: Desk 5 check in passenger : Mary Jones
+2024-04-04T02:35:32.823914800 [INFO]: Desk 4 get passenger : John Williams
+2024-04-04T02:35:32.823914800 [INFO]: Desk 4 check in passenger : John Williams
+2024-04-04T02:35:33.825882700 [INFO]: Desk 5 get passenger : Kimberly Murphy
+2024-04-04T02:35:33.825882700 [INFO]: Desk 1 get passenger : Robert Brown
+2024-04-04T02:35:33.825882700 [INFO]: Desk 4 get passenger : James Morrison
+2024-04-04T02:35:33.826878500 [INFO]: Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T02:35:33.826878500 [INFO]: Desk 1 check in passenger : Robert Brown
+2024-04-04T02:35:33.826878500 [INFO]: Desk 4 check in passenger : James Morrison
+2024-04-04T02:35:34.327265600 [INFO]: Queue is closed
+2024-04-04T02:35:34.327265600 [INFO]: Queue is closed
+2024-04-04T02:35:34.707226900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:34.960443600 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:35.212191400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:35.463531500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:35.715499600 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:35.968822500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:36.221849 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:36.473356800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:36.725205 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:36.976533100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:37.229855300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:37.481697 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:37.733113800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:37.984411300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:38.238773400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:38.490580400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:38.742427700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:38.994042500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:39.245328500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:39.497057300 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:39.497057300 [INFO]: All Flights Have Departured
+2024-04-04T02:35:39.749002100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:39.749002100 [INFO]: All Flights Have Departured
+2024-04-04T02:35:40.000857500 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:40.000857500 [INFO]: All Flights Have Departured
+2024-04-04T02:35:40.252809 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:40.252809 [INFO]: All Flights Have Departured
+2024-04-04T02:35:40.504799100 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:40.504799100 [INFO]: All Flights Have Departured
+2024-04-04T02:35:40.756714800 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:40.756714800 [INFO]: All Flights Have Departured
+2024-04-04T02:35:41.010077200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:41.010077200 [INFO]: All Flights Have Departured
+2024-04-04T02:35:41.261728900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:41.261728900 [INFO]: All Flights Have Departured
+2024-04-04T02:35:41.515189400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:41.515189400 [INFO]: All Flights Have Departured
+2024-04-04T02:35:41.767044700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:41.767044700 [INFO]: All Flights Have Departured
+2024-04-04T02:35:42.020366700 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:42.020366700 [INFO]: All Flights Have Departured
+2024-04-04T02:35:42.273534900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:42.273534900 [INFO]: All Flights Have Departured
+2024-04-04T02:35:42.526563200 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:42.526563200 [INFO]: All Flights Have Departured
+2024-04-04T02:35:42.779926400 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:42.779926400 [INFO]: All Flights Have Departured
+2024-04-04T02:35:43.031253900 [INFO]: All Passengers Have Checked-in
+2024-04-04T02:35:43.031253900 [INFO]: All Flights Have Departured
+2024-04-04T02:51:52.594983100 [INFO]: Desk 1 get passenger : Robert Brown
+2024-04-04T02:51:52.594983100 [INFO]: Desk 5 get passenger : Wesley Warren
+2024-04-04T02:51:52.594983100 [INFO]: Desk 4 get passenger : Brittany Anderson
+2024-04-04T02:51:52.597965900 [INFO]: Desk 5 check in passenger : Wesley Warren
+2024-04-04T02:51:52.597965900 [INFO]: Desk 4 check in passenger : Brittany Anderson
+2024-04-04T02:51:52.597965900 [INFO]: Desk 1 check in passenger : Robert Brown
+2024-04-04T02:51:53.581742400 [INFO]: Desk 4 get passenger : Sean Johnson MD
+2024-04-04T02:51:53.581742400 [INFO]: Desk 5 get passenger : Elizabeth Armstrong
+2024-04-04T02:51:53.581742400 [INFO]: Desk 5 check in passenger : Elizabeth Armstrong
+2024-04-04T02:51:53.581742400 [INFO]: Desk 4 check in passenger : Sean Johnson MD
+2024-04-04T02:51:54.582189 [INFO]: Desk 2 get passenger : Jason Reynolds
+2024-04-04T02:51:54.582189 [INFO]: Desk 4 get passenger : John Mcintyre
+2024-04-04T02:51:54.582189 [INFO]: Desk 2 check in passenger : Jason Reynolds
+2024-04-04T02:51:54.582189 [INFO]: Desk 4 check in passenger : John Mcintyre
+2024-04-04T02:51:55.583128200 [INFO]: Desk 4 get passenger : Andrew Phillips
+2024-04-04T02:51:55.583128200 [INFO]: Desk 1 get passenger : Anne Jackson
+2024-04-04T02:51:55.583128200 [INFO]: Desk 5 get passenger : Kristine Fitzgerald
+2024-04-04T02:51:55.583128200 [INFO]: Desk 1 check in passenger : Anne Jackson
+2024-04-04T02:51:55.583128200 [INFO]: Desk 4 check in passenger : Andrew Phillips
+2024-04-04T02:51:55.583128200 [INFO]: Desk 5 check in passenger : Kristine Fitzgerald
+2024-04-04T02:51:56.583346 [INFO]: Desk 3 get passenger : Tiffany Green
+2024-04-04T02:51:56.583346 [INFO]: Desk 3 check in passenger : Tiffany Green
+2024-04-04T02:51:57.583843600 [INFO]: Desk 5 get passenger : Drew Cortez
+2024-04-04T02:51:57.583843600 [INFO]: Desk 4 get passenger : David Hayes
+2024-04-04T02:51:57.583843600 [INFO]: Desk 5 check in passenger : Drew Cortez
+2024-04-04T02:51:57.583843600 [INFO]: Desk 4 check in passenger : David Hayes
+2024-04-04T02:51:58.584158300 [INFO]: Desk 5 get passenger : Dr. Gerald Hall
+2024-04-04T02:51:58.584158300 [INFO]: Desk 4 get passenger : Philip Leonard
+2024-04-04T02:51:58.584158300 [INFO]: Desk 4 check in passenger : Philip Leonard
+2024-04-04T02:51:58.584158300 [INFO]: Desk 5 check in passenger : Dr. Gerald Hall
+2024-04-04T02:51:58.584158300 [INFO]: Desk 4 get passenger : Catherine Murphy
+2024-04-04T02:51:58.585152700 [INFO]: Desk 4 check in passenger : Catherine Murphy
+2024-04-04T02:51:59.585431 [INFO]: Desk 5 get passenger : Kimberly Anthony
+2024-04-04T02:51:59.586168 [INFO]: Desk 5 check in passenger : Kimberly Anthony
+2024-04-04T02:52:00.585773300 [INFO]: Desk 5 get passenger : Kevin Little
+2024-04-04T02:52:00.585773300 [INFO]: Desk 4 get passenger : Mrs. Alexis Martin
+2024-04-04T02:52:00.585773300 [INFO]: Desk 4 check in passenger : Mrs. Alexis Martin
+2024-04-04T02:52:00.585773300 [INFO]: Desk 5 check in passenger : Kevin Little
+2024-04-04T02:52:00.585773300 [INFO]: Desk 4 get passenger : James Reynolds
+2024-04-04T02:52:00.586765700 [INFO]: Desk 4 check in passenger : James Reynolds
+2024-04-04T02:52:02.587395300 [INFO]: Desk 1 get passenger : Shawn Mack
+2024-04-04T02:52:02.587395300 [INFO]: Desk 4 get passenger : Chelsea Moreno
+2024-04-04T02:52:02.587395300 [INFO]: Desk 5 get passenger : Michelle Hansen
+2024-04-04T02:52:02.587395300 [INFO]: Desk 1 check in passenger : Shawn Mack
+2024-04-04T02:52:02.587395300 [INFO]: Desk 4 check in passenger : Chelsea Moreno
+2024-04-04T02:52:02.588388600 [INFO]: Desk 5 check in passenger : Michelle Hansen
+2024-04-04T02:52:03.587842900 [INFO]: Desk 4 get passenger : Debra Sheppard
+2024-04-04T02:52:03.587842900 [INFO]: Desk 5 get passenger : Russell Barr
+2024-04-04T02:52:03.588852600 [INFO]: Desk 5 check in passenger : Russell Barr
+2024-04-04T02:52:03.588852600 [INFO]: Desk 4 check in passenger : Debra Sheppard
+2024-04-04T02:52:03.588852600 [INFO]: Desk 4 get passenger : Sharon Hamilton
+2024-04-04T02:52:03.588852600 [INFO]: Desk 4 check in passenger : Sharon Hamilton
+2024-04-04T02:52:05.588291900 [INFO]: Desk 4 get passenger : Jonathan Rose
+2024-04-04T02:52:05.588291900 [INFO]: Desk 2 get passenger : Mr. Henry Holt
+2024-04-04T02:52:05.588291900 [INFO]: Desk 5 get passenger : Hannah Romero
+2024-04-04T02:52:05.588291900 [INFO]: Desk 2 check in passenger : Mr. Henry Holt
+2024-04-04T02:52:05.588291900 [INFO]: Desk 4 check in passenger : Jonathan Rose
+2024-04-04T02:52:05.588291900 [INFO]: Desk 5 check in passenger : Hannah Romero
+2024-04-04T02:52:05.589286600 [INFO]: Desk 5 get passenger : Scott Jones
+2024-04-04T02:52:05.589286600 [INFO]: Desk 5 check in passenger : Scott Jones
+2024-04-04T02:52:07.590954300 [INFO]: Desk 5 get passenger : Maureen Grimes
+2024-04-04T02:52:07.590954300 [INFO]: Desk 4 get passenger : Matthew Sanchez
+2024-04-04T02:52:07.590954300 [INFO]: Desk 5 check in passenger : Maureen Grimes
+2024-04-04T02:52:07.590954300 [INFO]: Desk 4 check in passenger : Matthew Sanchez
+2024-04-04T02:52:07.591916900 [INFO]: Desk 4 get passenger : Denise Salas
+2024-04-04T02:52:07.591916900 [INFO]: Desk 4 check in passenger : Denise Salas
+2024-04-04T02:52:07.591916900 [INFO]: Desk 5 get passenger : Jordan Richmond
+2024-04-04T02:52:07.591916900 [INFO]: Desk 5 check in passenger : Jordan Richmond
+2024-04-04T02:52:09.591559400 [INFO]: Desk 5 get passenger : Donald Taylor
+2024-04-04T02:52:09.591559400 [INFO]: Desk 4 get passenger : Matthew Turner
+2024-04-04T02:52:09.592261500 [INFO]: Desk 4 check in passenger : Matthew Turner
+2024-04-04T02:52:09.592261500 [INFO]: Desk 5 check in passenger : Donald Taylor
+2024-04-04T02:52:09.592261500 [INFO]: Desk 4 get passenger : Harold Smith
+2024-04-04T02:52:09.592261500 [INFO]: Desk 5 get passenger : Amanda Smith
+2024-04-04T02:52:09.592261500 [INFO]: Desk 4 check in passenger : Harold Smith
+2024-04-04T02:52:09.593258 [INFO]: Desk 5 check in passenger : Amanda Smith
+2024-04-04T02:52:11.592276200 [INFO]: Desk 3 get passenger : Robert Smith
+2024-04-04T02:52:11.592276200 [INFO]: Desk 1 get passenger : Fernando Buchanan
+2024-04-04T02:52:11.592276200 [INFO]: Desk 5 get passenger : Michael Obrien
+2024-04-04T02:52:11.592276200 [INFO]: Desk 1 check in passenger : Fernando Buchanan
+2024-04-04T02:52:11.592276200 [INFO]: Desk 5 check in passenger : Michael Obrien
+2024-04-04T02:52:11.592276200 [INFO]: Desk 3 check in passenger : Robert Smith
+2024-04-04T02:52:12.594717 [INFO]: Desk 1 get passenger : Jenna Smith
+2024-04-04T02:52:12.594717 [INFO]: Desk 4 get passenger : Christopher Mendoza
+2024-04-04T02:52:12.594717 [INFO]: Desk 5 get passenger : Steven Miller Jr.
+2024-04-04T02:52:12.595720400 [INFO]: Desk 4 check in passenger : Christopher Mendoza
+2024-04-04T02:52:12.595720400 [INFO]: Desk 5 check in passenger : Steven Miller Jr.
+2024-04-04T02:52:12.595720400 [INFO]: Desk 1 check in passenger : Jenna Smith
+2024-04-04T02:54:53.153492400 [INFO]: Business Desk 1 Close
+2024-04-04T02:54:53.593120400 [INFO]: Economy Desk 4 Close
+2024-04-04T02:54:53.850951500 [INFO]: Desk 3 get passenger : Mr. Henry Holt
+2024-04-04T02:54:53.850951500 [INFO]: Desk 2 get passenger : Yvette Martinez
+2024-04-04T02:54:53.850951500 [INFO]: Desk 5 get passenger : Debra Sheppard
+2024-04-04T02:54:53.851948400 [INFO]: Desk 5 check in passenger : Debra Sheppard
+2024-04-04T02:54:53.851948400 [INFO]: Desk 2 check in passenger : Yvette Martinez
+2024-04-04T02:54:53.851948400 [INFO]: Desk 3 check in passenger : Mr. Henry Holt
+2024-04-04T02:54:53.946826300 [INFO]: Business Desk 3 Close
+2024-04-04T02:54:54.144662300 [INFO]: Business Desk 2 Close
+2024-04-04T02:54:54.623388 [INFO]: Economy Desk 5 Close
+2024-04-04T02:54:54.851933800 [INFO]: Desk 5 get passenger : Emma Nunez
+2024-04-04T02:54:54.851933800 [INFO]: Desk 5 check in passenger : Emma Nunez
+2024-04-04T02:54:55.851967600 [INFO]: Desk 5 get passenger : Willie Thomas
+2024-04-04T02:54:55.851967600 [INFO]: Desk 2 get passenger : Robert Smith
+2024-04-04T02:54:55.851967600 [INFO]: Desk 2 check in passenger : Robert Smith
+2024-04-04T02:54:55.851967600 [INFO]: Desk 5 check in passenger : Willie Thomas
+2024-04-04T02:54:56.852974100 [INFO]: Desk 5 get passenger : Joseph Stevens
+2024-04-04T02:54:56.852974100 [INFO]: Desk 5 check in passenger : Joseph Stevens
+2024-04-04T02:54:57.853905100 [INFO]: Desk 2 get passenger : Joseph Norman
+2024-04-04T02:54:57.853905100 [INFO]: Desk 5 get passenger : Benjamin Hayes
+2024-04-04T02:54:57.853905100 [INFO]: Desk 2 check in passenger : Joseph Norman
+2024-04-04T02:54:57.853905100 [INFO]: Desk 5 check in passenger : Benjamin Hayes
+2024-04-04T02:54:58.854225600 [INFO]: Desk 5 get passenger : John Mcintyre
+2024-04-04T02:54:58.854225600 [INFO]: Desk 5 check in passenger : John Mcintyre
+2024-04-04T02:54:58.856219600 [INFO]: Desk 5 get passenger : Deborah Bowman
+2024-04-04T02:54:58.856219600 [INFO]: Desk 5 check in passenger : Deborah Bowman
+2024-04-04T02:54:59.854732800 [INFO]: Desk 5 get passenger : Paul Thomas
+2024-04-04T02:54:59.854732800 [INFO]: Desk 5 check in passenger : Paul Thomas
+2024-04-04T02:54:59.855724500 [INFO]: Desk 5 get passenger : Sara Fisher
+2024-04-04T02:54:59.855724500 [INFO]: Desk 5 check in passenger : Sara Fisher
+2024-04-04T02:54:59.856721800 [INFO]: Desk 5 get passenger : Donald Taylor
+2024-04-04T02:54:59.856721800 [INFO]: Desk 3 get passenger : Sergio Smith
+2024-04-04T02:54:59.856721800 [INFO]: Desk 3 check in passenger : Sergio Smith
+2024-04-04T02:54:59.856721800 [INFO]: Desk 5 check in passenger : Donald Taylor
+2024-04-04T02:55:13.870910100 [INFO]: Desk 4 get passenger : Daniel Larson
+2024-04-04T02:55:13.870910100 [INFO]: Desk 5 get passenger : Michele Smith
+2024-04-04T02:55:13.872905700 [INFO]: Desk 4 check in passenger : Daniel Larson
+2024-04-04T02:55:13.872905700 [INFO]: Desk 5 check in passenger : Michele Smith
+2024-04-04T02:55:14.609485400 [INFO]: Business Desk 1 Close
+2024-04-04T02:55:14.858402 [INFO]: Desk 4 get passenger : James Reynolds
+2024-04-04T02:55:14.858402 [INFO]: Desk 5 get passenger : Emily Greene
+2024-04-04T02:55:14.858402 [INFO]: Desk 4 check in passenger : James Reynolds
+2024-04-04T02:55:14.858402 [INFO]: Desk 5 check in passenger : Emily Greene
+2024-04-04T02:55:14.858402 [INFO]: Desk 5 get passenger : Lauren Mcclure
+2024-04-04T02:55:14.859398800 [INFO]: Desk 5 check in passenger : Lauren Mcclure
+2024-04-04T02:55:15.038918600 [INFO]: Business Desk 2 Close
+2024-04-04T02:55:15.722409100 [INFO]: Business Desk 3 Close
+2024-04-04T02:55:15.861141 [INFO]: Desk 5 get passenger : Benjamin Hayes
+2024-04-04T02:55:15.861141 [INFO]: Desk 4 get passenger : Audrey Salinas
+2024-04-04T02:55:15.861141 [INFO]: Desk 4 check in passenger : Audrey Salinas
+2024-04-04T02:55:15.861141 [INFO]: Desk 5 check in passenger : Benjamin Hayes
+2024-04-04T02:55:16.111473300 [INFO]: Economy Desk 4 Close
+2024-04-04T02:55:16.618891100 [INFO]: Economy Desk 5 Close
+2024-04-04T02:55:16.859240500 [INFO]: Desk 5 get passenger : Kathryn Ho
+2024-04-04T02:55:16.859240500 [INFO]: Desk 5 check in passenger : Kathryn Ho
+2024-04-04T02:55:16.861235700 [INFO]: Desk 4 get passenger : Philip Johnson
+2024-04-04T02:55:16.861235700 [INFO]: Desk 4 check in passenger : Philip Johnson
+2024-04-04T02:55:17.859342200 [INFO]: Desk 5 get passenger : Albert Malone
+2024-04-04T02:55:17.859342200 [INFO]: Desk 5 check in passenger : Albert Malone
+2024-04-04T02:55:18.862029600 [INFO]: Desk 4 get passenger : Christopher Ryan
+2024-04-04T02:55:18.862029600 [INFO]: Desk 4 check in passenger : Christopher Ryan
+2024-04-04T02:55:19.860820700 [INFO]: Desk 5 get passenger : Dale Harris
+2024-04-04T02:55:19.860820700 [INFO]: Desk 5 check in passenger : Dale Harris
+2024-04-04T02:55:19.862816500 [INFO]: Desk 4 get passenger : Debra Sheppard
+2024-04-04T02:55:19.862816500 [INFO]: Desk 4 check in passenger : Debra Sheppard
+2024-04-04T02:55:20.861460 [INFO]: Desk 5 get passenger : Denise Salas
+2024-04-04T02:55:20.861460 [INFO]: Desk 5 check in passenger : Denise Salas
+2024-04-04T02:55:20.863454900 [INFO]: Desk 4 get passenger : Sean Johnson MD
+2024-04-04T02:55:20.863454900 [INFO]: Desk 4 check in passenger : Sean Johnson MD
+2024-04-04T02:55:21.861941600 [INFO]: Desk 5 get passenger : Kristine Fitzgerald
+2024-04-04T02:55:21.861941600 [INFO]: Desk 5 check in passenger : Kristine Fitzgerald
+2024-04-04T02:55:21.863936200 [INFO]: Desk 4 get passenger : Taylor Fitzgerald
+2024-04-04T02:55:21.863936200 [INFO]: Desk 4 check in passenger : Taylor Fitzgerald
+2024-04-04T02:55:22.862537300 [INFO]: Desk 5 get passenger : Kevin Little
+2024-04-04T02:55:22.862537300 [INFO]: Desk 5 check in passenger : Kevin Little
+2024-04-04T02:55:22.864526500 [INFO]: Desk 4 get passenger : John Mcintyre
+2024-04-04T02:55:22.864526500 [INFO]: Desk 4 check in passenger : John Mcintyre
+2024-04-04T02:55:23.863403200 [INFO]: Desk 5 get passenger : Hannah Romero
+2024-04-04T02:55:23.863403200 [INFO]: Desk 5 check in passenger : Hannah Romero
+2024-04-04T02:55:25.867015500 [INFO]: Desk 4 get passenger : Drew Cortez
+2024-04-04T02:55:25.867015500 [INFO]: Desk 4 check in passenger : Drew Cortez
+2024-04-04T02:55:26.866017200 [INFO]: Desk 5 get passenger : Kyle Fitzpatrick
+2024-04-04T02:55:26.866017200 [INFO]: Desk 5 check in passenger : Kyle Fitzpatrick
+2024-04-04T02:55:26.867742 [INFO]: Desk 4 get passenger : Deborah Bowman
+2024-04-04T02:55:26.867742 [INFO]: Desk 4 check in passenger : Deborah Bowman
+2024-04-04T02:55:27.866474500 [INFO]: Desk 5 get passenger : David Hayes
+2024-04-04T02:55:27.866474500 [INFO]: Desk 5 check in passenger : David Hayes
+2024-04-04T02:55:27.868465900 [INFO]: Desk 4 get passenger : Christopher Mendoza
+2024-04-04T02:55:27.868465900 [INFO]: Desk 4 check in passenger : Christopher Mendoza
+2024-04-04T02:55:29.869514800 [INFO]: Desk 4 get passenger : Donald Taylor
+2024-04-04T02:55:29.869514800 [INFO]: Desk 4 check in passenger : Donald Taylor
+2024-04-04T02:55:30.869650700 [INFO]: Desk 4 get passenger : Lindsey Jackson
+2024-04-04T02:55:30.869650700 [INFO]: Desk 5 get passenger : Charles Evans
+2024-04-04T02:55:30.869650700 [INFO]: Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T02:55:30.869650700 [INFO]: Desk 5 check in passenger : Charles Evans
+2024-04-04T02:55:31.869911100 [INFO]: Desk 5 get passenger : Maureen Grimes
+2024-04-04T02:55:31.869911100 [INFO]: Desk 5 check in passenger : Maureen Grimes
+2024-04-04T02:55:32.870572800 [INFO]: Desk 4 get passenger : Kathy Byrd
+2024-04-04T02:55:32.870572800 [INFO]: Desk 5 get passenger : Jason Miller
+2024-04-04T02:55:32.870572800 [INFO]: Desk 4 check in passenger : Kathy Byrd
+2024-04-04T02:55:32.870572800 [INFO]: Desk 5 check in passenger : Jason Miller
+2024-04-04T02:55:33.870837500 [INFO]: Desk 4 get passenger : Kimberly Anthony
+2024-04-04T02:55:33.870837500 [INFO]: Desk 5 get passenger : Paul Thomas
+2024-04-04T02:55:33.870837500 [INFO]: Desk 4 check in passenger : Kimberly Anthony
+2024-04-04T02:55:33.870837500 [INFO]: Desk 5 check in passenger : Paul Thomas
+2024-04-04T02:55:34.870962500 [INFO]: Desk 5 get passenger : Courtney Johnson
+2024-04-04T02:55:34.870962500 [INFO]: Desk 4 get passenger : Sara Fisher
+2024-04-04T02:55:34.870962500 [INFO]: Desk 5 check in passenger : Courtney Johnson
+2024-04-04T02:55:34.870962500 [INFO]: Desk 4 check in passenger : Sara Fisher
+2024-04-04T02:55:34.893901600 [INFO]: Flight 1 Closed
+2024-04-04T02:55:35.871462800 [INFO]: Desk 5 get passenger : John Williams
+2024-04-04T02:55:35.871462800 [INFO]: Desk 5 check in passenger : John Williams
+2024-04-04T02:55:37.873679400 [INFO]: Desk 5 get passenger : Willie Thomas
+2024-04-04T02:55:37.873679400 [INFO]: Desk 5 check in passenger : Willie Thomas
+2024-04-04T02:56:06.730182200 [INFO]: Desk 4 get passenger : Mrs. Alexis Martin
+2024-04-04T02:56:06.730182200 [INFO]: Desk 5 get passenger : Jordan Richmond
+2024-04-04T02:56:06.730182200 [INFO]: Desk 1 get passenger : Tiffany Green
+2024-04-04T02:56:06.733176100 [INFO]: Desk 1 check in passenger : Tiffany Green
+2024-04-04T02:56:06.733176100 [INFO]: Desk 4 check in passenger : Mrs. Alexis Martin
+2024-04-04T02:56:06.733176100 [INFO]: Desk 5 check in passenger : Jordan Richmond
+2024-04-04T02:56:07.489248300 [INFO]: Business Desk 1 Close
+2024-04-04T02:56:07.718228700 [INFO]: Desk 5 get passenger : Daniel Larson
+2024-04-04T02:56:07.718228700 [INFO]: Desk 4 get passenger : Christopher Ryan
+2024-04-04T02:56:07.718228700 [INFO]: Desk 1 get passenger : Douglas Kaufman
+2024-04-04T02:56:07.718228700 [INFO]: Desk 4 check in passenger : Christopher Ryan
+2024-04-04T02:56:07.718228700 [INFO]: Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T02:56:07.718228700 [INFO]: Desk 5 check in passenger : Daniel Larson
+2024-04-04T02:56:09.208920200 [INFO]: Business Desk 2 Close
+2024-04-04T02:56:09.719066800 [INFO]: Desk 5 get passenger : Taylor Fitzgerald
+2024-04-04T02:56:09.719066800 [INFO]: Desk 3 get passenger : Jenna Smith
+2024-04-04T02:56:09.719066800 [INFO]: Desk 4 get passenger : Amanda Smith
+2024-04-04T02:56:09.719066800 [INFO]: Desk 2 get passenger : Maria Wolfe
+2024-04-04T02:56:09.720064800 [INFO]: Desk 5 check in passenger : Taylor Fitzgerald
+2024-04-04T02:56:09.720064800 [INFO]: Desk 4 check in passenger : Amanda Smith
+2024-04-04T02:56:09.720064800 [INFO]: Desk 3 check in passenger : Jenna Smith
+2024-04-04T02:56:09.720064800 [INFO]: Desk 2 check in passenger : Maria Wolfe
+2024-04-04T02:56:09.774945800 [INFO]: Business Desk 3 Close
+2024-04-04T02:56:10.262884700 [INFO]: Economy Desk 4 Close
+2024-04-04T02:56:10.845061 [INFO]: Economy Desk 5 Close
+2024-04-04T02:56:11.719999800 [INFO]: Desk 5 get passenger : Philip Leonard
+2024-04-04T02:56:11.719999800 [INFO]: Desk 5 check in passenger : Philip Leonard
+2024-04-04T02:56:12.720697600 [INFO]: Desk 5 get passenger : Vanessa Smith
+2024-04-04T02:56:12.720697600 [INFO]: Desk 5 check in passenger : Vanessa Smith
+2024-04-04T02:56:13.721068500 [INFO]: Desk 5 get passenger : Miss Katrina Lane
+2024-04-04T02:56:13.721068500 [INFO]: Desk 5 check in passenger : Miss Katrina Lane
+2024-04-04T02:56:14.721956 [INFO]: Desk 5 get passenger : Eric Grant
+2024-04-04T02:56:14.721956 [INFO]: Desk 5 check in passenger : Eric Grant
+2024-04-04T02:56:15.722404500 [INFO]: Desk 5 get passenger : Jessica Bell
+2024-04-04T02:56:15.722404500 [INFO]: Desk 5 check in passenger : Jessica Bell
+2024-04-04T02:56:16.722945700 [INFO]: Desk 5 get passenger : Lindsey Jackson
+2024-04-04T02:56:16.722945700 [INFO]: Desk 5 check in passenger : Lindsey Jackson
+2024-04-04T02:56:33.447176300 [INFO]: Economy Desk 5 Close
+2024-04-04T02:56:33.691522800 [INFO]: Economy Desk 4 Close
+2024-04-04T02:56:33.993343300 [INFO]: Business Desk 3 Close
+2024-04-04T02:56:34.113024100 [INFO]: Desk 1 get passenger : Daniel Rivera
+2024-04-04T02:56:34.113024100 [INFO]: Desk 1 check in passenger : Daniel Rivera
+2024-04-04T02:56:34.276585500 [INFO]: Business Desk 2 Close
+2024-04-04T02:56:35.087023700 [INFO]: Business Desk 1 Close
+2024-04-04T02:56:35.113951700 [INFO]: Desk 2 get passenger : Glenn Walker
+2024-04-04T02:56:35.113951700 [INFO]: Desk 2 check in passenger : Glenn Walker
+2024-04-04T02:56:36.114360100 [INFO]: Desk 1 get passenger : Maria Wolfe
+2024-04-04T02:56:36.114360100 [INFO]: Desk 1 check in passenger : Maria Wolfe
+2024-04-04T02:56:37.115262700 [INFO]: Desk 2 get passenger : Lisa Moore
+2024-04-04T02:56:37.115262700 [INFO]: Desk 2 check in passenger : Lisa Moore
+2024-04-04T02:56:39.115957500 [INFO]: Desk 2 get passenger : Joseph Norman
+2024-04-04T02:56:39.116950700 [INFO]: Desk 2 check in passenger : Joseph Norman
+2024-04-04T02:56:41.118068200 [INFO]: Desk 2 get passenger : Robert Brown
+2024-04-04T02:56:41.118068200 [INFO]: Desk 2 check in passenger : Robert Brown
+2024-04-04T02:56:44.119657100 [INFO]: Desk 1 get passenger : Kimberly Haney
+2024-04-04T02:56:44.119657100 [INFO]: Desk 1 check in passenger : Kimberly Haney
+2024-04-04T02:56:45.122470100 [INFO]: Desk 2 get passenger : Daniel Brown
+2024-04-04T02:56:45.122470100 [INFO]: Desk 2 check in passenger : Daniel Brown
+2024-04-04T02:56:49.123138700 [INFO]: Desk 1 get passenger : Mr. Henry Holt
+2024-04-04T02:56:49.123138700 [INFO]: Desk 1 check in passenger : Mr. Henry Holt
+2024-04-04T02:56:53.126361200 [INFO]: Desk 1 get passenger : Diana Ponce
+2024-04-04T02:56:53.126361200 [INFO]: Desk 1 check in passenger : Diana Ponce
+2024-04-04T02:56:54.125303800 [INFO]: Desk 2 get passenger : Yvette Martinez
+2024-04-04T02:56:54.125303800 [INFO]: Desk 2 check in passenger : Yvette Martinez
+2024-04-04T02:56:55.127378400 [INFO]: Desk 1 get passenger : David Dennis
+2024-04-04T02:56:55.127378400 [INFO]: Desk 1 check in passenger : David Dennis
+2024-04-04T02:56:59.127543500 [INFO]: Desk 2 get passenger : Fernando Buchanan
+2024-04-04T02:56:59.127543500 [INFO]: Desk 2 check in passenger : Fernando Buchanan
+2024-04-04T02:57:00.127974900 [INFO]: Desk 2 get passenger : Anne Jackson
+2024-04-04T02:57:00.127974900 [INFO]: Desk 2 check in passenger : Anne Jackson
+2024-04-04T02:58:23.895415300 [INFO]: Desk 4 get passenger : Lindsey Jackson
+2024-04-04T02:58:23.895415300 [INFO]: Desk 5 get passenger : Mrs. Alexis Martin
+2024-04-04T02:58:23.897409700 [INFO]: Desk 5 check in passenger : Mrs. Alexis Martin
+2024-04-04T02:58:23.897409700 [INFO]: Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T02:58:24.882299300 [INFO]: Desk 5 get passenger : Lauren Mcclure
+2024-04-04T02:58:24.882299300 [INFO]: Desk 4 get passenger : Joseph Stevens
+2024-04-04T02:58:24.882299300 [INFO]: Desk 1 get passenger : Elizabeth Escobar
+2024-04-04T02:58:24.882299300 [INFO]: Desk 5 check in passenger : Lauren Mcclure
+2024-04-04T02:58:24.882299300 [INFO]: Desk 4 check in passenger : Joseph Stevens
+2024-04-04T02:58:24.883319500 [INFO]: Desk 1 check in passenger : Elizabeth Escobar
+2024-04-04T02:58:25.882961800 [INFO]: Desk 4 get passenger : Harold Smith
+2024-04-04T02:58:25.882961800 [INFO]: Desk 5 get passenger : Dr. Gerald Hall
+2024-04-04T02:58:25.883920 [INFO]: Desk 4 check in passenger : Harold Smith
+2024-04-04T02:58:25.883920 [INFO]: Desk 5 check in passenger : Dr. Gerald Hall
+2024-04-04T02:58:25.883920 [INFO]: Desk 4 get passenger : Emily Greene
+2024-04-04T02:58:25.883920 [INFO]: Desk 4 check in passenger : Emily Greene
+2024-04-04T02:58:27.884505800 [INFO]: Desk 4 get passenger : Michelle Hansen
+2024-04-04T02:58:27.884505800 [INFO]: Desk 5 get passenger : Michelle Daniels
+2024-04-04T02:58:27.885186 [INFO]: Desk 4 check in passenger : Michelle Hansen
+2024-04-04T02:58:27.885186 [INFO]: Desk 5 check in passenger : Michelle Daniels
+2024-04-04T02:58:28.884874700 [INFO]: Desk 5 get passenger : Russell Barr
+2024-04-04T02:58:28.884874700 [INFO]: Desk 4 get passenger : Julie Smith
+2024-04-04T02:58:28.884874700 [INFO]: Desk 5 check in passenger : Russell Barr
+2024-04-04T02:58:28.884874700 [INFO]: Desk 4 check in passenger : Julie Smith
+2024-04-04T02:58:28.884874700 [INFO]: Desk 5 get passenger : Christopher Ryan
+2024-04-04T02:58:28.885867300 [INFO]: Desk 4 get passenger : Brittany Anderson
+2024-04-04T02:58:28.885867300 [INFO]: Desk 5 check in passenger : Christopher Ryan
+2024-04-04T02:58:28.885867300 [INFO]: Desk 4 check in passenger : Brittany Anderson
+2024-04-04T03:03:39.247513500 [INFO]: Desk 5 get passenger : James Reynolds
+2024-04-04T03:03:39.247513500 [INFO]: Desk 4 get passenger : Dale Harris
+2024-04-04T03:03:39.251502700 [INFO]: Desk 5 check in passenger : James Reynolds
+2024-04-04T03:03:39.251502700 [INFO]: Desk 4 check in passenger : Dale Harris
+2024-04-04T03:03:39.251502700 [INFO]: Desk 4 get passenger : Kevin Williams
+2024-04-04T03:03:39.251502700 [INFO]: Desk 5 get passenger : Kimberly Lee
+2024-04-04T03:03:39.252500500 [INFO]: Desk 5 check in passenger : Kimberly Lee
+2024-04-04T03:03:39.252500500 [INFO]: Desk 4 check in passenger : Kevin Williams
+2024-04-04T03:03:41.234803100 [INFO]: Desk 2 get passenger : Robert Brown
+2024-04-04T03:03:41.234803100 [INFO]: Desk 4 get passenger : Jason Miller
+2024-04-04T03:03:41.234803100 [INFO]: Desk 5 get passenger : Elizabeth Armstrong
+2024-04-04T03:03:41.234803100 [INFO]: Desk 2 check in passenger : Robert Brown
+2024-04-04T03:03:41.234803100 [INFO]: Desk 5 check in passenger : Elizabeth Armstrong
+2024-04-04T03:03:41.234803100 [INFO]: Desk 4 check in passenger : Jason Miller
+2024-04-04T03:03:42.234899800 [INFO]: Desk 5 get passenger : Christopher Ryan
+2024-04-04T03:03:42.234899800 [INFO]: Desk 4 get passenger : Kristine Fitzgerald
+2024-04-04T03:03:42.234899800 [INFO]: Desk 4 check in passenger : Kristine Fitzgerald
+2024-04-04T03:03:42.234899800 [INFO]: Desk 5 check in passenger : Christopher Ryan
+2024-04-04T03:03:43.238966700 [INFO]: Desk 4 get passenger : Matthew Sanchez
+2024-04-04T03:03:43.238966700 [INFO]: Desk 5 get passenger : Paul Thomas
+2024-04-04T03:03:43.238966700 [INFO]: Desk 4 check in passenger : Matthew Sanchez
+2024-04-04T03:03:43.238966700 [INFO]: Desk 5 check in passenger : Paul Thomas
+2024-04-04T03:03:43.238966700 [INFO]: Desk 5 get passenger : Michelle Hansen
+2024-04-04T03:03:43.239965600 [INFO]: Desk 5 check in passenger : Michelle Hansen
+2024-04-04T03:03:45.237115300 [INFO]: Desk 5 get passenger : Sharon Hamilton
+2024-04-04T03:03:45.237115300 [INFO]: Desk 4 get passenger : Jonathan Rose
+2024-04-04T03:03:45.237115300 [INFO]: Desk 4 check in passenger : Jonathan Rose
+2024-04-04T03:03:45.237115300 [INFO]: Desk 5 check in passenger : Sharon Hamilton
+2024-04-04T03:03:45.237115300 [INFO]: Desk 4 get passenger : Sean Johnson MD
+2024-04-04T03:03:45.238107100 [INFO]: Desk 4 check in passenger : Sean Johnson MD
+2024-04-04T03:03:46.240195500 [INFO]: Desk 5 get passenger : John Mcintyre
+2024-04-04T03:03:46.240195500 [INFO]: Desk 4 get passenger : Wesley Warren
+2024-04-04T03:03:46.240195500 [INFO]: Desk 4 check in passenger : Wesley Warren
+2024-04-04T03:03:46.240195500 [INFO]: Desk 5 check in passenger : John Mcintyre
+2024-04-04T03:03:47.241592100 [INFO]: Desk 1 get passenger : Maria Wolfe
+2024-04-04T03:03:47.241592100 [INFO]: Desk 2 get passenger : Joseph Norman
+2024-04-04T03:03:47.241592100 [INFO]: Desk 1 check in passenger : Maria Wolfe
+2024-04-04T03:03:47.241592100 [INFO]: Desk 2 check in passenger : Joseph Norman
+2024-04-04T03:03:48.240395200 [INFO]: Desk 4 get passenger : Debra Sheppard
+2024-04-04T03:03:48.240395200 [INFO]: Desk 3 get passenger : David Dennis
+2024-04-04T03:03:48.240395200 [INFO]: Desk 4 check in passenger : Debra Sheppard
+2024-04-04T03:03:48.240395200 [INFO]: Desk 3 check in passenger : David Dennis
+2024-04-04T03:03:49.065282500 [INFO]: Business Desk 1 Close
+2024-04-04T03:03:49.242689500 [INFO]: Desk 5 get passenger : Lauren Mcclure
+2024-04-04T03:03:49.242689500 [INFO]: Desk 4 get passenger : Richard White
+2024-04-04T03:03:49.242689500 [INFO]: Desk 4 check in passenger : Richard White
+2024-04-04T03:03:49.242689500 [INFO]: Desk 5 check in passenger : Lauren Mcclure
+2024-04-04T03:03:49.242689500 [INFO]: Desk 4 get passenger : Jordan Richmond
+2024-04-04T03:03:49.243682700 [INFO]: Desk 4 check in passenger : Jordan Richmond
+2024-04-04T03:03:49.483831600 [INFO]: Business Desk 2 Close
+2024-04-04T03:03:49.837857100 [INFO]: Business Desk 3 Close
+2024-04-04T03:03:50.218369900 [INFO]: Economy Desk 4 Close
+2024-04-04T03:03:50.668301800 [INFO]: Economy Desk 5 Close
+2024-04-04T03:03:51.241340800 [INFO]: Desk 5 get passenger : Drew Cortez
+2024-04-04T03:03:51.241340800 [INFO]: Desk 5 check in passenger : Drew Cortez
+2024-04-04T03:03:51.243337800 [INFO]: Desk 5 get passenger : Matthew Turner
+2024-04-04T03:03:51.243337800 [INFO]: Desk 5 check in passenger : Matthew Turner
+2024-04-04T03:03:52.241886700 [INFO]: Desk 5 get passenger : John Williams
+2024-04-04T03:03:52.241886700 [INFO]: Desk 5 check in passenger : John Williams
+2024-04-04T03:03:52.243878100 [INFO]: Desk 5 get passenger : Emily Greene
+2024-04-04T03:03:52.243878100 [INFO]: Desk 5 check in passenger : Emily Greene
+2024-04-04T03:03:53.242494900 [INFO]: Desk 5 get passenger : Denise Salas
+2024-04-04T03:03:53.242494900 [INFO]: Desk 5 check in passenger : Denise Salas
+2024-04-04T03:03:53.244483900 [INFO]: Desk 5 get passenger : Catherine Murphy
+2024-04-04T03:03:53.244483900 [INFO]: Desk 5 check in passenger : Catherine Murphy
+2024-04-04T03:03:54.243162800 [INFO]: Desk 5 get passenger : Brittany Anderson
+2024-04-04T03:03:54.243162800 [INFO]: Desk 5 check in passenger : Brittany Anderson
+2024-04-04T03:03:54.245171600 [INFO]: Desk 5 get passenger : Hannah Romero
+2024-04-04T03:03:54.245171600 [INFO]: Desk 5 check in passenger : Hannah Romero
+2024-04-04T03:03:55.244091 [INFO]: Desk 5 get passenger : Christopher Mendoza
+2024-04-04T03:03:55.244091 [INFO]: Desk 5 check in passenger : Christopher Mendoza
+2024-04-04T03:03:55.246067 [INFO]: Desk 5 get passenger : Cynthia Bell
+2024-04-04T03:03:55.246067 [INFO]: Desk 5 check in passenger : Cynthia Bell
+2024-04-04T03:03:56.244334900 [INFO]: Desk 5 get passenger : Lindsey Jackson
+2024-04-04T03:03:56.244334900 [INFO]: Desk 5 check in passenger : Lindsey Jackson
+2024-04-04T03:03:56.246343700 [INFO]: Desk 5 get passenger : Harold Smith
+2024-04-04T03:03:56.246343700 [INFO]: Desk 5 check in passenger : Harold Smith
+2024-04-04T03:03:57.245101800 [INFO]: Desk 5 get passenger : Rachel Robertson
+2024-04-04T03:03:57.245101800 [INFO]: Desk 5 check in passenger : Rachel Robertson
+2024-04-04T03:03:57.247098800 [INFO]: Desk 5 get passenger : Marie Williams
+2024-04-04T03:03:57.247098800 [INFO]: Desk 5 check in passenger : Marie Williams
+2024-04-04T03:03:58.245155800 [INFO]: Desk 5 get passenger : Courtney Johnson
+2024-04-04T03:03:58.245155800 [INFO]: Desk 5 check in passenger : Courtney Johnson
+2024-04-04T03:03:58.249145600 [INFO]: Desk 5 get passenger : Kathy Byrd
+2024-04-04T03:03:58.249145600 [INFO]: Desk 5 check in passenger : Kathy Byrd
+2024-04-04T03:03:59.245786300 [INFO]: Desk 5 get passenger : Kyle Fitzpatrick
+2024-04-04T03:03:59.245786300 [INFO]: Desk 5 check in passenger : Kyle Fitzpatrick
+2024-04-04T03:03:59.249776300 [INFO]: Desk 5 get passenger : Alexander Sutton
+2024-04-04T03:03:59.249776300 [INFO]: Desk 5 check in passenger : Alexander Sutton
+2024-04-04T03:04:00.246481800 [INFO]: Desk 5 get passenger : Chelsea Moreno
+2024-04-04T03:04:00.246481800 [INFO]: Desk 5 check in passenger : Chelsea Moreno
+2024-04-04T03:04:00.250425200 [INFO]: Desk 5 get passenger : Ashley Duarte
+2024-04-04T03:04:00.250425200 [INFO]: Desk 5 check in passenger : Ashley Duarte
+2024-04-04T03:04:01.246634400 [INFO]: Desk 5 get passenger : Jorge Mejia
+2024-04-04T03:04:01.246634400 [INFO]: Desk 5 check in passenger : Jorge Mejia
+2024-04-04T03:04:01.250623400 [INFO]: Desk 5 get passenger : Lisa Oliver
+2024-04-04T03:04:01.250623400 [INFO]: Desk 5 check in passenger : Lisa Oliver
+2024-04-04T03:04:02.246974500 [INFO]: Desk 5 get passenger : Monique Bryan
+2024-04-04T03:04:02.246974500 [INFO]: Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:04:02.250925800 [INFO]: Desk 5 get passenger : Shelby Curtis
+2024-04-04T03:04:02.250925800 [INFO]: Desk 5 check in passenger : Shelby Curtis
+2024-04-04T03:04:03.247651600 [INFO]: Desk 5 get passenger : Charles Evans
+2024-04-04T03:04:03.247651600 [INFO]: Desk 5 check in passenger : Charles Evans
+2024-04-04T03:04:04.160369100 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:04.247666400 [INFO]: Desk 5 get passenger : Maurice Baker
+2024-04-04T03:04:04.247666400 [INFO]: Desk 5 check in passenger : Maurice Baker
+2024-04-04T03:04:04.253645 [INFO]: Desk 5 get passenger : Sara Fisher
+2024-04-04T03:04:04.253645 [INFO]: Desk 5 check in passenger : Sara Fisher
+2024-04-04T03:04:05.176989 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:05.248781 [INFO]: Desk 5 get passenger : Emma Nunez
+2024-04-04T03:04:05.248781 [INFO]: Desk 5 check in passenger : Emma Nunez
+2024-04-04T03:04:05.253785500 [INFO]: Desk 5 get passenger : David Hayes
+2024-04-04T03:04:05.253785500 [INFO]: Desk 5 check in passenger : David Hayes
+2024-04-04T03:04:06.249104600 [INFO]: Desk 5 get passenger : Ivan Bates
+2024-04-04T03:04:06.249104600 [INFO]: Desk 5 check in passenger : Ivan Bates
+2024-04-04T03:04:06.254086400 [INFO]: Desk 5 get passenger : Michael Obrien
+2024-04-04T03:04:06.254086400 [INFO]: Desk 5 check in passenger : Michael Obrien
+2024-04-04T03:04:07.251204500 [INFO]: Desk 5 get passenger : Deborah Bowman
+2024-04-04T03:04:07.251204500 [INFO]: Desk 5 check in passenger : Deborah Bowman
+2024-04-04T03:04:07.254197100 [INFO]: Desk 5 get passenger : Heather Jackson
+2024-04-04T03:04:07.254197100 [INFO]: Desk 5 check in passenger : Heather Jackson
+2024-04-04T03:04:07.995488600 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:08.252360300 [INFO]: Desk 5 get passenger : Kenneth Morales
+2024-04-04T03:04:08.252360300 [INFO]: Desk 5 check in passenger : Kenneth Morales
+2024-04-04T03:04:08.254350700 [INFO]: Desk 5 get passenger : Veronica Kaufman
+2024-04-04T03:04:08.254350700 [INFO]: Desk 5 check in passenger : Veronica Kaufman
+2024-04-04T03:04:08.441587700 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:09.254473100 [INFO]: Desk 5 get passenger : Audrey Salinas
+2024-04-04T03:04:09.254473100 [INFO]: Desk 5 check in passenger : Audrey Salinas
+2024-04-04T03:04:10.256485600 [INFO]: Desk 5 get passenger : Kim Williams
+2024-04-04T03:04:10.256485600 [INFO]: Desk 5 check in passenger : Kim Williams
+2024-04-04T03:04:11.256600600 [INFO]: Desk 5 get passenger : Mary Jones
+2024-04-04T03:04:11.256600600 [INFO]: Desk 5 check in passenger : Mary Jones
+2024-04-04T03:04:12.258615500 [INFO]: Desk 5 get passenger : Joseph Stevens
+2024-04-04T03:04:12.258615500 [INFO]: Desk 5 check in passenger : Joseph Stevens
+2024-04-04T03:04:13.259606700 [INFO]: Desk 5 get passenger : Dr. Gerald Hall
+2024-04-04T03:04:13.259606700 [INFO]: Desk 5 check in passenger : Dr. Gerald Hall
+2024-04-04T03:04:13.714026700 [INFO]: Economy Desk 4 Open
+2024-04-04T03:04:14.260155300 [INFO]: Desk 4 get passenger : Willie Thomas
+2024-04-04T03:04:14.260155300 [INFO]: Desk 4 check in passenger : Willie Thomas
+2024-04-04T03:04:15.260373 [INFO]: Desk 5 get passenger : Eric Grant
+2024-04-04T03:04:15.260373 [INFO]: Desk 5 check in passenger : Eric Grant
+2024-04-04T03:04:16.261167400 [INFO]: Desk 4 get passenger : Scott Jones
+2024-04-04T03:04:16.261167400 [INFO]: Desk 4 check in passenger : Scott Jones
+2024-04-04T03:04:16.748355300 [INFO]: Economy Desk 4 Close
+2024-04-04T03:04:17.261518400 [INFO]: Desk 5 get passenger : Donald Taylor
+2024-04-04T03:04:17.261518400 [INFO]: Desk 5 check in passenger : Donald Taylor
+2024-04-04T03:04:18.104137400 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:18.262268500 [INFO]: Desk 4 get passenger : Jessica Donovan
+2024-04-04T03:04:18.262268500 [INFO]: Desk 4 check in passenger : Jessica Donovan
+2024-04-04T03:04:19.262692100 [INFO]: Desk 5 get passenger : Benjamin Hayes
+2024-04-04T03:04:19.262692100 [INFO]: Desk 5 check in passenger : Benjamin Hayes
+2024-04-04T03:04:20.691670300 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:20.848247200 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:21.288452800 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:22.263814600 [INFO]: Desk 5 get passenger : James Morrison
+2024-04-04T03:04:22.263814600 [INFO]: Desk 5 check in passenger : James Morrison
+2024-04-04T03:04:23.263994500 [INFO]: Desk 4 get passenger : Diane Golden
+2024-04-04T03:04:23.263994500 [INFO]: Desk 4 check in passenger : Diane Golden
+2024-04-04T03:04:24.264850300 [INFO]: Desk 5 get passenger : Daniel Larson
+2024-04-04T03:04:24.265538900 [INFO]: Desk 5 check in passenger : Daniel Larson
+2024-04-04T03:04:24.942386200 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:25.265801700 [INFO]: Desk 5 get passenger : Maria Woods
+2024-04-04T03:04:25.265801700 [INFO]: Desk 4 get passenger : Lynn Buckley
+2024-04-04T03:04:25.265801700 [INFO]: Desk 4 check in passenger : Lynn Buckley
+2024-04-04T03:04:25.265801700 [INFO]: Desk 5 check in passenger : Maria Woods
+2024-04-04T03:04:26.265882 [INFO]: Desk 5 get passenger : Steven Miller Jr.
+2024-04-04T03:04:26.265882 [INFO]: Desk 5 check in passenger : Steven Miller Jr.
+2024-04-04T03:04:26.844128800 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:27.268085500 [INFO]: Desk 4 get passenger : Jessica Bell
+2024-04-04T03:04:27.268085500 [INFO]: Desk 5 get passenger : Julie Smith
+2024-04-04T03:04:27.268085500 [INFO]: Desk 5 check in passenger : Julie Smith
+2024-04-04T03:04:27.268085500 [INFO]: Desk 4 check in passenger : Jessica Bell
+2024-04-04T03:04:27.687656400 [INFO]: Business Desk 1 Open
+2024-04-04T03:04:28.268773500 [INFO]: Desk 4 get passenger : David Davis
+2024-04-04T03:04:28.268773500 [INFO]: Desk 4 check in passenger : David Davis
+2024-04-04T03:04:29.270959800 [INFO]: Desk 1 get passenger : Yvette Martinez
+2024-04-04T03:04:29.270959800 [INFO]: Desk 1 check in passenger : Yvette Martinez
+2024-04-04T03:04:30.271530700 [INFO]: Desk 5 get passenger : Kimberly Anthony
+2024-04-04T03:04:30.271530700 [INFO]: Desk 1 get passenger : Douglas Kaufman
+2024-04-04T03:04:30.271530700 [INFO]: Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T03:04:30.271530700 [INFO]: Desk 5 check in passenger : Kimberly Anthony
+2024-04-04T03:04:31.273507100 [INFO]: Desk 1 get passenger : Lisa Moore
+2024-04-04T03:04:31.273507100 [INFO]: Desk 1 check in passenger : Lisa Moore
+2024-04-04T03:04:32.273721300 [INFO]: Desk 4 get passenger : Amanda Smith
+2024-04-04T03:04:32.273721300 [INFO]: Desk 5 get passenger : Barbara Best
+2024-04-04T03:04:32.273721300 [INFO]: Desk 1 get passenger : Bethany Harrison
+2024-04-04T03:04:32.274715 [INFO]: Desk 4 check in passenger : Amanda Smith
+2024-04-04T03:04:32.274715 [INFO]: Desk 5 check in passenger : Barbara Best
+2024-04-04T03:04:32.274715 [INFO]: Desk 1 check in passenger : Bethany Harrison
+2024-04-04T03:04:33.274636800 [INFO]: Desk 1 get passenger : Shawn Mack
+2024-04-04T03:04:33.274636800 [INFO]: Desk 4 get passenger : Kathryn Ho
+2024-04-04T03:04:33.274636800 [INFO]: Desk 4 check in passenger : Kathryn Ho
+2024-04-04T03:04:33.274636800 [INFO]: Desk 1 check in passenger : Shawn Mack
+2024-04-04T03:04:34.274847900 [INFO]: Desk 5 get passenger : Albert Malone
+2024-04-04T03:04:34.274847900 [INFO]: Desk 1 get passenger : Robert Smith
+2024-04-04T03:04:34.274847900 [INFO]: Desk 4 get passenger : Philip Leonard
+2024-04-04T03:04:34.274847900 [INFO]: Desk 5 check in passenger : Albert Malone
+2024-04-04T03:04:34.274847900 [INFO]: Desk 1 check in passenger : Robert Smith
+2024-04-04T03:04:34.274847900 [INFO]: Desk 4 check in passenger : Philip Leonard
+2024-04-04T03:04:34.590187500 [INFO]: Economy Desk 4 Open
+2024-04-04T03:04:34.912331200 [INFO]: Economy Desk 5 Open
+2024-04-04T03:04:35.276881400 [INFO]: Desk 4 get passenger : Kevin Little
+2024-04-04T03:04:35.276881400 [INFO]: Desk 5 get passenger : Taylor Fitzgerald
+2024-04-04T03:04:35.276881400 [INFO]: Desk 1 get passenger : Anne Jackson
+2024-04-04T03:04:35.276881400 [INFO]: Desk 1 check in passenger : Anne Jackson
+2024-04-04T03:04:35.276881400 [INFO]: Desk 5 check in passenger : Taylor Fitzgerald
+2024-04-04T03:04:35.276881400 [INFO]: Desk 4 check in passenger : Kevin Little
+2024-04-04T03:04:35.301814800 [INFO]: Flight 1 Closed
+2024-04-04T03:04:35.501328300 [INFO]: Business Desk 3 Open
+2024-04-04T03:04:35.795542600 [INFO]: Business Desk 2 Open
+2024-04-04T03:04:36.277841400 [INFO]: Desk 5 get passenger : Russell Barr
+2024-04-04T03:04:36.277841400 [INFO]: Desk 4 get passenger : Kimberly Murphy
+2024-04-04T03:04:36.277841400 [INFO]: Desk 3 get passenger : Daniel Rivera
+2024-04-04T03:04:36.277841400 [INFO]: Desk 1 get passenger : Diana Ponce
+2024-04-04T03:04:36.277841400 [INFO]: Desk 5 check in passenger : Russell Barr
+2024-04-04T03:04:36.278850400 [INFO]: Desk 4 check in passenger : Kimberly Murphy
+2024-04-04T03:04:36.278850400 [INFO]: Desk 3 check in passenger : Daniel Rivera
+2024-04-04T03:04:36.278850400 [INFO]: Desk 1 check in passenger : Diana Ponce
+2024-04-04T03:04:37.385704200 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:37.929836700 [INFO]: Economy Desk 4 Close
+2024-04-04T03:04:38.280511400 [INFO]: Desk 2 get passenger : Sergio Smith
+2024-04-04T03:04:38.280511400 [INFO]: Queue is closed
+2024-04-04T03:04:38.280511400 [INFO]: Queue is closed
+2024-04-04T03:04:38.280511400 [INFO]: Desk 2 check in passenger : Sergio Smith
+2024-04-04T03:04:39.281350300 [INFO]: Desk 3 closed
+2024-04-04T03:04:39.281350300 [INFO]: Desk 1 closed
+2024-04-04T03:04:39.281350300 [INFO]: Desk 2 closed
+2024-04-04T03:04:39.626693600 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:40.628541500 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:41.629935300 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:42.633115400 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:43.634779 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:44.636452700 [INFO]: All Passengers Have Checked-in
+2024-04-04T03:04:49.770363300 [INFO]: Desk 3 get passenger : Yvette Martinez
+2024-04-04T03:04:49.770363300 [INFO]: Desk 4 get passenger : Michelle Hansen
+2024-04-04T03:04:49.769367600 [INFO]: Desk 5 get passenger : Philip Leonard
+2024-04-04T03:04:49.773355400 [INFO]: Desk 4 check in passenger : Michelle Hansen
+2024-04-04T03:04:49.773355400 [INFO]: Desk 3 check in passenger : Yvette Martinez
+2024-04-04T03:04:49.773355400 [INFO]: Desk 5 check in passenger : Philip Leonard
+2024-04-04T03:04:50.571064700 [INFO]: Economy Desk 5 Close
+2024-04-04T03:04:50.756568400 [INFO]: Desk 4 get passenger : Lindsey Jackson
+2024-04-04T03:04:50.756568400 [INFO]: Desk 5 get passenger : Jessica Bell
+2024-04-04T03:04:50.756568400 [INFO]: Desk 5 check in passenger : Jessica Bell
+2024-04-04T03:04:50.756568400 [INFO]: Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T03:04:51.757295400 [INFO]: Desk 5 get passenger : Hannah Romero
+2024-04-04T03:04:51.757295400 [INFO]: Desk 4 get passenger : Christine Willis
+2024-04-04T03:04:51.757295400 [INFO]: Desk 4 check in passenger : Christine Willis
+2024-04-04T03:04:51.757295400 [INFO]: Desk 5 check in passenger : Hannah Romero
+2024-04-04T03:04:52.758296 [INFO]: Desk 5 get passenger : Christopher Ryan
+2024-04-04T03:04:52.758296 [INFO]: Desk 4 get passenger : John Williams
+2024-04-04T03:04:52.759249 [INFO]: Desk 4 check in passenger : John Williams
+2024-04-04T03:04:52.759249 [INFO]: Desk 5 check in passenger : Christopher Ryan
+2024-04-04T03:04:53.759497800 [INFO]: Desk 5 get passenger : Albert Malone
+2024-04-04T03:04:53.759497800 [INFO]: Desk 4 get passenger : Denise Salas
+2024-04-04T03:04:53.760222500 [INFO]: Desk 5 check in passenger : Albert Malone
+2024-04-04T03:04:53.760222500 [INFO]: Desk 4 check in passenger : Denise Salas
+2024-04-04T03:04:54.760189 [INFO]: Desk 5 get passenger : Kimberly Murphy
+2024-04-04T03:04:54.760189 [INFO]: Desk 4 get passenger : Catherine Murphy
+2024-04-04T03:04:54.760189 [INFO]: Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T03:04:54.760189 [INFO]: Desk 4 check in passenger : Catherine Murphy
+2024-04-04T03:04:55.521953500 [INFO]: Economy Desk 4 Close
+2024-04-04T03:04:55.760420100 [INFO]: Desk 5 get passenger : Richard White
+2024-04-04T03:04:55.760420100 [INFO]: Desk 4 get passenger : David Hayes
+2024-04-04T03:04:55.760420100 [INFO]: Desk 4 check in passenger : David Hayes
+2024-04-04T03:04:55.760420100 [INFO]: Desk 5 check in passenger : Richard White
+2024-04-04T03:04:56.760737500 [INFO]: Desk 5 get passenger : Kenneth Morales
+2024-04-04T03:04:56.760737500 [INFO]: Desk 4 get passenger : Shelby Curtis
+2024-04-04T03:04:56.760737500 [INFO]: Desk 4 check in passenger : Shelby Curtis
+2024-04-04T03:04:56.760737500 [INFO]: Desk 5 check in passenger : Kenneth Morales
+2024-04-04T03:04:57.761228900 [INFO]: Desk 5 get passenger : Jorge Mejia
+2024-04-04T03:04:57.761228900 [INFO]: Desk 2 get passenger : Bethany Harrison
+2024-04-04T03:04:57.761228900 [INFO]: Desk 4 get passenger : Ashley Duarte
+2024-04-04T03:04:57.761228900 [INFO]: Desk 5 check in passenger : Jorge Mejia
+2024-04-04T03:04:57.762226 [INFO]: Desk 2 check in passenger : Bethany Harrison
+2024-04-04T03:04:57.762226 [INFO]: Desk 4 check in passenger : Ashley Duarte
+2024-04-04T03:05:00.762837700 [INFO]: Desk 2 get passenger : Tiffany Green
+2024-04-04T03:05:00.762837700 [INFO]: Desk 1 get passenger : Douglas Kaufman
+2024-04-04T03:05:00.762837700 [INFO]: Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T03:05:00.762837700 [INFO]: Desk 2 check in passenger : Tiffany Green
+2024-04-04T03:05:01.763557700 [INFO]: Desk 1 get passenger : Elizabeth Escobar
+2024-04-04T03:05:01.764577 [INFO]: Desk 1 check in passenger : Elizabeth Escobar
+2024-04-04T03:05:04.765382800 [INFO]: Desk 1 get passenger : Robert Smith
+2024-04-04T03:05:04.765382800 [INFO]: Desk 1 check in passenger : Robert Smith
+2024-04-04T03:12:15.439244100 [INFO]: Desk Desk 3 get passenger : David Dennis
+2024-04-04T03:12:15.439244100 [INFO]: Desk Desk 5 get passenger : Hannah Romero
+2024-04-04T03:12:15.439244100 [INFO]: Desk Desk 1 get passenger : Sergio Smith
+2024-04-04T03:12:15.442236300 [INFO]: Desk Desk 5 check in passenger : Hannah Romero
+2024-04-04T03:12:15.442236300 [INFO]: Desk Desk 1 check in passenger : Sergio Smith
+2024-04-04T03:12:15.442236300 [INFO]: Desk Desk 3 check in passenger : David Dennis
+2024-04-04T03:12:16.427074100 [INFO]: Desk Desk 3 get passenger : Douglas Kaufman
+2024-04-04T03:12:16.427074100 [INFO]: Desk Desk 1 get passenger : Robert Brown
+2024-04-04T03:12:16.427074100 [INFO]: Desk Desk 1 check in passenger : Robert Brown
+2024-04-04T03:12:16.427074100 [INFO]: Desk Desk 3 check in passenger : Douglas Kaufman
+2024-04-04T03:12:17.428029500 [INFO]: Desk Desk 5 get passenger : John Williams
+2024-04-04T03:12:17.428029500 [INFO]: Desk Desk 5 check in passenger : John Williams
+2024-04-04T03:12:17.428029500 [INFO]: Desk Desk 4 get passenger : Kevin Little
+2024-04-04T03:12:17.428029500 [INFO]: Desk Desk 4 check in passenger : Kevin Little
+2024-04-04T03:12:18.440766200 [INFO]: Desk Desk 4 get passenger : Jessica Bell
+2024-04-04T03:12:18.440766200 [INFO]: Desk Desk 5 get passenger : Kimberly Lee
+2024-04-04T03:12:18.441780200 [INFO]: Desk Desk 5 check in passenger : Kimberly Lee
+2024-04-04T03:12:18.440766200 [INFO]: Desk Desk 4 check in passenger : Jessica Bell
+2024-04-04T03:12:18.441780200 [INFO]: Desk Desk 5 get passenger : Scott Anderson
+2024-04-04T03:12:18.441780200 [INFO]: Desk Desk 5 check in passenger : Scott Anderson
+2024-04-04T03:12:20.431134200 [INFO]: Desk Desk 5 get passenger : Brittany Anderson
+2024-04-04T03:12:20.431134200 [INFO]: Desk Desk 4 get passenger : Kyle Fitzpatrick
+2024-04-04T03:12:20.431134200 [INFO]: Desk Desk 4 check in passenger : Kyle Fitzpatrick
+2024-04-04T03:12:20.431134200 [INFO]: Desk Desk 5 check in passenger : Brittany Anderson
+2024-04-04T03:12:20.432140300 [INFO]: Desk Desk 4 get passenger : Jorge Mejia
+2024-04-04T03:12:20.432140300 [INFO]: Desk Desk 4 check in passenger : Jorge Mejia
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 1 get passenger : Fernando Buchanan
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 4 get passenger : Kathy Byrd
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 5 get passenger : Albert Malone
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 4 check in passenger : Kathy Byrd
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 1 check in passenger : Fernando Buchanan
+2024-04-04T03:12:21.442056400 [INFO]: Desk Desk 5 check in passenger : Albert Malone
+2024-04-04T03:12:35.628247400 [INFO]: Desk Desk 3 get passenger : Heather Peterson
+2024-04-04T03:12:35.628247400 [INFO]: Desk Desk 5 get passenger : Audrey Salinas
+2024-04-04T03:12:35.628247400 [INFO]: Desk Desk 4 get passenger : Joseph Stevens
+2024-04-04T03:12:35.632236300 [INFO]: Desk Desk 5 check in passenger : Audrey Salinas
+2024-04-04T03:12:35.632236300 [INFO]: Desk Desk 3 check in passenger : Heather Peterson
+2024-04-04T03:12:35.632236300 [INFO]: Desk Desk 4 check in passenger : Joseph Stevens
+2024-04-04T03:12:36.616245600 [INFO]: Desk Desk 5 get passenger : Russell Barr
+2024-04-04T03:12:36.616245600 [INFO]: Desk Desk 4 get passenger : Mrs. Alexis Martin
+2024-04-04T03:12:36.616245600 [INFO]: Desk Desk 5 check in passenger : Russell Barr
+2024-04-04T03:12:36.616245600 [INFO]: Desk Desk 4 check in passenger : Mrs. Alexis Martin
+2024-04-04T03:12:37.624604600 [INFO]: Desk Desk 5 get passenger : Kristine Fitzgerald
+2024-04-04T03:12:37.624604600 [INFO]: Desk Desk 4 get passenger : Kathy Byrd
+2024-04-04T03:12:37.624604600 [INFO]: Desk Desk 3 get passenger : Tiffany Green
+2024-04-04T03:12:37.625604600 [INFO]: Desk Desk 5 check in passenger : Kristine Fitzgerald
+2024-04-04T03:12:37.625604600 [INFO]: Desk Desk 3 check in passenger : Tiffany Green
+2024-04-04T03:12:37.625604600 [INFO]: Desk Desk 4 check in passenger : Kathy Byrd
+2024-04-04T03:12:39.617532100 [INFO]: Desk Desk 1 get passenger : Maria Wolfe
+2024-04-04T03:12:39.617532100 [INFO]: Desk Desk 4 get passenger : Philip Johnson
+2024-04-04T03:12:39.617532100 [INFO]: Desk Desk 5 get passenger : Christopher Mendoza
+2024-04-04T03:12:39.618213500 [INFO]: Desk Desk 4 check in passenger : Philip Johnson
+2024-04-04T03:12:39.618213500 [INFO]: Desk Desk 1 check in passenger : Maria Wolfe
+2024-04-04T03:12:39.619229200 [INFO]: Desk Desk 5 check in passenger : Christopher Mendoza
+2024-04-04T03:12:40.620629100 [INFO]: Desk Desk 1 get passenger : Robert Brown
+2024-04-04T03:12:40.620629100 [INFO]: Desk Desk 4 get passenger : Albert Malone
+2024-04-04T03:12:40.620629100 [INFO]: Desk Desk 4 check in passenger : Albert Malone
+2024-04-04T03:12:40.620629100 [INFO]: Desk Desk 1 check in passenger : Robert Brown
+2024-04-04T03:12:41.625685200 [INFO]: Desk Desk 2 get passenger : Jenna Smith
+2024-04-04T03:12:41.625685200 [INFO]: Desk Desk 4 get passenger : Jessica Donovan
+2024-04-04T03:12:41.625685200 [INFO]: Desk Desk 5 get passenger : Denise Salas
+2024-04-04T03:12:41.626690100 [INFO]: Desk Desk 4 check in passenger : Jessica Donovan
+2024-04-04T03:12:41.626690100 [INFO]: Desk Desk 2 check in passenger : Jenna Smith
+2024-04-04T03:12:41.626690100 [INFO]: Desk Desk 5 check in passenger : Denise Salas
+2024-04-04T03:12:41.730172500 [INFO]: Business Desk 3 Close
+2024-04-04T03:12:41.943596800 [INFO]: Economy Desk 4 Close
+2024-04-04T03:12:42.424900400 [INFO]: Business Desk 2 Close
+2024-04-04T03:12:42.789477100 [INFO]: Business Desk 1 Close
+2024-04-04T03:12:43.622001500 [INFO]: Desk Desk 5 get passenger : Monique Bryan
+2024-04-04T03:12:43.622001500 [INFO]: Desk Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:12:43.626724700 [INFO]: Desk Desk 5 get passenger : Scott Jones
+2024-04-04T03:12:43.626724700 [INFO]: Desk Desk 5 check in passenger : Scott Jones
+2024-04-04T03:12:44.622983900 [INFO]: Desk Desk 5 get passenger : Kimberly Lee
+2024-04-04T03:12:44.622983900 [INFO]: Desk Desk 5 check in passenger : Kimberly Lee
+2024-04-04T03:12:44.626972900 [INFO]: Desk Desk 5 get passenger : Kimberly Murphy
+2024-04-04T03:12:44.626972900 [INFO]: Desk Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T03:12:45.623078700 [INFO]: Desk Desk 5 get passenger : Christine Willis
+2024-04-04T03:12:45.623078700 [INFO]: Desk Desk 5 check in passenger : Christine Willis
+2024-04-04T03:12:45.627076600 [INFO]: Desk Desk 5 get passenger : Jordan Richmond
+2024-04-04T03:12:45.627076600 [INFO]: Desk Desk 1 get passenger : Diana Ponce
+2024-04-04T03:12:45.627076600 [INFO]: Desk Desk 1 check in passenger : Diana Ponce
+2024-04-04T03:12:45.627076600 [INFO]: Desk Desk 5 check in passenger : Jordan Richmond
+2024-04-04T03:12:46.623583100 [INFO]: Desk Desk 5 get passenger : Kathryn Ho
+2024-04-04T03:12:46.623583100 [INFO]: Desk Desk 5 check in passenger : Kathryn Ho
+2024-04-04T03:12:46.627565700 [INFO]: Desk Desk 5 get passenger : Amanda Smith
+2024-04-04T03:12:46.627565700 [INFO]: Desk Desk 5 check in passenger : Amanda Smith
+2024-04-04T03:12:46.637539700 [INFO]: Economy Desk 5 Close
+2024-04-04T03:12:47.623807300 [INFO]: Desk Desk 5 get passenger : Sean Johnson MD
+2024-04-04T03:12:47.623807300 [INFO]: Desk Desk 5 check in passenger : Sean Johnson MD
+2024-04-04T03:12:47.627802800 [INFO]: Desk Desk 5 get passenger : Lindsey Jackson
+2024-04-04T03:12:47.627802800 [INFO]: Desk Desk 5 check in passenger : Lindsey Jackson
+2024-04-04T03:12:48.624491600 [INFO]: Desk Desk 5 get passenger : Maurice Baker
+2024-04-04T03:12:48.624491600 [INFO]: Desk Desk 5 check in passenger : Maurice Baker
+2024-04-04T03:12:48.628486900 [INFO]: Desk Desk 5 get passenger : Willie Thomas
+2024-04-04T03:12:48.628486900 [INFO]: Desk Desk 5 check in passenger : Willie Thomas
+2024-04-04T03:12:48.678983300 [INFO]: Economy Desk 5 Open
+2024-04-04T03:12:49.624877 [INFO]: Desk Desk 5 get passenger : Jessica Bell
+2024-04-04T03:12:49.624877 [INFO]: Desk Desk 5 check in passenger : Jessica Bell
+2024-04-04T03:12:49.628865800 [INFO]: Desk Desk 5 get passenger : Courtney Johnson
+2024-04-04T03:12:49.628865800 [INFO]: Desk Desk 5 check in passenger : Courtney Johnson
+2024-04-04T03:12:50.277522 [INFO]: Business Desk 3 Open
+2024-04-04T03:12:50.625121400 [INFO]: Desk Desk 1 get passenger : Douglas Kaufman
+2024-04-04T03:12:50.625121400 [INFO]: Desk Desk 5 get passenger : Paul Thomas
+2024-04-04T03:12:50.625121400 [INFO]: Desk Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T03:12:50.625121400 [INFO]: Desk Desk 5 check in passenger : Paul Thomas
+2024-04-04T03:12:50.962778400 [INFO]: Business Desk 1 Open
+2024-04-04T03:12:51.550933100 [INFO]: Business Desk 2 Open
+2024-04-04T03:12:51.629717200 [INFO]: Desk Desk 5 get passenger : Vanessa Smith
+2024-04-04T03:12:51.629717200 [INFO]: Desk Desk 5 check in passenger : Vanessa Smith
+2024-04-04T03:12:51.923508400 [INFO]: Economy Desk 4 Open
+2024-04-04T03:12:52.625849500 [INFO]: Desk Desk 5 get passenger : Kyle Fitzpatrick
+2024-04-04T03:12:52.625849500 [INFO]: Desk Desk 5 check in passenger : Kyle Fitzpatrick
+2024-04-04T03:12:52.625849500 [INFO]: Desk Desk 5 get passenger : Maureen Grimes
+2024-04-04T03:12:52.626841800 [INFO]: Desk Desk 5 check in passenger : Maureen Grimes
+2024-04-04T03:12:52.626841800 [INFO]: Desk Desk 5 get passenger : Debra Sheppard
+2024-04-04T03:12:52.626841800 [INFO]: Desk Desk 5 check in passenger : Debra Sheppard
+2024-04-04T03:13:39.994858100 [INFO]: Desk Desk 4 get passenger : Matthew Sanchez
+2024-04-04T03:13:39.994858100 [INFO]: Desk Desk 5 get passenger : Christopher Mendoza
+2024-04-04T03:13:39.998848 [INFO]: Desk Desk 4 check in passenger : Matthew Sanchez
+2024-04-04T03:13:39.998848 [INFO]: Desk Desk 5 check in passenger : Christopher Mendoza
+2024-04-04T03:13:40.980700700 [INFO]: Desk Desk 5 get passenger : Chelsea Moreno
+2024-04-04T03:13:40.980700700 [INFO]: Desk Desk 4 get passenger : Marie Williams
+2024-04-04T03:13:40.980700700 [INFO]: Desk Desk 5 check in passenger : Chelsea Moreno
+2024-04-04T03:13:40.980700700 [INFO]: Desk Desk 4 check in passenger : Marie Williams
+2024-04-04T03:13:40.980700700 [INFO]: Desk Desk 4 get passenger : Jordan Richmond
+2024-04-04T03:13:40.981690700 [INFO]: Desk Desk 4 check in passenger : Jordan Richmond
+2024-04-04T03:13:41.982832800 [INFO]: Desk Desk 4 get passenger : Donald Taylor
+2024-04-04T03:13:41.982832800 [INFO]: Desk Desk 4 check in passenger : Donald Taylor
+2024-04-04T03:13:41.990862200 [INFO]: Desk Desk 5 get passenger : Emily Greene
+2024-04-04T03:13:41.990862200 [INFO]: Desk Desk 1 get passenger : Douglas Kaufman
+2024-04-04T03:13:41.990862200 [INFO]: Desk Desk 5 check in passenger : Emily Greene
+2024-04-04T03:13:41.990862200 [INFO]: Desk Desk 1 check in passenger : Douglas Kaufman
+2024-04-04T03:13:42.278042200 [INFO]: Business Desk 1 Close
+2024-04-04T03:13:42.625642400 [INFO]: Business Desk 2 Close
+2024-04-04T03:13:42.998165500 [INFO]: Business Desk 3 Close
+2024-04-04T03:13:43.325694900 [INFO]: Economy Desk 4 Close
+2024-04-04T03:13:43.693370900 [INFO]: Economy Desk 5 Close
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 3 get passenger : Robert Smith
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 4 get passenger : Kimberly Murphy
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 5 get passenger : Lauren Mcclure
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 3 check in passenger : Robert Smith
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 4 check in passenger : Kimberly Murphy
+2024-04-04T03:13:43.983755400 [INFO]: Desk Desk 5 check in passenger : Lauren Mcclure
+2024-04-04T03:14:04.724306200 [INFO]: Business Desk 1 Close
+2024-04-04T03:14:05.066390900 [INFO]: Business Desk 2 Close
+2024-04-04T03:14:05.279821300 [INFO]: Desk Desk 5 get passenger : Russell Barr
+2024-04-04T03:14:05.279821300 [INFO]: Desk Desk 4 get passenger : David Davis
+2024-04-04T03:14:05.279821300 [INFO]: Desk Desk 1 get passenger : Robert Brown
+2024-04-04T03:14:05.280817500 [INFO]: Desk Desk 5 check in passenger : Russell Barr
+2024-04-04T03:14:05.280817500 [INFO]: Desk Desk 4 check in passenger : David Davis
+2024-04-04T03:14:05.280817500 [INFO]: Desk Desk 1 check in passenger : Robert Brown
+2024-04-04T03:14:05.407272800 [INFO]: Business Desk 3 Close
+2024-04-04T03:14:06.025881800 [INFO]: Economy Desk 5 Close
+2024-04-04T03:14:06.289182900 [INFO]: Desk Desk 4 get passenger : Kristine Fitzgerald
+2024-04-04T03:14:06.289182900 [INFO]: Desk Desk 4 check in passenger : Kristine Fitzgerald
+2024-04-04T03:14:06.702994600 [INFO]: Economy Desk 4 Close
+2024-04-04T03:14:07.280916400 [INFO]: Desk Desk 4 get passenger : Denise Salas
+2024-04-04T03:14:07.280916400 [INFO]: Desk Desk 4 check in passenger : Denise Salas
+2024-04-04T03:14:07.289931500 [INFO]: Desk Desk 4 get passenger : Paul Thomas
+2024-04-04T03:14:07.289931500 [INFO]: Desk Desk 4 check in passenger : Paul Thomas
+2024-04-04T03:14:08.281818 [INFO]: Desk Desk 4 get passenger : Wesley Warren
+2024-04-04T03:14:08.281818 [INFO]: Desk Desk 4 check in passenger : Wesley Warren
+2024-04-04T03:14:08.290822200 [INFO]: Desk Desk 4 get passenger : Lauren Mcclure
+2024-04-04T03:14:08.290822200 [INFO]: Desk Desk 4 check in passenger : Lauren Mcclure
+2024-04-04T03:14:09.281886100 [INFO]: Desk Desk 4 get passenger : Maureen Grimes
+2024-04-04T03:14:09.281886100 [INFO]: Desk Desk 4 check in passenger : Maureen Grimes
+2024-04-04T03:14:09.290855800 [INFO]: Desk Desk 4 get passenger : Ashley Duarte
+2024-04-04T03:14:09.290855800 [INFO]: Desk Desk 4 check in passenger : Ashley Duarte
+2024-04-04T03:14:10.282295300 [INFO]: Desk Desk 4 get passenger : Mary Jones
+2024-04-04T03:14:10.282295300 [INFO]: Desk Desk 4 check in passenger : Mary Jones
+2024-04-04T03:14:10.291271100 [INFO]: Desk Desk 4 get passenger : Jessica Bell
+2024-04-04T03:14:10.291271100 [INFO]: Desk Desk 4 check in passenger : Jessica Bell
+2024-04-04T03:14:11.282564500 [INFO]: Desk Desk 4 get passenger : Taylor Fitzgerald
+2024-04-04T03:14:11.282564500 [INFO]: Desk Desk 4 check in passenger : Taylor Fitzgerald
+2024-04-04T03:14:11.291581300 [INFO]: Desk Desk 4 get passenger : Jorge Mejia
+2024-04-04T03:14:11.291581300 [INFO]: Desk Desk 4 check in passenger : Jorge Mejia
+2024-04-04T03:14:12.283174800 [INFO]: Desk Desk 4 get passenger : Julie Smith
+2024-04-04T03:14:12.283174800 [INFO]: Desk Desk 4 check in passenger : Julie Smith
+2024-04-04T03:14:12.292155600 [INFO]: Desk Desk 4 get passenger : Matthew Turner
+2024-04-04T03:14:12.292155600 [INFO]: Desk Desk 4 check in passenger : Matthew Turner
+2024-04-04T03:14:13.283743700 [INFO]: Desk Desk 4 get passenger : Vanessa Smith
+2024-04-04T03:14:13.283743700 [INFO]: Desk Desk 4 check in passenger : Vanessa Smith
+2024-04-04T03:14:13.292718500 [INFO]: Desk Desk 4 get passenger : Eric Grant
+2024-04-04T03:14:13.292718500 [INFO]: Desk Desk 4 check in passenger : Eric Grant
+2024-04-04T03:14:14.284275100 [INFO]: Desk Desk 4 get passenger : Lisa Oliver
+2024-04-04T03:14:14.284275100 [INFO]: Desk Desk 4 check in passenger : Lisa Oliver
+2024-04-04T03:14:14.293251500 [INFO]: Desk Desk 4 get passenger : Ivan Bates
+2024-04-04T03:14:14.293251500 [INFO]: Desk Desk 4 check in passenger : Ivan Bates
+2024-04-04T03:14:15.293799100 [INFO]: Desk Desk 4 get passenger : Emily Greene
+2024-04-04T03:14:15.293799100 [INFO]: Desk Desk 4 check in passenger : Emily Greene
+2024-04-04T03:14:21.909509900 [INFO]: Business Desk 1 Close
+2024-04-04T03:14:22.260091 [INFO]: Business Desk 2 Close
+2024-04-04T03:14:22.459119900 [INFO]: Desk Desk 4 get passenger : John Williams
+2024-04-04T03:14:22.459119900 [INFO]: Desk Desk 5 get passenger : Jessica Donovan
+2024-04-04T03:14:22.459119900 [INFO]: Desk Desk 1 get passenger : Lisa Moore
+2024-04-04T03:14:22.460134500 [INFO]: Desk Desk 4 check in passenger : John Williams
+2024-04-04T03:14:22.460134500 [INFO]: Desk Desk 1 check in passenger : Lisa Moore
+2024-04-04T03:14:22.460134500 [INFO]: Desk Desk 5 check in passenger : Jessica Donovan
+2024-04-04T03:14:22.593759700 [INFO]: Business Desk 3 Close
+2024-04-04T03:14:23.001425200 [INFO]: Economy Desk 4 Close
+2024-04-04T03:14:23.467496900 [INFO]: Desk Desk 5 get passenger : Steven Miller Jr.
+2024-04-04T03:14:23.467496900 [INFO]: Desk Desk 5 check in passenger : Steven Miller Jr.
+2024-04-04T03:14:24.113924200 [INFO]: Economy Desk 5 Close
+2024-04-04T03:14:24.459634200 [INFO]: Desk Desk 5 get passenger : Jessica Bell
+2024-04-04T03:14:24.459634200 [INFO]: Desk Desk 5 check in passenger : Jessica Bell
+2024-04-04T03:14:24.468617900 [INFO]: Desk Desk 5 get passenger : Jonathan Rose
+2024-04-04T03:14:24.468617900 [INFO]: Desk Desk 5 check in passenger : Jonathan Rose
+2024-04-04T03:14:25.460083100 [INFO]: Desk Desk 5 get passenger : David Davis
+2024-04-04T03:14:25.460083100 [INFO]: Desk Desk 5 check in passenger : David Davis
+2024-04-04T03:14:26.460817800 [INFO]: Desk Desk 5 get passenger : Kimberly Lee
+2024-04-04T03:14:26.460817800 [INFO]: Desk Desk 5 check in passenger : Kimberly Lee
+2024-04-04T03:14:27.461618100 [INFO]: Desk Desk 5 get passenger : Rachel Robertson
+2024-04-04T03:14:27.461618100 [INFO]: Desk Desk 5 check in passenger : Rachel Robertson
+2024-04-04T03:14:27.470588200 [INFO]: Desk Desk 5 get passenger : Matthew Turner
+2024-04-04T03:14:27.470588200 [INFO]: Desk Desk 5 check in passenger : Matthew Turner
+2024-04-04T03:14:28.461898400 [INFO]: Desk Desk 5 get passenger : David Hayes
+2024-04-04T03:14:28.461898400 [INFO]: Desk Desk 5 check in passenger : David Hayes
+2024-04-04T03:14:28.470868500 [INFO]: Desk Desk 5 get passenger : Paul Thomas
+2024-04-04T03:14:28.470868500 [INFO]: Desk Desk 5 check in passenger : Paul Thomas
+2024-04-04T03:14:29.462689100 [INFO]: Desk Desk 5 get passenger : Maureen Grimes
+2024-04-04T03:14:29.462689100 [INFO]: Desk Desk 5 check in passenger : Maureen Grimes
+2024-04-04T03:14:29.471670400 [INFO]: Desk Desk 5 get passenger : Ashley Duarte
+2024-04-04T03:14:29.471670400 [INFO]: Desk Desk 5 check in passenger : Ashley Duarte
+2024-04-04T03:14:35.055653400 [INFO]: Desk Desk 4 get passenger : Drew Cortez
+2024-04-04T03:14:35.055653400 [INFO]: Desk Desk 5 get passenger : James Reynolds
+2024-04-04T03:14:35.055653400 [INFO]: Desk Desk 1 get passenger : Diana Ponce
+2024-04-04T03:14:35.057649 [INFO]: Desk Desk 4 check in passenger : Drew Cortez
+2024-04-04T03:14:35.057649 [INFO]: Desk Desk 5 check in passenger : James Reynolds
+2024-04-04T03:14:35.057649 [INFO]: Desk Desk 1 check in passenger : Diana Ponce
+2024-04-04T03:14:36.042685900 [INFO]: Desk Desk 4 get passenger : Lee Kline
+2024-04-04T03:14:36.042685900 [INFO]: Desk Desk 5 get passenger : Kenneth Morales
+2024-04-04T03:14:36.042685900 [INFO]: Desk Desk 4 check in passenger : Lee Kline
+2024-04-04T03:14:36.043677 [INFO]: Desk Desk 5 check in passenger : Kenneth Morales
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 4 get passenger : Vanessa Smith
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 1 get passenger : Daniel Rivera
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 5 get passenger : Michelle Daniels
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 1 check in passenger : Daniel Rivera
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 4 check in passenger : Vanessa Smith
+2024-04-04T03:14:37.053200 [INFO]: Desk Desk 5 check in passenger : Michelle Daniels
+2024-04-04T03:14:39.044294300 [INFO]: Desk Desk 5 get passenger : Barbara Best
+2024-04-04T03:14:39.044294300 [INFO]: Desk Desk 4 get passenger : Cynthia Bell
+2024-04-04T03:14:39.044294300 [INFO]: Desk Desk 5 check in passenger : Barbara Best
+2024-04-04T03:14:39.044294300 [INFO]: Desk Desk 4 check in passenger : Cynthia Bell
+2024-04-04T03:14:39.045288 [INFO]: Desk Desk 4 get passenger : Sean Johnson MD
+2024-04-04T03:14:39.045288 [INFO]: Desk Desk 4 check in passenger : Sean Johnson MD
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 4 get passenger : John Mcintyre
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 3 get passenger : Maria Wolfe
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 5 get passenger : Lisa Oliver
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 4 check in passenger : John Mcintyre
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 3 check in passenger : Maria Wolfe
+2024-04-04T03:14:40.054594900 [INFO]: Desk Desk 5 check in passenger : Lisa Oliver
+2024-04-04T03:14:41.055110100 [INFO]: Desk Desk 1 get passenger : Mr. Henry Holt
+2024-04-04T03:14:41.055110100 [INFO]: Desk Desk 1 check in passenger : Mr. Henry Holt
+2024-04-04T03:14:42.045335500 [INFO]: Desk Desk 5 get passenger : Albert Malone
+2024-04-04T03:14:42.045335500 [INFO]: Desk Desk 4 get passenger : Donald Taylor
+2024-04-04T03:14:42.046329 [INFO]: Desk Desk 5 check in passenger : Albert Malone
+2024-04-04T03:14:42.046329 [INFO]: Desk Desk 4 check in passenger : Donald Taylor
+2024-04-04T03:14:43.055611800 [INFO]: Desk Desk 4 get passenger : Jonathan Rose
+2024-04-04T03:14:43.055611800 [INFO]: Desk Desk 5 get passenger : Christine Willis
+2024-04-04T03:14:43.056605 [INFO]: Desk Desk 4 check in passenger : Jonathan Rose
+2024-04-04T03:14:43.056605 [INFO]: Desk Desk 5 check in passenger : Christine Willis
+2024-04-04T03:14:43.056605 [INFO]: Desk Desk 5 get passenger : Philip Johnson
+2024-04-04T03:14:43.057600600 [INFO]: Desk Desk 5 check in passenger : Philip Johnson
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 4 get passenger : David Hayes
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 5 get passenger : Monique Bryan
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 2 get passenger : Joseph Norman
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 4 check in passenger : David Hayes
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:14:45.046470900 [INFO]: Desk Desk 2 check in passenger : Joseph Norman
+2024-04-04T03:14:46.057261100 [INFO]: Desk Desk 4 get passenger : Julie Smith
+2024-04-04T03:14:46.057261100 [INFO]: Desk Desk 5 get passenger : Ashley Duarte
+2024-04-04T03:14:46.057261100 [INFO]: Desk Desk 4 check in passenger : Julie Smith
+2024-04-04T03:14:46.057261100 [INFO]: Desk Desk 5 check in passenger : Ashley Duarte
+2024-04-04T03:14:46.057261100 [INFO]: Desk Desk 4 get passenger : Hannah Romero
+2024-04-04T03:14:46.058260100 [INFO]: Desk Desk 4 check in passenger : Hannah Romero
+2024-04-04T03:14:46.533152500 [INFO]: Business Desk 1 Close
+2024-04-04T03:14:46.911681700 [INFO]: Business Desk 2 Close
+2024-04-04T03:14:47.058292300 [INFO]: Desk Desk 5 get passenger : Catherine Murphy
+2024-04-04T03:14:47.058292300 [INFO]: Desk Desk 3 get passenger : Lisa Moore
+2024-04-04T03:14:47.058292300 [INFO]: Desk Desk 5 check in passenger : Catherine Murphy
+2024-04-04T03:14:47.058292300 [INFO]: Desk Desk 3 check in passenger : Lisa Moore
+2024-04-04T03:14:47.375495700 [INFO]: Business Desk 3 Close
+2024-04-04T03:14:47.813694 [INFO]: Economy Desk 4 Close
+2024-04-04T03:14:48.269302900 [INFO]: Economy Desk 5 Close
+2024-04-04T03:14:49.050557100 [INFO]: Desk Desk 5 get passenger : Wesley Warren
+2024-04-04T03:14:49.050557100 [INFO]: Desk Desk 5 check in passenger : Wesley Warren
+2024-04-04T03:14:49.059534300 [INFO]: Desk Desk 5 get passenger : Courtney Johnson
+2024-04-04T03:14:49.059534300 [INFO]: Desk Desk 5 check in passenger : Courtney Johnson
+2024-04-04T03:14:50.051420 [INFO]: Desk Desk 5 get passenger : Kathy Byrd
+2024-04-04T03:14:50.051420 [INFO]: Desk Desk 5 check in passenger : Kathy Byrd
+2024-04-04T03:14:50.060390500 [INFO]: Desk Desk 5 get passenger : Heather Jackson
+2024-04-04T03:14:50.060390500 [INFO]: Desk Desk 5 check in passenger : Heather Jackson
+2024-04-04T03:14:51.052364700 [INFO]: Desk Desk 5 get passenger : Sharon Hamilton
+2024-04-04T03:14:51.052364700 [INFO]: Desk Desk 5 check in passenger : Sharon Hamilton
+2024-04-04T03:14:51.061334400 [INFO]: Desk Desk 5 get passenger : Audrey Salinas
+2024-04-04T03:14:51.061334400 [INFO]: Desk Desk 5 check in passenger : Audrey Salinas
+2024-04-04T03:14:52.054371400 [INFO]: Desk Desk 5 get passenger : Maureen Grimes
+2024-04-04T03:14:52.054371400 [INFO]: Desk Desk 5 check in passenger : Maureen Grimes
+2024-04-04T03:14:52.063360700 [INFO]: Desk Desk 5 get passenger : Willie Thomas
+2024-04-04T03:14:52.063360700 [INFO]: Desk Desk 5 check in passenger : Willie Thomas
+2024-04-04T03:14:53.054703700 [INFO]: Desk Desk 5 get passenger : Harold Smith
+2024-04-04T03:14:53.054703700 [INFO]: Desk Desk 5 check in passenger : Harold Smith
+2024-04-04T03:14:53.063718 [INFO]: Desk Desk 5 get passenger : Lynn Buckley
+2024-04-04T03:14:53.063718 [INFO]: Desk Desk 5 check in passenger : Lynn Buckley
+2024-04-04T03:14:54.054735300 [INFO]: Desk Desk 5 get passenger : Emily Greene
+2024-04-04T03:14:54.054735300 [INFO]: Desk Desk 5 check in passenger : Emily Greene
+2024-04-04T03:14:54.064708600 [INFO]: Desk Desk 5 get passenger : Maria Woods
+2024-04-04T03:14:54.064708600 [INFO]: Desk Desk 5 check in passenger : Maria Woods
+2024-04-04T03:14:54.782991400 [INFO]: Economy Desk 5 Open
+2024-04-04T03:14:55.055257100 [INFO]: Desk Desk 5 get passenger : Shelby Curtis
+2024-04-04T03:14:55.055257100 [INFO]: Desk Desk 5 check in passenger : Shelby Curtis
+2024-04-04T03:14:55.065226100 [INFO]: Desk Desk 5 get passenger : Matthew Sanchez
+2024-04-04T03:14:55.065226100 [INFO]: Desk Desk 5 check in passenger : Matthew Sanchez
+2024-04-04T03:14:55.070212700 [INFO]: Economy Desk 4 Open
+2024-04-04T03:14:55.345686600 [INFO]: Business Desk 3 Open
+2024-04-04T03:14:55.658833600 [INFO]: Business Desk 2 Open
+2024-04-04T03:14:55.997498500 [INFO]: Business Desk 1 Open
+2024-04-04T03:14:56.056346400 [INFO]: Desk Desk 5 get passenger : Kyle Fitzpatrick
+2024-04-04T03:14:56.056346400 [INFO]: Desk Desk 5 check in passenger : Kyle Fitzpatrick
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 5 get passenger : Denise Salas
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 2 get passenger : Yvette Martinez
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 1 get passenger : Jason Reynolds
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 5 check in passenger : Denise Salas
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 2 check in passenger : Yvette Martinez
+2024-04-04T03:14:56.065316500 [INFO]: Desk Desk 1 check in passenger : Jason Reynolds
+2024-04-04T03:14:57.013483400 [INFO]: Economy Desk 5 Close
+2024-04-04T03:14:57.383241 [INFO]: Economy Desk 4 Close
+2024-04-04T03:14:57.647533300 [INFO]: Business Desk 3 Close
+2024-04-04T03:14:57.995714400 [INFO]: Business Desk 2 Close
+2024-04-04T03:14:58.056548400 [INFO]: Desk Desk 4 get passenger : Kimberly Lee
+2024-04-04T03:14:58.056548400 [INFO]: Desk Desk 4 check in passenger : Kimberly Lee
+2024-04-04T03:14:58.057558300 [INFO]: Desk Desk 4 get passenger : Michele Smith
+2024-04-04T03:14:58.057558300 [INFO]: Desk Desk 4 check in passenger : Michele Smith
+2024-04-04T03:14:58.058539500 [INFO]: Desk Desk 4 get passenger : Jessica Donovan
+2024-04-04T03:14:58.058539500 [INFO]: Desk Desk 4 check in passenger : Jessica Donovan
+2024-04-04T03:14:58.319327300 [INFO]: Business Desk 1 Close
+2024-04-04T03:18:20.257854 [INFO]: Desk Desk 5 get passenger : Alexander Sutton
+2024-04-04T03:18:20.257854 [INFO]: Desk Desk 4 get passenger : Amanda Smith
+2024-04-04T03:18:20.260847300 [INFO]: Desk Desk 5 check in passenger : Alexander Sutton
+2024-04-04T03:18:20.260847300 [INFO]: Desk Desk 4 check in passenger : Amanda Smith
+2024-04-04T03:18:20.261844300 [INFO]: Desk Desk 4 get passenger : Ivan Bates
+2024-04-04T03:18:20.261844300 [INFO]: Desk Desk 5 get passenger : Heather Jackson
+2024-04-04T03:18:20.261844300 [INFO]: Desk Desk 5 check in passenger : Heather Jackson
+2024-04-04T03:18:20.261844300 [INFO]: Desk Desk 4 check in passenger : Ivan Bates
+2024-04-04T03:18:22.245963800 [INFO]: Desk Desk 4 get passenger : Philip Leonard
+2024-04-04T03:18:22.245963800 [INFO]: Desk Desk 5 get passenger : Scott Jones
+2024-04-04T03:18:22.245963800 [INFO]: Desk Desk 5 check in passenger : Scott Jones
+2024-04-04T03:18:22.245963800 [INFO]: Desk Desk 4 check in passenger : Philip Leonard
+2024-04-04T03:18:22.246962400 [INFO]: Desk Desk 5 get passenger : Mary Jones
+2024-04-04T03:18:22.247953600 [INFO]: Desk Desk 5 check in passenger : Mary Jones
+2024-04-04T03:18:23.256099800 [INFO]: Desk Desk 5 get passenger : Catherine Murphy
+2024-04-04T03:18:23.256099800 [INFO]: Desk Desk 1 get passenger : Glenn Walker
+2024-04-04T03:18:23.256099800 [INFO]: Desk Desk 4 get passenger : Jonathan Rose
+2024-04-04T03:18:23.257094100 [INFO]: Desk Desk 1 check in passenger : Glenn Walker
+2024-04-04T03:18:23.257094100 [INFO]: Desk Desk 5 check in passenger : Catherine Murphy
+2024-04-04T03:18:23.257094100 [INFO]: Desk Desk 4 check in passenger : Jonathan Rose
+2024-04-04T03:18:23.918077700 [INFO]: Business Desk 1 Close
+2024-04-04T03:18:24.401482700 [INFO]: Business Desk 2 Close
+2024-04-04T03:18:24.820392400 [INFO]: Business Desk 3 Close
+2024-04-04T03:18:25.175973300 [INFO]: Economy Desk 4 Close
+2024-04-04T03:18:25.247369400 [INFO]: Desk Desk 4 get passenger : Christopher Ryan
+2024-04-04T03:18:25.247369400 [INFO]: Desk Desk 5 get passenger : Courtney Johnson
+2024-04-04T03:18:25.247369400 [INFO]: Desk Desk 4 check in passenger : Christopher Ryan
+2024-04-04T03:18:25.247369400 [INFO]: Desk Desk 5 check in passenger : Courtney Johnson
+2024-04-04T03:18:25.248356200 [INFO]: Desk Desk 4 get passenger : Kenneth Morales
+2024-04-04T03:18:25.248356200 [INFO]: Desk Desk 4 check in passenger : Kenneth Morales
+2024-04-04T03:18:25.678858700 [INFO]: Economy Desk 5 Close
+2024-04-04T03:18:48.334851800 [INFO]: Economy Desk 5 Open
+2024-04-04T03:18:48.634078800 [INFO]: Economy Desk 4 Open
+2024-04-04T03:18:48.957392800 [INFO]: Business Desk 3 Open
+2024-04-04T03:18:49.219049500 [INFO]: Business Desk 2 Open
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 4 get passenger : Michelle Hansen
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 5 get passenger : Cynthia Bell
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 2 get passenger : Daniel Rivera
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 3 get passenger : Sergio Smith
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 4 check in passenger : Michelle Hansen
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 5 check in passenger : Cynthia Bell
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 3 check in passenger : Sergio Smith
+2024-04-04T03:18:49.273906600 [INFO]: Desk Desk 2 check in passenger : Daniel Rivera
+2024-04-04T03:18:49.481551800 [INFO]: Business Desk 1 Open
+2024-04-04T03:18:50.261217600 [INFO]: Desk Desk 2 get passenger : Douglas Kaufman
+2024-04-04T03:18:50.261217600 [INFO]: Desk Desk 4 get passenger : Jessica Bell
+2024-04-04T03:18:50.261217600 [INFO]: Desk Desk 3 get passenger : Joseph Norman
+2024-04-04T03:18:50.261217600 [INFO]: Desk Desk 5 get passenger : Audrey Salinas
+2024-04-04T03:18:50.262208900 [INFO]: Desk Desk 2 check in passenger : Douglas Kaufman
+2024-04-04T03:18:50.262208900 [INFO]: Desk Desk 4 check in passenger : Jessica Bell
+2024-04-04T03:18:50.262208900 [INFO]: Desk Desk 3 check in passenger : Joseph Norman
+2024-04-04T03:18:50.262208900 [INFO]: Desk Desk 5 check in passenger : Audrey Salinas
+2024-04-04T03:18:50.262208900 [INFO]: Desk Desk 2 get passenger : Mr. Henry Holt
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 2 check in passenger : Mr. Henry Holt
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 5 get passenger : David Davis
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 3 get passenger : Maria Wolfe
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 4 get passenger : Miss Katrina Lane
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 3 check in passenger : Maria Wolfe
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 2 get passenger : Tiffany Green
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 4 check in passenger : Miss Katrina Lane
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 5 check in passenger : David Davis
+2024-04-04T03:18:50.263206700 [INFO]: Desk Desk 2 check in passenger : Tiffany Green
+2024-04-04T03:18:50.274182 [INFO]: Desk Desk 3 get passenger : Bethany Harrison
+2024-04-04T03:18:50.274182 [INFO]: Desk Desk 1 get passenger : Anne Jackson
+2024-04-04T03:18:50.274182 [INFO]: Desk Desk 2 get passenger : David Dennis
+2024-04-04T03:18:50.274182 [INFO]: Desk Desk 4 get passenger : Lauren Mcclure
+2024-04-04T03:18:50.274182 [INFO]: Desk Desk 5 get passenger : Kathy Byrd
+2024-04-04T03:18:50.275174800 [INFO]: Desk Desk 3 check in passenger : Bethany Harrison
+2024-04-04T03:18:50.275174800 [INFO]: Desk Desk 2 check in passenger : David Dennis
+2024-04-04T03:18:50.275174800 [INFO]: Desk Desk 4 check in passenger : Lauren Mcclure
+2024-04-04T03:18:50.275174800 [INFO]: Desk Desk 5 check in passenger : Kathy Byrd
+2024-04-04T03:18:50.275174800 [INFO]: Desk Desk 1 check in passenger : Anne Jackson
+2024-04-04T03:18:51.261763400 [INFO]: Desk Desk 3 get passenger : Shawn Mack
+2024-04-04T03:18:51.261763400 [INFO]: Desk Desk 5 get passenger : Lisa Oliver
+2024-04-04T03:18:51.261763400 [INFO]: Desk Desk 4 get passenger : Wesley Warren
+2024-04-04T03:18:51.261763400 [INFO]: Desk Desk 3 check in passenger : Shawn Mack
+2024-04-04T03:18:51.262757500 [INFO]: Desk Desk 5 check in passenger : Lisa Oliver
+2024-04-04T03:18:51.262757500 [INFO]: Desk Desk 4 check in passenger : Wesley Warren
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 5 get passenger : Dr. Gerald Hall
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 4 get passenger : Veronica Kaufman
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 5 check in passenger : Dr. Gerald Hall
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 4 check in passenger : Veronica Kaufman
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 5 get passenger : Sean Johnson MD
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 4 get passenger : Eric Grant
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 5 check in passenger : Sean Johnson MD
+2024-04-04T03:18:51.263752700 [INFO]: Desk Desk 4 check in passenger : Eric Grant
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 4 get passenger : Michele Smith
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 5 get passenger : Russell Barr
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 4 check in passenger : Michele Smith
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 5 check in passenger : Russell Barr
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 4 get passenger : Kimberly Anthony
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 5 get passenger : Mrs. Alexis Martin
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 4 check in passenger : Kimberly Anthony
+2024-04-04T03:18:51.264751 [INFO]: Desk Desk 5 check in passenger : Mrs. Alexis Martin
+2024-04-04T03:18:51.265748900 [INFO]: Desk Desk 5 get passenger : Kyle Fitzpatrick
+2024-04-04T03:18:51.265748900 [INFO]: Desk Desk 4 get passenger : Kevin Williams
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 4 check in passenger : Kevin Williams
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 4 get passenger : Michael Obrien
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 5 check in passenger : Kyle Fitzpatrick
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 4 check in passenger : Michael Obrien
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 5 get passenger : Vanessa Smith
+2024-04-04T03:18:51.266745600 [INFO]: Desk Desk 4 get passenger : Emma Nunez
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 5 check in passenger : Vanessa Smith
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 4 check in passenger : Emma Nunez
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 5 get passenger : Lindsey Jackson
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 4 get passenger : Kristine Fitzgerald
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 5 check in passenger : Lindsey Jackson
+2024-04-04T03:18:51.267753200 [INFO]: Desk Desk 4 check in passenger : Kristine Fitzgerald
+2024-04-04T03:18:51.269737200 [INFO]: Desk Desk 4 get passenger : Marie Williams
+2024-04-04T03:18:51.269737200 [INFO]: Desk Desk 5 get passenger : Kimberly Murphy
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 4 check in passenger : Marie Williams
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 4 get passenger : Taylor Fitzgerald
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 5 get passenger : Jorge Mejia
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 5 check in passenger : Jorge Mejia
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 4 check in passenger : Taylor Fitzgerald
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 5 get passenger : James Reynolds
+2024-04-04T03:18:51.270735200 [INFO]: Desk Desk 4 get passenger : Kathryn Ho
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 5 check in passenger : James Reynolds
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 4 check in passenger : Kathryn Ho
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 4 get passenger : Debra Sheppard
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 5 get passenger : Christopher Mendoza
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 4 check in passenger : Debra Sheppard
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 5 check in passenger : Christopher Mendoza
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 4 get passenger : Diane Golden
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 5 get passenger : Hannah Romero
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 5 check in passenger : Hannah Romero
+2024-04-04T03:18:51.271733 [INFO]: Desk Desk 4 check in passenger : Diane Golden
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 5 get passenger : Chelsea Moreno
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 4 get passenger : Barbara Best
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 5 check in passenger : Chelsea Moreno
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 4 check in passenger : Barbara Best
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 4 get passenger : Rachel Robertson
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 5 get passenger : Maureen Grimes
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 5 check in passenger : Maureen Grimes
+2024-04-04T03:18:51.272730 [INFO]: Desk Desk 4 check in passenger : Rachel Robertson
+2024-04-04T03:18:51.273728500 [INFO]: Desk Desk 4 get passenger : Michelle Daniels
+2024-04-04T03:18:51.273728500 [INFO]: Desk Desk 5 get passenger : Joseph Stevens
+2024-04-04T03:18:51.273728500 [INFO]: Desk Desk 4 check in passenger : Michelle Daniels
+2024-04-04T03:18:51.273728500 [INFO]: Desk Desk 5 check in passenger : Joseph Stevens
+2024-04-04T03:18:52.264441600 [INFO]: Business Desk 1 Close
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 4 get passenger : Sharon Hamilton
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 5 get passenger : Jason Miller
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 5 check in passenger : Jason Miller
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 4 check in passenger : Sharon Hamilton
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 4 get passenger : Willie Thomas
+2024-04-04T03:18:52.275411900 [INFO]: Desk Desk 4 check in passenger : Willie Thomas
+2024-04-04T03:18:52.544862900 [INFO]: Business Desk 2 Close
+2024-04-04T03:18:52.849047800 [INFO]: Business Desk 3 Close
+2024-04-04T03:18:53.114858600 [INFO]: Economy Desk 4 Close
+2024-04-04T03:18:53.380708600 [INFO]: Economy Desk 5 Close
+2024-04-04T03:18:54.264891500 [INFO]: Desk Desk 5 get passenger : Lynn Buckley
+2024-04-04T03:18:54.264891500 [INFO]: Desk Desk 5 check in passenger : Lynn Buckley
+2024-04-04T03:18:54.278156 [INFO]: Desk Desk 5 get passenger : Brittany Anderson
+2024-04-04T03:18:54.278156 [INFO]: Desk Desk 5 check in passenger : Brittany Anderson
+2024-04-04T03:18:55.265101100 [INFO]: Desk Desk 5 get passenger : Elizabeth Armstrong
+2024-04-04T03:18:55.265101100 [INFO]: Desk Desk 5 check in passenger : Elizabeth Armstrong
+2024-04-04T03:18:55.279068800 [INFO]: Desk Desk 5 get passenger : John Mcintyre
+2024-04-04T03:18:55.279068800 [INFO]: Desk Desk 5 check in passenger : John Mcintyre
+2024-04-04T03:18:56.265830600 [INFO]: Desk Desk 5 get passenger : Monique Bryan
+2024-04-04T03:18:56.265830600 [INFO]: Desk Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:18:56.279793200 [INFO]: Desk Desk 5 get passenger : Lee Kline
+2024-04-04T03:18:56.279793200 [INFO]: Desk Desk 5 check in passenger : Lee Kline
+2024-04-04T03:18:57.266771900 [INFO]: Desk Desk 5 get passenger : Albert Malone
+2024-04-04T03:18:57.266771900 [INFO]: Desk Desk 5 check in passenger : Albert Malone
+2024-04-04T03:18:57.280732300 [INFO]: Desk Desk 5 get passenger : Drew Cortez
+2024-04-04T03:18:57.280732300 [INFO]: Desk Desk 5 check in passenger : Drew Cortez
+2024-04-04T03:19:00.627092200 [INFO]: Business Desk 1 Close
+2024-04-04T03:19:00.879417300 [INFO]: Business Desk 2 Close
+2024-04-04T03:19:01.399050400 [INFO]: Business Desk 3 Close
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 5 get passenger : Albert Malone
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 2 get passenger : Maria Wolfe
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 4 get passenger : Harold Smith
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 2 check in passenger : Maria Wolfe
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 4 check in passenger : Harold Smith
+2024-04-04T03:19:01.668329800 [INFO]: Desk Desk 5 check in passenger : Albert Malone
+2024-04-04T03:19:01.681295400 [INFO]: Economy Desk 4 Close
+2024-04-04T03:19:01.931636200 [INFO]: Economy Desk 5 Close
+2024-04-04T03:21:52.326158900 [INFO]: Desk Desk 1 get passenger : Shawn Mack
+2024-04-04T03:21:52.326158900 [INFO]: Desk Desk 4 get passenger : Philip Leonard
+2024-04-04T03:21:52.326158900 [INFO]: Desk Desk 5 get passenger : Debra Sheppard
+2024-04-04T03:21:52.328153600 [INFO]: Desk Desk 4 check in passenger : Philip Leonard
+2024-04-04T03:21:52.328153600 [INFO]: Desk Desk 1 check in passenger : Shawn Mack
+2024-04-04T03:21:52.328153600 [INFO]: Desk Desk 5 check in passenger : Debra Sheppard
+2024-04-04T03:21:53.318676300 [INFO]: Desk Desk 5 get passenger : Ivan Bates
+2024-04-04T03:21:53.318676300 [INFO]: Desk Desk 4 get passenger : Dr. Gerald Hall
+2024-04-04T03:21:53.318676300 [INFO]: Desk Desk 5 check in passenger : Ivan Bates
+2024-04-04T03:21:53.318676300 [INFO]: Desk Desk 4 check in passenger : Dr. Gerald Hall
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 5 get passenger : Sean Johnson MD
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 3 get passenger : Tiffany Green
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 4 get passenger : Kimberly Murphy
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 5 check in passenger : Sean Johnson MD
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 3 check in passenger : Tiffany Green
+2024-04-04T03:21:54.326794300 [INFO]: Desk Desk 4 check in passenger : Kimberly Murphy
+2024-04-04T03:21:56.319743200 [INFO]: Desk Desk 5 get passenger : Lynn Buckley
+2024-04-04T03:21:56.319743200 [INFO]: Desk Desk 4 get passenger : Jonathan Rose
+2024-04-04T03:21:56.319743200 [INFO]: Desk Desk 5 check in passenger : Lynn Buckley
+2024-04-04T03:21:56.319743200 [INFO]: Desk Desk 4 check in passenger : Jonathan Rose
+2024-04-04T03:21:56.320735500 [INFO]: Desk Desk 4 get passenger : Steven Miller Jr.
+2024-04-04T03:21:56.320735500 [INFO]: Desk Desk 4 check in passenger : Steven Miller Jr.
+2024-04-04T03:21:57.328148600 [INFO]: Desk Desk 4 get passenger : Russell Barr
+2024-04-04T03:21:57.328148600 [INFO]: Desk Desk 5 get passenger : Miss Katrina Lane
+2024-04-04T03:21:57.328148600 [INFO]: Desk Desk 4 check in passenger : Russell Barr
+2024-04-04T03:21:57.328148600 [INFO]: Desk Desk 5 check in passenger : Miss Katrina Lane
+2024-04-04T03:21:57.330142700 [INFO]: Desk Desk 4 get passenger : Jordan Richmond
+2024-04-04T03:21:57.330142700 [INFO]: Desk Desk 4 check in passenger : Jordan Richmond
+2024-04-04T03:21:59.321204300 [INFO]: Desk Desk 5 get passenger : Michelle Hansen
+2024-04-04T03:21:59.321204300 [INFO]: Desk Desk 4 get passenger : Kristine Fitzgerald
+2024-04-04T03:21:59.321204300 [INFO]: Desk Desk 5 check in passenger : Michelle Hansen
+2024-04-04T03:21:59.321204300 [INFO]: Desk Desk 4 check in passenger : Kristine Fitzgerald
+2024-04-04T03:21:59.322198300 [INFO]: Desk Desk 4 get passenger : Matthew Turner
+2024-04-04T03:21:59.322198300 [INFO]: Desk Desk 4 check in passenger : Matthew Turner
+2024-04-04T03:22:00.330157300 [INFO]: Desk Desk 4 get passenger : Ashley Duarte
+2024-04-04T03:22:00.330157300 [INFO]: Desk Desk 5 get passenger : Veronica Kaufman
+2024-04-04T03:22:00.330157300 [INFO]: Desk Desk 5 check in passenger : Veronica Kaufman
+2024-04-04T03:22:00.330157300 [INFO]: Desk Desk 4 check in passenger : Ashley Duarte
+2024-04-04T03:22:00.331155100 [INFO]: Desk Desk 5 get passenger : Kathy Byrd
+2024-04-04T03:22:00.331155100 [INFO]: Desk Desk 5 check in passenger : Kathy Byrd
+2024-04-04T03:24:30.144658600 [INFO]: Business Desk 2 Close
+2024-04-04T03:24:30.372136800 [INFO]: Business Desk 3 Close
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 4 get passenger : Lindsey Jackson
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 1 get passenger : Sergio Smith
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 5 get passenger : Kenneth Morales
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 1 check in passenger : Sergio Smith
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 5 check in passenger : Kenneth Morales
+2024-04-04T03:24:30.568610900 [INFO]: Desk Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T03:24:31.558695700 [INFO]: Business Desk 1 Close
+2024-04-04T03:24:31.580636200 [INFO]: Desk Desk 5 get passenger : Veronica Kaufman
+2024-04-04T03:24:31.580636200 [INFO]: Desk Desk 4 get passenger : Matthew Sanchez
+2024-04-04T03:24:31.580636200 [INFO]: Desk Desk 4 check in passenger : Matthew Sanchez
+2024-04-04T03:24:31.580636200 [INFO]: Desk Desk 5 check in passenger : Veronica Kaufman
+2024-04-04T03:24:32.053898900 [INFO]: Economy Desk 4 Close
+2024-04-04T03:24:32.294803700 [INFO]: Economy Desk 5 Close
+2024-04-04T03:24:32.569210800 [INFO]: Desk Desk 5 get passenger : Monique Bryan
+2024-04-04T03:24:32.569210800 [INFO]: Desk Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:24:32.581178 [INFO]: Desk Desk 4 get passenger : Philip Johnson
+2024-04-04T03:24:32.581178 [INFO]: Desk Desk 4 check in passenger : Philip Johnson
+2024-04-04T03:24:33.569530800 [INFO]: Desk Desk 5 get passenger : James Morrison
+2024-04-04T03:24:33.569530800 [INFO]: Desk Desk 5 check in passenger : James Morrison
+2024-04-04T03:24:33.581498600 [INFO]: Desk Desk 4 get passenger : Catherine Murphy
+2024-04-04T03:24:33.581498600 [INFO]: Desk Desk 4 check in passenger : Catherine Murphy
+2024-04-04T03:24:34.570488400 [INFO]: Desk Desk 5 get passenger : Benjamin Hayes
+2024-04-04T03:24:34.570488400 [INFO]: Desk Desk 5 check in passenger : Benjamin Hayes
+2024-04-04T03:24:35.570842300 [INFO]: Desk Desk 5 get passenger : Julie Smith
+2024-04-04T03:24:35.570842300 [INFO]: Desk Desk 5 check in passenger : Julie Smith
+2024-04-04T03:24:36.571629800 [INFO]: Desk Desk 5 get passenger : Sara Fisher
+2024-04-04T03:24:36.571629800 [INFO]: Desk Desk 5 check in passenger : Sara Fisher
+2024-04-04T03:24:36.583598300 [INFO]: Desk Desk 4 get passenger : David Davis
+2024-04-04T03:24:36.583598300 [INFO]: Desk Desk 4 check in passenger : David Davis
+2024-04-04T03:24:37.572009400 [INFO]: Desk Desk 5 get passenger : Scott Jones
+2024-04-04T03:24:37.572009400 [INFO]: Desk Desk 5 check in passenger : Scott Jones
+2024-04-04T03:24:37.583976600 [INFO]: Desk Desk 4 get passenger : Elizabeth Armstrong
+2024-04-04T03:24:37.583976600 [INFO]: Desk Desk 4 check in passenger : Elizabeth Armstrong
+2024-04-04T03:25:09.813268200 [INFO]: Desk Desk 5 get passenger : Kathryn Ho
+2024-04-04T03:25:09.813268200 [INFO]: Desk Desk 2 get passenger : Joseph Norman
+2024-04-04T03:25:09.813268200 [INFO]: Desk Desk 4 get passenger : Hannah Romero
+2024-04-04T03:25:09.817256600 [INFO]: Desk Desk 2 check in passenger : Joseph Norman
+2024-04-04T03:25:09.817256600 [INFO]: Desk Desk 4 check in passenger : Hannah Romero
+2024-04-04T03:25:09.817256600 [INFO]: Desk Desk 5 check in passenger : Kathryn Ho
+2024-04-04T03:25:10.737475 [INFO]: Business Desk 1 Close
+2024-04-04T03:25:10.803304100 [INFO]: Desk Desk 4 get passenger : Harold Smith
+2024-04-04T03:25:10.803304100 [INFO]: Desk Desk 5 get passenger : Alexander Sutton
+2024-04-04T03:25:10.803304100 [INFO]: Desk Desk 4 check in passenger : Harold Smith
+2024-04-04T03:25:10.803304100 [INFO]: Desk Desk 5 check in passenger : Alexander Sutton
+2024-04-04T03:25:11.383883500 [INFO]: Business Desk 2 Close
+2024-04-04T03:25:11.810281500 [INFO]: Business Desk 3 Close
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 3 get passenger : Bethany Harrison
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 4 get passenger : Vanessa Smith
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 5 get passenger : Michele Smith
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 4 check in passenger : Vanessa Smith
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 5 check in passenger : Michele Smith
+2024-04-04T03:25:11.816265700 [INFO]: Desk Desk 3 check in passenger : Bethany Harrison
+2024-04-04T03:25:12.231154600 [INFO]: Economy Desk 4 Close
+2024-04-04T03:25:12.637957500 [INFO]: Economy Desk 5 Close
+2024-04-04T03:25:23.734195900 [INFO]: Business Desk 1 Close
+2024-04-04T03:25:24.288811800 [INFO]: Business Desk 2 Close
+2024-04-04T03:25:24.388653100 [INFO]: Desk Desk 5 get passenger : Jason Miller
+2024-04-04T03:25:24.388653100 [INFO]: Desk Desk 4 get passenger : Michele Smith
+2024-04-04T03:25:24.388653100 [INFO]: Desk Desk 4 check in passenger : Michele Smith
+2024-04-04T03:25:24.388653100 [INFO]: Desk Desk 5 check in passenger : Jason Miller
+2024-04-04T03:25:24.389651600 [INFO]: Desk Desk 5 get passenger : Denise Salas
+2024-04-04T03:25:24.389651600 [INFO]: Desk Desk 5 check in passenger : Denise Salas
+2024-04-04T03:25:24.860392500 [INFO]: Business Desk 3 Close
+2024-04-04T03:25:25.399149900 [INFO]: Desk Desk 4 get passenger : Maureen Grimes
+2024-04-04T03:25:25.399149900 [INFO]: Desk Desk 5 get passenger : Alexander Sutton
+2024-04-04T03:25:25.399149900 [INFO]: Desk Desk 4 check in passenger : Maureen Grimes
+2024-04-04T03:25:25.399149900 [INFO]: Desk Desk 5 check in passenger : Alexander Sutton
+2024-04-04T03:25:25.456990700 [INFO]: Economy Desk 4 Close
+2024-04-04T03:25:25.926733600 [INFO]: Economy Desk 5 Close
+2024-04-04T03:25:26.389339600 [INFO]: Desk Desk 4 get passenger : Marie Williams
+2024-04-04T03:25:26.389339600 [INFO]: Desk Desk 4 check in passenger : Marie Williams
+2024-04-04T03:25:26.399890900 [INFO]: Desk Desk 5 get passenger : John Williams
+2024-04-04T03:25:26.399890900 [INFO]: Desk Desk 5 check in passenger : John Williams
+2024-04-04T03:25:27.390099300 [INFO]: Desk Desk 4 get passenger : Eric Grant
+2024-04-04T03:25:27.390099300 [INFO]: Desk Desk 4 check in passenger : Eric Grant
+2024-04-04T03:25:27.400074200 [INFO]: Desk Desk 5 get passenger : Sharon Hamilton
+2024-04-04T03:25:27.400074200 [INFO]: Desk Desk 5 check in passenger : Sharon Hamilton
+2024-04-04T03:25:28.390132400 [INFO]: Desk Desk 4 get passenger : Charles Evans
+2024-04-04T03:25:28.390132400 [INFO]: Desk Desk 4 check in passenger : Charles Evans
+2024-04-04T03:25:28.402101 [INFO]: Desk Desk 5 get passenger : Monique Bryan
+2024-04-04T03:25:28.402101 [INFO]: Desk Desk 5 check in passenger : Monique Bryan
+2024-04-04T03:25:29.402882300 [INFO]: Desk Desk 4 get passenger : Hannah Romero
+2024-04-04T03:25:29.402882300 [INFO]: Desk Desk 4 check in passenger : Hannah Romero
+2024-04-04T03:25:31.391549200 [INFO]: Desk Desk 5 get passenger : David Davis
+2024-04-04T03:25:31.391549200 [INFO]: Desk Desk 5 check in passenger : David Davis
+2024-04-04T03:25:31.403576600 [INFO]: Desk Desk 4 get passenger : Lindsey Jackson
+2024-04-04T03:25:31.403576600 [INFO]: Desk Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T03:25:32.391880300 [INFO]: Desk Desk 5 get passenger : Kimberly Murphy
+2024-04-04T03:25:32.391880300 [INFO]: Desk Desk 5 check in passenger : Kimberly Murphy
+2024-04-04T03:25:33.393887700 [INFO]: Desk Desk 5 get passenger : David Hayes
+2024-04-04T03:25:33.393887700 [INFO]: Desk Desk 5 check in passenger : David Hayes
+2024-04-04T03:25:33.405851300 [INFO]: Desk Desk 4 get passenger : Kimberly Lee
+2024-04-04T03:25:33.405851300 [INFO]: Desk Desk 4 check in passenger : Kimberly Lee
+2024-04-04T03:25:34.396025600 [INFO]: Desk Desk 5 get passenger : Taylor Fitzgerald
+2024-04-04T03:25:34.396025600 [INFO]: Desk Desk 5 check in passenger : Taylor Fitzgerald
+2024-04-04T03:25:34.406004500 [INFO]: Desk Desk 4 get passenger : Jessica Bell
+2024-04-04T03:25:34.406004500 [INFO]: Desk Desk 4 check in passenger : Jessica Bell
+2024-04-04T03:25:52.471153 [INFO]: Business Desk 1 Close
+2024-04-04T03:25:52.776336 [INFO]: Business Desk 2 Close
+2024-04-04T03:25:53.053593600 [INFO]: Desk Desk 5 get passenger : Harold Smith
+2024-04-04T03:25:53.053593600 [INFO]: Desk Desk 4 get passenger : Scott Anderson
+2024-04-04T03:25:53.053593600 [INFO]: Desk Desk 4 check in passenger : Scott Anderson
+2024-04-04T03:25:53.053593600 [INFO]: Desk Desk 5 check in passenger : Harold Smith
+2024-04-04T03:25:53.054591200 [INFO]: Desk Desk 5 get passenger : Steven Miller Jr.
+2024-04-04T03:25:53.054591200 [INFO]: Desk Desk 5 check in passenger : Steven Miller Jr.
+2024-04-04T03:25:53.070548700 [INFO]: Business Desk 3 Close
+2024-04-04T03:25:53.336906100 [INFO]: Economy Desk 4 Close
+2024-04-04T03:25:53.551858300 [INFO]: Economy Desk 5 Close
+2024-04-04T03:26:00.624617700 [INFO]: Business Desk 1 Close
+2024-04-04T03:26:01.380452700 [INFO]: Business Desk 3 Close
+2024-04-04T03:26:01.446342 [INFO]: Desk Desk 4 get passenger : Monique Bryan
+2024-04-04T03:26:01.446342 [INFO]: Desk Desk 5 get passenger : David Davis
+2024-04-04T03:26:01.447338100 [INFO]: Desk Desk 5 check in passenger : David Davis
+2024-04-04T03:26:01.447338100 [INFO]: Desk Desk 4 check in passenger : Monique Bryan
+2024-04-04T03:26:01.447338100 [INFO]: Desk Desk 5 get passenger : Sharon Hamilton
+2024-04-04T03:26:01.447338100 [INFO]: Desk Desk 5 check in passenger : Sharon Hamilton
+2024-04-04T03:26:01.664809900 [INFO]: Business Desk 2 Close
+2024-04-04T03:26:02.066326200 [INFO]: Economy Desk 4 Close
+2024-04-04T03:26:02.332189100 [INFO]: Economy Desk 5 Close
+2024-04-04T03:37:20.640024200 [INFO]: Business Desk 1 Close
+2024-04-04T03:37:20.895551700 [INFO]: Business Desk 2 Close
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 5 get passenger : Kimberly Lee
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 1 get passenger : Bethany Harrison
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 4 get passenger : Benjamin Hayes
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 5 check in passenger : Kimberly Lee
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 4 check in passenger : Benjamin Hayes
+2024-04-04T03:37:21.464123100 [INFO]: Desk Desk 1 check in passenger : Bethany Harrison
+2024-04-04T03:37:21.494044600 [INFO]: Business Desk 3 Close
+2024-04-04T03:37:21.760331400 [INFO]: Economy Desk 4 Close
+2024-04-04T03:37:22.035839100 [INFO]: Economy Desk 5 Close
+2024-04-04T03:38:09.061098100 [INFO]: Business Desk 1 Close
+2024-04-04T03:38:09.721561800 [INFO]: Desk Desk 4 get passenger : Shelby Curtis
+2024-04-04T03:38:09.721561800 [INFO]: Desk Desk 5 get passenger : Kimberly Anthony
+2024-04-04T03:38:09.721561800 [INFO]: Desk Desk 4 check in passenger : Shelby Curtis
+2024-04-04T03:38:09.721561800 [INFO]: Desk Desk 5 check in passenger : Kimberly Anthony
+2024-04-04T03:38:09.722558800 [INFO]: Desk Desk 4 get passenger : Drew Cortez
+2024-04-04T03:38:09.722558800 [INFO]: Desk Desk 4 check in passenger : Drew Cortez
+2024-04-04T03:38:09.902080200 [INFO]: Business Desk 3 Close
+2024-04-04T03:38:10.236714900 [INFO]: Business Desk 2 Close
+2024-04-04T03:38:10.730524400 [INFO]: Desk Desk 4 get passenger : Jessica Donovan
+2024-04-04T03:38:10.730524400 [INFO]: Desk Desk 5 get passenger : Julie Smith
+2024-04-04T03:38:10.730524400 [INFO]: Desk Desk 5 check in passenger : Julie Smith
+2024-04-04T03:38:10.730524400 [INFO]: Desk Desk 4 check in passenger : Jessica Donovan
+2024-04-04T03:38:11.018747 [INFO]: Economy Desk 4 Close
+2024-04-04T03:38:11.431882400 [INFO]: Economy Desk 5 Close
+2024-04-04T03:38:11.723142600 [INFO]: Desk Desk 5 get passenger : Jonathan Rose
+2024-04-04T03:38:11.723142600 [INFO]: Desk Desk 5 check in passenger : Jonathan Rose
+2024-04-04T03:38:11.731114200 [INFO]: Desk Desk 4 get passenger : Lee Kline
+2024-04-04T03:38:11.731114200 [INFO]: Desk Desk 4 check in passenger : Lee Kline
+2024-04-04T03:38:12.725244100 [INFO]: Desk Desk 5 get passenger : Christopher Ryan
+2024-04-04T03:38:12.725244100 [INFO]: Desk Desk 5 check in passenger : Christopher Ryan
+2024-04-04T03:38:12.731228400 [INFO]: Desk Desk 4 get passenger : Kim Williams
+2024-04-04T03:38:12.731228400 [INFO]: Desk Desk 4 check in passenger : Kim Williams
+2024-04-04T03:38:13.725553600 [INFO]: Desk Desk 5 get passenger : Catherine Murphy
+2024-04-04T03:38:13.725553600 [INFO]: Desk Desk 5 check in passenger : Catherine Murphy
+2024-04-04T03:38:13.731536900 [INFO]: Desk Desk 4 get passenger : Lindsey Jackson
+2024-04-04T03:38:13.731536900 [INFO]: Desk Desk 4 check in passenger : Lindsey Jackson
+2024-04-04T03:38:14.727664400 [INFO]: Desk Desk 5 get passenger : John Mcintyre
+2024-04-04T03:38:14.727664400 [INFO]: Desk Desk 5 check in passenger : John Mcintyre
+2024-04-04T03:38:14.733648 [INFO]: Desk Desk 4 get passenger : John Williams
+2024-04-04T03:38:14.733648 [INFO]: Desk Desk 4 check in passenger : John Williams
+2024-04-04T03:38:15.728081300 [INFO]: Desk Desk 5 get passenger : Jason Miller
+2024-04-04T03:38:15.728081300 [INFO]: Desk Desk 5 check in passenger : Jason Miller
+2024-04-04T03:38:16.728593400 [INFO]: Desk Desk 4 get passenger : Mary Jones
+2024-04-04T03:38:16.728593400 [INFO]: Desk Desk 4 check in passenger : Mary Jones
+2024-04-04T03:38:16.734573 [INFO]: Desk Desk 5 get passenger : Denise Salas
+2024-04-04T03:38:16.734573 [INFO]: Desk Desk 5 check in passenger : Denise Salas
+2024-04-04T03:38:27.854862700 [INFO]: Desk Desk 5 get passenger : Kim Williams
+2024-04-04T03:38:27.854862700 [INFO]: Desk Desk 4 get passenger : Debra Sheppard
+2024-04-04T03:38:27.854862700 [INFO]: Desk Desk 1 get passenger : Maria Wolfe
+2024-04-04T03:38:27.857881500 [INFO]: Desk Desk 1 check in passenger : Maria Wolfe
+2024-04-04T03:38:27.857881500 [INFO]: Desk Desk 4 check in passenger : Debra Sheppard
+2024-04-04T03:38:27.857881500 [INFO]: Desk Desk 5 check in passenger : Kim Williams
+2024-04-04T03:38:28.843381200 [INFO]: Desk Desk 2 get passenger : Tiffany Green
+2024-04-04T03:38:28.843381200 [INFO]: Desk Desk 1 get passenger : Elizabeth Escobar
+2024-04-04T03:38:28.844386200 [INFO]: Desk Desk 2 check in passenger : Tiffany Green
+2024-04-04T03:38:28.844386200 [INFO]: Desk Desk 1 check in passenger : Elizabeth Escobar
+2024-04-04T03:38:29.083793200 [INFO]: Business Desk 1 Close
+2024-04-04T03:38:29.751892100 [INFO]: Business Desk 2 Close
+2024-04-04T03:38:29.854620200 [INFO]: Desk Desk 4 get passenger : Christine Willis
+2024-04-04T03:38:29.854620200 [INFO]: Desk Desk 5 get passenger : Charles Evans
+2024-04-04T03:38:29.854620200 [INFO]: Desk Desk 5 check in passenger : Charles Evans
+2024-04-04T03:38:29.854620200 [INFO]: Desk Desk 4 check in passenger : Christine Willis
+2024-04-04T03:38:30.146354700 [INFO]: Business Desk 3 Close
+2024-04-04T03:38:30.509535300 [INFO]: Economy Desk 4 Close
+2024-04-04T03:38:30.846633 [INFO]: Desk Desk 5 get passenger : Matthew Turner
+2024-04-04T03:38:30.846633 [INFO]: Desk Desk 4 get passenger : Maureen Grimes
+2024-04-04T03:38:30.846633 [INFO]: Desk Desk 4 check in passenger : Maureen Grimes
+2024-04-04T03:38:30.846633 [INFO]: Desk Desk 5 check in passenger : Matthew Turner
+2024-04-04T03:38:30.899485100 [INFO]: Economy Desk 5 Close
+2024-04-04T03:38:42.395608200 [INFO]: Business Desk 1 Close
+2024-04-04T03:38:42.627986900 [INFO]: Business Desk 2 Close
+2024-04-04T03:38:43.283759900 [INFO]: Economy Desk 4 Close
+2024-04-04T03:38:43.321180800 [INFO]: Desk Desk 4 get passenger : Alexander Sutton
+2024-04-04T03:38:43.321180800 [INFO]: Desk Desk 5 get passenger : Matthew Sanchez
+2024-04-04T03:38:43.322178500 [INFO]: Desk Desk 5 check in passenger : Matthew Sanchez
+2024-04-04T03:38:43.322178500 [INFO]: Desk Desk 4 check in passenger : Alexander Sutton
+2024-04-04T03:38:43.322178500 [INFO]: Desk Desk 5 get passenger : Kimberly Anthony
+2024-04-04T03:38:43.322178500 [INFO]: Desk Desk 5 check in passenger : Kimberly Anthony
+2024-04-04T03:38:43.531618 [INFO]: Business Desk 3 Close
+2024-04-04T03:38:43.949715 [INFO]: Economy Desk 5 Close
