@@ -3,7 +3,7 @@ package checkInSimulation;
 import java.util.ArrayList;
 import java.util.Random;
 
-// Manages a collection of Flight objects.
+
 public class FlightList {
 	// Storage for an arbitrary number of flights.
 		private ArrayList<Flight> flightList;
@@ -55,24 +55,16 @@ public class FlightList {
 			}
 			return null;
 		}
-		/**
-		* Randomly selects a Passenger from one of the flights in the list. It ensures
-		* that the selected passenger has not already checked in.
-		* 
-		* @return A randomly selected Passenger who hasn't checked in yet.
-		*/
+		
 		public Passenger randomSelect() {
 			Random rand = new Random();
-			// Select a random flight, ensuring it has passengers who haven't checked in.
 			int idx1 = rand.nextInt(getNumberOfEntries());
 			while(flightList.get(idx1).getList().getNumberOfEntries() == flightList.get(idx1).numberOfCheckIn()) 
 				idx1 = rand.nextInt(getNumberOfEntries());
 			Flight flight = getFlight(idx1);
-			// Select a random passenger from the chosen flight, ensuring they haven't checked in.
 			int idx2 = rand.nextInt(flight.getList().getNumberOfEntries());
 			while(flight.getList().getByIdx(idx2).getCheckin().equals("NO"))
 				idx2 = rand.nextInt(flight.getList().getNumberOfEntries());
-			// Return the randomly selected passenger.
 			return flight.getList().getByIdx(idx2);
 		}
 

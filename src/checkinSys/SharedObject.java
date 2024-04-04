@@ -11,24 +11,22 @@ import java.util.Random;
 
 import myException.InvalidAttributeException;
 import myException.InvalidBookRefException;
-// Represents a shared resource in the simulation where flights and passengers are managed.
+
 public class SharedObject {
-	// Maps for storing flights and passengers, and queues for managing passenger processing.
+	// Maps to store flights and passengers data
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
-	private FlightList flightList = new FlightList();// Stores a list of flights.
-	private PassengerList all = new PassengerList();tores all passengers. // Stores all passengers.
-	private Queue<Passenger> queue1 = new LinkedList();// Queue for one type of passengers (e.g., Economy).
-	private Queue<Passenger> queue2 = new LinkedList(); // Queue for another type of passengers (e.g., Business).
+	private FlightList flightList = new FlightList();
+	private PassengerList all = new PassengerList();
+	private Queue<Passenger> queue1 = new LinkedList();
+	private Queue<Passenger> queue2 = new LinkedList();
+	private ArrayList<Flight> flightDesk = new ArrayList<>();
     private int passengerNum1 = 0;
     private int passengerNum2 = 0;
     private int passengerNum3 = 0;
     private double baggageNum1 = 0;
     private double baggageNum2 = 0;
     private double baggageNum3 = 0;
-    private boolean f1;
-	private boolean f2;
-	private boolean f3;
 
 	/**
 	 * Constructor for Manager. Initializes the class and reads data from files.
@@ -40,135 +38,99 @@ public class SharedObject {
 	    } catch (InvalidAttributeException | IOException | InvalidBookRefException e) {
 	        e.printStackTrace();// Print the stack trace in case of an exception
 		}
-	    this.f1 = true;
-		this.f2 = true;
-		this.f3 = true;
 	}
 	
-	// Methods for closing specific flags
-	public boolean closef1() {
-		f1 = false;
-		return f1;
+	/**
+	 * compute passenger number for Flight1
+	 */
+	public synchronized void addF1P() {
+		passengerNum1++;
+		notifyAll();
 	}
 	
-	public boolean closef2() {
-		f2 = false;
-		return f2;
+	/**
+	 * compute passenger baggage weight for Flight1
+	 */
+	public synchronized void addF1B(Passenger p) {
+		baggageNum1 += p.getWeight();
+		notifyAll();
 	}
 	
-	public boolean closef3() {
-		f3 = false;
-		return f3;
-	}
-	
-	public void addF2P() {
+	/**
+	 * compute passenger number for Flight2
+	 */
+	public synchronized void addF2P() {
 		passengerNum2++;
+		notifyAll();
 	}
 	
-	public boolean isF1() {
-		return f1;
-	}
-
-
-	public void setF1(boolean f1) {
-		this.f1 = f1;
-	}
-
-
-	public boolean isF2() {
-		return f2;
-	}
-
-
-	public void setF2(boolean f2) {
-		this.f2 = f2;
-	}
-
-
-	public boolean isF3() {
-		return f3;
-	}
-
-
-	public void setF3(boolean f3) {
-		this.f3 = f3;
-	}
-
-
-	public void addF2B(Passenger p) {
+	/**
+	 * compute passenger baggage weight for Flight2
+	 */
+	public synchronized void addF2B(Passenger p) {
 		baggageNum2 += p.getWeight();
+		notifyAll();
 	}
 	
-	public void addF3P() {
+	/**
+	 * compute passenger number for Flight3
+	 */
+	public synchronized void addF3P() {
 		passengerNum3++;
+		notifyAll();
 	}
 	
-	public void addF3B(Passenger p) {
+	
+	/**
+	 * compute passenger baggage weight for Flight3
+	 */
+	public synchronized void addF3B(Passenger p) {
 		baggageNum3 += p.getWeight();
+		notifyAll();
 		
 	}
 	
-	public void addF1P() {
-		passengerNum1++;
-	}
-	
-	public void addF1B(Passenger p) {
-		baggageNum1 += p.getWeight();
-	}
-	
-	
-	
-	
-
+	/**
+	 * get passenger number for flight 1
+	 */
 	public int getPassengerNum1() {
 		return passengerNum1;
 	}
-
-	public void setPassengerNum1(int passengerNum1) {
-		this.passengerNum1 = passengerNum1;
-	}
-
+	
+	/**
+	 * get passenger number for flight 2
+	 */
 	public int getPassengerNum2() {
 		return passengerNum2;
 	}
-
-	public void setPassengerNum2(int passengerNum2) {
-		this.passengerNum2 = passengerNum2;
-	}
-
+	
+	/**
+	 * get passenger number for flight 3
+	 */
 	public int getPassengerNum3() {
 		return passengerNum3;
 	}
-
-	public void setPassengerNum3(int passengerNum3) {
-		this.passengerNum3 = passengerNum3;
-	}
-
+	
+	/**
+	 * get passenger baggage weight for flight 1
+	 */
 	public double getBaggageNum1() {
 		return baggageNum1;
 	}
 
-	public void setBaggageNum1(double baggageNum1) {
-		this.baggageNum1 = baggageNum1;
-	}
-
+	/**
+	 * get passenger baggage weight for flight 2
+	 */
 	public double getBaggageNum2() {
 		return baggageNum2;
 	}
-
-	public void setBaggageNum2(double baggageNum2) {
-		this.baggageNum2 = baggageNum2;
-	}
-
+	
+	/**
+	 * get passenger baggage weight for flight 3
+	 */
 	public double getBaggageNum3() {
 		return baggageNum3;
 	}
-
-	public void setBaggageNum3(double baggageNum3) {
-		this.baggageNum3 = baggageNum3;
-	}
-
-	
 
 	/**
 	 * Reads flight and passenger data from files and populates data structures.
@@ -257,7 +219,10 @@ public class SharedObject {
 		p.set(weight, volume);
 		return p.excess_fee();
 	}
-	// Selects a passenger at random from the list of all passengers.
+	
+	/**
+	 * randomly select passenger which is not check-in
+	 */
 	public synchronized Passenger randomSelect() {
 		if(all.getNumberOfEntries() == 0) {
 			notifyAll();
@@ -300,8 +265,25 @@ public class SharedObject {
 		p.check_in();
 	}
 	
+	/**
+	 * @return get all passenger
+	 */
 	public synchronized PassengerList getAllPassenger() {
 		return all;
+	}
+	
+	/**
+	 * @param flight Flight object
+	 */
+	public void addFlightDesk(Flight flight) {
+		flightDesk.add(flight);
+	}
+	
+	/**
+	 * @return get flight list
+	 */
+	public synchronized ArrayList<Flight> getFlightDesk() {
+		return flightDesk;
 	}
 	
 	/**
@@ -346,20 +328,30 @@ public class SharedObject {
 	}
 	
 	public synchronized void addQueue1(Passenger p) {
+//		try {
+//			wait();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		queue1.add(p);
 		notifyAll();
 	}
 	
 	public synchronized void addQueue2(Passenger p) {
+//		try {
+//			wait();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		queue2.add(p);
 		notifyAll();
 	}
 	
-	public synchronized Queue getQueue1() {
+	public synchronized Queue<Passenger> getQueue1() {
 		return queue1;
 	}
 	
-	public synchronized Queue getQueue2() {
+	public synchronized Queue<Passenger> getQueue2() {
 		return queue2;
 	}
 	
@@ -369,6 +361,30 @@ public class SharedObject {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+//		notifyAll();
+//		if(!queue1.isEmpty() && queue2.isEmpty()) {
+//			Passenger curP = queue1.poll();
+//			notifyAll();
+//			return curP;
+//		}
+//		if(!queue2.isEmpty() && queue1.isEmpty()) {
+//			Passenger curP = queue2.poll();
+//			notifyAll();
+//			return curP;
+//		}
+//		Random rand = new Random();
+//		int idx = rand.nextInt(2);
+//		if(idx == 0) {
+//			Passenger curP = queue1.poll();
+//			notifyAll();
+//			return curP;
+//			
+//		}
+//		else {
+//			Passenger curP = queue2.poll();
+//			notifyAll();
+//			return curP;
+//		}
 		Passenger curP = null;
 		if(!queue1.isEmpty()) {
 			curP = queue1.poll();
@@ -378,6 +394,7 @@ public class SharedObject {
 			notifyAll();
 			return curP;
 		}
+		
 	}
 	
 	public synchronized Passenger getFromQueue2() {
@@ -395,7 +412,11 @@ public class SharedObject {
 			notifyAll();
 			return curP;
 		}
+		
+		
 	}
+	
+	
 	
 	/**
 	 * validate Flight Data legal or not
@@ -472,6 +493,7 @@ public class SharedObject {
 		String weight = fields[5];
 		String volume = fields[6];
 		String cabin = fields[7];
+		
 		// for reference_code
 		if (reference_code.isEmpty()) throw new InvalidAttributeException("Reference code cannot be empty");
 		
