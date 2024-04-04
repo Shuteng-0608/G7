@@ -1,21 +1,21 @@
 package checkInSimulation;
 
-
+// Class to represent a flight, including its details and a list of passengers.
 public class Flight implements Comparable<Flight> {
 	
-	private String flight_code;
-	private String date;
-	private String destination;
-	private String carrier;
-	private int capacity;
-	private double maxWeight;
-	private double maxVolume;
-	private PassengerList passengerList;
-
+	private String flight_code;// Unique identifier for the flight.
+	private String date;// Date of the flight.
+	private String destination;// Destination of the flight.
+	private String carrier;// Airline carrier of the flight.
+	private int capacity;// Maximum number of passengers for the flight.
+	private double maxWeight; // Maximum weight capacity for baggage.
+	private double maxVolume;// Maximum volume capacity for baggage.
+	private PassengerList passengerList;// List of passengers booked on this flight.
+	// List of passengers booked on this flight.
 	public Flight() {}
 	
 	/**
-	 * Set up the contact details.
+	 * Constructor to initialize a flight with its details.
 	 */
 	public Flight(String flight_code, String date, String destination, String carrier, int capacity, double maxWeight,
 			double maxVolume) {
@@ -26,6 +26,7 @@ public class Flight implements Comparable<Flight> {
 		this.capacity = capacity;
 		this.maxWeight = maxWeight;
 		this.maxVolume = maxVolume;
+		 // Initialize the passenger list for the flight
 		this.passengerList = new PassengerList();
 	}
 
@@ -93,7 +94,7 @@ public class Flight implements Comparable<Flight> {
 	public PassengerList getList() {
 		return passengerList;
 	}
-
+	// Methods to calculate various metrics related to the flight's passengers and baggage.
 	/**
 	 * @return The number of passengers checked-in.
 	 */
