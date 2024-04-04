@@ -1,4 +1,4 @@
-package checkInSimulation;
+package checkinSys;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -27,7 +27,7 @@ public class Controller {
 			desk.getButton().addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					JCheckBox jcb = (JCheckBox) e.getSource(); // 得到产生的事件
+					JCheckBox jcb = (JCheckBox) e.getSource(); // 碌脙碌陆虏煤脡煤碌脛脢脗录镁
 					if (jcb.isSelected()) {
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.RED)); 
 						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
