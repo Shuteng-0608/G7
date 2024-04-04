@@ -1,4 +1,4 @@
-![image](https://github.com/Shuteng-0608/G7/assets/72130686/315b2fbf-c819-4d97-9bd9-40fe4d7d1acd)1. System overview
+1. System overview
 This system is an application that simulates the airport boarding process and aims to improve the operational efficiency of the airport by simulating the check-in and boarding process of passengers at the airport, as well as the management of flights. The system allows multiple check-in counters to process passengers in parallel and organise the passenger flow through one or more queues. At the same time, the system displays real-time queue status, check-in progress and flight information through a graphical user interface (GUI), as well as providing log files to record system operation status.
 
 2. Architecture design
@@ -15,3 +15,4 @@ Graphical User Interface (GUI): Implemented using the Java Swing library, the GU
 Logging: Logger, implemented using the singleton pattern, records key system events such as passenger queuing, check-in and boarding.
 
 4. UML
+![image](https://github.com/Shuteng-0608/G7/assets/72130686/315b2fbf-c819-4d97-9bd9-40fe4d7d1acd)
