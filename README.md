@@ -1,3 +1,7 @@
-How to run the Check-In system/use JAR package:
+How to run the Check-In system:
+1. go to the file root.
 
-java -jar {Package name}
+cd ./G7
+
+2. Launch the Jar file.
+java -jar stage2.jar
