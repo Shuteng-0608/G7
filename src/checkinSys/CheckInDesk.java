@@ -4,17 +4,17 @@ import java.util.List;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-
+// Represents a check-in desk at the airport, responsible for handling passengers.
 public class CheckInDesk implements Runnable {
-	private final String deskName;
-	private final String deskType;
-	private SharedObject so;
-	private boolean isOpen;
-	private Passenger client;
-	private int timer;
-	private JTextArea deskText;
-	private JCheckBox deskButton;
-	private JPanel buttonPanel;
+    private final String deskName; // The name of the desk.
+    private final String deskType; // The type of desk (e.g., Economy or Business).
+    private SharedObject so; // A shared object for coordinating between desks.
+    private boolean isOpen; // Indicates whether the desk is open.
+    private Passenger client; // The current passenger being serviced.
+    private int timer; // Timer for the thread to control processing speed.
+    private JTextArea deskText; // Text area for displaying desk status.
+    private JCheckBox deskButton; // Checkbox to toggle the desk open or closed.
+    private JPanel buttonPanel; // Panel containing the desk's button.
 
 	public CheckInDesk(String deskName, String deskType, SharedObject so, JTextArea deskText, JCheckBox deskButton, JPanel buttonPanel) {
 		this.deskName = deskName;
