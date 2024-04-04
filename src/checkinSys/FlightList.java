@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 
 import java.util.ArrayList;
 import java.util.Random;

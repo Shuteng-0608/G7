@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 import java.util.List;
 
 import javax.swing.JCheckBox;
@@ -83,7 +83,7 @@ public class CheckInDesk implements Runnable {
 			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0) {
 				closeDesk();
 				client = null;
-				Logger.log("Desk " + getDeskName() + " closed");
+				Logger.log(Logger.LogLevel.INFO, getDeskName() + " closed");
 			} 
 				
 			while(!so.getQueue1().isEmpty() || !so.getQueue2().isEmpty()) {
@@ -98,26 +98,26 @@ public class CheckInDesk implements Runnable {
 				if (!so.isF3() && client.getFlight().equals("EK660")) continue;
 				
 //				System.out.println("Desk " + getDeskName() + " get passenger : " + getClient().getName());
-				Logger.log("Desk " + getDeskName() + " get passenger : " + getClient().getName());
+				Logger.log(Logger.LogLevel.INFO, getDeskName() + " get passenger : " + getClient().getName());
 				if (client.getFlight().equals("CA378")) {
-					System.out.println(deskName);
+//					System.out.println(deskName);
 					so.addF1B(client);
 					so.addF1P();
 				}
 				if (client.getFlight().equals("EK216")) {
-					System.out.println(deskName);
+//					System.out.println(deskName);
 
 					so.addF2B(client);
 					so.addF2P();
 				}
 				if (client.getFlight().equals("EK660")) {
-					System.out.println(deskName);
+//					System.out.println(deskName);
 
 					so.addF3B(client);
 					so.addF3P();
 				}
 				so.check_in(client);
-				Logger.log("Desk " + getDeskName() + " check in passenger : " + getClient().getName());	
+				Logger.log(Logger.LogLevel.INFO, getDeskName() + " check in passenger : " + getClient().getName());	
 			}
 			
 		}

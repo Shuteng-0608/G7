@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,8 +9,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-import myExceptions.InvalidAttributeException;
-import myExceptions.InvalidBookRefException;
+import myException.InvalidAttributeException;
+import myException.InvalidBookRefException;
 
 public class SharedObject {
 	// Maps to store flights and passengers data

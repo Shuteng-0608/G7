@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 
 
 public class Flight implements Comparable<Flight> {

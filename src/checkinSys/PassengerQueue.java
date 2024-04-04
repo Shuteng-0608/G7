@@ -1,4 +1,4 @@
-package checkinSys;
+package checkInSimulation;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -14,6 +14,7 @@ public class PassengerQueue implements Runnable {
 		this.queueType = queueType;
 		this.so = so;
 		this.isOpen = true;
+		this.timer = 1000;
 	}
 	
 	public void queueClose() {
@@ -45,12 +46,13 @@ public class PassengerQueue implements Runnable {
 			Passenger p = so.randomSelect();
 			if(p == null) {
 				queueClose();
-				System.out.println("Queue " + queueType + " is closed");
-				Logger.log("Queue " + queueType + " is closed");
+//				System.out.println("Queue " + queueType + " is closed");
+				
+				Logger.log(Logger.LogLevel.INFO, "Queue is closed");
 				continue;
 			}
-			if(queueType.equals("economy 1")) so.addQueue1(p);
-			if(queueType.equals("economy 2")) so.addQueue2(p);
+			if(p.getCabin().equals("Business")) so.addQueue1(p);
+			if(p.getCabin().equals("Economy")) so.addQueue2(p);
 		}
     }
 
