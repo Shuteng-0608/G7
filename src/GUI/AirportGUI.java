@@ -1,9 +1,6 @@
 package GUI;
-
 import javax.swing.*;
-
 import checkInSimulation.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +12,9 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
 
+// Defines a class AirportGUI that extends JFrame and implements Runnable interface for concurrency
 public class AirportGUI extends JFrame implements Runnable {
+	// Declaration of GUI components such as panels, text areas, sliders, etc.
 	private JPanel queuePanel;
 	private JPanel deskPanel;
 	private JPanel flightPanel;
@@ -31,6 +30,7 @@ public class AirportGUI extends JFrame implements Runnable {
     private Font fontM = new Font("Comic Sans MS", Font.BOLD,14);
     private Font fontL = new Font("Comic Sans MS", Font.BOLD,18);
 
+	// Random object for time settings and layout constraints
 	private Random timeSetter = new Random();
 	private final int deskWidth = 200; 
 	private final int deskHeight = 50; 
@@ -42,6 +42,7 @@ public class AirportGUI extends JFrame implements Runnable {
 	final int[] timeLeft2 = { 20 + timeSetter.nextInt(100) };
 	final int[] timeLeft3 = { 20 + timeSetter.nextInt(100) };
 
+	// Shared object for synchronization and ArrayLists for managing threads, desks, queues, and buttons
 	private SharedObject so;
 	private ArrayList<Thread> checkInThreads = new ArrayList<>();
 	private ArrayList<CheckInDesk> Desk = new ArrayList<>();
@@ -50,25 +51,28 @@ public class AirportGUI extends JFrame implements Runnable {
 	private ArrayList<JPanel> JPDesk = new ArrayList<>();
 	private ArrayList<JPanel> JDeskBut = new ArrayList<>();
 	private ArrayList<Thread> queueThreads = new ArrayList<>();
-	private final int queuePanelHeight = 200; // ���ö������̶��߶�
+	private final int queuePanelHeight = 200; 
 	private ArrayList<Passenger> curPassengerList = new ArrayList<>();
 	private boolean q1state = true;
 	private boolean q2state = true;
 	private int timerSpeed = 1000; 
 
+	// Map to store timers for flights
 	private Map<Integer, Timer> flightTimers = new HashMap<>();
 
+	// Constructor of AirportGUI class to initialize and set up the GUI
 	public AirportGUI(SharedObject so) {
 		this.so = so;
 		setTitle("Airport Check-in System");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BorderLayout(10, 10)); 
 
-		// For passenger queue
+		// Set up for passenger queue panel
 		queuePanel = new JPanel(new GridLayout(1, 2, 10, 10));
 		queuePanel.setPreferredSize(new Dimension(getWidth(), queuePanelHeight)); 
 		queuePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
+		// Queue text areas for displaying queue information
 		queue1Text = new JTextArea("There are currently " + queueCount1 + " people in Business Queue");
 		queue1Text.setEditable(false);
 		JScrollPane queue1Scroll = new JScrollPane(queue1Text);
@@ -79,7 +83,7 @@ public class AirportGUI extends JFrame implements Runnable {
 		JScrollPane queue2Scroll = new JScrollPane(queue2Text);
 		queuePanel.add(queue2Scroll);
 
-		// For check-in desk
+ 		// Set up for check-in desk control panel
 		deskControlPanel = new JPanel(new GridLayout(1, 5, 10, 10));
 		deskControlPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
