@@ -11,12 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 
 import GUI.AirportGUI;
-
+// Controller class for handling the interaction between the GUI and the simulation logic
 public class Controller {
+	// Constructor initializes the controller with the airport GUI and the shared object
 	public Controller(AirportGUI airport, SharedObject so) {
-		airport.setSharedObject(so);
-		startSpeedSlider(airport);
-		new Thread(airport).start();
+		airport.setSharedObject(so);// Sets the shared object used for synchronization
+		startSpeedSlider(airport);// Initializes the slider to adjust simulation speed
+		new Thread(airport).start();// Starts the GUI in a separate thread
+		// Initializes each check-in desk with a toggle functionality
 		for(CheckInDesk desk: airport.getDesk())
 			startCheckInDeskBox(desk);
 	}
@@ -25,7 +27,7 @@ public class Controller {
 			desk.getButton().addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					JCheckBox jcb = (JCheckBox) e.getSource(); // 得到产生的事件
+					JCheckBox jcb = (JCheckBox) e.getSource(); // 碌脙碌陆虏煤脡煤碌脛脢脗录镁
 					if (jcb.isSelected()) {
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.RED)); 
 						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
