@@ -2,7 +2,7 @@ package checkInSimulation;
 
 import java.util.ArrayList;
 
-
+// Manages a list of passengers, providing functionality to add, remove, and search for passengers.
 public class PassengerList {
 	// Storage for an arbitrary number of passengers.
 		private ArrayList<Passenger> passengerList;
@@ -75,7 +75,7 @@ public class PassengerList {
 			for (int i = 0; i < passengerList.size(); i++) {
 				Passenger p = getByIdx(i);
 				String name = p.getName();
-				String last_name = name.split(" ")[1];
+				String last_name = name.split(" ")[1]; // Assumes the last name is the second part of the full name.
 				if (last_name.equals(lastName) && p.getReference().equals(reference_code)) {
 					return i;
 				}
@@ -84,13 +84,13 @@ public class PassengerList {
 		}
 
 		/**
-		 * @return All the passenger details
+		 * @return A string containing the details of all passengers.
 		 */
 		public String listDetails() {
 			StringBuffer allEntries = new StringBuffer();
 			for (Passenger details : passengerList) {
-				allEntries.append(details);
-				allEntries.append('\n');
+				allEntries.append(details);// Append the string representation of each passenger.
+				allEntries.append('\n');// New line after each passenger's details.
 			}
 			return allEntries.toString();
 		}
