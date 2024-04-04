@@ -22,13 +22,14 @@ public class Controller {
 		for(CheckInDesk desk: airport.getDesk())
 			startCheckInDeskBox(desk);
 	}
-
+ 	// Method to add action listeners to the check-in desk buttons
 	public void startCheckInDeskBox(CheckInDesk desk) {
 			desk.getButton().addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					JCheckBox jcb = (JCheckBox) e.getSource(); // µÃµ½²úÉúµÄÊÂ¼þ
+					JCheckBox jcb = (JCheckBox) e.getSource(); // Gets the source of the event
 					if (jcb.isSelected()) {
+						// If the checkbox is selected, close the desk
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.RED)); 
 						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Close"); 
 						jcb.setForeground(Color.red);
@@ -37,6 +38,7 @@ public class Controller {
 						desk.closeDesk();
 					}
 					else {
+						// If the checkbox is deselected, open the desk
 						desk.getButtonPanel().setBorder(BorderFactory.createLineBorder(Color.GREEN)); 
 						jcb.setText(desk.getDeskType()+ ' ' + desk.getDeskName() + " Open");
 						jcb.setForeground(Color.black);
@@ -46,11 +48,12 @@ public class Controller {
 				}
 			});
 		}
-
+	// Method to initialize the speed slider functionality
 	public void startSpeedSlider(AirportGUI airport) {
 		airport.getSpeedSlider().addChangeListener(e -> {
 			JSlider source = (JSlider) e.getSource();
 			if (!source.getValueIsAdjusting()) {
+				// Adjusts the timer speed based on the slider's value
 				airport.setTimerSpeed(1000000 / source.getValue());
 
 				// Adjust all timers according to the new speed
@@ -58,13 +61,12 @@ public class Controller {
 			}
 		});
 	}
-
+	// Main method to start the simulation
 	public static void main(String[] args) {
-		Logger logger = Logger.getInstance();
-
-		SharedObject so = new SharedObject();
-		AirportGUI airport = new AirportGUI(so);
-		Controller c = new Controller(airport, so);
+		Logger logger = Logger.getInstance();// Initializes the logger
+		SharedObject so = new SharedObject();// Shared object for synchronization
+		AirportGUI airport = new AirportGUI(so);// Creates the GUI
+		Controller c = new Controller(airport, so); // Starts the controller
 	}
 
 }
