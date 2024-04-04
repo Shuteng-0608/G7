@@ -11,15 +11,15 @@ import java.util.Random;
 
 import myException.InvalidAttributeException;
 import myException.InvalidBookRefException;
-
+// Represents a shared resource in the simulation where flights and passengers are managed.
 public class SharedObject {
-	// Maps to store flights and passengers data
+	// Maps for storing flights and passengers, and queues for managing passenger processing.
 	private HashMap<String, Flight> flights = new HashMap<String, Flight>(); // flight code -> flight object
 	private HashMap<String, Passenger> passengers = new HashMap<String, Passenger>(); // name -> passenger object
-	private FlightList flightList = new FlightList();
-	private PassengerList all = new PassengerList();
-	private Queue<Passenger> queue1 = new LinkedList();
-	private Queue<Passenger> queue2 = new LinkedList();
+	private FlightList flightList = new FlightList();// Stores a list of flights.
+	private PassengerList all = new PassengerList();tores all passengers. // Stores all passengers.
+	private Queue<Passenger> queue1 = new LinkedList();// Queue for one type of passengers (e.g., Economy).
+	private Queue<Passenger> queue2 = new LinkedList(); // Queue for another type of passengers (e.g., Business).
     private int passengerNum1 = 0;
     private int passengerNum2 = 0;
     private int passengerNum3 = 0;
@@ -45,7 +45,7 @@ public class SharedObject {
 		this.f3 = true;
 	}
 	
-	
+	// Methods for closing specific flags
 	public boolean closef1() {
 		f1 = false;
 		return f1;
@@ -257,7 +257,7 @@ public class SharedObject {
 		p.set(weight, volume);
 		return p.excess_fee();
 	}
-	
+	// Selects a passenger at random from the list of all passengers.
 	public synchronized Passenger randomSelect() {
 		if(all.getNumberOfEntries() == 0) {
 			notifyAll();
@@ -346,21 +346,11 @@ public class SharedObject {
 	}
 	
 	public synchronized void addQueue1(Passenger p) {
-//		try {
-//			wait();
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
 		queue1.add(p);
 		notifyAll();
 	}
 	
 	public synchronized void addQueue2(Passenger p) {
-//		try {
-//			wait();
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
 		queue2.add(p);
 		notifyAll();
 	}
@@ -379,30 +369,6 @@ public class SharedObject {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-//		notifyAll();
-//		if(!queue1.isEmpty() && queue2.isEmpty()) {
-//			Passenger curP = queue1.poll();
-//			notifyAll();
-//			return curP;
-//		}
-//		if(!queue2.isEmpty() && queue1.isEmpty()) {
-//			Passenger curP = queue2.poll();
-//			notifyAll();
-//			return curP;
-//		}
-//		Random rand = new Random();
-//		int idx = rand.nextInt(2);
-//		if(idx == 0) {
-//			Passenger curP = queue1.poll();
-//			notifyAll();
-//			return curP;
-//			
-//		}
-//		else {
-//			Passenger curP = queue2.poll();
-//			notifyAll();
-//			return curP;
-//		}
 		Passenger curP = null;
 		if(!queue1.isEmpty()) {
 			curP = queue1.poll();
@@ -412,7 +378,6 @@ public class SharedObject {
 			notifyAll();
 			return curP;
 		}
-		
 	}
 	
 	public synchronized Passenger getFromQueue2() {
@@ -430,11 +395,7 @@ public class SharedObject {
 			notifyAll();
 			return curP;
 		}
-		
-		
 	}
-	
-	
 	
 	/**
 	 * validate Flight Data legal or not
