@@ -1,40 +1,40 @@
-package checkInSimulation;
+package checkinSys;
 import java.util.List;
 
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-// Represents a check-in desk at the airport, responsible for handling passengers.
+
 public class CheckInDesk implements Runnable {
-	private final String deskName; // The name of the desk.
-	private final String deskType; // The type of desk (e.g., Economy or Business).
-	private SharedObject so; // A shared object for coordinating between desks.
-	private boolean isOpen; // Indicates whether the desk is open.
-	private Passenger client; // The current passenger being serviced.
-	private int timer; // Timer for the thread to control processing speed.
-	private JTextArea deskText; // Text area for displaying desk status.
-	private JCheckBox deskButton; // Checkbox to toggle the desk open or closed.
-	private JPanel buttonPanel; // Panel containing the desk's button.
-	// Constructor to initialize a CheckInDesk object with the provided parameters.
+	private final String deskName;
+	private final String deskType;
+	private SharedObject so;
+	private boolean isOpen;
+	private Passenger client;
+	private int timer;
+	private JTextArea deskText;
+	private JCheckBox deskButton;
+	private JPanel buttonPanel;
+
 	public CheckInDesk(String deskName, String deskType, SharedObject so, JTextArea deskText, JCheckBox deskButton, JPanel buttonPanel) {
 		this.deskName = deskName;
 		this.deskType = deskType;
 		this.so = so;
 		this.isOpen = true;
-		this.timer = 1000;// Default timer speed.
+		this.timer = 1000;
 		this.deskText = deskText;
 		this.deskButton = deskButton;
 		this.buttonPanel = buttonPanel;
 	}
- 	// Method to close the desk, setting its state to not open.
+
 	public void closeDesk() {
 		isOpen = false;
 	}
-	// Method to reopen the desk, setting its state to open.
+	
 	public void restartDesk() {
 		isOpen = true;
 	}
-	// Getters and setters
+	
 	public Passenger getClient() {
 		return client;
 	}
@@ -68,64 +68,47 @@ public class CheckInDesk implements Runnable {
 	}
 	
 	
- 	// The run method that contains the logic executed by the thread associated with this desk.
+
 	@Override
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(timer);// Pause for the specified timer duration.
+				Thread.sleep(timer);
 			} catch (InterruptedException e) {
 			}
-			if(!isOpen) {
-				// If the desk is closed, skip the rest of the loop and check again.
-				System.out.println(" ");
-				continue;
-			}
-			// Check if both queues are empty and all passengers are processed.
+			if(!isOpen) continue;
 			if(so.getQueue1().isEmpty() && so.getQueue2().isEmpty() && so.getAllPassenger().getNumberOfEntries() == 0) {
-				closeDesk();// Close the desk if no passengers are left.
-				client = null;// Clear the current client.
-				Logger.log(Logger.LogLevel.INFO, getDeskName() + " closed");
+				closeDesk();
+				client = null;
+				Logger.log("Desk " + getDeskName() + " closed");
 			} 
-
-			// Process passengers from queues as long as there are passengers waiting.
+				
 			while(!so.getQueue1().isEmpty() || !so.getQueue2().isEmpty()) {
-				// Assign the next passenger from the appropriate queue based on the desk type.
 				if (deskName.equals("Desk 1") || deskName.equals("Desk 2") || deskName.equals("Desk 3")) {
 					client = so.getFromQueue1();
 				} else {
 					client = so.getFromQueue2();
 				}
-				if (client == null) continue;// Skip if no passenger was retrieved.
-				// Skip processing the passenger if their flight is already closed.
-				if (!so.isF1() && client.getFlight().equals("CA378")) continue;
-				if (!so.isF2() && client.getFlight().equals("EK216")) continue;
-				if (!so.isF3() && client.getFlight().equals("EK660")) continue;
-				 // Log that the passenger is being processed at this desk.
-//				System.out.println("Desk " + getDeskName() + " get passenger : " + getClient().getName());
-				Logger.log(Logger.LogLevel.INFO, getDeskName() + " get passenger : " + getClient().getName());
-				// Update shared object with the passenger's baggage and increment the passenger count for the flight.
+				if (client == null) continue;
+				if (!so.getFlightDesk().get(0).states() && client.getFlight().equals("CA378")) continue;
+				if (!so.getFlightDesk().get(1).states() && client.getFlight().equals("EK216")) continue;
+				if (!so.getFlightDesk().get(2).states() && client.getFlight().equals("EK660")) continue;
+				Logger.log("Desk " + getDeskName() + " get passenger : " + getClient().getName());
 				if (client.getFlight().equals("CA378")) {
-//					System.out.println(deskName);
 					so.addF1B(client);
 					so.addF1P();
 				}
 				if (client.getFlight().equals("EK216")) {
-//					System.out.println(deskName);
-
 					so.addF2B(client);
 					so.addF2P();
 				}
 				if (client.getFlight().equals("EK660")) {
-//					System.out.println(deskName);
-
 					so.addF3B(client);
 					so.addF3P();
 				}
-				so.check_in(client);// Check in the passenger.
-				Logger.log(Logger.LogLevel.INFO, getDeskName() + " check in passenger : " + getClient().getName());	
+				so.check_in(client);
+				Logger.log("Desk " + getDeskName() + " check in passenger : " + getClient().getName());	
 			}
-			
 		}
 	}
 
