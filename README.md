@@ -4,4 +4,5 @@ How to run the Check-In system:
   cd ./G7
 
 2. Launch the Jar file.
+   
 java -jar stage2.jar
