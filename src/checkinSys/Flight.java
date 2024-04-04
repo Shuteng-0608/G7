@@ -1,8 +1,8 @@
-package checkInSimulation;
+package checkinSys;
 
+import javax.swing.JTextArea;
 
 public class Flight implements Comparable<Flight> {
-	
 	private String flight_code;
 	private String date;
 	private String destination;
@@ -11,8 +11,12 @@ public class Flight implements Comparable<Flight> {
 	private double maxWeight;
 	private double maxVolume;
 	private PassengerList passengerList;
+	private JTextArea flightText;
+	private boolean isOpen;
 
-	public Flight() {}
+	public Flight() {
+		isOpen = true;
+	}
 	
 	/**
 	 * Set up the contact details.
@@ -50,7 +54,13 @@ public class Flight implements Comparable<Flight> {
 		return maxWeight;
 	}
 	
+	public void close() {
+		isOpen = false;
+	}
 	
+	public boolean states() {
+		return isOpen;
+	}
 
 	/**
 	 * @return The destination.
@@ -92,6 +102,14 @@ public class Flight implements Comparable<Flight> {
 	 */
 	public PassengerList getList() {
 		return passengerList;
+	}
+	
+	public JTextArea getText() {
+		return flightText;
+	}
+	
+	public void setText(JTextArea text) {
+		flightText = text;
 	}
 
 	/**
