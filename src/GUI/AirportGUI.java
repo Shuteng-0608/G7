@@ -2,7 +2,7 @@ package GUI;
 
 import javax.swing.*;
 
-import checkInSimulation.*;
+import checkinSys.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
