@@ -15,4 +15,4 @@ Graphical User Interface (GUI): Implemented using the Java Swing library, the GU
 Logging: Logger, implemented using the singleton pattern, records key system events such as passenger queuing, check-in and boarding.
 
 4. UML
-![image](https://github.com/Shuteng-0608/G7/assets/72130686/315b2fbf-c819-4d97-9bd9-40fe4d7d1acd)
+![tmp666E](https://github.com/Shuteng-0608/G7/assets/72130686/00650679-2458-4dfa-85c6-db4f24477496)
