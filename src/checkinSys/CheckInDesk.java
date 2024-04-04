@@ -6,35 +6,35 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 // Represents a check-in desk at the airport, responsible for handling passengers.
 public class CheckInDesk implements Runnable {
-    private final String deskName; // The name of the desk.
-    private final String deskType; // The type of desk (e.g., Economy or Business).
-    private SharedObject so; // A shared object for coordinating between desks.
-    private boolean isOpen; // Indicates whether the desk is open.
-    private Passenger client; // The current passenger being serviced.
-    private int timer; // Timer for the thread to control processing speed.
-    private JTextArea deskText; // Text area for displaying desk status.
-    private JCheckBox deskButton; // Checkbox to toggle the desk open or closed.
-    private JPanel buttonPanel; // Panel containing the desk's button.
-
+	private final String deskName; // The name of the desk.
+	private final String deskType; // The type of desk (e.g., Economy or Business).
+	private SharedObject so; // A shared object for coordinating between desks.
+	private boolean isOpen; // Indicates whether the desk is open.
+	private Passenger client; // The current passenger being serviced.
+	private int timer; // Timer for the thread to control processing speed.
+	private JTextArea deskText; // Text area for displaying desk status.
+	private JCheckBox deskButton; // Checkbox to toggle the desk open or closed.
+	private JPanel buttonPanel; // Panel containing the desk's button.
+	// Constructor to initialize a CheckInDesk object with the provided parameters.
 	public CheckInDesk(String deskName, String deskType, SharedObject so, JTextArea deskText, JCheckBox deskButton, JPanel buttonPanel) {
 		this.deskName = deskName;
 		this.deskType = deskType;
 		this.so = so;
 		this.isOpen = true;
-		this.timer = 1000;
+		this.timer = 1000;// Default timer speed.
 		this.deskText = deskText;
 		this.deskButton = deskButton;
 		this.buttonPanel = buttonPanel;
 	}
-
+ 	// Method to close the desk, setting its state to not open.
 	public void closeDesk() {
 		isOpen = false;
 	}
-	
+	// Method to reopen the desk, setting its state to open.
 	public void restartDesk() {
 		isOpen = true;
 	}
-	
+	// Getters and setters
 	public Passenger getClient() {
 		return client;
 	}
@@ -68,15 +68,16 @@ public class CheckInDesk implements Runnable {
 	}
 	
 	
-
+ 	// The run method that contains the logic executed by the thread associated with this desk.
 	@Override
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(timer);
+				Thread.sleep(timer);// Pause for the specified timer duration.
 			} catch (InterruptedException e) {
 			}
 			if(!isOpen) {
+				// If the desk is closed, skip the rest of the loop and check again.
 				System.out.println(" ");
 				continue;
 			}
