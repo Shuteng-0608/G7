@@ -2,7 +2,7 @@ package GUI;
 
 import javax.swing.*;
 
-import checkinSys.*;
+import checkInSimulation.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -246,7 +246,7 @@ public class AirportGUI extends JFrame implements Runnable {
 						if (timeLeft1[0] <= 0) {
 							flightPanel.setBorder(BorderFactory.createLineBorder(Color.RED)); // �߿���
 							countdownLabel.setText("Flight " + flightNumber + " Closed"); // �ı�����ΪClosed
-							Logger.log("Flight " + flightNumber + " Closed");
+							Logger.log(Logger.LogLevel.INFO, "Flight " + flightNumber + " Closed");
 							countdownLabel.setForeground(Color.RED);
 							((Timer) e.getSource()).stop(); // ֹͣ��ʱ��
 							so.closef1();
@@ -339,7 +339,7 @@ public class AirportGUI extends JFrame implements Runnable {
 						desk.getButton().setSelected(true);
 						desk.getText().setText("All Passengers Have Checked-in");
 					}
-					Logger.log("All Passengers Have Checked-in");
+					Logger.log(Logger.LogLevel.INFO, "All Passengers Have Checked-in");
 				}
 				if (!so.isF1() && !so.isF2() && !so.isF3()) {
 					for (JPanel d : JPDesk) {
@@ -351,7 +351,7 @@ public class AirportGUI extends JFrame implements Runnable {
 						desk.getButton().setSelected(true);
 						desk.getText().setText("All Flights Have Departured");
 					}
-					Logger.log("All Flights Have Departured");
+					Logger.log(Logger.LogLevel.INFO, "All Flights Have Departured");
 
 				}
 				for (PassengerQueue queue : passengerQueueDesk) {
